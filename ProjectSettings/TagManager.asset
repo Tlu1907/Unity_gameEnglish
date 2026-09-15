@@ -46,14 +46,21 @@ TagManager:
   - name: Ground
     uniqueID: 4070902811
     locked: 0
+  - name: Fences
+    uniqueID: 1950371337
+    locked: 0
+  - name: Chest
+    uniqueID: 221689873
+    locked: 0
   - name: PlayerGroundGround
     uniqueID: 482218887
     locked: 0
   - name: Monster
     uniqueID: 1367526805
     locked: 0
-  - name: Chest
-    uniqueID: 221689873
+  - name: Table
+    uniqueID: 2749606959
     locked: 0
   m_RenderingLayers:
   - Default
+  m_MigratedRenderPipelines: []

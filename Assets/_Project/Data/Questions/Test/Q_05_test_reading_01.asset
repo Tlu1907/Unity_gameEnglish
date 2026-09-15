@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3dcf1c25115127478ec4b372eac41e7, type: 3}
+  m_Name: Q_05_test_reading_01
+  m_EditorClassIdentifier: 
+  id: test_reading_01
+  skillTag: Reading
+  content: Tom has a red bike. He rides it to school every day. What color is Tom's bike?
+  answers:
+  - Blue
+  - Green
+  - Red
+  - Black
+  correctIndex: 2
+  explanation: The passage says 'Tom has a red bike.'
+  freezeDuration: 3
