@@ -1,0 +1,5 @@
+{
+  "name": "DoAn.Refactor.EditModeTests",
+  "includePlatforms": ["Editor"],
+  "optionalUnityReferences": ["TestAssemblies"]
+}

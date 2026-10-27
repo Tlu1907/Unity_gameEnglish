@@ -1,0 +1,349 @@
+fileFormatVersion: 2
+guid: c48415de39e8a7949b4ee99d2fe52df4
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5914248077170507668
+    second: player_equipment_down_0
+  - first:
+      213: 869567622578807234
+    second: player_equipment_down_1
+  - first:
+      213: -9050846325945366638
+    second: player_equipment_down_2
+  - first:
+      213: -4241472139166037538
+    second: player_equipment_down_3
+  - first:
+      213: 3504848641148473129
+    second: player_equipment_down_4
+  - first:
+      213: -277239734150210838
+    second: player_equipment_down_5
+  - first:
+      213: 8568280117941841898
+    second: player_equipment_down_6
+  - first:
+      213: -2444118298246714590
+    second: player_equipment_down_7
+  - first:
+      213: 7609889744656701368
+    second: player_equipment_down_8
+  - first:
+      213: 4147639895717064454
+    second: player_equipment_down_9
+  - first:
+      213: 1113303636937227426
+    second: player_equipment_down_10
+  - first:
+      213: -1510900138828658288
+    second: player_equipment_down_11
+  - first:
+      213: -5529162892085977721
+    second: player_equipment_down_12
+  - first:
+      213: -7785131452060798256
+    second: player_equipment_down_13
+  - first:
+      213: 193339895877543893
+    second: player_equipment_down_14
+  - first:
+      213: 8731829159343010644
+    second: player_equipment_down_15
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 128
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: player_equipment_down_0
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 49
+        width: 350
+        height: 564
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49ff8498a41a31250800000000000000
+      internalID: 5914248077170507668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_equipment_down_2
+      rect:
+        serializedVersion: 2
+        x: 748
+        y: 55
+        width: 334
+        height: 557
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2978061583fe46280800000000000000
+      internalID: -9050846325945366638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_equipment_down_3
+      rect:
+        serializedVersion: 2
+        x: 1110
+        y: 54
+        width: 348
+        height: 557
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed9ca4ccf834325c0800000000000000
+      internalID: -4241472139166037538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_equipment_down_1
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 54
+        width: 340
+        height: 557
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ac3bce52cf337f00800000000000000
+      internalID: 1113303636937227426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_equipment_down_4
+      rect:
+        serializedVersion: 2
+        x: 1474
+        y: 50
+        width: 348
+        height: 563
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78d91f7f4a77443b0800000000000000
+      internalID: -5529162892085977721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_equipment_down_5
+      rect:
+        serializedVersion: 2
+        x: 1830
+        y: 48
+        width: 342
+        height: 565
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 453b9027b50bd2970800000000000000
+      internalID: 8731829159343010644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: c040389d46621a44db41cab0f2cac88b
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      player_equipment_down_0: 5914248077170507668
+      player_equipment_down_1: 1113303636937227426
+      player_equipment_down_11: -1510900138828658288
+      player_equipment_down_13: -7785131452060798256
+      player_equipment_down_14: 193339895877543893
+      player_equipment_down_2: -9050846325945366638
+      player_equipment_down_3: -4241472139166037538
+      player_equipment_down_4: -5529162892085977721
+      player_equipment_down_5: 8731829159343010644
+      player_equipment_down_6: 8568280117941841898
+      player_equipment_down_7: -2444118298246714590
+      player_equipment_down_8: 7609889744656701368
+      player_equipment_down_9: 4147639895717064454
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,3 +1,5 @@
+> Tài liệu lịch sử trước refactor. Cấu trúc và luồng hiện tại được mô tả trong [REFACTOR_GUIDE.md](REFACTOR_GUIDE.md) và [PROJECT_STRUCTURE.md](../../../PROJECT_STRUCTURE.md). Các đường dẫn và cơ chế freeze bên dưới không còn là thiết kế hiện hành.
+
 # Hướng Dẫn Refactor Hệ Thống Quiz — Gương Kho Báu
 
 > File này dùng cho 2 mục đích:

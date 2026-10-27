@@ -4,7 +4,7 @@ using UnityEngine;
 
 public static class QuestionDataSeeder
 {
-    private const string FolderPath = "Assets/_Project/Data/Questions/Test";
+    private const string FolderPath = "Assets/_Project/Learning/Quiz/Data/Questions/Test";
 
     [MenuItem("EarthDefender/Tạo dữ liệu câu hỏi test")]
     public static void CreateQuestionTestData()
@@ -78,43 +78,24 @@ public static class QuestionDataSeeder
                 existingAsset.explanation = questions[i].explanation;
                 existingAsset.freezeDuration = questions[i].freezeDuration;
                 EditorUtility.SetDirty(existingAsset);
+                Object.DestroyImmediate(questions[i]);
             }
         }
 
         AssetDatabase.SaveAssets();
         AssetDatabase.Refresh();
-        Debug.Log("Đã tạo 5 câu hỏi test tại Assets/_Project/Data/Questions/Test/");
+        Debug.Log("Đã tạo 5 câu hỏi test tại Assets/_Project/Learning/Quiz/Data/Questions/Test/");
     }
 
     private static void EnsureFolderExists()
     {
-        if (!AssetDatabase.IsValidFolder(FolderPath))
+        string current = "Assets";
+        foreach (string part in FolderPath.Substring("Assets/".Length).Split('/'))
         {
-            string parentFolder = "Assets/_Project/Data/Questions";
-            if (!AssetDatabase.IsValidFolder(parentFolder))
-            {
-                string[] parts = parentFolder.Split('/');
-                string current = "Assets/_Project/Data";
-
-                if (!AssetDatabase.IsValidFolder(current))
-                {
-                    AssetDatabase.CreateFolder("Assets/_Project", "Data");
-                    current = "Assets/_Project/Data";
-                }
-
-                if (!AssetDatabase.IsValidFolder(current + "/Questions"))
-                {
-                    AssetDatabase.CreateFolder(current, "Questions");
-                }
-            }
-
-            if (!AssetDatabase.IsValidFolder(FolderPath))
-            {
-                AssetDatabase.CreateFolder("Assets/_Project/Data/Questions", "Test");
-            }
+            if (!AssetDatabase.IsValidFolder(current + "/" + part)) AssetDatabase.CreateFolder(current, part);
+            current += "/" + part;
         }
     }
-
     private static QuestionData CreateQuestion(
         string id,
         string skillTag,

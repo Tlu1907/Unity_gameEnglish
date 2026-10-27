@@ -1,0 +1,369 @@
+fileFormatVersion: 2
+guid: 4f49e71ff378ed34d81e5bdee262e27f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7558394695973851716
+    second: player_equipment_up_0
+  - first:
+      213: 6488617424047439702
+    second: player_equipment_up_1
+  - first:
+      213: 44708107521436552
+    second: player_equipment_up_2
+  - first:
+      213: 6165630196217477403
+    second: player_equipment_up_3
+  - first:
+      213: 6218768548411834747
+    second: player_equipment_up_4
+  - first:
+      213: 509645586892100575
+    second: player_equipment_up_5
+  - first:
+      213: 7637870264311253367
+    second: player_equipment_up_6
+  - first:
+      213: -5913415786728478296
+    second: player_equipment_up_7
+  - first:
+      213: -7293816028889403466
+    second: player_equipment_up_8
+  - first:
+      213: -634999190326712301
+    second: player_equipment_up_9
+  - first:
+      213: 1901199339496140852
+    second: player_equipment_up_10
+  - first:
+      213: 2442533307373117326
+    second: player_equipment_up_11
+  - first:
+      213: -6926811222343457531
+    second: player_equipment_up_12
+  - first:
+      213: -3044749817871646185
+    second: player_equipment_up_13
+  - first:
+      213: 3569928615800005153
+    second: player_equipment_up_14
+  - first:
+      213: -3602036094578430874
+    second: player_equipment_up_15
+  - first:
+      213: -1500390700067353711
+    second: player_equipment_up_16
+  - first:
+      213: 6131798016840788253
+    second: player_equipment_up_17
+  - first:
+      213: -169595834580018489
+    second: player_equipment_up_18
+  - first:
+      213: 3209497540609696607
+    second: player_equipment_up_19
+  - first:
+      213: 2984651556554719397
+    second: player_equipment_up_20
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 128
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: player_equipment_up_1
+      rect:
+        serializedVersion: 2
+        x: 409
+        y: 173
+        width: 308
+        height: 409
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cbd2842f1103b1790800000000000000
+      internalID: -7558394695973851716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_equipment_up_2
+      rect:
+        serializedVersion: 2
+        x: 776
+        y: 175
+        width: 285
+        height: 404
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b19f6fd1ff7b09550800000000000000
+      internalID: 6165630196217477403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_equipment_up_3
+      rect:
+        serializedVersion: 2
+        x: 1113
+        y: 173
+        width: 310
+        height: 407
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b71857cdb018d4650800000000000000
+      internalID: 6218768548411834747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_equipment_up_5
+      rect:
+        serializedVersion: 2
+        x: 1828
+        y: 175
+        width: 308
+        height: 404
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7798ac8c98a2ff960800000000000000
+      internalID: 7637870264311253367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_equipment_up_0
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 176
+        width: 282
+        height: 403
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a9acde2ca35feda0800000000000000
+      internalID: -5913415786728478296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_equipment_up_4
+      rect:
+        serializedVersion: 2
+        x: 1489
+        y: 178
+        width: 297
+        height: 406
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8fd80a1a1f95e120800000000000000
+      internalID: 2442533307373117326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: c96a0d1f02ff84649ae909875dee492f
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      player_equipment_up_0: -5913415786728478296
+      player_equipment_up_1: -7558394695973851716
+      player_equipment_up_10: 1901199339496140852
+      player_equipment_up_12: -6926811222343457531
+      player_equipment_up_13: -3044749817871646185
+      player_equipment_up_14: 3569928615800005153
+      player_equipment_up_15: -3602036094578430874
+      player_equipment_up_16: -1500390700067353711
+      player_equipment_up_17: 6131798016840788253
+      player_equipment_up_18: -169595834580018489
+      player_equipment_up_19: 3209497540609696607
+      player_equipment_up_2: 6165630196217477403
+      player_equipment_up_20: 2984651556554719397
+      player_equipment_up_3: 6218768548411834747
+      player_equipment_up_4: 2442533307373117326
+      player_equipment_up_5: 7637870264311253367
+      player_equipment_up_8: -7293816028889403466
+      player_equipment_up_9: -634999190326712301
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

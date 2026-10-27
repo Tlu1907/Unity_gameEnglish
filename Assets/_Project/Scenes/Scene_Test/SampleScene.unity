@@ -1779,11 +1779,15 @@ MonoBehaviour:
     - rid: 2989111740876980225
       type: {class: Light2DProviderSources, ns: UnityEngine.Rendering.Universal, asm: Unity.RenderPipelines.Universal.2D.Runtime}
       data:
-        m_SelectedHashCode: 0
+        m_SelectedHashCode: 4
         m_SelectedSource:
           rid: -2
         m_Provider2DCache:
-          rid: -2
+          rid: 3745424236306235469
+    - rid: 3745424236306235469
+      type: {class: 'Provider2DCache`1[[UnityEngine.Rendering.Universal.Light2DProvider, Unity.RenderPipelines.Universal.2D.Runtime]]', ns: UnityEngine.Rendering.Universal, asm: Unity.RenderPipelines.Universal.2D.Runtime}
+      data:
+        m_Cache: []
 --- !u!4 &619394802
 Transform:
   m_ObjectHideFlags: 0
@@ -1824,6 +1828,7 @@ MonoBehaviour:
   openChestPrefab: {fileID: 2055102311959635369, guid: 48d90339465f4964aba55d7450552945, type: 3}
   questionId: 
   openAnimationTrigger: Open
+  requiresQuiz: 0
 --- !u!114 &661940782
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1839,6 +1844,7 @@ MonoBehaviour:
   question: {fileID: 11400000, guid: 82329655eaa89e44f849a0b97e0f9aa8, type: 2}
   questionText: {fileID: 369817914}
   relatedChest: {fileID: 0}
+  controller: {fileID: 0}
 --- !u!4 &717783469 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5381830279292389648, guid: fd7df843cd33c0a4889216b95fa08621, type: 3}
@@ -2325,6 +2331,7 @@ MonoBehaviour:
   openChestPrefab: {fileID: 2055102311959635369, guid: 48d90339465f4964aba55d7450552945, type: 3}
   questionId: 
   openAnimationTrigger: Open
+  requiresQuiz: 0
 --- !u!114 &897716149
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2340,6 +2347,7 @@ MonoBehaviour:
   question: {fileID: 11400000, guid: 04fe0fc74bfde1a4d8e208c63ba19a36, type: 2}
   questionText: {fileID: 0}
   relatedChest: {fileID: 0}
+  controller: {fileID: 0}
 --- !u!1 &977928055 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7605988075093954291, guid: 7e240fe4045d9f94a9317b528c1a8b60, type: 3}
@@ -5166,6 +5174,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6eeb6adc62028d14c98813bad3d58e0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PanelController
+  contentText: {fileID: 0}
+  feedbackText: {fileID: 0}
+  answerButtons: []
 --- !u!1001 &1300703561
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5849,6 +5860,7 @@ MonoBehaviour:
   openChestPrefab: {fileID: 2055102311959635369, guid: 48d90339465f4964aba55d7450552945, type: 3}
   questionId: 
   openAnimationTrigger: Open
+  requiresQuiz: 0
 --- !u!114 &1613181083
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5864,6 +5876,7 @@ MonoBehaviour:
   question: {fileID: 11400000, guid: 8783d60c5b7d1d74ca6de39b55cd481c, type: 2}
   questionText: {fileID: 0}
   relatedChest: {fileID: 0}
+  controller: {fileID: 0}
 --- !u!1 &1624654236
 GameObject:
   m_ObjectHideFlags: 0
@@ -6564,6 +6577,7 @@ MonoBehaviour:
   openChestPrefab: {fileID: 2055102311959635369, guid: 48d90339465f4964aba55d7450552945, type: 3}
   questionId: 
   openAnimationTrigger: Open
+  requiresQuiz: 0
 --- !u!114 &1913507966
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6579,6 +6593,7 @@ MonoBehaviour:
   question: {fileID: 11400000, guid: 4ac4fc8923171a44db5371694a7a5e3c, type: 2}
   questionText: {fileID: 0}
   relatedChest: {fileID: 0}
+  controller: {fileID: 0}
 --- !u!1001 &1937971145
 PrefabInstance:
   m_ObjectHideFlags: 0
