@@ -24,14 +24,14 @@ public class QuizTrigger : MonoBehaviour, IInteractable
         if (controller == null && searchScene) controller = FindAnyObjectByType<QuizController>(FindObjectsInactive.Include);
     }
     public void TryActivate() => Interact();
-    public void Interact()
+    public virtual void Interact()
     {
         if (isCompleted || !GameplayState.CanAct) return;
         if (controller == null) controller = QuizController.Instance;
         if (controller != null) controller.TryShowQuestion(question, HandleResult);
         else Debug.LogWarning("QuizTrigger requires a QuizController in the scene.", this);
     }
-    private void HandleResult(bool correct)
+    protected void HandleResult(bool correct)
     {
         if (!correct || isCompleted || this == null) return;
         isCompleted = true;

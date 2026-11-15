@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-public enum GameplayMode { Playing, Quiz, Paused, GameOver }
+public enum GameplayMode { Playing, Quiz, Paused, GameOver, Dialogue }
 
 public static class GameplayState
 {
@@ -10,9 +10,23 @@ public static class GameplayState
     public static event Action<GameplayMode> Changed;
     private static GameplayMode beforeQuiz;
     private static object quizOwner;
+    private static object dialogueOwner;
+    public static bool BeginDialogue(object owner)
+    {
+        if (owner == null || dialogueOwner != null || !CanAct) return false;
+        dialogueOwner = owner;
+        Set(GameplayMode.Dialogue);
+        return true;
+    }
+    public static void EndDialogue(object owner)
+    {
+        if (!ReferenceEquals(owner, dialogueOwner)) return;
+        dialogueOwner = null;
+        if (Current == GameplayMode.Dialogue) Set(GameplayMode.Playing);
+    }
     public static bool BeginQuiz(object owner)
     {
-        if (owner == null || quizOwner != null || Current == GameplayMode.GameOver) return false;
+        if (owner == null || quizOwner != null || Current == GameplayMode.GameOver || Current == GameplayMode.Dialogue) return false;
         beforeQuiz = Current;
         quizOwner = owner;
         Set(GameplayMode.Quiz);
@@ -35,5 +49,6 @@ public static class GameplayState
         beforeQuiz = GameplayMode.Playing;
         quizOwner = null;
         Changed = null;
+        dialogueOwner = null;
     }
 }

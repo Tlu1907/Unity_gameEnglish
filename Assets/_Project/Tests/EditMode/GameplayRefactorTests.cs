@@ -39,6 +39,245 @@ public sealed class GameplayRefactorTests
     }
 
     [Test]
+    public void PlayerSwingHitsOnlyForwardOncePerMonsterAndRespectsCooldown()
+    {
+        Component attack = Add("PlayerAttack");
+        Component visuals = attack.gameObject.AddComponent(RuntimeType("CharacterAnimation"));
+        Component inventory = attack.gameObject.AddComponent(RuntimeType("PlayerInventory"));
+        Call(visuals, "Face", Vector3.right);
+        Component front = Add("EnemyBrain");
+        Component back = Add("EnemyBrain");
+        Call(front, "EnsureComponents");
+        Call(back, "EnsureComponents");
+        Call(front, "OnDisable");
+        Call(front, "OnEnable");
+        front.transform.position = Vector3.right;
+        back.transform.position = Vector3.left;
+        front.gameObject.AddComponent<BoxCollider2D>();
+        back.gameObject.AddComponent<BoxCollider2D>();
+        var child = new GameObject("Extra monster collider");
+        child.transform.SetParent(front.transform, false);
+        child.AddComponent<BoxCollider2D>();
+        Component frontHealth = front.GetComponent(RuntimeType("Health"));
+        Component backHealth = back.GetComponent(RuntimeType("Health"));
+        Physics2D.SyncTransforms();
+        Assert.That(Call(attack, "TryAttack"), Is.EqualTo(true));
+        Assert.That(Value(frontHealth, "Current"), Is.EqualTo(75));
+        Assert.That(Value(backHealth, "Current"), Is.EqualTo(100));
+        Assert.That(Call(attack, "TryAttack"), Is.EqualTo(false));
+        Assert.That(Value(frontHealth, "Current"), Is.EqualTo(75));
+        Call(inventory, "SetEquipped", true);
+        Field(attack, "cooldown", 0f);
+        Call(attack, "TryAttack");
+        Assert.That(Value(frontHealth, "Current"), Is.EqualTo(25));
+        Field(attack, "cooldown", 0f);
+        Call(attack, "TryAttack");
+        Assert.That(Value(frontHealth, "IsDead"), Is.EqualTo(true));
+        Assert.That(front.gameObject.activeSelf, Is.EqualTo(false));
+    }
+
+    [Test]
+    public void PlayerCannotAttackThroughWallsOrDuringDialogue()
+    {
+        Component attack = Add("PlayerAttack");
+        Component motor = attack.gameObject.AddComponent(RuntimeType("GridMovement"));
+        Field(motor, "obstacleMask", (LayerMask)(1 << 6));
+        Component enemy = Add("EnemyBrain");
+        Call(enemy, "EnsureComponents");
+        enemy.transform.position = Vector3.down;
+        enemy.gameObject.AddComponent<BoxCollider2D>();
+        Component health = enemy.GetComponent(RuntimeType("Health"));
+        var wall = new GameObject("Wall");
+        wall.transform.SetParent(root.transform);
+        wall.layer = 6;
+        wall.transform.position = Vector3.down * .5f;
+        wall.AddComponent<BoxCollider2D>().size = new Vector2(1, .1f);
+        Physics2D.SyncTransforms();
+        Call(attack, "TryAttack");
+        Assert.That(Value(health, "Current"), Is.EqualTo(100));
+        wall.SetActive(false);
+        Physics2D.SyncTransforms();
+        Field(attack, "cooldown", 0f);
+        Static("GameplayState", "BeginDialogue", attack);
+        Assert.That(Call(attack, "TryAttack"), Is.EqualTo(false));
+        Assert.That(Value(health, "Current"), Is.EqualTo(100));
+    }
+
+    [Test]
+    public void MonsterAttackDealsThirtyAndCannotBypassCooldownByReenteringRange()
+    {
+        Component attack = Add("EnemyAttack");
+        Component health = Add("Health");
+        Assert.That(Call(attack, "TryAttack", health), Is.EqualTo(true));
+        Assert.That(Value(health, "Current"), Is.EqualTo(170));
+        Assert.That(attack.GetType().GetField("cooldown", Flags).GetValue(attack), Is.EqualTo(1.5f));
+        Assert.That(Call(attack, "TryAttack", health), Is.EqualTo(false));
+        health.transform.position = Vector3.right * 10;
+        Field(attack, "cooldown", 0f);
+        Assert.That(Call(attack, "TryAttack", health), Is.EqualTo(false));
+        health.transform.position = Vector3.zero;
+        Call(health, "SetArmorEquipped", true);
+        Assert.That(Call(attack, "TryAttack", health), Is.EqualTo(true));
+        Assert.That(Value(health, "Armor"), Is.EqualTo(70));
+        Assert.That(Value(health, "Current"), Is.EqualTo(170));
+        Field(attack, "cooldown", 0f);
+        Static("GameplayState", "Pause");
+        Assert.That(Call(attack, "TryAttack", health), Is.EqualTo(false));
+    }
+
+    [Test]
+    public void MonsterPatrolContainsExactlyTwentyFiveCells()
+    {
+        // Use an inactive object to inspect the patrol boundary without initializing gameplay.
+        var go = new GameObject("Patrol boundary");
+        go.transform.SetParent(root.transform);
+        go.SetActive(false);
+        Component brain = go.AddComponent(RuntimeType("EnemyBrain"));
+        int admitted = 0;
+        for (int x = -4; x <= 4; x++)
+            for (int y = -4; y <= 4; y++)
+                if ((bool)Call(brain, "IsInsidePatrolArea", new Vector2Int(x, y))) admitted++;
+        Assert.That(admitted, Is.EqualTo(25));
+        Assert.That(Call(brain, "IsInsidePatrolArea", new Vector2Int(3, 0)), Is.EqualTo(false));
+    }
+
+    [Test]
+    public void ArmorAbsorbsDamageBeforeHealthAndPassesOverflow()
+    {
+        Component health = Add("Health");
+        Assert.That(Value(health, "Armor"), Is.EqualTo(0));
+        Call(health, "SetArmorEquipped", true);
+        Assert.That(Value(health, "Armor"), Is.EqualTo(100));
+        Call(health, "TakeDamage", 30);
+        Assert.That(Value(health, "Armor"), Is.EqualTo(70));
+        Assert.That(Value(health, "Current"), Is.EqualTo(200));
+        Call(health, "SetArmorEquipped", true);
+        Assert.That(Value(health, "Armor"), Is.EqualTo(70));
+        Call(health, "TakeDamage", 90);
+        Assert.That(Value(health, "Armor"), Is.EqualTo(0));
+        Assert.That(Value(health, "Current"), Is.EqualTo(180));
+    }
+
+    [Test]
+    public void InventoryEquipmentGrantsAndRemovesArmor()
+    {
+        Component inventory = Add("PlayerInventory");
+        Component health = inventory.gameObject.AddComponent(RuntimeType("Health"));
+        Call(inventory, "SetEquipped", true);
+        Assert.That(Value(health, "Armor"), Is.EqualTo(100));
+        Call(inventory, "SetEquipped", false);
+        Assert.That(Value(health, "Armor"), Is.EqualTo(0));
+    }
+
+    [Test]
+    public void FlaskSessionKeepsGradeVisibleAndCompletesOnlyOnceOnClose()
+    {
+        float originalTimeScale = Time.timeScale;
+        var go = new GameObject("Flask quiz");
+        go.transform.SetParent(root.transform);
+        go.SetActive(false);
+        Component panel = go.AddComponent(RuntimeType("FlaskEnglishQuizPanel"));
+        Type textType = Type.GetType("TMPro.TextMeshProUGUI, Unity.TextMeshPro", true);
+        var status = new GameObject("Status", typeof(RectTransform), textType);
+        var result = new GameObject("Result", typeof(RectTransform), textType);
+        status.transform.SetParent(go.transform);
+        result.transform.SetParent(go.transform);
+        Field(panel, "statusText", status.GetComponent(textType));
+        Field(panel, "resultText", result.GetComponent(textType));
+        int completions = 0;
+        bool passed = false;
+        Field(panel, "completed", (Action<bool>)(value => { completions++; passed = value; }));
+        try
+        {
+            Assert.That(Static("FlaskEnglishQuizPanel", "IsReviewRequired", "{\"status\":\"review_required\"}"), Is.EqualTo(true));
+            Static("GameplayState", "BeginQuiz", panel);
+            Field(panel, "<IsSessionOpen>k__BackingField", true);
+            Field(panel, "previousTimeScale", .75f);
+            Time.timeScale = 0f;
+            Call(panel, "ReadGrade", "{\"status\":\"validated\",\"can_award_reward\":true,\"data\":{\"total_score\":8,\"max_score\":10,\"feedback_vi\":\"Good\",\"corrected_answer\":\"Answer\"}}");
+            Assert.That(completions, Is.EqualTo(0));
+            Assert.That(State, Is.EqualTo("Quiz"));
+            Assert.That(Value(panel, "CanAwardReward"), Is.EqualTo(true));
+            Call(panel, "OnDisable");
+            Call(panel, "OnDisable");
+            Assert.That(completions, Is.EqualTo(1));
+            Assert.That(passed, Is.EqualTo(true));
+            Assert.That(State, Is.EqualTo("Playing"));
+            Assert.That(Time.timeScale, Is.EqualTo(.75f));
+        }
+        finally { Time.timeScale = originalTimeScale; }
+    }
+
+    [Test]
+    public void IntroDialogueAdvancesSevenPairsAndRestoresTimeOnCloseOrDisable()
+    {
+        float originalTimeScale = Time.timeScale;
+        Component dialogue = Add("NPCIntroDialogue");
+        dialogue.gameObject.AddComponent<Canvas>().renderMode = RenderMode.ScreenSpaceOverlay;
+        var panel = new GameObject("DialoguePanel");
+        panel.transform.SetParent(dialogue.transform);
+        Type textType = Type.GetType("TMPro.TextMeshProUGUI, Unity.TextMeshPro", true);
+        var english = new GameObject("English", typeof(RectTransform), textType);
+        var vietnamese = new GameObject("Vietnamese", typeof(RectTransform), textType);
+        english.transform.SetParent(panel.transform);
+        vietnamese.transform.SetParent(panel.transform);
+        Component englishText = english.GetComponent(textType);
+        Component vietnameseText = vietnamese.GetComponent(textType);
+        Field(dialogue, "dialoguePanel", panel);
+        Field(dialogue, "englishText", englishText);
+        Field(dialogue, "vietnameseText", vietnameseText);
+        var data = UnityEditor.AssetDatabase.LoadAssetAtPath<ScriptableObject>(
+            "Assets/_Project/Data/Dialogues/Linh_CityIntro.asset");
+        Assert.That(data, Is.Not.Null);
+        Field(dialogue, "dialogue", data);
+        try
+        {
+            Time.timeScale = .75f;
+            Call(dialogue, "Open");
+            Assert.That(State, Is.EqualTo("Dialogue"));
+            Assert.That(Time.timeScale, Is.EqualTo(0f));
+            Assert.That(Value(englishText, "text"), Is.EqualTo("This is Linh. I work for the National Security Bureau."));
+            Assert.That(Value(vietnameseText, "text"), Is.EqualTo("Tôi là Linh. Tôi làm việc cho Cục An ninh Quốc gia."));
+            Assert.That(Value(dialogue, "IsTyping"), Is.EqualTo(true));
+            Assert.That(Value(englishText, "maxVisibleCharacters"), Is.EqualTo(0));
+            Call(dialogue, "RevealText", .1f);
+            Assert.That(Value(englishText, "maxVisibleCharacters"), Is.EqualTo(4));
+            Assert.That(Time.timeScale, Is.EqualTo(0f));
+            Call(dialogue, "Advance");
+            Assert.That(Value(dialogue, "IsTyping"), Is.EqualTo(false));
+            Assert.That(Value(englishText, "text"), Is.EqualTo("This is Linh. I work for the National Security Bureau."));
+            Assert.That(Value(englishText, "maxVisibleCharacters"), Is.EqualTo(int.MaxValue));
+            Assert.That(Static("GameplayState", "BeginQuiz", new object()), Is.EqualTo(false));
+            Static("GameplayState", "EndDialogue", new object());
+            Assert.That(State, Is.EqualTo("Dialogue"));
+            string previous = (string)Value(englishText, "text");
+            for (int i = 0; i < 6; i++)
+            {
+                Call(dialogue, "Advance");
+                Assert.That(Value(dialogue, "IsTyping"), Is.EqualTo(true));
+                Call(dialogue, "RevealText", 100f);
+                Assert.That(Value(dialogue, "IsTyping"), Is.EqualTo(false));
+                string current = (string)Value(englishText, "text");
+                Assert.That(current, Is.Not.EqualTo(previous));
+                Assert.That(Value(vietnameseText, "text"), Is.Not.Empty);
+                previous = current;
+                Assert.That(Value(dialogue, "IsOpen"), Is.EqualTo(true));
+            }
+            Assert.That(previous, Is.EqualTo("Go to the park and check the object. Take any items you find inside."));
+            Call(dialogue, "Advance");
+            Assert.That(panel.activeSelf, Is.EqualTo(false));
+            Assert.That(State, Is.EqualTo("Playing"));
+            Assert.That(Time.timeScale, Is.EqualTo(.75f));
+            Call(dialogue, "Open");
+            Static("GameplayState", "GameOver");
+            Call(dialogue, "OnDisable");
+            Assert.That(State, Is.EqualTo("GameOver"));
+            Assert.That(Time.timeScale, Is.EqualTo(.75f));
+        }
+        finally { Call(dialogue, "Close"); Time.timeScale = originalTimeScale; }
+    }
+
+    [Test]
     public void PhysicsPlayerUsesVelocityAndStopsOnReleasePauseAndInvalidGround()
     {
         Component motor = Add("GridMovement");
@@ -226,6 +465,7 @@ public sealed class GameplayRefactorTests
             // Leave the renderer unassigned to exercise discovery on a child Visual.
             Field(chest, "openedSprite", opened);
             Component interaction = chest.gameObject.AddComponent(RuntimeType("ChestQuizInteraction"));
+            Field(interaction, "useFlaskQuiz", false);
             Field(interaction, "question", question);
             Field(interaction, "controller", controller);
             Field(interaction, "retryDelay", 0f);

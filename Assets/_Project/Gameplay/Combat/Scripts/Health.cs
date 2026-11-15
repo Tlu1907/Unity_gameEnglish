@@ -6,11 +6,24 @@ public sealed class Health : MonoBehaviour, IDamageable
 {
     [SerializeField] private int maximum = 200;
     [SerializeField] private int current = 200;
+    [SerializeField, Min(1)] private int maximumArmor = 100;
+    [SerializeField] private int armor;
+    private bool armorEquipped;
+    public int MaximumArmor => maximumArmor;
+    public int Armor => armor;
+    public event Action<int> ArmorChanged;
     public int Maximum => maximum;
     public int Current => current;
     public bool IsDead => current <= 0;
     public event Action<int> Changed;
     public event Action Died;
+    public void SetArmorEquipped(bool equipped)
+    {
+        if (armorEquipped == equipped) return;
+        armorEquipped = equipped;
+        armor = equipped ? maximumArmor : 0;
+        ArmorChanged?.Invoke(armor);
+    }
     public void Configure(int maxHealth, int currentHealth)
     {
         maximum = Mathf.Max(1, maxHealth);
@@ -19,6 +32,14 @@ public sealed class Health : MonoBehaviour, IDamageable
     public void TakeDamage(int amount)
     {
         if (!GameplayState.CanAct || IsDead || amount <= 0) return;
+        int absorbed = Mathf.Min(armor, amount);
+        if (absorbed > 0)
+        {
+            armor -= absorbed;
+            amount -= absorbed;
+            ArmorChanged?.Invoke(armor);
+        }
+        if (amount == 0) return;
         current = Mathf.Max(0, current - amount);
         Changed?.Invoke(current);
         if (IsDead) Died?.Invoke();

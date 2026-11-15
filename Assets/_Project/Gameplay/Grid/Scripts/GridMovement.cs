@@ -19,6 +19,8 @@ public sealed class GridMovement : MonoBehaviour
     public bool UsesPhysicsMovement { get; private set; }
     public bool IsMoving { get; private set; }
     public Tilemap Ground => groundTilemap;
+    public SpriteRenderer WalkableBackground => walkableBackground;
+    public void SetWalkableBackground(SpriteRenderer background) => walkableBackground = background;
     public float GridSize => gridSize;
     public LayerMask Obstacles => obstacleMask;
     public event Action StepCompleted;

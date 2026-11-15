@@ -113,6 +113,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ChestQuizInteraction
   question: {fileID: 11400000, guid: 82329655eaa89e44f849a0b97e0f9aa8, type: 2}
   controller: {fileID: 0}
+  useFlaskQuiz: 1
+  flaskPanel: {fileID: 0}
   retryDelay: 0.5
 --- !u!1 &9216250757987405876
 GameObject:

@@ -49,9 +49,12 @@ public class PlayerMovement : MonoBehaviour
             gameObject.AddComponent<GridMovement>().Configure(groundTilemap, obstacleMask, gridSize);
         if (!TryGetComponent<Health>(out _)) gameObject.AddComponent<Health>().Configure(maxHealth, currentHealth);
         if (!TryGetComponent<PlayerInventory>(out _)) gameObject.AddComponent<PlayerInventory>().SetItem(currentItem);
+        if (!TryGetComponent<PlayerArmorBar>(out _)) gameObject.AddComponent<PlayerArmorBar>();
         if (!TryGetComponent<PlayerAppearance>(out _)) gameObject.AddComponent<PlayerAppearance>();
         if (!TryGetComponent<PlayerInteractor>(out _)) gameObject.AddComponent<PlayerInteractor>();
         if (!TryGetComponent<PlayerInputReader>(out _)) gameObject.AddComponent<PlayerInputReader>().Configure(speed);
+        if (!TryGetComponent<PlayerAttack>(out _)) gameObject.AddComponent<PlayerAttack>();
+        if (!TryGetComponent<PlayerGroundShadow>(out _)) gameObject.AddComponent<PlayerGroundShadow>();
         GridMovement motor = GetComponent<GridMovement>();
         if (motor.Ground == null && groundTilemap != null) motor.Configure(groundTilemap, motor.Obstacles, motor.GridSize);
     }

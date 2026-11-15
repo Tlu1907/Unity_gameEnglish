@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2598e857b284925a344cfeb3fb12f50, type: 3}
+  m_Name: ScientistDialogue
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueData
+  speakerName: Scientist
+  portrait: {fileID: 6997741227164693895, guid: 9c358807b99b5d943b5939d0c7833aec, type: 3}
+  continuePrompt: "Nh\u1EA5n C \u0111\u1EC3 ti\u1EBFp t\u1EE5c"
+  closePrompt: "Nh\u1EA5n C \u0111\u1EC3 \u0111\xF3ng"
+  lines:
+  - english: Hello! Use WASD to move around the city.
+    vietnamese: "Xin ch\xE0o! D\xF9ng WASD \u0111\u1EC3 di chuy\u1EC3n trong th\xE0nh
+      ph\u1ED1."
+  - english: Answer questions to open chests. Equip your gear to gain 100 armor.
+    vietnamese: "Tr\u1EA3 l\u1EDDi c\xE2u h\u1ECFi \u0111\u1EC3 m\u1EDF r\u01B0\u01A1ng.
+      Trang b\u1ECB v\u1EADt ph\u1EA9m \u0111\u1EC3 nh\u1EADn 100 gi\xE1p."

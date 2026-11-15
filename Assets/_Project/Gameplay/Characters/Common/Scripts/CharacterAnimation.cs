@@ -15,6 +15,7 @@ public sealed class CharacterAnimation : MonoBehaviour
     private static readonly int FaceY = Animator.StringToHash("FaceY");
     private static readonly int IsMoving = Animator.StringToHash("IsMoving");
     public Animator Animator => animator;
+    public Vector2 Facing => facing;
     private void Awake() => RefreshController();
     private void Start() => RefreshController();
     private void OnEnable() => GameplayState.Changed += OnStateChanged;
