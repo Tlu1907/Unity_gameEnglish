@@ -1,0 +1,260 @@
+{
+  "npcs": [
+    {
+      "id": "Hai",
+      "name": "Bác Hải — Trưởng ga",
+      "x": 720,
+      "y": 315,
+      "stages": [
+        {
+          "lines": [
+            {
+              "english": "Linh said a rescue worker was coming. Since the strange object fell, words have vanished from Lexi.",
+              "vietnamese": "Linh báo sẽ có người đến cứu hộ. Từ khi vật thể lạ rơi xuống, chữ trong thị trấn Lexi cứ biến mất."
+            },
+            {
+              "english": "Recover the letter fragments in all twelve chests. We need the station board to guide people to the evacuation train.",
+              "vietnamese": "Hãy tìm các mảnh chữ trong đủ 12 rương. Bảng ga cần sáng lại để hướng dẫn người dân lên tàu sơ tán."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "english": "Some letters are back on the board! Keep going.",
+              "vietnamese": "Bảng ga đã hiện lại vài chữ rồi! Cố lên nhé, 'Keep going'."
+            },
+            {
+              "english": "The residents call those creatures Error Dust. Please help anyone you meet.",
+              "vietnamese": "Người dân gọi lũ sinh vật ấy là Bụi Lỗi. Trên đường đi, nhớ giúp mọi người nhé."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "english": "The station board is readable again. We can prepare the evacuation train.",
+              "vietnamese": "Bảng ga đã rõ chữ trở lại. Chúng tôi có thể chuẩn bị chuyến tàu sơ tán."
+            },
+            {
+              "english": "Before you leave, speak to the man in gray on the right of the station.",
+              "vietnamese": "Trước khi đi, hãy gặp người áo xám bên phải sân ga."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Ti",
+      "name": "Tí — Cậu bé bán báo",
+      "x": 230,
+      "y": 360,
+      "stages": [
+        {
+          "lines": [
+            {
+              "english": "Today's newspaper is full of empty spaces! Even the headlines have disappeared.",
+              "vietnamese": "Báo hôm nay toàn ô trống! Cả những dòng tít lớn cũng biến mất rồi."
+            },
+            {
+              "english": "Hide in the leafy bushes if Error Dust follows you. Stay quiet.",
+              "vietnamese": "Nếu Bụi Lỗi đuổi theo, anh có thể nấp trong bụi cây rậm. 'Stay quiet' — hãy giữ yên lặng."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "english": "Uncle Ba made the orange traps. Lure the creatures onto them to gain some time.",
+              "vietnamese": "Chú Ba làm những cái bẫy màu cam đấy. Dụ quái giẫm vào để có thêm thời gian chạy đi."
+            },
+            {
+              "english": "Watch your step, and look for more chests!",
+              "vietnamese": "Cẩn thận nhé, rồi tìm thêm các rương nữa!"
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "english": "The newspaper has words again! Today's headline is: Hello again, Lexi.",
+              "vietnamese": "Báo có chữ trở lại rồi! Trang nhất hôm nay là: 'Hello again, Lexi'."
+            },
+            {
+              "english": "Thank you for helping our town.",
+              "vietnamese": "Cảm ơn anh đã giúp thị trấn của chúng em."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Ba",
+      "name": "Chú Ba — Thợ máy",
+      "x": 270,
+      "y": 835,
+      "stages": [
+        {
+          "lines": [
+            {
+              "english": "I built the orange traps to hold the creatures for four seconds.",
+              "vietnamese": "Những bẫy cam này chú tự chế, giữ quái đứng yên trong bốn giây."
+            },
+            {
+              "english": "You can walk across safely. After a trap rests, it will work again.",
+              "vietnamese": "Cháu cứ đi qua an toàn. Đợi bẫy hồi lại rồi nó sẽ hoạt động tiếp."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "english": "I see more Error Dust near the lake. Many forgotten words gather there.",
+              "vietnamese": "Chú thấy nhiều Bụi Lỗi quanh hồ. Hình như những từ bị quên đang tụ về đó."
+            },
+            {
+              "english": "Do not rush. Use a bush or a trap when you need a break.",
+              "vietnamese": "Đừng vội. Hãy dùng bụi cây hoặc bẫy khi cần một khoảng nghỉ."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "english": "The labels on my tools are back. Repairs will be much easier now.",
+              "vietnamese": "Chữ trên đồ nghề đã hiện lại rồi. Giờ sửa chữa sẽ dễ hơn nhiều."
+            },
+            {
+              "english": "Thank you. I will help get the vehicles ready for the residents.",
+              "vietnamese": "Cảm ơn cháu. Chú sẽ chuẩn bị xe để giúp người dân di chuyển."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Man",
+      "name": "Bà Mận",
+      "x": 1000,
+      "y": 600,
+      "stages": [
+        {
+          "lines": [
+            {
+              "english": "People used to write letters beside this lake.",
+              "vietnamese": "Ngày trước, mọi người thường ngồi viết thư bên bờ hồ này."
+            },
+            {
+              "english": "A kind word can stay with someone for a long time.",
+              "vietnamese": "Một lời nói tử tế có thể ở lại trong lòng người rất lâu."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "english": "Some say the lake keeps words that people never got to say.",
+              "vietnamese": "Có người bảo hồ giữ những lời chưa kịp nói."
+            },
+            {
+              "english": "Perhaps the Error Dust carries forgotten words. I wonder what it remembers.",
+              "vietnamese": "Có lẽ Bụi Lỗi mang theo những từ bị bỏ quên. Bà tự hỏi chúng còn nhớ điều gì."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "english": "I can read the names by the lake again. Hello, old friends.",
+              "vietnamese": "Bà lại đọc được những cái tên bên hồ rồi. 'Hello, old friends' — chào những người bạn cũ."
+            },
+            {
+              "english": "Thank you for listening, not just passing by.",
+              "vietnamese": "Cảm ơn cháu vì đã lắng nghe, chứ không chỉ đi ngang qua."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Lan",
+      "name": "Lan — Sinh viên",
+      "x": 680,
+      "y": 795,
+      "stages": [
+        {
+          "lines": [
+            {
+              "english": "I arrived on the last train before the emergency. I am waiting here for help.",
+              "vietnamese": "Tớ đến trên chuyến tàu cuối trước khi có báo động. Tớ đang chờ được giúp đỡ ở đây."
+            },
+            {
+              "english": "I study English, but the words in my notebook are fading.",
+              "vietnamese": "Tớ học tiếng Anh, nhưng chữ trong cuốn sổ cứ nhạt dần."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "english": "Some words are coming back. Your letter fragments seem to help.",
+              "vietnamese": "Một vài từ đang hiện lại. Những mảnh chữ cậu tìm được có vẻ đang giúp ích."
+            },
+            {
+              "english": "One step at a time. We can get through this.",
+              "vietnamese": "'One step at a time' — cứ từng bước một. Chúng ta sẽ vượt qua chuyện này."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "english": "Hello, nice to meet you. I can read my notes again!",
+              "vietnamese": "'Hello, nice to meet you.' Tớ đọc được cuốn sổ của mình rồi!"
+            },
+            {
+              "english": "I will help the other students reach the station. Thank you.",
+              "vietnamese": "Tớ sẽ giúp các bạn sinh viên khác đến ga. Cảm ơn cậu."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Gray",
+      "name": "Người áo xám",
+      "x": 900,
+      "y": 340,
+      "gray": true,
+      "stages": [
+        {
+          "lines": []
+        },
+        {
+          "lines": [
+            {
+              "english": "Every letter you carry was once part of someone's memory.",
+              "vietnamese": "Mỗi mảnh chữ cậu mang theo từng là một phần ký ức của ai đó."
+            },
+            {
+              "english": "If the creatures carry forgotten words, what disappears when they fall?",
+              "vietnamese": "Nếu những sinh vật ấy mang các từ bị quên, điều gì sẽ mất đi khi chúng gục xuống?"
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "english": "The town can read again, and its people may leave. But who will remember Lexi?",
+              "vietnamese": "Thị trấn đã đọc được chữ, và người dân có thể rời đi. Nhưng ai sẽ nhớ Lexi?"
+            },
+            {
+              "english": "Goodbye does not mean forgetting.",
+              "vietnamese": "... 'Goodbye' không có nghĩa là quên."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

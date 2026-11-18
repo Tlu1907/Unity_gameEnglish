@@ -2,6 +2,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
+public enum EnemyBehaviour { Chaser, Patrol, Guard }
+
 public class EnemyBrain : MonoBehaviour
 {
     [SerializeField] private GameObject player;
@@ -14,6 +16,42 @@ public class EnemyBrain : MonoBehaviour
     [SerializeField] private bool useAnimator = true;
     [SerializeField] private string runParameterName = "IsRunning";
     [SerializeField, HideInInspector] private int migrationVersion;
+    [SerializeField] private EnemyBehaviour behaviour;
+    [SerializeField] private Vector2[] patrolOffsets = new Vector2[0];
+    [SerializeField, Min(1)] private int patrolRadius = 2;
+    [SerializeField, Min(0)] private float loseSightSeconds = 3f;
+    private int waypoint;
+    private float memoryRemaining;
+    private float immobilizedRemaining;
+    private PlayerHidingState hiding;
+    public bool IsImmobilized => immobilizedRemaining > 0;
+    public float ImmobilizedRemaining => immobilizedRemaining;
+    public void Immobilize(float seconds)
+    {
+        if (health != null && health.IsDead) return;
+        immobilizedRemaining = Mathf.Max(immobilizedRemaining, seconds);
+        var animator = GetComponent<CharacterAnimation>()?.Animator;
+        if (animator != null && IsImmobilized) animator.speed = 0;
+    }
+    [SerializeField, Min(.5f)] private float personalSpace = 1.1f;
+    private Vector3 PlayerFeet => target != null ? EnemyAttack.GroundPosition(target) : player != null ? player.transform.position : Vector3.zero;
+    public bool CanOccupy(Vector3 position)
+    {
+        if (player == null || target == null || target.IsDead) return true;
+        float distance = Vector2.Distance(position, PlayerFeet);
+        // Allow a trapped enemy to retreat, but never let it advance into the player's space.
+        return distance >= personalSpace || distance > Vector2.Distance(transform.position, PlayerFeet) + .001f;
+    }
+    private float alertRemaining;
+    public bool IsAlerted => alertRemaining > 0;
+    public void Alert(float seconds)
+    {
+        if (health != null && health.IsDead) return;
+        alertRemaining = Mathf.Max(alertRemaining, seconds);
+    }
+    private Vector2Int lastSeen;
+    public EnemyBehaviour Behaviour => behaviour;
+    public bool IsChasing { get; private set; }
     private GridMovement movement;
     private EnemyAttack attack;
     private Health target;
@@ -58,6 +96,7 @@ public class EnemyBrain : MonoBehaviour
             if (player != null)
             {
                 target = player.GetComponent<Health>();
+                hiding = player.GetComponent<PlayerHidingState>();
                 GridMovement playerMotor = player.GetComponent<GridMovement>();
                 if (playerMotor != null)
                 {
@@ -69,18 +108,50 @@ public class EnemyBrain : MonoBehaviour
             }
             initialized = true;
         }
-        if (!GameplayState.CanAct || movement.IsMoving || Time.time < retryAt) return;
-        Vector2Int current = Cell(transform.position);
-        if (target != null && !target.IsDead && player.activeInHierarchy &&
-            Vector2.Distance(transform.position, player.transform.position) <= chaseRangeTiles * gridSize)
+        if (!GameplayState.CanAct) return;
+        if (IsImmobilized)
         {
-            if (attack.IsInRange(target))
+            immobilizedRemaining = Mathf.Max(0, immobilizedRemaining - Time.deltaTime);
+            return;
+        }
+        bool concealed = hiding != null && hiding.IsHidden && Vector2.Distance(transform.position, PlayerFeet) > gridSize;
+        if (concealed) { memoryRemaining = 0; alertRemaining = 0; }
+        bool alerted = alertRemaining > 0;
+        alertRemaining = Mathf.Max(0, alertRemaining - Time.deltaTime);
+        bool visible = !concealed && target != null && !target.IsDead && player.activeInHierarchy
+            && (alerted || (behaviour == EnemyBehaviour.Chaser && Distance(Cell(transform.position), Cell(PlayerFeet)) <= chaseRangeTiles));
+        if (visible) { lastSeen = Cell(PlayerFeet); memoryRemaining = loseSightSeconds; }
+        else memoryRemaining = Mathf.Max(0, memoryRemaining - Time.deltaTime);
+        IsChasing = alerted || (behaviour == EnemyBehaviour.Chaser && (visible || memoryRemaining > 0));
+        if (attack.IsAttacking || movement.IsMoving || Time.time < retryAt) return;
+        Vector2Int current = Cell(transform.position);
+        if (target != null && !target.IsDead && Vector2.Distance(transform.position, PlayerFeet) < personalSpace - .15f)
+        {
+            foreach (var direction in Directions)
             {
-                GetComponent<CharacterAnimation>()?.Face(player.transform.position - transform.position);
-                attack.TryAttack(target);
-                return;
+                Vector3 next = transform.position + (Vector3)(Vector2)direction * gridSize;
+                if (Vector2.Distance(next, PlayerFeet) <= Vector2.Distance(transform.position, PlayerFeet)) continue;
+                if (movement.IsWalkable(next) && CanOccupy(next) && movement.TryMove(next - transform.position, patrolSpeed)) return;
             }
-            MoveToward(current, Cell(player.transform.position), chaseSpeed);
+            return;
+        }
+        if (!concealed && target != null && attack.IsInRange(target))
+        {
+            GetComponent<CharacterAnimation>()?.Face(PlayerFeet - transform.position);
+            attack.TryAttack(target);
+            return;
+        }
+        if (IsChasing)
+        {
+            if (!visible || !attack.IsInRange(target)) MoveToward(current, lastSeen, chaseSpeed);
+            return;
+        }
+        if (patrolOffsets != null && patrolOffsets.Length > 0)
+        {
+            Vector2 p = patrolOffsets[waypoint % patrolOffsets.Length];
+            Vector2Int goal = new Vector2Int(Mathf.RoundToInt(p.x), Mathf.RoundToInt(p.y));
+            if (current == goal) { waypoint = (waypoint + 1) % patrolOffsets.Length; return; }
+            MoveToward(current, goal, patrolSpeed);
             return;
         }
         if (!IsInsidePatrolArea(current))
@@ -92,13 +163,13 @@ public class EnemyBrain : MonoBehaviour
         for (int i = 0; i < Directions.Length; i++)
         {
             Vector2Int next = current + Directions[(start + i) % Directions.Length];
-            if (IsInsidePatrolArea(next) && movement.IsWalkable(World(next)) &&
+            if (IsInsidePatrolArea(next) && movement.IsWalkable(World(next)) && CanOccupy(World(next)) &&
                 movement.TryMove(World(next) - transform.position, patrolSpeed)) return;
         }
         retryAt = Time.time + .25f;
     }
     // Exactly five cells on each axis, centered on the spawn cell.
-    private bool IsInsidePatrolArea(Vector2Int cell) => Mathf.Abs(cell.x) <= 2 && Mathf.Abs(cell.y) <= 2;
+    private bool IsInsidePatrolArea(Vector2Int cell) => Mathf.Abs(cell.x) <= patrolRadius && Mathf.Abs(cell.y) <= patrolRadius;
     private Vector2Int Cell(Vector3 position) => new Vector2Int(
         Mathf.RoundToInt((position.x - origin.x) / gridSize),
         Mathf.RoundToInt((position.y - origin.y) / gridSize));
@@ -121,7 +192,7 @@ public class EnemyBrain : MonoBehaviour
             {
                 Vector2Int next = cell + direction;
                 if (firstStep.ContainsKey(next) || Mathf.Abs(next.x - current.x) > 16 ||
-                    Mathf.Abs(next.y - current.y) > 16 || !movement.IsWalkable(World(next))) continue;
+                    Mathf.Abs(next.y - current.y) > 16 || !movement.IsWalkable(World(next)) || !CanOccupy(World(next))) continue;
                 firstStep[next] = cell == current ? next : firstStep[cell];
                 queue.Enqueue(next);
                 int distance = Distance(next, goal);

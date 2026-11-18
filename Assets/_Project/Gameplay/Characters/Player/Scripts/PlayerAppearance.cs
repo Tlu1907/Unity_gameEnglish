@@ -48,11 +48,7 @@ public sealed class PlayerAppearance : MonoBehaviour
             return;
         }
         RuntimeAnimatorController desired = baseController;
-        if (inventory.HasWeapon)
-        {
-            if (HasCompleteOverrides()) desired = equippedController;
-            else Warn("Player_Equipped must use Base Controller and override all eight U_ clips with matching E_ clips. Keeping unequipped visuals.");
-        }
+        // Equipment is a separate sprite; keep the original body and all eight base animations.
         if (animator.runtimeAnimatorController == desired) return;
         // Both controllers share the same state machine, so Unity retains the current state.
         animator.runtimeAnimatorController = desired;

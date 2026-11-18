@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2598e857b284925a344cfeb3fb12f50, type: 3}
+  m_Name: Ba_A
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueData
+  speakerName: "BA \u2014 K\u1EF9 thu\u1EADt c\u1EE9u h\u1ED9"
+  portrait: {fileID: 3797019372818277767, guid: d9cd513cc127c82479931333a891b8db, type: 3}
+  continuePrompt: "Nh\u1EA5n C \u0111\u1EC3 ti\u1EBFp t\u1EE5c"
+  closePrompt: "Nh\u1EA5n C \u0111\u1EC3 \u0111\xF3ng"
+  lines:
+  - english: I maintain the traps for the rescue team. Lure monsters onto the orange
+      spikes.
+    vietnamese: "T\xF4i ph\u1EE5 tr\xE1ch b\u1EABy cho \u0111\u1ED9i c\u1EE9u h\u1ED9.
+      H\xE3y d\u1EE5 qu\xE1i l\xEAn b\u1EABy gai m\xE0u cam."
+  - english: Correct answers release supplies. Pick them up before moving on.
+    vietnamese: "Tr\u1EA3 l\u1EDDi \u0111\xFAng \u0111\u1EC3 m\u1EDF ti\u1EBFp t\u1EBF.
+      Nh\u1EB7t v\u1EADt ph\u1EA9m r\u1ED3i h\xE3y \u0111i ti\u1EBFp."

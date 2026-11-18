@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2598e857b284925a344cfeb3fb12f50, type: 3}
+  m_Name: Hai_B
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueData
+  speakerName: "B\xE1c H\u1EA3i \u2014 Tr\u01B0\u1EDFng ga"
+  portrait: {fileID: 3640663352827712068, guid: d9cd513cc127c82479931333a891b8db, type: 3}
+  continuePrompt: "Nh\u1EA5n C \u0111\u1EC3 ti\u1EBFp t\u1EE5c"
+  closePrompt: "Nh\u1EA5n C \u0111\u1EC3 \u0111\xF3ng"
+  lines:
+  - english: Some letters are back on the board! Keep going.
+    vietnamese: "B\u1EA3ng ga \u0111\xE3 hi\u1EC7n l\u1EA1i v\xE0i ch\u1EEF r\u1ED3i!
+      C\u1ED1 l\xEAn nh\xE9, 'Keep going'."
+  - english: The residents call those creatures Error Dust. Please help anyone you
+      meet.
+    vietnamese: "Ng\u01B0\u1EDDi d\xE2n g\u1ECDi l\u0169 sinh v\u1EADt \u1EA5y l\xE0
+      B\u1EE5i L\u1ED7i. Tr\xEAn \u0111\u01B0\u1EDDng \u0111i, nh\u1EDB gi\xFAp m\u1ECDi
+      ng\u01B0\u1EDDi nh\xE9."

@@ -11,7 +11,7 @@ public sealed class NPCDialogueTrigger : MonoBehaviour
         new HashSet<Collider2D>();
 
     private bool played;
-    private bool activatedThisVisit;
+
 
     private void Start()
     {
@@ -32,38 +32,31 @@ public sealed class NPCDialogueTrigger : MonoBehaviour
     {
         contacts.Remove(other);
 
-        if (contacts.Count == 0)
-            activatedThisVisit = false;
+
+    
     }
 
-    private void Update()
+    public bool CanTalk => isActiveAndEnabled && !(onlyOnce && played) && dialogueUI != null && dialogueData != null;
+    public string SpeakerName => dialogueData != null ? dialogueData.speakerName : "NPC";
+    public bool TryTalk()
     {
-        contacts.RemoveWhere(c =>
-            c == null || !c.enabled || !c.gameObject.activeInHierarchy);
-
-        if (contacts.Count == 0)
-        {
-            activatedThisVisit = false;
-            return;
-        }
-
-        if (activatedThisVisit || (onlyOnce && played) ||
-            !GameplayState.CanAct || dialogueUI == null ||
-            dialogueData == null)
-            return;
+        if (!CanTalk || !GameplayState.CanAct || dialogueUI.IsOpen) return false;
 
         dialogueUI.ShowDialogue(dialogueData);
 
         if (dialogueUI.IsOpen)
         {
             played = true;
-            activatedThisVisit = true;
+
+            return true;
         }
+        return false;
     }
 
     private void OnDisable()
     {
         contacts.Clear();
-        activatedThisVisit = false;
+
     }
 }
+

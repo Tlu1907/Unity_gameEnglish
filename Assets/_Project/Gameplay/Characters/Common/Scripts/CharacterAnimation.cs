@@ -57,7 +57,7 @@ public sealed class CharacterAnimation : MonoBehaviour
     private void OnStateChanged(GameplayMode mode) => Apply();
     private void Apply()
     {
-        if (!useAnimator || animator == null || animator.runtimeAnimatorController == null) return;
+        if (!useAnimator || animator == null || !animator.isActiveAndEnabled || !animator.isInitialized || animator.runtimeAnimatorController == null) return;
         if (directional)
         {
             animator.SetFloat(FaceX, facing.x);

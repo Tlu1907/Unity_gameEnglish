@@ -12,7 +12,10 @@ public sealed class GridMovement : MonoBehaviour
     [Tooltip("Optional bounds for sprite-based maps with an empty Ground Tilemap. Painted Tilemaps remain authoritative.")]
     [SerializeField] private SpriteRenderer walkableBackground;
     private CharacterAnimation visuals;
+    private EnemyBrain enemy;
     private Rigidbody2D body;
+    private Collider2D feetCollider;
+    private CityTerrain terrain;
     private Vector2 inputDirection;
     private float inputSpeed;
     public Vector2 MovementInput => inputDirection;
@@ -27,6 +30,9 @@ public sealed class GridMovement : MonoBehaviour
     private void Awake()
     {
         visuals = GetComponent<CharacterAnimation>();
+        enemy = GetComponent<EnemyBrain>();
+        feetCollider = GetComponent<Collider2D>();
+        terrain = FindAnyObjectByType<CityTerrain>();
         if (GetComponent<PlayerMovement>() != null || GetComponent<PlayerInputReader>() != null)
             EnablePlayerPhysics();
     }
@@ -71,8 +77,12 @@ public sealed class GridMovement : MonoBehaviour
     {
         if (!UsesPhysicsMovement || body == null) return;
         Vector2 velocity = GameplayState.CanAct ? inputDirection * inputSpeed : Vector2.zero;
+        Vector2 feet = feetCollider != null ? (Vector2)feetCollider.bounds.center : body.position;
+        if (terrain != null) velocity *= terrain.SpeedMultiplier(feet);
         // Map admission remains separate from solid collision, which Physics2D now resolves.
-        if (velocity != Vector2.zero && !HasGround(body.position + velocity * Time.fixedDeltaTime))
+        Vector2 nextFeet = feet + velocity * Time.fixedDeltaTime;
+        bool admitted = terrain != null ? terrain.ContainsSurface(nextFeet) : HasGround(nextFeet);
+        if (velocity != Vector2.zero && !admitted)
             velocity = Vector2.zero;
         body.linearVelocity = velocity;
     }
@@ -109,7 +119,7 @@ public sealed class GridMovement : MonoBehaviour
     public bool TryMove(Vector3 direction, float speed, bool admittedByInteraction = false)
     {
         if (UsesPhysicsMovement) return false;
-        if (!GameplayState.CanAct || IsMoving || speed <= 0f || gridSize <= 0f || direction == Vector3.zero) return false;
+        if (!isActiveAndEnabled || !GameplayState.CanAct || (enemy != null && enemy.IsImmobilized) || IsMoving || speed <= 0f || gridSize <= 0f || direction == Vector3.zero) return false;
         // Keep every caller on cardinal cells; never normalize a diagonal into an off-grid target.
         direction = Mathf.Abs(direction.x) > Mathf.Abs(direction.y)
             ? new Vector3(Mathf.Sign(direction.x), 0f, 0f)
@@ -129,8 +139,12 @@ public sealed class GridMovement : MonoBehaviour
         while (transform.position != target)
         {
             Vector3 previous = transform.position;
-            if (GameplayState.CanAct)
-                transform.position = Vector3.MoveTowards(transform.position, target, speed * Time.deltaTime);
+            if (GameplayState.CanAct && (enemy == null || !enemy.IsImmobilized))
+            {
+                Vector3 next = Vector3.MoveTowards(transform.position, target, speed * Time.deltaTime);
+                if (enemy != null && !enemy.CanOccupy(next)) break;
+                transform.position = next;
+            }
             visuals?.SetMoving(transform.position != previous);
             yield return null;
         }

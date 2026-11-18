@@ -12,6 +12,8 @@ public class Chest : MonoBehaviour, IInteractable
     private Animator animator;
     private bool isOpened;
     private bool unlocked;
+    private bool failedQuestion;
+    public bool AllowsReward => !failedQuestion;
     public bool IsOpened => isOpened;
     public bool IsLocked => (requiresQuiz || !string.IsNullOrEmpty(questionId)) && !unlocked;
     public event Action Opened;
@@ -30,7 +32,16 @@ public class Chest : MonoBehaviour, IInteractable
     }
     public void UnlockForQuestion(QuestionData question)
     {
+        if (isOpened) return;
         if (question == null || string.IsNullOrEmpty(questionId) || question.id != questionId) return;
+        unlocked = true;
+        Open();
+    }
+    public void FinishFailedQuestion(QuestionData question)
+    {
+        if (isOpened || question == null || string.IsNullOrEmpty(questionId) || question.id != questionId) return;
+        // Set before Opened fires: progress advances, but reward listeners must not spawn loot.
+        failedQuestion = true;
         unlocked = true;
         Open();
     }
