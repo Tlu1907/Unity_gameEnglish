@@ -104,3 +104,6 @@ crashlytics-build.properties
 /Assets/_Project/Editor/StoryNPCSetup.cs.meta
 /Assets/_Project/Editor/StoryNPCValidation.cs
 /Assets/_Project/Editor/StoryNPCValidation.cs.meta
+
+/Assets/_Project/Editor/PlayerMeleeRegression.cs
+/Assets/_Project/Editor/PlayerMeleeRegression.cs.meta

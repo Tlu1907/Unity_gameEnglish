@@ -8,7 +8,7 @@ public sealed class PlayerAttack : MonoBehaviour
     [SerializeField, Min(1)] private int unarmedDamage = 25;
     [SerializeField, Min(1)] private int weaponDamage = 50;
     [SerializeField, Min(.01f)] private float attackInterval = .5f;
-    [SerializeField, Min(.01f)] private float reach = 1.4f;
+    [SerializeField, Min(.01f)] private float reach = 1.8f;
     [SerializeField, Range(1f, 180f)] private float attackAngle = 100f;
     [SerializeField, Min(.01f)] private float effectDuration = .15f;
     private float cooldown;
@@ -40,16 +40,25 @@ public sealed class PlayerAttack : MonoBehaviour
         GridMovement motor = GetComponent<GridMovement>();
         LayerMask obstacles = motor != null ? motor.Obstacles : 0;
         var struck = new HashSet<EnemyBrain>();
-        foreach (Collider2D contact in Physics2D.OverlapCircleAll(transform.position, reach))
+        Vector3 origin = playerHealth != null ? EnemyAttack.GroundPosition(playerHealth) : transform.position;
+        foreach (Collider2D contact in Physics2D.OverlapCircleAll(origin, reach))
         {
             EnemyBrain enemy = contact.GetComponentInParent<EnemyBrain>();
             if (enemy == null || !struck.Add(enemy)) continue;
-            Vector2 delta = enemy.transform.position - transform.position;
+            Health target = enemy.GetComponent<Health>();
+            if (target == null || target.IsDead) continue;
+            Vector3 targetPoint = EnemyAttack.GroundPosition(target);
+            Vector2 delta = targetPoint - origin;
             if (delta.sqrMagnitude > reach * reach ||
                 (delta.sqrMagnitude > .0001f && Vector2.Angle(facing, delta) > attackAngle * .5f)) continue;
-            if (Physics2D.Linecast(transform.position, enemy.transform.position, obstacles).collider != null) continue;
-            Health target = enemy.GetComponent<Health>();
-            if (target != null && !target.IsDead) target.TakeDamage(Damage);
+            bool blocked = false;
+            foreach (var hit in Physics2D.LinecastAll(origin, targetPoint, obstacles))
+            {
+                if (hit.collider.isTrigger || hit.collider.transform.IsChildOf(transform) ||
+                    hit.collider.transform.IsChildOf(enemy.transform)) continue;
+                blocked = true; break;
+            }
+            if (!blocked) target.TakeDamage(Damage);
         }
         if (Application.isPlaying) PlayEffect(facing);
         return true;
@@ -85,7 +94,7 @@ public sealed class PlayerAttack : MonoBehaviour
         {
             float angle = (centerAngle + Mathf.Lerp(-attackAngle * .5f, attackAngle * .5f,
                 (float)i / (slash.positionCount - 1))) * Mathf.Deg2Rad;
-            slash.SetPosition(i, transform.position + new Vector3(Mathf.Cos(angle), Mathf.Sin(angle)) * reach * .8f);
+            slash.SetPosition(i, EnemyAttack.GroundPosition(GetComponent<Health>()) + new Vector3(Mathf.Cos(angle), Mathf.Sin(angle)) * reach * .8f);
         }
         slash.enabled = true;
         effectRemaining = effectDuration;

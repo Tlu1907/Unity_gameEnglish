@@ -210,6 +210,7 @@ public class EnemyBrain : MonoBehaviour
             gameObject.AddComponent<GridMovement>().Configure(groundTilemap, obstacleMask, gridSize);
         if (!TryGetComponent<EnemyAttack>(out _)) gameObject.AddComponent<EnemyAttack>();
         if (!TryGetComponent<Health>(out _)) gameObject.AddComponent<Health>().Configure(100, 100);
+        if (Application.isPlaying && !TryGetComponent<EnemyHealthBar>(out _)) gameObject.AddComponent<EnemyHealthBar>();
     }
     public bool Migrate(int version)
     {

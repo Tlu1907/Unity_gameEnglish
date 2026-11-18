@@ -13,6 +13,6 @@ public sealed class WeaponSlotUI : MonoBehaviour
     {
         bool equipped = source != null && source.HasWeapon;
         icon.enabled = equipped;
-        label.text = equipped ? "Đã trang bị · T" : "Chưa có vũ khí";
+        label.text = equipped ? "Kiếm · T để đánh" : "Tay không · T để đánh";
     }
 }

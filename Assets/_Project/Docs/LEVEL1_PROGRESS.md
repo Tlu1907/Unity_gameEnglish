@@ -212,3 +212,10 @@ Phần này thay thế mô tả B+C và phần thưởng ở các mục cũ phí
 - CITY_EXIT_PLAY_PASS: 45 camera positions/aspects, no early unlock with 1 enemy alive, last real death unlocks, physical trigger successfully loads SampleScene.
 - Existing destination limitation: SampleScene reports missing Player and PF Props - Chest 01 prefab GUIDs on load. Destination scene was not rewritten.
 - Setup / test / preview menus: Tools > Level 1 > Install Camera Bounds and Station Exit / Test Camera Bounds and Station Exit / Preview Station Exit. Run the test in fresh Play Mode; it consumes enemies and loads SampleScene only in that play session.
+
+## Player melee reach and enemy HP feedback
+- Fixed player attack origin and target geometry to use feet collider centers consistently with enemy combat; increased reach from 1.4 to 1.8 so enemies stopping around 1.5 can be hit.
+- Solid obstacles still block swings; trigger volumes and the participants' own colliders do not. Facing, cooldown, unarmed 25 and weapon 50 damage preserved.
+- EnemyBrain creates a small non-interactive world-space EnemyHealthBar at runtime. It follows the animated body, updates with Health.Changed, changes green/yellow/red and hides on death.
+- Weapon HUD now explains T for both unarmed and equipped combat.
+- Runtime C# assembly compiled successfully using Unity's cached response file and bundled Roslyn compiler (existing obsolete API warnings). Batch Play Mode regression could not execute: Unity exits with code 1 during project startup. In-editor gameplay/visual verification remains pending.
