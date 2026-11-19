@@ -1,0 +1,187 @@
+{
+  "id": "q2_archaeologist",
+  "speaker": "Archaeologist",
+  "introduction": {
+    "dialogue_vi": "Cảm ơn anh đã cứu tôi! Tôi là một nhà khảo cổ. Những con quái vật này có liên quan đến một phong ấn cổ bên dưới thành phố. Tôi nghĩ trận động đất đã làm hư hại phong ấn đó. Tôi đã nghiên cứu các ký hiệu cổ và ghi lại những gì tìm được. Tài liệu đang ở trong phòng nghiên cứu của tôi.",
+    "dialogue_en": "Thank you for saving me! I am an archaeologist. These monsters are linked to an ancient seal under the city. I think the earthquake damaged the seal. I studied the old symbols and wrote down what I found. The document is in my lab.",
+    "vocabulary": [
+      {
+        "word": "archaeologist",
+        "meaning": "nhà khảo cổ (n)"
+      },
+      {
+        "word": "be linked to",
+        "meaning": "có liên quan đến (v. phr.)"
+      },
+      {
+        "word": "ancient",
+        "meaning": "cổ xưa (adj)"
+      },
+      {
+        "word": "seal",
+        "meaning": "phong ấn (n)"
+      },
+      {
+        "word": "earthquake",
+        "meaning": "động đất (n)"
+      },
+      {
+        "word": "symbols",
+        "meaning": "các ký hiệu (n)"
+      }
+    ],
+    "grammar": "be linked to + N: liên quan đến …"
+  },
+  "consent": {
+    "dialogue_en": "Will you go to my lab and get the document?",
+    "choices": [
+      {
+        "id": "yes",
+        "label_en": "Yes. I will get it.",
+        "reply_en": "Thank you. Monsters are on the way to the lab. Defeat them and make your way there.",
+        "start_quest": "q2_research_document",
+        "vocabulary": [
+          {
+            "word": "get",
+            "meaning": "lấy (v)"
+          },
+          {
+            "word": "monsters",
+            "meaning": "quái vật (n)"
+          },
+          {
+            "word": "on the way",
+            "meaning": "trên đường (prep. phr.)"
+          },
+          {
+            "word": "lab",
+            "meaning": "phòng nghiên cứu (n)"
+          },
+          {
+            "word": "defeat",
+            "meaning": "đánh bại (v)"
+          },
+          {
+            "word": "make your way",
+            "meaning": "tìm cách đi tới (idiom)"
+          }
+        ],
+        "grammar": "will + V nguyên mẫu: sẽ …"
+      },
+      {
+        "id": "no",
+        "label_en": "I am not ready yet.",
+        "reply_en": "All right. Come back when you are ready. Please be careful.",
+        "loop": true,
+        "vocabulary": [
+          {
+            "word": "ready",
+            "meaning": "sẵn sàng (adj)"
+          },
+          {
+            "word": "yet",
+            "meaning": "chưa (adv)"
+          },
+          {
+            "word": "all right",
+            "meaning": "được rồi (interj)"
+          },
+          {
+            "word": "come back",
+            "meaning": "quay lại (v. phr.)"
+          },
+          {
+            "word": "careful",
+            "meaning": "cẩn thận (adj)"
+          },
+          {
+            "word": "please",
+            "meaning": "làm ơn (interj)"
+          }
+        ],
+        "grammar": "when + mệnh đề: khi …"
+      }
+    ],
+    "vocabulary": [
+      {
+        "word": "will",
+        "meaning": "sẽ (modal v)"
+      },
+      {
+        "word": "go to",
+        "meaning": "đi đến (v. phr.)"
+      },
+      {
+        "word": "lab",
+        "meaning": "phòng nghiên cứu (n)"
+      },
+      {
+        "word": "get",
+        "meaning": "lấy (v)"
+      },
+      {
+        "word": "document",
+        "meaning": "tài liệu (n)"
+      }
+    ],
+    "grammar": "Will you + V …?: Bạn sẽ … chứ?"
+  },
+  "questions": [],
+  "completion": {
+    "reward_items": [],
+    "after_vi": "Phòng nghiên cứu của tôi ở phía đông bắc thành phố, bên bờ đông của kênh và ngay phía nam đường ray xe lửa. Hãy tìm tòa nhà có biểu tượng cổ phía trên cửa. Tài liệu nằm trên bàn bên trong. Tôi đã viết bản giải mã bằng tiếng Anh. Nó có thêm thông tin về phong ấn và ghi chú chỉ đường đến cổng cổ. Hãy tiêu diệt những con quái vật cản đường, đến phòng nghiên cứu và lấy tài liệu.",
+    "after_en": "My lab is in the northeast of the city. It is on the east side of the canal, just south of the train tracks. Look for the building with an old symbol above the door. The document is on the table inside. I wrote the old message in English. It has more information about the seal and notes on the way to the old gate. Defeat the monsters in your way, reach the lab, and take the document.",
+    "vocabulary": [
+      {
+        "word": "northeast",
+        "meaning": "phía đông bắc (n)"
+      },
+      {
+        "word": "canal",
+        "meaning": "kênh (n)"
+      },
+      {
+        "word": "train tracks",
+        "meaning": "đường ray (n. phr.)"
+      },
+      {
+        "word": "above",
+        "meaning": "phía trên (prep)"
+      },
+      {
+        "word": "document",
+        "meaning": "tài liệu (n)"
+      },
+      {
+        "word": "gate",
+        "meaning": "cổng (n)"
+      }
+    ],
+    "grammar": "Look for + N: Hãy tìm …"
+  },
+  "quest": {
+    "id": "q2_research_document",
+    "title_en": "The Ancient Seal",
+    "description_en": "The archaeologist believes the earthquake damaged an ancient seal linked to the monsters. Go to his lab and get his research document.",
+    "objectives": [
+      {
+        "id": "defeat_route_monsters",
+        "description_en": "Defeat the monsters blocking the way to the lab."
+      },
+      {
+        "id": "reach_research_lab",
+        "description_en": "Reach the archaeologist's lab.",
+        "target_id": "archaeologist_lab"
+      },
+      {
+        "id": "collect_research_document",
+        "description_en": "Take the research document from the table.",
+        "target_id": "lab_decoded_document"
+      }
+    ],
+    "destination_id": "archaeologist_lab",
+    "quest_item_id": "decoded_gate_document",
+    "next_objective_en": "Read the document to learn about the ancient seal and find the way to the old gate."
+  },
+  "showImage": false
+}

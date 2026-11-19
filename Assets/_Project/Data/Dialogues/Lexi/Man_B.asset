@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2598e857b284925a344cfeb3fb12f50, type: 3}
+  m_Name: Man_B
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueData
+  speakerName: "B\xE0 M\u1EADn"
+  portrait: {fileID: 824597434760713125, guid: d9cd513cc127c82479931333a891b8db, type: 3}
+  continuePrompt: "Nh\u1EA5n C \u0111\u1EC3 ti\u1EBFp t\u1EE5c"
+  closePrompt: "Nh\u1EA5n C \u0111\u1EC3 \u0111\xF3ng"
+  lines:
+  - english: Some say the lake keeps words that people never got to say.
+    vietnamese: "C\xF3 ng\u01B0\u1EDDi b\u1EA3o h\u1ED3 gi\u1EEF nh\u1EEFng l\u1EDDi
+      ch\u01B0a k\u1ECBp n\xF3i."
+  - english: Perhaps the Error Dust carries forgotten words. I wonder what it remembers.
+    vietnamese: "C\xF3 l\u1EBD B\u1EE5i L\u1ED7i mang theo nh\u1EEFng t\u1EEB b\u1ECB
+      b\u1ECF qu\xEAn. B\xE0 t\u1EF1 h\u1ECFi ch\xFAng c\xF2n nh\u1EDB \u0111i\u1EC1u
+      g\xEC."

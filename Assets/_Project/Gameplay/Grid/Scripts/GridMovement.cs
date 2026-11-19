@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
@@ -12,9 +13,13 @@ public sealed class GridMovement : MonoBehaviour
     [Tooltip("Optional bounds for sprite-based maps with an empty Ground Tilemap. Painted Tilemaps remain authoritative.")]
     [SerializeField] private SpriteRenderer walkableBackground;
     private CharacterAnimation visuals;
+    private EnemyBrain enemy;
     private Rigidbody2D body;
+    private Collider2D feetCollider;
+    private CityTerrain terrain;
     private Vector2 inputDirection;
     private float inputSpeed;
+    private readonly List<Collider2D> obstacleHits = new List<Collider2D>(8);
     public Vector2 MovementInput => inputDirection;
     public bool UsesPhysicsMovement { get; private set; }
     public bool IsMoving { get; private set; }
@@ -27,6 +32,9 @@ public sealed class GridMovement : MonoBehaviour
     private void Awake()
     {
         visuals = GetComponent<CharacterAnimation>();
+        enemy = GetComponent<EnemyBrain>();
+        feetCollider = GetComponent<Collider2D>();
+        ResolveTerrain();
         if (GetComponent<PlayerMovement>() != null || GetComponent<PlayerInputReader>() != null)
             EnablePlayerPhysics();
     }
@@ -71,8 +79,12 @@ public sealed class GridMovement : MonoBehaviour
     {
         if (!UsesPhysicsMovement || body == null) return;
         Vector2 velocity = GameplayState.CanAct ? inputDirection * inputSpeed : Vector2.zero;
+        Vector2 feet = feetCollider != null ? (Vector2)feetCollider.bounds.center : body.position;
+        if (terrain != null) velocity *= terrain.SpeedMultiplier(feet);
         // Map admission remains separate from solid collision, which Physics2D now resolves.
-        if (velocity != Vector2.zero && !HasGround(body.position + velocity * Time.fixedDeltaTime))
+        Vector2 nextFeet = feet + velocity * Time.fixedDeltaTime;
+        bool admitted = terrain != null ? terrain.ContainsSurface(nextFeet) : HasGround(nextFeet);
+        if (velocity != Vector2.zero && !admitted)
             velocity = Vector2.zero;
         body.linearVelocity = velocity;
     }
@@ -88,14 +100,16 @@ public sealed class GridMovement : MonoBehaviour
     { groundTilemap = ground; obstacleMask = obstacles; gridSize = size; }
     private void Start()
     {
+        ResolveTerrain();
         visuals = GetComponent<CharacterAnimation>();
-        if (!UsesPhysicsMovement && groundTilemap != null)
+        if (!UsesPhysicsMovement && terrain == null && groundTilemap != null)
             transform.position = groundTilemap.GetCellCenterWorld(groundTilemap.WorldToCell(transform.position));
-        if ((groundTilemap == null || groundTilemap.GetUsedTilesCount() == 0) && walkableBackground == null)
+        if (terrain == null && (groundTilemap == null || groundTilemap.GetUsedTilesCount() == 0) && walkableBackground == null)
             Debug.LogWarning("GridMovement: Ground has no tiles and Walkable Background is unassigned. No walkable cells. Run Tools/Player/Setup Player in Current Scene or assign a painted Ground Tilemap.", this);
     }
     public bool HasGround(Vector3 position)
     {
+        if (terrain != null) return terrain.ContainsSurface(position);
         if (groundTilemap != null && groundTilemap.GetUsedTilesCount() > 0)
             return groundTilemap.HasTile(groundTilemap.WorldToCell(position));
         if (walkableBackground == null || walkableBackground.sprite == null) return false;
@@ -103,13 +117,30 @@ public sealed class GridMovement : MonoBehaviour
         return position.x >= bounds.min.x && position.x <= bounds.max.x
             && position.y >= bounds.min.y && position.y <= bounds.max.y;
     }
-    public Collider2D ObstacleAt(Vector3 position) => Physics2D.OverlapBox(position, new Vector2(.8f, .8f), 0f, obstacleMask);
+    private void ResolveTerrain()
+    {
+        terrain = null;
+        if (!gameObject.scene.IsValid()) return;
+        foreach (var root in gameObject.scene.GetRootGameObjects())
+        foreach (var candidate in root.GetComponentsInChildren<CityTerrain>(true))
+            if (candidate.isActiveAndEnabled) { terrain = candidate; return; }
+    }
+    public Collider2D ObstacleAt(Vector3 position)
+    {
+        var filter = new ContactFilter2D { useTriggers = false };
+        filter.SetLayerMask(obstacleMask);
+        obstacleHits.Clear();
+        Physics2D.OverlapBox(position, new Vector2(.8f, .8f), 0f, filter, obstacleHits);
+        foreach (var hit in obstacleHits)
+            if (hit != null && !hit.transform.IsChildOf(transform)) return hit;
+        return null;
+    }
     public bool IsWalkable(Vector3 position) => HasGround(position) && ObstacleAt(position) == null;
     // Caller owns interaction-specific admission; the motor always requires ground.
     public bool TryMove(Vector3 direction, float speed, bool admittedByInteraction = false)
     {
         if (UsesPhysicsMovement) return false;
-        if (!GameplayState.CanAct || IsMoving || speed <= 0f || gridSize <= 0f || direction == Vector3.zero) return false;
+        if (!isActiveAndEnabled || !GameplayState.CanAct || (enemy != null && enemy.IsImmobilized) || IsMoving || speed <= 0f || gridSize <= 0f || direction == Vector3.zero) return false;
         // Keep every caller on cardinal cells; never normalize a diagonal into an off-grid target.
         direction = Mathf.Abs(direction.x) > Mathf.Abs(direction.y)
             ? new Vector3(Mathf.Sign(direction.x), 0f, 0f)
@@ -129,8 +160,12 @@ public sealed class GridMovement : MonoBehaviour
         while (transform.position != target)
         {
             Vector3 previous = transform.position;
-            if (GameplayState.CanAct)
-                transform.position = Vector3.MoveTowards(transform.position, target, speed * Time.deltaTime);
+            if (GameplayState.CanAct && (enemy == null || !enemy.IsImmobilized))
+            {
+                Vector3 next = Vector3.MoveTowards(transform.position, target, speed * Time.deltaTime);
+                if (enemy != null && !enemy.CanOccupy(next)) break;
+                transform.position = next;
+            }
             visuals?.SetMoving(transform.position != previous);
             yield return null;
         }

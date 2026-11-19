@@ -1,0 +1,30 @@
+SUCCESS
+21 Dust prefabs updated; 7 scene actors configured.
+Dust art/controllers retained. Monster AI fields matched; attack damage=30, interval=1.5, range=1.5. Validated attack state, all directional attack events and sprite keys.
+Backup: Library/DustMonsterLogicBackups/20261119_222704_505
+Updated: Assets/_Project/Gameplay/Characters/Enemies/Prefabs/Dust/DustChaser.prefab
+Updated: Assets/_Project/Gameplay/Characters/Enemies/Prefabs/Dust/DustGuard.prefab
+Updated: Assets/_Project/Gameplay/Characters/Enemies/Prefabs/Dust/DustPatrol.prefab
+Updated: Assets/_Project/Gameplay/Characters/Enemies/Prefabs/Dust/Variants/Scene1/DustChaser_1_0136.prefab
+Updated: Assets/_Project/Gameplay/Characters/Enemies/Prefabs/Dust/Variants/Scene1/DustChaser_2_0137.prefab
+Updated: Assets/_Project/Gameplay/Characters/Enemies/Prefabs/Dust/Variants/Scene1/DustChaser_3_0138.prefab
+Updated: Assets/_Project/Gameplay/Characters/Enemies/Prefabs/Dust/Variants/Scene1/DustChaser_City_1_0139.prefab
+Updated: Assets/_Project/Gameplay/Characters/Enemies/Prefabs/Dust/Variants/Scene1/DustChaser_City_2_0140.prefab
+Updated: Assets/_Project/Gameplay/Characters/Enemies/Prefabs/Dust/Variants/Scene1/DustChaser_City_3_0141.prefab
+Updated: Assets/_Project/Gameplay/Characters/Enemies/Prefabs/Dust/Variants/Scene1/DustGuard_1_0142.prefab
+Updated: Assets/_Project/Gameplay/Characters/Enemies/Prefabs/Dust/Variants/Scene1/DustGuard_2_0143.prefab
+Updated: Assets/_Project/Gameplay/Characters/Enemies/Prefabs/Dust/Variants/Scene1/DustGuard_City_1_0144.prefab
+Updated: Assets/_Project/Gameplay/Characters/Enemies/Prefabs/Dust/Variants/Scene1/DustGuard_City_2_0145.prefab
+Updated: Assets/_Project/Gameplay/Characters/Enemies/Prefabs/Dust/Variants/Scene1/DustPatrol_1_0146.prefab
+Updated: Assets/_Project/Gameplay/Characters/Enemies/Prefabs/Dust/Variants/Scene1/DustPatrol_2_0147.prefab
+Updated: Assets/_Project/Gameplay/Characters/Enemies/Prefabs/Dust/Variants/Scene1/DustPatrol_3_0148.prefab
+Updated: Assets/_Project/Gameplay/Characters/Enemies/Prefabs/Dust/Variants/Scene1/DustPatrol_4_0149.prefab
+Updated: Assets/_Project/Gameplay/Characters/Enemies/Prefabs/Dust/Variants/Scene1/DustPatrol_City_1_0150.prefab
+Updated: Assets/_Project/Gameplay/Characters/Enemies/Prefabs/Dust/Variants/Scene1/DustPatrol_City_2_0151.prefab
+Updated: Assets/_Project/Gameplay/Characters/Enemies/Prefabs/Dust/Variants/Scene1/DustPatrol_City_3_0152.prefab
+Updated: Assets/_Project/Gameplay/Characters/Enemies/Prefabs/Dust/Variants/Scene1/DustPatrol_City_4_0153.prefab
+Scene visual: Monster (1) -> DustChaser; original brain and mission links retained
+Scene visual: Monster (2) -> DustPatrol; original brain and mission links retained
+Scene visual: Monster (3) -> DustGuard; original brain and mission links retained
+Scene visual: Monster (4) -> DustChaser; original brain and mission links retained
+Scene visual: Monster (5) -> DustPatrol; original brain and mission links retained

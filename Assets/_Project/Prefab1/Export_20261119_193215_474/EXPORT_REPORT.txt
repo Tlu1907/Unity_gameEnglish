@@ -1,0 +1,388 @@
+Source scenes were copied from disk; unsaved editor changes are not included.
+Original scenes and prefabs were not modified.
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0001_GroundShadow.prefab <- Grid/Enviroments/Bushes/Bush (1)/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0002_GroundShadow.prefab <- Grid/Enviroments/Bushes/Bush (10)/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0003_GroundShadow.prefab <- Grid/Enviroments/Bushes/Bush (11)/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0004_GroundShadow.prefab <- Grid/Enviroments/Bushes/Bush (2)/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0005_GroundShadow.prefab <- Grid/Enviroments/Bushes/Bush (3)/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0006_GroundShadow.prefab <- Grid/Enviroments/Bushes/Bush (4)/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0007_GroundShadow.prefab <- Grid/Enviroments/Bushes/Bush (5)/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0008_GroundShadow.prefab <- Grid/Enviroments/Bushes/Bush (6)/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0009_GroundShadow.prefab <- Grid/Enviroments/Bushes/Bush (7)/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0010_GroundShadow.prefab <- Grid/Enviroments/Bushes/Bush (8)/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0011_GroundShadow.prefab <- Grid/Enviroments/Bushes/Bush (9)/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0012_GroundShadow.prefab <- Grid/Enviroments/Bushes/Bush/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0013_GroundShadow.prefab <- Grid/Enviroments/Cars/Car/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0014_GroundShadow.prefab <- Grid/Enviroments/Cars/Car/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0015_GroundShadow.prefab <- Grid/Enviroments/Houses/House_1/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0016_GroundShadow.prefab <- Grid/Enviroments/Houses/House_2/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0017_GroundShadow.prefab <- Grid/Enviroments/Recycle/RecycleBin (1)/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0018_GroundShadow.prefab <- Grid/Enviroments/Recycle/RecycleBin/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0019_GroundShadow.prefab <- Grid/Enviroments/Street_lamps/Street_lamp (1)/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0020_GroundShadow.prefab <- Grid/Enviroments/Street_lamps/Street_lamp (1)/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0021_GroundShadow.prefab <- Grid/Enviroments/Street_lamps/Street_lamp (2)/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0022_GroundShadow.prefab <- Grid/Enviroments/Street_lamps/Street_lamp (2)/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0023_GroundShadow.prefab <- Grid/Enviroments/Street_lamps/Street_lamp (3)/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0024_GroundShadow.prefab <- Grid/Enviroments/Street_lamps/Street_lamp (3)/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0025_GroundShadow.prefab <- Grid/Enviroments/Street_lamps/Street_lamp (4)/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0026_GroundShadow.prefab <- Grid/Enviroments/Street_lamps/Street_lamp (5)/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0027_GroundShadow.prefab <- Grid/Enviroments/Street_lamps/Street_lamp/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0028_GroundShadow.prefab <- Grid/Enviroments/Street_lamps/Street_lamp/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0029_GroundShadow.prefab <- Grid/Enviroments/Trees/Tree (1)/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0030_GroundShadow.prefab <- Grid/Enviroments/Trees/Tree (2)/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0031_GroundShadow.prefab <- Grid/Enviroments/Trees/Tree (3)/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0032_GroundShadow.prefab <- Grid/Enviroments/Trees/Tree (4)/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0033_GroundShadow.prefab <- Grid/Enviroments/Trees/Tree/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0034_GroundShadow.prefab <- CityExpansion/CityScenery/Bush_28/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0035_GroundShadow.prefab <- CityExpansion/CityScenery/House_1_00/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0036_GroundShadow.prefab <- CityExpansion/CityScenery/House_1_03/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0037_GroundShadow.prefab <- CityExpansion/CityScenery/House_1_05/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0038_GroundShadow.prefab <- CityExpansion/CityScenery/House_2_01/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0039_GroundShadow.prefab <- CityExpansion/CityScenery/House_2_02/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0040_GroundShadow.prefab <- CityExpansion/CityScenery/House_2_04/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0041_GroundShadow.prefab <- CityExpansion/CityScenery/Item_47_41/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0042_GroundShadow.prefab <- CityExpansion/CityScenery/Item_47_42/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0043_GroundShadow.prefab <- CityExpansion/CityScenery/Item_47_43/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0044_GroundShadow.prefab <- CityExpansion/CityScenery/Item_47_44/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0045_GroundShadow.prefab <- CityExpansion/CityScenery/Park_bench_29/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0046_GroundShadow.prefab <- CityExpansion/CityScenery/Park_bench_30/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0047_GroundShadow.prefab <- CityExpansion/CityScenery/Park_bench_31/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0048_GroundShadow.prefab <- CityExpansion/CityScenery/Park_bench_32/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0049_GroundShadow.prefab <- CityExpansion/CityScenery/Park_bench_33/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0050_GroundShadow.prefab <- CityExpansion/CityScenery/RecycleBin_40/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0051_GroundShadow.prefab <- CityExpansion/CityScenery/Street_lamp_34/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0052_GroundShadow.prefab <- CityExpansion/CityScenery/Street_lamp_35/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0053_GroundShadow.prefab <- CityExpansion/CityScenery/Street_lamp_36/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0054_GroundShadow.prefab <- CityExpansion/CityScenery/Street_lamp_37/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0055_GroundShadow.prefab <- CityExpansion/CityScenery/Street_lamp_38/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0056_GroundShadow.prefab <- CityExpansion/CityScenery/Street_lamp_39/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0057_GroundShadow.prefab <- CityExpansion/CityScenery/Tree_07/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0058_GroundShadow.prefab <- CityExpansion/CityScenery/Tree_08/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0059_GroundShadow.prefab <- CityExpansion/CityScenery/Tree_09/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0060_GroundShadow.prefab <- CityExpansion/CityScenery/Tree_10/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0061_GroundShadow.prefab <- CityExpansion/CityScenery/Tree_11/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0062_GroundShadow.prefab <- CityExpansion/CityScenery/Tree_12/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0063_GroundShadow.prefab <- CityExpansion/CityScenery/Tree_13/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0064_GroundShadow.prefab <- CityExpansion/CityScenery/Tree_14/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0065_GroundShadow.prefab <- CityExpansion/CityScenery/Tree_15/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0066_GroundShadow.prefab <- CityExpansion/CityScenery/Tree_16/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0067_GroundShadow.prefab <- CityExpansion/CityScenery/Tree_17/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0068_Bush.prefab <- Grid/Enviroments/Bushes/Bush
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0069_GroundShadow.prefab <- Grid/Enviroments/Car (1)/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0070_Car.prefab <- Grid/Enviroments/Cars/Car
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0071_GroundShadow.prefab <- Grid/Enviroments/Fire_hydrant (1)/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0072_GroundShadow.prefab <- Grid/Enviroments/Fire_hydrant/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0073_House_1.prefab <- Grid/Enviroments/Houses/House_1
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0074_House_2.prefab <- Grid/Enviroments/Houses/House_2
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0075_GroundShadow.prefab <- Grid/Enviroments/Item_47 (1)/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0076_GroundShadow.prefab <- Grid/Enviroments/Item_47 (2)/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0077_GroundShadow.prefab <- Grid/Enviroments/Item_47 (3)/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0078_GroundShadow.prefab <- Grid/Enviroments/Item_47 (4)/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0079_GroundShadow.prefab <- Grid/Enviroments/Item_47/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0080_RecycleBin.prefab <- Grid/Enviroments/Recycle/RecycleBin
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0081_GroundShadow.prefab <- Grid/Enviroments/Station/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0082_Street_lamp.prefab <- Grid/Enviroments/Street_lamps/Street_lamp
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0083_Tree.prefab <- Grid/Enviroments/Trees/Tree
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0084_SharedGroundShadow.prefab <- HidingAndTraps/HidingBushes/HidingBush_01/SharedGroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0085_SharedGroundShadow.prefab <- HidingAndTraps/HidingBushes/HidingBush_02/SharedGroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0086_SharedGroundShadow.prefab <- HidingAndTraps/HidingBushes/HidingBush_03/SharedGroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0087_SharedGroundShadow.prefab <- HidingAndTraps/HidingBushes/HidingBush_04/SharedGroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0088_SharedGroundShadow.prefab <- HidingAndTraps/HidingBushes/HidingBush_05/SharedGroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0089_SharedGroundShadow.prefab <- HidingAndTraps/HidingBushes/HidingBush_06/SharedGroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0090_SharedGroundShadow.prefab <- HidingAndTraps/HidingBushes/HidingBush_07/SharedGroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0091_SharedGroundShadow.prefab <- HidingAndTraps/HidingBushes/HidingBush_08/SharedGroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0092_SharedGroundShadow.prefab <- HidingAndTraps/HidingBushes/HidingBush_09/SharedGroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0093_SharedGroundShadow.prefab <- HidingAndTraps/HidingBushes/HidingBush_10/SharedGroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0094_SharedGroundShadow.prefab <- HidingAndTraps/MonsterTraps/MonsterTrap_01/SharedGroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0095_SharedGroundShadow.prefab <- HidingAndTraps/MonsterTraps/MonsterTrap_02/SharedGroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0096_SharedGroundShadow.prefab <- HidingAndTraps/MonsterTraps/MonsterTrap_03/SharedGroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0097_SharedGroundShadow.prefab <- HidingAndTraps/MonsterTraps/MonsterTrap_04/SharedGroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0098_SharedGroundShadow.prefab <- HidingAndTraps/MonsterTraps/MonsterTrap_05/SharedGroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0099_SharedGroundShadow.prefab <- HidingAndTraps/MonsterTraps/MonsterTrap_06/SharedGroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0100_GroundShadow.prefab <- Level1Content/DustEnemies/DustChaser_1/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0101_GroundShadow.prefab <- Level1Content/DustEnemies/DustChaser_2/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0102_GroundShadow.prefab <- Level1Content/DustEnemies/DustChaser_3/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0103_GroundShadow.prefab <- Level1Content/DustEnemies/DustChaser_City_1/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0104_GroundShadow.prefab <- Level1Content/DustEnemies/DustChaser_City_2/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0105_GroundShadow.prefab <- Level1Content/DustEnemies/DustChaser_City_3/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0106_GroundShadow.prefab <- Level1Content/DustEnemies/DustGuard_1/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0107_GroundShadow.prefab <- Level1Content/DustEnemies/DustGuard_2/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0108_GroundShadow.prefab <- Level1Content/DustEnemies/DustGuard_City_1/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0109_GroundShadow.prefab <- Level1Content/DustEnemies/DustGuard_City_2/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0110_GroundShadow.prefab <- Level1Content/DustEnemies/DustPatrol_1/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0111_GroundShadow.prefab <- Level1Content/DustEnemies/DustPatrol_2/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0112_GroundShadow.prefab <- Level1Content/DustEnemies/DustPatrol_3/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0113_GroundShadow.prefab <- Level1Content/DustEnemies/DustPatrol_4/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0114_GroundShadow.prefab <- Level1Content/DustEnemies/DustPatrol_City_1/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0115_GroundShadow.prefab <- Level1Content/DustEnemies/DustPatrol_City_2/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0116_GroundShadow.prefab <- Level1Content/DustEnemies/DustPatrol_City_3/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0117_GroundShadow.prefab <- Level1Content/DustEnemies/DustPatrol_City_4/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0118_Fire_hydrant.prefab <- Grid/Enviroments/Fire_hydrant
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0119_Item_47.prefab <- Grid/Enviroments/Item_47
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0120_HidingBush_01.prefab <- HidingAndTraps/HidingBushes/HidingBush_01
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0121_HidingBush_02.prefab <- HidingAndTraps/HidingBushes/HidingBush_02
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0122_HidingBush_03.prefab <- HidingAndTraps/HidingBushes/HidingBush_03
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0123_HidingBush_04.prefab <- HidingAndTraps/HidingBushes/HidingBush_04
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0124_HidingBush_05.prefab <- HidingAndTraps/HidingBushes/HidingBush_05
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0125_HidingBush_06.prefab <- HidingAndTraps/HidingBushes/HidingBush_06
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0126_HidingBush_07.prefab <- HidingAndTraps/HidingBushes/HidingBush_07
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0127_HidingBush_08.prefab <- HidingAndTraps/HidingBushes/HidingBush_08
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0128_HidingBush_09.prefab <- HidingAndTraps/HidingBushes/HidingBush_09
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0129_HidingBush_10.prefab <- HidingAndTraps/HidingBushes/HidingBush_10
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0130_MonsterTrap_01.prefab <- HidingAndTraps/MonsterTraps/MonsterTrap_01
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0131_MonsterTrap_02.prefab <- HidingAndTraps/MonsterTraps/MonsterTrap_02
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0132_MonsterTrap_03.prefab <- HidingAndTraps/MonsterTraps/MonsterTrap_03
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0133_MonsterTrap_04.prefab <- HidingAndTraps/MonsterTraps/MonsterTrap_04
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0134_MonsterTrap_05.prefab <- HidingAndTraps/MonsterTraps/MonsterTrap_05
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0135_MonsterTrap_06.prefab <- HidingAndTraps/MonsterTraps/MonsterTrap_06
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0136_DustChaser_1.prefab <- Level1Content/DustEnemies/DustChaser_1
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0137_DustChaser_2.prefab <- Level1Content/DustEnemies/DustChaser_2
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0138_DustChaser_3.prefab <- Level1Content/DustEnemies/DustChaser_3
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0139_DustChaser_City_1.prefab <- Level1Content/DustEnemies/DustChaser_City_1
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0140_DustChaser_City_2.prefab <- Level1Content/DustEnemies/DustChaser_City_2
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0141_DustChaser_City_3.prefab <- Level1Content/DustEnemies/DustChaser_City_3
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0142_DustGuard_1.prefab <- Level1Content/DustEnemies/DustGuard_1
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0143_DustGuard_2.prefab <- Level1Content/DustEnemies/DustGuard_2
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0144_DustGuard_City_1.prefab <- Level1Content/DustEnemies/DustGuard_City_1
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0145_DustGuard_City_2.prefab <- Level1Content/DustEnemies/DustGuard_City_2
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0146_DustPatrol_1.prefab <- Level1Content/DustEnemies/DustPatrol_1
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0147_DustPatrol_2.prefab <- Level1Content/DustEnemies/DustPatrol_2
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0148_DustPatrol_3.prefab <- Level1Content/DustEnemies/DustPatrol_3
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0149_DustPatrol_4.prefab <- Level1Content/DustEnemies/DustPatrol_4
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0150_DustPatrol_City_1.prefab <- Level1Content/DustEnemies/DustPatrol_City_1
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0151_DustPatrol_City_2.prefab <- Level1Content/DustEnemies/DustPatrol_City_2
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0152_DustPatrol_City_3.prefab <- Level1Content/DustEnemies/DustPatrol_City_3
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0153_DustPatrol_City_4.prefab <- Level1Content/DustEnemies/DustPatrol_City_4
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0154_Chest_City_01.prefab <- Level1Content/LetterChests/Chest_City_01
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0155_Chest_City_02.prefab <- Level1Content/LetterChests/Chest_City_02
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0156_Chest_City_03.prefab <- Level1Content/LetterChests/Chest_City_03
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0157_Chest_City_04.prefab <- Level1Content/LetterChests/Chest_City_04
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0158_Chest_City_05.prefab <- Level1Content/LetterChests/Chest_City_05
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0159_Chest_City_06.prefab <- Level1Content/LetterChests/Chest_City_06
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0160_Chest_City_07.prefab <- Level1Content/LetterChests/Chest_City_07
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0161_Chest_City_08.prefab <- Level1Content/LetterChests/Chest_City_08
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0162_Chest_Lake.prefab <- Level1Content/LetterChests/Chest_Lake
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0163_Chest_Park.prefab <- Level1Content/LetterChests/Chest_Park
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0164_Chest_Southwest.prefab <- Level1Content/LetterChests/Chest_Southwest
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0165_Chest_Station.prefab <- Level1Content/LetterChests/Chest_Station
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0166_SharedGroundShadow.prefab <- LexiStoryNPCs/NPC_Ba/SharedGroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0167_SharedGroundShadow.prefab <- LexiStoryNPCs/NPC_Gray/SharedGroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0168_SharedGroundShadow.prefab <- LexiStoryNPCs/NPC_Hai/SharedGroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0169_SharedGroundShadow.prefab <- LexiStoryNPCs/NPC_Lan/SharedGroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0170_SharedGroundShadow.prefab <- LexiStoryNPCs/NPC_Man/SharedGroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0171_SharedGroundShadow.prefab <- LexiStoryNPCs/NPC_Ti/SharedGroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0172_NPC_Ba.prefab <- LexiStoryNPCs/NPC_Ba
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0173_NPC_Gray.prefab <- LexiStoryNPCs/NPC_Gray
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0174_NPC_Hai.prefab <- LexiStoryNPCs/NPC_Hai
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0175_NPC_Lan.prefab <- LexiStoryNPCs/NPC_Lan
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0176_NPC_Man.prefab <- LexiStoryNPCs/NPC_Man
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0177_NPC_Ti.prefab <- LexiStoryNPCs/NPC_Ti
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0178_GroundShadow.prefab <- ScientistNPC/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0179_ChestQuizSystem.prefab <- ChestQuizSystem
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0180_CityExpansion.prefab <- CityExpansion
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0181_DialogueCanvas.prefab <- DialogueCanvas
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0182_Flask English Quiz Test.prefab <- Flask English Quiz Test
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0183_Grid.prefab <- Grid
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0184_HidingAndTraps.prefab <- HidingAndTraps
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0185_LayeredCityTerrain.prefab <- LayeredCityTerrain
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0186_Level1Content.prefab <- Level1Content
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0187_Level1Progress.prefab <- Level1Progress
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0188_LexiStoryNPCs.prefab <- LexiStoryNPCs
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0189_Main Camera.prefab <- Main Camera
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0190_Player.prefab <- Player
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0191_ScientistNPC.prefab <- ScientistNPC
+Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0192_StationExitPortal.prefab <- StationExitPortal
+Scene1_Layout: 192 prefabs; validated 705 scene references.
+Assets/_Project/Prefab1/Export_20261119_193215_474/Sence1_final/0001_GroundShadow.prefab <- Grid/Enviroments/Bushes/Bush/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Sence1_final/0002_GroundShadow.prefab <- Grid/Enviroments/Cars/Car/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Sence1_final/0003_GroundShadow.prefab <- Grid/Enviroments/Houses/House_1/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Sence1_final/0004_GroundShadow.prefab <- Grid/Enviroments/Houses/House_2/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Sence1_final/0005_GroundShadow.prefab <- Grid/Enviroments/Recycle/RecycleBin/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Sence1_final/0006_GroundShadow.prefab <- Grid/Enviroments/Street_lamps/Street_lamp/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Sence1_final/0007_GroundShadow.prefab <- Grid/Enviroments/Trees/Tree/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Sence1_final/0008_Bush.prefab <- Grid/Enviroments/Bushes/Bush
+Assets/_Project/Prefab1/Export_20261119_193215_474/Sence1_final/0009_Car.prefab <- Grid/Enviroments/Cars/Car
+Assets/_Project/Prefab1/Export_20261119_193215_474/Sence1_final/0010_GroundShadow.prefab <- Grid/Enviroments/Fire_hydrant/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Sence1_final/0011_House_1.prefab <- Grid/Enviroments/Houses/House_1
+Assets/_Project/Prefab1/Export_20261119_193215_474/Sence1_final/0012_House_2.prefab <- Grid/Enviroments/Houses/House_2
+Assets/_Project/Prefab1/Export_20261119_193215_474/Sence1_final/0013_GroundShadow.prefab <- Grid/Enviroments/Item_47/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Sence1_final/0014_RecycleBin.prefab <- Grid/Enviroments/Recycle/RecycleBin
+Assets/_Project/Prefab1/Export_20261119_193215_474/Sence1_final/0015_Street_lamp.prefab <- Grid/Enviroments/Street_lamps/Street_lamp
+Assets/_Project/Prefab1/Export_20261119_193215_474/Sence1_final/0016_Tree.prefab <- Grid/Enviroments/Trees/Tree
+Assets/_Project/Prefab1/Export_20261119_193215_474/Sence1_final/0017_Fire_hydrant.prefab <- Grid/Enviroments/Fire_hydrant
+Assets/_Project/Prefab1/Export_20261119_193215_474/Sence1_final/0018_Item_47.prefab <- Grid/Enviroments/Item_47
+Assets/_Project/Prefab1/Export_20261119_193215_474/Sence1_final/0019_GroundShadow.prefab <- House_1/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Sence1_final/0020_GroundShadow.prefab <- Monster (1)/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Sence1_final/0021_GroundShadow.prefab <- Monster (2)/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Sence1_final/0022_GroundShadow.prefab <- Monster (3)/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Sence1_final/0023_GroundShadow.prefab <- Monster (4)/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Sence1_final/0024_GroundShadow.prefab <- Monster (5)/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Sence1_final/0025_ChestQuizSystem.prefab <- ChestQuizSystem
+Assets/_Project/Prefab1/Export_20261119_193215_474/Sence1_final/0026_DialogueCanvas.prefab <- DialogueCanvas
+Assets/_Project/Prefab1/Export_20261119_193215_474/Sence1_final/0027_Flask English Quiz Test.prefab <- Flask English Quiz Test
+Assets/_Project/Prefab1/Export_20261119_193215_474/Sence1_final/0028_Grid.prefab <- Grid
+Assets/_Project/Prefab1/Export_20261119_193215_474/Sence1_final/0029_House_1.prefab <- House_1
+Assets/_Project/Prefab1/Export_20261119_193215_474/Sence1_final/0030_lab.prefab <- lab
+Assets/_Project/Prefab1/Export_20261119_193215_474/Sence1_final/0031_Main Camera.prefab <- Main Camera
+Assets/_Project/Prefab1/Export_20261119_193215_474/Sence1_final/0032_Monster (1).prefab <- Monster (1)
+Assets/_Project/Prefab1/Export_20261119_193215_474/Sence1_final/0033_Monster (2).prefab <- Monster (2)
+Assets/_Project/Prefab1/Export_20261119_193215_474/Sence1_final/0034_Monster (3).prefab <- Monster (3)
+Assets/_Project/Prefab1/Export_20261119_193215_474/Sence1_final/0035_Monster (4).prefab <- Monster (4)
+Assets/_Project/Prefab1/Export_20261119_193215_474/Sence1_final/0036_Monster (5).prefab <- Monster (5)
+Assets/_Project/Prefab1/Export_20261119_193215_474/Sence1_final/0037_Player.prefab <- Player
+Assets/_Project/Prefab1/Export_20261119_193215_474/Sence1_final/0038_ScientistNPC.prefab <- ScientistNPC
+Assets/_Project/Prefab1/Export_20261119_193215_474/Sence1_final/0039_Tower.prefab <- Tower
+Assets/_Project/Prefab1/Export_20261119_193215_474/Sence1_final/0040_TreasureMirrorDialogueCanvas.prefab <- TreasureMirrorDialogueCanvas
+Sence1_final_Layout: 40 prefabs; validated 119 scene references.
+Map root imported: Grid
+Map root imported: CityExpansion
+Map root imported: LayeredCityTerrain
+Map root imported: HidingAndTraps
+Story roots retained: Main Camera, Player, ChestQuizSystem, Flask English Quiz Test, DialogueCanvas, Monster (1), Monster (2), Monster (3), Monster (4), Monster (5), ScientistNPC, House_1, Tower, TreasureMirrorDialogueCanvas, lab
+Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0001_GroundShadow.prefab <- Grid/Enviroments/Bushes/Bush (1)/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0002_GroundShadow.prefab <- Grid/Enviroments/Bushes/Bush (10)/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0003_GroundShadow.prefab <- Grid/Enviroments/Bushes/Bush (11)/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0004_GroundShadow.prefab <- Grid/Enviroments/Bushes/Bush (2)/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0005_GroundShadow.prefab <- Grid/Enviroments/Bushes/Bush (3)/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0006_GroundShadow.prefab <- Grid/Enviroments/Bushes/Bush (4)/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0007_GroundShadow.prefab <- Grid/Enviroments/Bushes/Bush (5)/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0008_GroundShadow.prefab <- Grid/Enviroments/Bushes/Bush (6)/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0009_GroundShadow.prefab <- Grid/Enviroments/Bushes/Bush (7)/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0010_GroundShadow.prefab <- Grid/Enviroments/Bushes/Bush (8)/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0011_GroundShadow.prefab <- Grid/Enviroments/Bushes/Bush (9)/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0012_GroundShadow.prefab <- Grid/Enviroments/Bushes/Bush/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0013_GroundShadow.prefab <- Grid/Enviroments/Cars/Car/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0014_GroundShadow.prefab <- Grid/Enviroments/Cars/Car/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0015_GroundShadow.prefab <- Grid/Enviroments/Houses/House_1/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0016_GroundShadow.prefab <- Grid/Enviroments/Houses/House_2/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0017_GroundShadow.prefab <- Grid/Enviroments/Recycle/RecycleBin (1)/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0018_GroundShadow.prefab <- Grid/Enviroments/Recycle/RecycleBin/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0019_GroundShadow.prefab <- Grid/Enviroments/Street_lamps/Street_lamp (1)/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0020_GroundShadow.prefab <- Grid/Enviroments/Street_lamps/Street_lamp (1)/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0021_GroundShadow.prefab <- Grid/Enviroments/Street_lamps/Street_lamp (2)/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0022_GroundShadow.prefab <- Grid/Enviroments/Street_lamps/Street_lamp (2)/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0023_GroundShadow.prefab <- Grid/Enviroments/Street_lamps/Street_lamp (3)/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0024_GroundShadow.prefab <- Grid/Enviroments/Street_lamps/Street_lamp (3)/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0025_GroundShadow.prefab <- Grid/Enviroments/Street_lamps/Street_lamp (4)/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0026_GroundShadow.prefab <- Grid/Enviroments/Street_lamps/Street_lamp (5)/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0027_GroundShadow.prefab <- Grid/Enviroments/Street_lamps/Street_lamp/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0028_GroundShadow.prefab <- Grid/Enviroments/Street_lamps/Street_lamp/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0029_GroundShadow.prefab <- Grid/Enviroments/Trees/Tree (1)/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0030_GroundShadow.prefab <- Grid/Enviroments/Trees/Tree (2)/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0031_GroundShadow.prefab <- Grid/Enviroments/Trees/Tree (3)/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0032_GroundShadow.prefab <- Grid/Enviroments/Trees/Tree (4)/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0033_GroundShadow.prefab <- Grid/Enviroments/Trees/Tree/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0034_GroundShadow.prefab <- CityExpansion/CityScenery/Bush_28/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0035_GroundShadow.prefab <- CityExpansion/CityScenery/House_1_00/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0036_GroundShadow.prefab <- CityExpansion/CityScenery/House_1_03/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0037_GroundShadow.prefab <- CityExpansion/CityScenery/House_1_05/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0038_GroundShadow.prefab <- CityExpansion/CityScenery/House_2_01/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0039_GroundShadow.prefab <- CityExpansion/CityScenery/House_2_02/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0040_GroundShadow.prefab <- CityExpansion/CityScenery/House_2_04/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0041_GroundShadow.prefab <- CityExpansion/CityScenery/Item_47_41/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0042_GroundShadow.prefab <- CityExpansion/CityScenery/Item_47_42/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0043_GroundShadow.prefab <- CityExpansion/CityScenery/Item_47_43/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0044_GroundShadow.prefab <- CityExpansion/CityScenery/Item_47_44/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0045_GroundShadow.prefab <- CityExpansion/CityScenery/Park_bench_29/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0046_GroundShadow.prefab <- CityExpansion/CityScenery/Park_bench_30/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0047_GroundShadow.prefab <- CityExpansion/CityScenery/Park_bench_31/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0048_GroundShadow.prefab <- CityExpansion/CityScenery/Park_bench_32/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0049_GroundShadow.prefab <- CityExpansion/CityScenery/Park_bench_33/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0050_GroundShadow.prefab <- CityExpansion/CityScenery/RecycleBin_40/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0051_GroundShadow.prefab <- CityExpansion/CityScenery/Street_lamp_34/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0052_GroundShadow.prefab <- CityExpansion/CityScenery/Street_lamp_35/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0053_GroundShadow.prefab <- CityExpansion/CityScenery/Street_lamp_36/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0054_GroundShadow.prefab <- CityExpansion/CityScenery/Street_lamp_37/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0055_GroundShadow.prefab <- CityExpansion/CityScenery/Street_lamp_38/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0056_GroundShadow.prefab <- CityExpansion/CityScenery/Street_lamp_39/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0057_GroundShadow.prefab <- CityExpansion/CityScenery/Tree_07/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0058_GroundShadow.prefab <- CityExpansion/CityScenery/Tree_08/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0059_GroundShadow.prefab <- CityExpansion/CityScenery/Tree_09/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0060_GroundShadow.prefab <- CityExpansion/CityScenery/Tree_10/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0061_GroundShadow.prefab <- CityExpansion/CityScenery/Tree_11/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0062_GroundShadow.prefab <- CityExpansion/CityScenery/Tree_12/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0063_GroundShadow.prefab <- CityExpansion/CityScenery/Tree_13/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0064_GroundShadow.prefab <- CityExpansion/CityScenery/Tree_14/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0065_GroundShadow.prefab <- CityExpansion/CityScenery/Tree_15/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0066_GroundShadow.prefab <- CityExpansion/CityScenery/Tree_16/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0067_GroundShadow.prefab <- CityExpansion/CityScenery/Tree_17/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0068_Bush.prefab <- Grid/Enviroments/Bushes/Bush
+Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0069_GroundShadow.prefab <- Grid/Enviroments/Car (1)/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0070_Car.prefab <- Grid/Enviroments/Cars/Car
+Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0071_GroundShadow.prefab <- Grid/Enviroments/Fire_hydrant (1)/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0072_GroundShadow.prefab <- Grid/Enviroments/Fire_hydrant/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0073_House_1.prefab <- Grid/Enviroments/Houses/House_1
+Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0074_House_2.prefab <- Grid/Enviroments/Houses/House_2
+Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0075_GroundShadow.prefab <- Grid/Enviroments/Item_47 (1)/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0076_GroundShadow.prefab <- Grid/Enviroments/Item_47 (2)/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0077_GroundShadow.prefab <- Grid/Enviroments/Item_47 (3)/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0078_GroundShadow.prefab <- Grid/Enviroments/Item_47 (4)/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0079_GroundShadow.prefab <- Grid/Enviroments/Item_47/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0080_RecycleBin.prefab <- Grid/Enviroments/Recycle/RecycleBin
+Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0081_GroundShadow.prefab <- Grid/Enviroments/Station/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0082_Street_lamp.prefab <- Grid/Enviroments/Street_lamps/Street_lamp
+Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0083_Tree.prefab <- Grid/Enviroments/Trees/Tree
+Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0084_SharedGroundShadow.prefab <- HidingAndTraps/HidingBushes/HidingBush_01/SharedGroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0085_SharedGroundShadow.prefab <- HidingAndTraps/HidingBushes/HidingBush_02/SharedGroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0086_SharedGroundShadow.prefab <- HidingAndTraps/HidingBushes/HidingBush_03/SharedGroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0087_SharedGroundShadow.prefab <- HidingAndTraps/HidingBushes/HidingBush_04/SharedGroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0088_SharedGroundShadow.prefab <- HidingAndTraps/HidingBushes/HidingBush_05/SharedGroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0089_SharedGroundShadow.prefab <- HidingAndTraps/HidingBushes/HidingBush_06/SharedGroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0090_SharedGroundShadow.prefab <- HidingAndTraps/HidingBushes/HidingBush_07/SharedGroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0091_SharedGroundShadow.prefab <- HidingAndTraps/HidingBushes/HidingBush_08/SharedGroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0092_SharedGroundShadow.prefab <- HidingAndTraps/HidingBushes/HidingBush_09/SharedGroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0093_SharedGroundShadow.prefab <- HidingAndTraps/HidingBushes/HidingBush_10/SharedGroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0094_SharedGroundShadow.prefab <- HidingAndTraps/MonsterTraps/MonsterTrap_01/SharedGroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0095_SharedGroundShadow.prefab <- HidingAndTraps/MonsterTraps/MonsterTrap_02/SharedGroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0096_SharedGroundShadow.prefab <- HidingAndTraps/MonsterTraps/MonsterTrap_03/SharedGroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0097_SharedGroundShadow.prefab <- HidingAndTraps/MonsterTraps/MonsterTrap_04/SharedGroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0098_SharedGroundShadow.prefab <- HidingAndTraps/MonsterTraps/MonsterTrap_05/SharedGroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0099_SharedGroundShadow.prefab <- HidingAndTraps/MonsterTraps/MonsterTrap_06/SharedGroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0100_Fire_hydrant.prefab <- Grid/Enviroments/Fire_hydrant
+Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0101_Item_47.prefab <- Grid/Enviroments/Item_47
+Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0102_HidingBush_01.prefab <- HidingAndTraps/HidingBushes/HidingBush_01
+Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0103_HidingBush_02.prefab <- HidingAndTraps/HidingBushes/HidingBush_02
+Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0104_HidingBush_03.prefab <- HidingAndTraps/HidingBushes/HidingBush_03
+Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0105_HidingBush_04.prefab <- HidingAndTraps/HidingBushes/HidingBush_04
+Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0106_HidingBush_05.prefab <- HidingAndTraps/HidingBushes/HidingBush_05
+Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0107_HidingBush_06.prefab <- HidingAndTraps/HidingBushes/HidingBush_06
+Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0108_HidingBush_07.prefab <- HidingAndTraps/HidingBushes/HidingBush_07
+Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0109_HidingBush_08.prefab <- HidingAndTraps/HidingBushes/HidingBush_08
+Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0110_HidingBush_09.prefab <- HidingAndTraps/HidingBushes/HidingBush_09
+Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0111_HidingBush_10.prefab <- HidingAndTraps/HidingBushes/HidingBush_10
+Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0112_MonsterTrap_01.prefab <- HidingAndTraps/MonsterTraps/MonsterTrap_01
+Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0113_MonsterTrap_02.prefab <- HidingAndTraps/MonsterTraps/MonsterTrap_02
+Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0114_MonsterTrap_03.prefab <- HidingAndTraps/MonsterTraps/MonsterTrap_03
+Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0115_MonsterTrap_04.prefab <- HidingAndTraps/MonsterTraps/MonsterTrap_04
+Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0116_MonsterTrap_05.prefab <- HidingAndTraps/MonsterTraps/MonsterTrap_05
+Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0117_MonsterTrap_06.prefab <- HidingAndTraps/MonsterTraps/MonsterTrap_06
+Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0118_GroundShadow.prefab <- House_1/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0119_GroundShadow.prefab <- Monster (1)/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0120_GroundShadow.prefab <- Monster (2)/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0121_GroundShadow.prefab <- Monster (3)/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0122_GroundShadow.prefab <- Monster (4)/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0123_GroundShadow.prefab <- Monster (5)/GroundShadow
+Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0124_ChestQuizSystem.prefab <- ChestQuizSystem
+Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0125_CityExpansion.prefab <- CityExpansion
+Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0126_DialogueCanvas.prefab <- DialogueCanvas
+Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0127_Flask English Quiz Test.prefab <- Flask English Quiz Test
+Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0128_Grid.prefab <- Grid
+Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0129_HidingAndTraps.prefab <- HidingAndTraps
+Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0130_House_1.prefab <- House_1
+Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0131_lab.prefab <- lab
+Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0132_LayeredCityTerrain.prefab <- LayeredCityTerrain
+Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0133_Main Camera.prefab <- Main Camera
+Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0134_Monster (1).prefab <- Monster (1)
+Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0135_Monster (2).prefab <- Monster (2)
+Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0136_Monster (3).prefab <- Monster (3)
+Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0137_Monster (4).prefab <- Monster (4)
+Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0138_Monster (5).prefab <- Monster (5)
+Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0139_Player.prefab <- Player
+Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0140_ScientistNPC.prefab <- ScientistNPC
+Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0141_Tower.prefab <- Tower
+Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0142_TreasureMirrorDialogueCanvas.prefab <- TreasureMirrorDialogueCanvas
+Scene1_Merged: 142 prefabs; validated 440 scene references.
+Merged scene: Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1_Merged.unity
+Build Settings were not changed. Play-test the merged scene before including it in a build.
+Standalone prefabs cannot store references to other scene objects. The exported layout scenes retain those links as instance overrides.
+Mission behavior still depends on the existing EnemyBrain implementation; exporting does not repair missing encounter logic.

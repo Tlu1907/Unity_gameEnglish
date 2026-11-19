@@ -25,6 +25,7 @@ public sealed class NPCIntroDialogue : MonoBehaviour
     private float previousTimeScale;
     private float revealedCharacters;
     private int characterCount;
+    private System.Action<bool> completed;
     public bool IsTyping { get; private set; }
     public bool IsOpen { get; private set; }
 
@@ -36,16 +37,45 @@ public sealed class NPCIntroDialogue : MonoBehaviour
 
     public void Open() => ShowDialogue(dialogue);
 
-    public void ShowDialogue(DialogueData data)
+#if UNITY_EDITOR
+    /// <summary>Copies the authored NPC canvas for the story dialogue Editor builder.</summary>
+    public StoryQuizPanel CreateStoryPanel()
     {
-        if (IsOpen || !isActiveAndEnabled) return;
+        if (dialoguePanel == null || englishText == null || vietnameseText == null ||
+            !dialoguePanel.transform.IsChildOf(transform) ||
+            !englishText.transform.IsChildOf(dialoguePanel.transform) ||
+            !vietnameseText.transform.IsChildOf(dialoguePanel.transform)) return null;
+
+        NPCIntroDialogue copy = Instantiate(this);
+        copy.gameObject.SetActive(false);
+        copy.playOnStart = false;
+        UnityEngine.SceneManagement.SceneManager.MoveGameObjectToScene(copy.gameObject, gameObject.scene);
+        StoryQuizPanel view = copy.dialoguePanel.GetComponent<StoryQuizPanel>();
+        if (view == null) view = copy.dialoguePanel.AddComponent<StoryQuizPanel>();
+        view.Configure(copy.npcNameText, copy.englishText, copy.vietnameseText, copy.continueText);
+        if (copy.portraitImage != null) view.ConfigurePortrait(copy.portraitImage);
+        GameObject canvas = copy.gameObject;
+        DestroyImmediate(copy);
+        canvas.SetActive(true);
+        return view;
+    }
+#endif
+
+    public void ShowDialogue(DialogueData data) => TryShowDialogue(data, null);
+
+    public bool TryShowDialogue(DialogueData data, System.Action<bool> onCompleted)
+    {
+        if (IsOpen || !enabled) return false;
         if (dialoguePanel == null || englishText == null || vietnameseText == null ||
             data == null || !data.IsValid)
         {
             Debug.LogWarning("NPCIntroDialogue: assign Dialogue Panel, English Text, Vietnamese Text and a valid DialogueData asset.", this);
-            return;
+            return false;
         }
-        if (!GameplayState.BeginDialogue(this)) return;
+        if (!GameplayState.CanAct) return false;
+        if (!gameObject.activeSelf) gameObject.SetActive(true);
+        if (!isActiveAndEnabled || !GameplayState.BeginDialogue(this)) return false;
+        completed = onCompleted;
         activeDialogue = data;
         previousTimeScale = Time.timeScale;
         IsOpen = true;
@@ -60,6 +90,7 @@ public sealed class NPCIntroDialogue : MonoBehaviour
         }
         dialoguePanel.SetActive(true);
         ShowLine();
+        return true;
     }
 
     // Update and legacy keyboard input keep working with timeScale at zero.
@@ -76,7 +107,7 @@ public sealed class NPCIntroDialogue : MonoBehaviour
     {
         if (!IsOpen || GameplayState.Current != GameplayMode.Dialogue) return;
         if (IsTyping) { FinishTyping(); return; }
-        if (lineIndex + 1 >= activeDialogue.lines.Length) { Close(); return; }
+        if (lineIndex + 1 >= activeDialogue.lines.Length) { CloseInternal(true); return; }
         lineIndex++;
         ShowLine();
     }
@@ -117,9 +148,13 @@ public sealed class NPCIntroDialogue : MonoBehaviour
                 ? activeDialogue.closePrompt : activeDialogue.continuePrompt;
     }
 
-    public void Close()
+    public void Close() => CloseInternal(false);
+
+    private void CloseInternal(bool readToEnd)
     {
         if (!IsOpen) return;
+        var callback = completed;
+        completed = null;
         IsOpen = false;
         IsTyping = false;
         activeDialogue = null;
@@ -128,6 +163,7 @@ public sealed class NPCIntroDialogue : MonoBehaviour
         Time.timeScale = previousTimeScale;
         GameplayState.EndDialogue(this);
         if (dialoguePanel != null) dialoguePanel.SetActive(false);
+        callback?.Invoke(readToEnd);
     }
 
     private void OnDisable() => Close();

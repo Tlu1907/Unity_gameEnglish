@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2598e857b284925a344cfeb3fb12f50, type: 3}
+  m_Name: Ti_A
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueData
+  speakerName: "T\xED \u2014 C\u1EADu b\xE9 b\xE1n b\xE1o"
+  portrait: {fileID: 5170774222504116895, guid: d9cd513cc127c82479931333a891b8db, type: 3}
+  continuePrompt: "Nh\u1EA5n C \u0111\u1EC3 ti\u1EBFp t\u1EE5c"
+  closePrompt: "Nh\u1EA5n C \u0111\u1EC3 \u0111\xF3ng"
+  lines:
+  - english: Today's newspaper is full of empty spaces! Even the headlines have disappeared.
+    vietnamese: "B\xE1o h\xF4m nay to\xE0n \xF4 tr\u1ED1ng! C\u1EA3 nh\u1EEFng d\xF2ng
+      t\xEDt l\u1EDBn c\u0169ng bi\u1EBFn m\u1EA5t r\u1ED3i."
+  - english: Hide in the leafy bushes if Error Dust follows you. Stay quiet.
+    vietnamese: "N\u1EBFu B\u1EE5i L\u1ED7i \u0111u\u1ED5i theo, anh c\xF3 th\u1EC3
+      n\u1EA5p trong b\u1EE5i c\xE2y r\u1EADm. 'Stay quiet' \u2014 h\xE3y gi\u1EEF
+      y\xEAn l\u1EB7ng."

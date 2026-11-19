@@ -13,21 +13,39 @@ public sealed class PlayerArmorBar : MonoBehaviour
 
     private void Start()
     {
+        foreach (var hud in FindObjectsByType<PlayerVitalsHUD>(FindObjectsInactive.Exclude))
+            if (hud.isActiveAndEnabled && hud.gameObject.scene == gameObject.scene) return;
         health = GetComponent<Health>();
-        canvasObject = new GameObject("Player Armor HUD", typeof(Canvas), typeof(CanvasScaler));
-        Canvas canvas = canvasObject.GetComponent<Canvas>();
-        canvas.renderMode = RenderMode.ScreenSpaceOverlay;
-        canvas.sortingOrder = 10;
-        CanvasScaler scaler = canvasObject.GetComponent<CanvasScaler>();
-        scaler.uiScaleMode = CanvasScaler.ScaleMode.ScaleWithScreenSize;
-        scaler.referenceResolution = new Vector2(1920, 1080);
+        GameStateUI levelHud = FindAnyObjectByType<GameStateUI>();
+        Canvas existing = levelHud != null ? levelHud.GetComponentInParent<Canvas>() : null;
+        if (existing != null)
+        {
+            canvasObject = new GameObject("Player Armor HUD", typeof(RectTransform));
+            canvasObject.transform.SetParent(levelHud.transform, false);
+            canvasObject.transform.SetAsFirstSibling();
+            RectTransform root = (RectTransform)canvasObject.transform;
+            root.anchorMin = Vector2.zero;
+            root.anchorMax = Vector2.one;
+            root.offsetMin = root.offsetMax = Vector2.zero;
+        }
+        else
+        {
+            // Preserve the standalone armor display in scenes without the level HUD.
+            canvasObject = new GameObject("Player Armor HUD", typeof(Canvas), typeof(CanvasScaler));
+            Canvas canvas = canvasObject.GetComponent<Canvas>();
+            canvas.renderMode = RenderMode.ScreenSpaceOverlay;
+            canvas.sortingOrder = 10;
+            CanvasScaler scaler = canvasObject.GetComponent<CanvasScaler>();
+            scaler.uiScaleMode = CanvasScaler.ScaleMode.ScaleWithScreenSize;
+            scaler.referenceResolution = new Vector2(1920, 1080);
+        }
 
         var background = new GameObject("Armor", typeof(RectTransform), typeof(Image));
         background.transform.SetParent(canvasObject.transform, false);
         RectTransform rect = background.GetComponent<RectTransform>();
         rect.anchorMin = rect.anchorMax = rect.pivot = new Vector2(0, 1);
-        rect.anchoredPosition = new Vector2(24, -24);
-        rect.sizeDelta = new Vector2(260, 28);
+        rect.anchoredPosition = existing != null ? new Vector2(40, -156) : new Vector2(24, -24);
+        rect.sizeDelta = existing != null ? new Vector2(420, 28) : new Vector2(260, 28);
         background.GetComponent<Image>().color = new Color(.06f, .09f, .15f, .9f);
         background.GetComponent<Image>().raycastTarget = false;
 

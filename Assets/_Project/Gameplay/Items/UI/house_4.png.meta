@@ -1,0 +1,364 @@
+fileFormatVersion: 2
+guid: cf4c4c76d6f22c844a032ce5b565763c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7605500232587288409
+    second: house_4_0
+  - first:
+      213: 6501044746427203502
+    second: house_4_1
+  - first:
+      213: -8594787515282582727
+    second: house_4_2
+  - first:
+      213: 712243062336447333
+    second: house_4_3
+  - first:
+      213: -758795637971221363
+    second: house_4_4
+  - first:
+      213: 8370836198554762096
+    second: house_4_5
+  - first:
+      213: -3286849863179289114
+    second: house_4_6
+  - first:
+      213: -6610798109195708326
+    second: house_4_7
+  - first:
+      213: 1522437049089494239
+    second: house_4_8
+  - first:
+      213: 2224544622530935294
+    second: house_4_9
+  - first:
+      213: -7117914797170424848
+    second: house_4_10
+  - first:
+      213: 935529710381449878
+    second: house_4_11
+  - first:
+      213: -9211788296274523212
+    second: house_4_12
+  - first:
+      213: -1664858240674299868
+    second: house_4_13
+  - first:
+      213: -3022782307749049250
+    second: house_4_14
+  - first:
+      213: -6166635561417204911
+    second: house_4_15
+  - first:
+      213: -8215185550455641929
+    second: house_4_16
+  - first:
+      213: 6090278076549684334
+    second: house_4_17
+  - first:
+      213: 8074185256011136016
+    second: house_4_18
+  - first:
+      213: -5015793664948058480
+    second: house_4_19
+  - first:
+      213: -1941372405464889417
+    second: house_4_20
+  - first:
+      213: 3739434983925603122
+    second: house_4_21
+  - first:
+      213: -5706842974064446244
+    second: house_4_22
+  - first:
+      213: 784824036637638245
+    second: house_4_23
+  - first:
+      213: 1627966154413202623
+    second: house_4_24
+  - first:
+      213: 4110065905692710006
+    second: house_4_25
+  - first:
+      213: -5935713506154079529
+    second: house_4_26
+  - first:
+      213: 8064352869383830112
+    second: house_4_27
+  - first:
+      213: 4484304655068313925
+    second: house_4_28
+  - first:
+      213: -273004960838063927
+    second: house_4_29
+  - first:
+      213: 8461668086307993118
+    second: house_4_30
+  - first:
+      213: -5116123340937772523
+    second: house_4_31
+  - first:
+      213: -768607269375045164
+    second: house_4_32
+  - first:
+      213: -3570964673550181301
+    second: house_4_33
+  - first:
+      213: -3763049966410359603
+    second: house_4_34
+  - first:
+      213: -9196960949364087026
+    second: house_4_35
+  - first:
+      213: -6379228088076467404
+    second: house_4_36
+  - first:
+      213: -4918406121664311757
+    second: house_4_37
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: house_4_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 624
+        width: 630
+        height: 623
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a0eb7985d5d37690800000000000000
+      internalID: -7605500232587288409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: house_4_1
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 624
+        width: 630
+        height: 623
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eaf76bbb0c9583a50800000000000000
+      internalID: 6501044746427203502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: house_4_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1
+        width: 630
+        height: 623
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9339e9fba4e29b880800000000000000
+      internalID: -8594787515282582727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: house_4_3
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 1
+        width: 630
+        height: 623
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 563ec44aa4562e900800000000000000
+      internalID: 712243062336447333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 0fed9956854c5254d93f16dd5d4a3b90
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":2.0,"y":2.0},"gridSpriteSize":{"x":630.0,"y":623.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      house_4_0: -7605500232587288409
+      house_4_1: 6501044746427203502
+      house_4_2: -8594787515282582727
+      house_4_3: 712243062336447333
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

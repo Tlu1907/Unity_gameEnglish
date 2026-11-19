@@ -13,6 +13,8 @@ public sealed class PlayerAppearance : MonoBehaviour
     private CharacterAnimation visuals;
     private bool warned;
     private bool started;
+    public bool UsesEquippedAnimations => visuals != null && visuals.Animator != null &&
+        equippedController != null && visuals.Animator.runtimeAnimatorController == equippedController;
 
     private void OnEnable()
     {
@@ -48,11 +50,8 @@ public sealed class PlayerAppearance : MonoBehaviour
             return;
         }
         RuntimeAnimatorController desired = baseController;
-        if (inventory.HasWeapon)
-        {
-            if (HasCompleteOverrides()) desired = equippedController;
-            else Warn("Player_Equipped must use Base Controller and override all eight U_ clips with matching E_ clips. Keeping unequipped visuals.");
-        }
+        if (inventory != null && inventory.HasWeapon && HasCompleteOverrides())
+            desired = equippedController;
         if (animator.runtimeAnimatorController == desired) return;
         // Both controllers share the same state machine, so Unity retains the current state.
         animator.runtimeAnimatorController = desired;

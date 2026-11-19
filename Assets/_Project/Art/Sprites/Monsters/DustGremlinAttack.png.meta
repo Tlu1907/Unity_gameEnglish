@@ -1,0 +1,853 @@
+fileFormatVersion: 2
+guid: ab9f0318499de244595281747c5faa10
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3082430278691695135
+    second: DustGremlinAttack_0
+  - first:
+      213: -880684668071904076
+    second: DustGremlinAttack_1
+  - first:
+      213: -6226531951224760715
+    second: DustGremlinAttack_2
+  - first:
+      213: 5253217823923799545
+    second: DustGremlinAttack_3
+  - first:
+      213: 2351126288631266347
+    second: DustGremlinAttack_4
+  - first:
+      213: 3887240391188429825
+    second: DustGremlinAttack_5
+  - first:
+      213: -1278843547686947142
+    second: DustGremlinAttack_6
+  - first:
+      213: -5491625845916485773
+    second: DustGremlinAttack_7
+  - first:
+      213: 4593073385302619956
+    second: DustGremlinAttack_8
+  - first:
+      213: 2252357107762145194
+    second: DustGremlinAttack_9
+  - first:
+      213: -8679712512784017561
+    second: DustGremlinAttack_10
+  - first:
+      213: 5010210584121581389
+    second: DustGremlinAttack_11
+  - first:
+      213: 5703819070771974031
+    second: DustGremlinAttack_12
+  - first:
+      213: 8540566696696857941
+    second: DustGremlinAttack_13
+  - first:
+      213: -1721222194531448388
+    second: DustGremlinAttack_14
+  - first:
+      213: 7535624187628448179
+    second: DustGremlinAttack_15
+  - first:
+      213: 7748543792103476740
+    second: DustGremlinAttack_16
+  - first:
+      213: -8913827335944214747
+    second: DustGremlinAttack_17
+  - first:
+      213: -3450095494556936439
+    second: DustGremlinAttack_18
+  - first:
+      213: -2637098107387696854
+    second: DustGremlinAttack_19
+  - first:
+      213: 7312296829634440550
+    second: DustGremlinAttack_20
+  - first:
+      213: 7134161887396067139
+    second: DustGremlinAttack_21
+  - first:
+      213: -7679500499927215668
+    second: DustGremlinAttack_22
+  - first:
+      213: 4972024921462915135
+    second: DustGremlinAttack_23
+  - first:
+      213: 3962983353580967189
+    second: DustGremlinAttack_24
+  - first:
+      213: -6988235679261159834
+    second: DustGremlinAttack_25
+  - first:
+      213: -6646710758082247352
+    second: DustGremlinAttack_26
+  - first:
+      213: -1665428389422405246
+    second: DustGremlinAttack_27
+  - first:
+      213: 6265747402492823578
+    second: DustGremlinAttack_28
+  - first:
+      213: -1466911001718002695
+    second: DustGremlinAttack_29
+  - first:
+      213: 350069194690134315
+    second: DustGremlinAttack_30
+  - first:
+      213: -6194123110969162863
+    second: DustGremlinAttack_31
+  - first:
+      213: 2865825303268103057
+    second: DustGremlinAttack_32
+  - first:
+      213: 7766213914662179441
+    second: DustGremlinAttack_33
+  - first:
+      213: 4789561903986330409
+    second: DustGremlinAttack_34
+  - first:
+      213: 2712203460063217517
+    second: DustGremlinAttack_35
+  - first:
+      213: -9074590489315120709
+    second: DustGremlinAttack_36
+  - first:
+      213: 7695467449129349345
+    second: DustGremlinAttack_37
+  - first:
+      213: 4272695024932640346
+    second: DustGremlinAttack_38
+  - first:
+      213: 8436103554085152431
+    second: DustGremlinAttack_39
+  - first:
+      213: 5168928359429571785
+    second: DustGremlinAttack_40
+  - first:
+      213: 7633887720299499645
+    second: DustGremlinAttack_41
+  - first:
+      213: 3358820308882262988
+    second: DustGremlinAttack_42
+  - first:
+      213: 2150029463617517039
+    second: DustGremlinAttack_43
+  - first:
+      213: 8760606987286675104
+    second: DustGremlinAttack_44
+  - first:
+      213: -657602740915280567
+    second: DustGremlinAttack_45
+  - first:
+      213: -4948387146092106110
+    second: DustGremlinAttack_46
+  - first:
+      213: 1250184051681895241
+    second: DustGremlinAttack_47
+  - first:
+      213: -7081563564238124592
+    second: DustGremlinAttack_48
+  - first:
+      213: -7252212993148632032
+    second: DustGremlinAttack_49
+  - first:
+      213: -3494212197732909220
+    second: DustGremlinAttack_50
+  - first:
+      213: 882942230653123566
+    second: DustGremlinAttack_51
+  - first:
+      213: 6783295443301600252
+    second: DustGremlinAttack_52
+  - first:
+      213: 7347087838062000071
+    second: DustGremlinAttack_53
+  - first:
+      213: -7104527242487007593
+    second: DustGremlinAttack_54
+  - first:
+      213: 315842466221862482
+    second: DustGremlinAttack_55
+  - first:
+      213: -1051677156265645754
+    second: DustGremlinAttack_56
+  - first:
+      213: -3995819960021567761
+    second: DustGremlinAttack_57
+  - first:
+      213: -5426538511820890581
+    second: DustGremlinAttack_58
+  - first:
+      213: -5529146223677272148
+    second: DustGremlinAttack_59
+  - first:
+      213: -4985065515314432175
+    second: DustGremlinAttack_60
+  - first:
+      213: -4127859014310213009
+    second: DustGremlinAttack_61
+  - first:
+      213: 8426628126992844654
+    second: DustGremlinAttack_62
+  - first:
+      213: 6711683423601851182
+    second: DustGremlinAttack_63
+  - first:
+      213: 3563739889025457837
+    second: DustGremlinAttack_64
+  - first:
+      213: -4573318730637162777
+    second: DustGremlinAttack_65
+  - first:
+      213: 2085581031340511964
+    second: DustGremlinAttack_66
+  - first:
+      213: 7915650938347394200
+    second: DustGremlinAttack_67
+  - first:
+      213: 8679648483819579475
+    second: DustGremlinAttack_68
+  - first:
+      213: 2196388254371422683
+    second: DustGremlinAttack_69
+  - first:
+      213: -7972294398331670806
+    second: DustGremlinAttack_70
+  - first:
+      213: -336308110446318442
+    second: DustGremlinAttack_71
+  - first:
+      213: 4613006268587720785
+    second: DustGremlinAttack_72
+  - first:
+      213: 453115505161168155
+    second: DustGremlinAttack_73
+  - first:
+      213: 784741069575517135
+    second: DustGremlinAttack_74
+  - first:
+      213: -6452217695980364163
+    second: DustGremlinAttack_75
+  - first:
+      213: 8342481150372366839
+    second: DustGremlinAttack_76
+  - first:
+      213: 128908575054916514
+    second: DustGremlinAttack_77
+  - first:
+      213: -2204159045208893957
+    second: DustGremlinAttack_78
+  - first:
+      213: 960305760950342819
+    second: DustGremlinAttack_79
+  - first:
+      213: 2822323049296663685
+    second: DustGremlin_Attack_Down_0
+  - first:
+      213: -1989105239304938702
+    second: DustGremlin_Attack_Down_1
+  - first:
+      213: 3182652933702123846
+    second: DustGremlin_Attack_Down_2
+  - first:
+      213: 4354050162941234926
+    second: DustGremlin_Attack_Down_3
+  - first:
+      213: -8692046379579684757
+    second: DustGremlin_Attack_Left_0
+  - first:
+      213: -4843182183870555285
+    second: DustGremlin_Attack_Left_1
+  - first:
+      213: -263477228309890794
+    second: DustGremlin_Attack_Left_2
+  - first:
+      213: 1176841983701303241
+    second: DustGremlin_Attack_Left_3
+  - first:
+      213: -7783419135119631383
+    second: DustGremlin_Attack_Right_0
+  - first:
+      213: -1117722988325976902
+    second: DustGremlin_Attack_Right_1
+  - first:
+      213: -4061153782318424822
+    second: DustGremlin_Attack_Right_2
+  - first:
+      213: -2577091319852775407
+    second: DustGremlin_Attack_Right_3
+  - first:
+      213: -5202635408372399277
+    second: DustGremlin_Attack_Up_0
+  - first:
+      213: -7926759948182222435
+    second: DustGremlin_Attack_Up_1
+  - first:
+      213: 6865153961789231658
+    second: DustGremlin_Attack_Up_2
+  - first:
+      213: -8748647012447737132
+    second: DustGremlin_Attack_Up_3
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 313
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: DustGremlin_Attack_Down_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 941
+        width: 313
+        height: 313
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1373802}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58499ba2cd7ea2720800000000000000
+      internalID: 2822323049296663685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DustGremlin_Attack_Down_1
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 941
+        width: 313
+        height: 313
+      alignment: 9
+      pivot: {x: 0.5, y: 0.11821086}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23b5c56d2574564e0800000000000000
+      internalID: -1989105239304938702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DustGremlin_Attack_Down_2
+      rect:
+        serializedVersion: 2
+        x: 626
+        y: 941
+        width: 313
+        height: 313
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1086262}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6418ba41bfd0b2c20800000000000000
+      internalID: 3182652933702123846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DustGremlin_Attack_Down_3
+      rect:
+        serializedVersion: 2
+        x: 939
+        y: 941
+        width: 313
+        height: 313
+      alignment: 9
+      pivot: {x: 0.5, y: 0.14376996}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eee0850fd81bc6c30800000000000000
+      internalID: 4354050162941234926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DustGremlin_Attack_Left_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 628
+        width: 313
+        height: 313
+      alignment: 9
+      pivot: {x: 0.5, y: 0.17571884}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b68cee5ced5af5780800000000000000
+      internalID: -8692046379579684757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DustGremlin_Attack_Left_1
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 628
+        width: 313
+        height: 313
+      alignment: 9
+      pivot: {x: 0.5, y: 0.17891374}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6b15ebc67f89ccb0800000000000000
+      internalID: -4843182183870555285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DustGremlin_Attack_Left_2
+      rect:
+        serializedVersion: 2
+        x: 626
+        y: 628
+        width: 313
+        height: 313
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1629393}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6193f285bd0f75cf0800000000000000
+      internalID: -263477228309890794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DustGremlin_Attack_Left_3
+      rect:
+        serializedVersion: 2
+        x: 939
+        y: 628
+        width: 313
+        height: 313
+      alignment: 9
+      pivot: {x: 0.5, y: 0.20447284}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9cf384b8c8bf45010800000000000000
+      internalID: 1176841983701303241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DustGremlin_Attack_Right_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 315
+        width: 313
+        height: 313
+      alignment: 9
+      pivot: {x: 0.5, y: 0.18530351}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9eb5731f88dbbf390800000000000000
+      internalID: -7783419135119631383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DustGremlin_Attack_Right_1
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 315
+        width: 313
+        height: 313
+      alignment: 9
+      pivot: {x: 0.5, y: 0.17891374}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab4ca833ddc0d70f0800000000000000
+      internalID: -1117722988325976902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DustGremlin_Attack_Right_2
+      rect:
+        serializedVersion: 2
+        x: 626
+        y: 315
+        width: 313
+        height: 313
+      alignment: 9
+      pivot: {x: 0.5, y: 0.16613418}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0d1da2e622e3a7c0800000000000000
+      internalID: -4061153782318424822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DustGremlin_Attack_Right_3
+      rect:
+        serializedVersion: 2
+        x: 939
+        y: 315
+        width: 313
+        height: 313
+      alignment: 9
+      pivot: {x: 0.5, y: 0.18530351}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 118ce6e39155c3cd0800000000000000
+      internalID: -2577091319852775407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DustGremlin_Attack_Up_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2
+        width: 313
+        height: 313
+      alignment: 9
+      pivot: {x: 0.5, y: 0.20766774}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 353081c29a68cc7b0800000000000000
+      internalID: -5202635408372399277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DustGremlin_Attack_Up_1
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 2
+        width: 313
+        height: 313
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2172524}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d990ecc23dd7ef190800000000000000
+      internalID: -7926759948182222435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DustGremlin_Attack_Up_2
+      rect:
+        serializedVersion: 2
+        x: 626
+        y: 2
+        width: 313
+        height: 313
+      alignment: 9
+      pivot: {x: 0.5, y: 0.19169329}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2210d4b72de54f50800000000000000
+      internalID: 6865153961789231658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DustGremlin_Attack_Up_3
+      rect:
+        serializedVersion: 2
+        x: 939
+        y: 2
+        width: 313
+        height: 313
+      alignment: 9
+      pivot: {x: 0.5, y: 0.20766774}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4da25cdf4ef869680800000000000000
+      internalID: -8748647012447737132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 7e87178da0ab10b4cadf3f38c8ff1f9b
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      DustGremlinAttack_0: 3082430278691695135
+      DustGremlinAttack_1: -880684668071904076
+      DustGremlinAttack_10: -8679712512784017561
+      DustGremlinAttack_11: 5010210584121581389
+      DustGremlinAttack_12: 5703819070771974031
+      DustGremlinAttack_13: 8540566696696857941
+      DustGremlinAttack_14: -1721222194531448388
+      DustGremlinAttack_15: 7535624187628448179
+      DustGremlinAttack_16: 7748543792103476740
+      DustGremlinAttack_17: -8913827335944214747
+      DustGremlinAttack_18: -3450095494556936439
+      DustGremlinAttack_19: -2637098107387696854
+      DustGremlinAttack_2: -6226531951224760715
+      DustGremlinAttack_20: 7312296829634440550
+      DustGremlinAttack_21: 7134161887396067139
+      DustGremlinAttack_22: -7679500499927215668
+      DustGremlinAttack_23: 4972024921462915135
+      DustGremlinAttack_24: 3962983353580967189
+      DustGremlinAttack_25: -6988235679261159834
+      DustGremlinAttack_26: -6646710758082247352
+      DustGremlinAttack_27: -1665428389422405246
+      DustGremlinAttack_28: 6265747402492823578
+      DustGremlinAttack_29: -1466911001718002695
+      DustGremlinAttack_3: 5253217823923799545
+      DustGremlinAttack_30: 350069194690134315
+      DustGremlinAttack_31: -6194123110969162863
+      DustGremlinAttack_32: 2865825303268103057
+      DustGremlinAttack_33: 7766213914662179441
+      DustGremlinAttack_34: 4789561903986330409
+      DustGremlinAttack_35: 2712203460063217517
+      DustGremlinAttack_36: -9074590489315120709
+      DustGremlinAttack_37: 7695467449129349345
+      DustGremlinAttack_38: 4272695024932640346
+      DustGremlinAttack_39: 8436103554085152431
+      DustGremlinAttack_4: 2351126288631266347
+      DustGremlinAttack_40: 5168928359429571785
+      DustGremlinAttack_41: 7633887720299499645
+      DustGremlinAttack_42: 3358820308882262988
+      DustGremlinAttack_43: 2150029463617517039
+      DustGremlinAttack_44: 8760606987286675104
+      DustGremlinAttack_45: -657602740915280567
+      DustGremlinAttack_46: -4948387146092106110
+      DustGremlinAttack_47: 1250184051681895241
+      DustGremlinAttack_48: -7081563564238124592
+      DustGremlinAttack_49: -7252212993148632032
+      DustGremlinAttack_5: 3887240391188429825
+      DustGremlinAttack_50: -3494212197732909220
+      DustGremlinAttack_51: 882942230653123566
+      DustGremlinAttack_52: 6783295443301600252
+      DustGremlinAttack_53: 7347087838062000071
+      DustGremlinAttack_54: -7104527242487007593
+      DustGremlinAttack_55: 315842466221862482
+      DustGremlinAttack_56: -1051677156265645754
+      DustGremlinAttack_57: -3995819960021567761
+      DustGremlinAttack_58: -5426538511820890581
+      DustGremlinAttack_59: -5529146223677272148
+      DustGremlinAttack_6: -1278843547686947142
+      DustGremlinAttack_60: -4985065515314432175
+      DustGremlinAttack_61: -4127859014310213009
+      DustGremlinAttack_62: 8426628126992844654
+      DustGremlinAttack_63: 6711683423601851182
+      DustGremlinAttack_64: 3563739889025457837
+      DustGremlinAttack_65: -4573318730637162777
+      DustGremlinAttack_66: 2085581031340511964
+      DustGremlinAttack_67: 7915650938347394200
+      DustGremlinAttack_68: 8679648483819579475
+      DustGremlinAttack_69: 2196388254371422683
+      DustGremlinAttack_7: -5491625845916485773
+      DustGremlinAttack_70: -7972294398331670806
+      DustGremlinAttack_71: -336308110446318442
+      DustGremlinAttack_72: 4613006268587720785
+      DustGremlinAttack_73: 453115505161168155
+      DustGremlinAttack_74: 784741069575517135
+      DustGremlinAttack_75: -6452217695980364163
+      DustGremlinAttack_76: 8342481150372366839
+      DustGremlinAttack_77: 128908575054916514
+      DustGremlinAttack_78: -2204159045208893957
+      DustGremlinAttack_79: 960305760950342819
+      DustGremlinAttack_8: 4593073385302619956
+      DustGremlinAttack_9: 2252357107762145194
+      DustGremlin_Attack_Down_0: 2822323049296663685
+      DustGremlin_Attack_Down_1: -1989105239304938702
+      DustGremlin_Attack_Down_2: 3182652933702123846
+      DustGremlin_Attack_Down_3: 4354050162941234926
+      DustGremlin_Attack_Left_0: -8692046379579684757
+      DustGremlin_Attack_Left_1: -4843182183870555285
+      DustGremlin_Attack_Left_2: -263477228309890794
+      DustGremlin_Attack_Left_3: 1176841983701303241
+      DustGremlin_Attack_Right_0: -7783419135119631383
+      DustGremlin_Attack_Right_1: -1117722988325976902
+      DustGremlin_Attack_Right_2: -4061153782318424822
+      DustGremlin_Attack_Right_3: -2577091319852775407
+      DustGremlin_Attack_Up_0: -5202635408372399277
+      DustGremlin_Attack_Up_1: -7926759948182222435
+      DustGremlin_Attack_Up_2: 6865153961789231658
+      DustGremlin_Attack_Up_3: -8748647012447737132
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

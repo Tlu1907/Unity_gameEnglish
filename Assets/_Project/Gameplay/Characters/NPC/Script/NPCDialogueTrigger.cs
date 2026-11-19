@@ -6,15 +6,34 @@ public sealed class NPCDialogueTrigger : MonoBehaviour
     [SerializeField] private NPCIntroDialogue dialogueUI;
     [SerializeField] private DialogueData dialogueData;
     [SerializeField] private bool onlyOnce = true;
+    [SerializeField] private string beatId;
+    [SerializeField] private StoryQuizPanel dialoguePanel;
+    private StoryBeatData storyBeat;
+    private bool pending;
+    public bool IsMissionNpc => !string.IsNullOrEmpty(beatId);
+    public string MissionBeatId => beatId;
+    private StoryBeatData Beat
+    {
+        get
+        {
+            if (storyBeat == null || storyBeat.beatId != beatId) storyBeat = StoryBeatData.Load(beatId);
+            return storyBeat;
+        }
+    }
 
     private readonly HashSet<Collider2D> contacts =
         new HashSet<Collider2D>();
 
     private bool played;
-    private bool activatedThisVisit;
+
 
     private void Start()
     {
+        if (!string.IsNullOrEmpty(beatId))
+        {
+            if (Beat == null || !Beat.IsValid) { Debug.LogWarning("NPC story beat is missing or invalid: " + beatId, this); enabled = false; }
+            return;
+        }
         if (dialogueUI == null || dialogueData == null || !dialogueData.IsValid)
         {
             Debug.LogWarning("NPCDialogueTrigger: assign Dialogue UI and Dialogue Data with non-empty English and Vietnamese lines.", this);
@@ -32,38 +51,44 @@ public sealed class NPCDialogueTrigger : MonoBehaviour
     {
         contacts.Remove(other);
 
-        if (contacts.Count == 0)
-            activatedThisVisit = false;
+
+    
     }
 
-    private void Update()
+    public bool CanTalk => isActiveAndEnabled && !pending && !(onlyOnce && played) &&
+        (!string.IsNullOrEmpty(beatId) ? StoryProgress.CanStart(beatId) : dialogueUI != null && dialogueData != null);
+    public string SpeakerName => !string.IsNullOrEmpty(beatId) ? Beat != null ? Beat.speaker : "NPC" : dialogueData != null ? dialogueData.speakerName : "NPC";
+    public bool TryTalk()
     {
-        contacts.RemoveWhere(c =>
-            c == null || !c.enabled || !c.gameObject.activeInHierarchy);
-
-        if (contacts.Count == 0)
+        if (!CanTalk || !GameplayState.CanAct) return false;
+        if (!string.IsNullOrEmpty(beatId))
         {
-            activatedThisVisit = false;
-            return;
+            if (dialoguePanel == null) dialoguePanel = StoryQuizPanel.FindOrCreate();
+            if (dialoguePanel == null || Beat == null) return false;
+            pending = true;
+            if (dialoguePanel.TryOpen(Beat, completed => { pending = false; if (completed) played = true; })) return true;
+            pending = false;
+            return false;
         }
-
-        if (activatedThisVisit || (onlyOnce && played) ||
-            !GameplayState.CanAct || dialogueUI == null ||
-            dialogueData == null)
-            return;
+        if (dialogueUI.IsOpen) return false;
 
         dialogueUI.ShowDialogue(dialogueData);
 
         if (dialogueUI.IsOpen)
         {
             played = true;
-            activatedThisVisit = true;
+
+            return true;
         }
+        return false;
     }
 
     private void OnDisable()
     {
+        if (pending && dialoguePanel != null && dialoguePanel.IsOpen) dialoguePanel.Close();
+        pending = false;
         contacts.Clear();
-        activatedThisVisit = false;
+
     }
 }
+

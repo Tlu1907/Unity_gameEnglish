@@ -1,0 +1,474 @@
+fileFormatVersion: 2
+guid: d45cdf11411f42046b35bcc837a5946e
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1659130921392490716
+    second: down_v2_0
+  - first:
+      213: -7946149012520484731
+    second: down_v2_1
+  - first:
+      213: 5934997683764720997
+    second: down_v2_2
+  - first:
+      213: -6893047532376696152
+    second: down_v2_3
+  - first:
+      213: 2765708770392034060
+    second: down_v2_4
+  - first:
+      213: -5996142545757376607
+    second: down_v2_5
+  - first:
+      213: -1508444551467299435
+    second: down_v2_6
+  - first:
+      213: -2634184084679834314
+    second: down_v2_7
+  - first:
+      213: -1865350702496766212
+    second: down_v2_8
+  - first:
+      213: 3789922223112555329
+    second: down_v2_9
+  - first:
+      213: -8990028400637437873
+    second: down_v2_10
+  - first:
+      213: 5467486219124707104
+    second: down_v2_11
+  - first:
+      213: -5486636479693698587
+    second: down_v2_12
+  - first:
+      213: 7508857175389250216
+    second: down_v2_13
+  - first:
+      213: -2394637047521576158
+    second: down_v2_14
+  - first:
+      213: -6805411346264072288
+    second: down_v2_15
+  - first:
+      213: 7001226632855578310
+    second: down_v2_16
+  - first:
+      213: 6019638535943467889
+    second: down_v2_17
+  - first:
+      213: 403514581073463594
+    second: down_v2_18
+  - first:
+      213: -4005713669044051065
+    second: down_v2_19
+  - first:
+      213: -6789568723315115675
+    second: down_v2_20
+  - first:
+      213: 8221244921301406952
+    second: down_v2_21
+  - first:
+      213: -5886856138316864283
+    second: down_v2_22
+  - first:
+      213: -3487829236330443827
+    second: down_v2_23
+  - first:
+      213: -4030850628488076905
+    second: down_v2_24
+  - first:
+      213: -1378403250064773625
+    second: down_v2_25
+  - first:
+      213: -882310668834009388
+    second: down_v2_26
+  - first:
+      213: -4943354606722790281
+    second: down_v2_27
+  - first:
+      213: 223803320884913839
+    second: down_v2_28
+  - first:
+      213: 4754522786250336437
+    second: down_v2_29
+  - first:
+      213: 6524812188171007883
+    second: down_v2_30
+  - first:
+      213: 2631079911569137526
+    second: down_v2_31
+  - first:
+      213: -3214267113924501403
+    second: down_v2_32
+  - first:
+      213: -3074239014168575308
+    second: down_v2_33
+  - first:
+      213: -7852452120131318908
+    second: down_v2_34
+  - first:
+      213: 4728615534541734623
+    second: down_v2_35
+  - first:
+      213: -3507833975775989936
+    second: down_v2_36
+  - first:
+      213: -2132502832126754872
+    second: down_v2_37
+  - first:
+      213: 3450398329643273949
+    second: down_v2_38
+  - first:
+      213: 5018075756110170675
+    second: down_v2_39
+  - first:
+      213: 2024636748387425408
+    second: down_v2_40
+  - first:
+      213: -5549516788823714739
+    second: down_v2_41
+  - first:
+      213: 256923992607782591
+    second: down_v2_42
+  - first:
+      213: -181601931470888834
+    second: down_v2_43
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 120
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: down_v2_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 271
+        height: 724
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 427b88aa73599f8e0800000000000000
+      internalID: -1659130921392490716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: down_v2_1
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 0
+        width: 271
+        height: 724
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5804568d29b99b190800000000000000
+      internalID: -7946149012520484731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: down_v2_2
+      rect:
+        serializedVersion: 2
+        x: 542
+        y: 0
+        width: 271
+        height: 724
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 565ff8bc2f85d5250800000000000000
+      internalID: 5934997683764720997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: down_v2_3
+      rect:
+        serializedVersion: 2
+        x: 813
+        y: 0
+        width: 271
+        height: 724
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8aaddcc4ac9f650a0800000000000000
+      internalID: -6893047532376696152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: down_v2_4
+      rect:
+        serializedVersion: 2
+        x: 1084
+        y: 0
+        width: 271
+        height: 724
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0b466b2975c16620800000000000000
+      internalID: 2765708770392034060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: down_v2_5
+      rect:
+        serializedVersion: 2
+        x: 1355
+        y: 0
+        width: 271
+        height: 724
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1af6681af1c69cca0800000000000000
+      internalID: -5996142545757376607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: down_v2_6
+      rect:
+        serializedVersion: 2
+        x: 1626
+        y: 0
+        width: 271
+        height: 724
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59d0b6a2cade01be0800000000000000
+      internalID: -1508444551467299435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: down_v2_7
+      rect:
+        serializedVersion: 2
+        x: 1897
+        y: 0
+        width: 271
+        height: 724
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 635cbaf088f717bd0800000000000000
+      internalID: -2634184084679834314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 0496c9806290adb4f8973ba130605829
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":8.0,"y":1.0},"gridSpriteSize":{"x":271.0,"y":724.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      down_v2_0: -1659130921392490716
+      down_v2_1: -7946149012520484731
+      down_v2_2: 5934997683764720997
+      down_v2_3: -6893047532376696152
+      down_v2_4: 2765708770392034060
+      down_v2_5: -5996142545757376607
+      down_v2_6: -1508444551467299435
+      down_v2_7: -2634184084679834314
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

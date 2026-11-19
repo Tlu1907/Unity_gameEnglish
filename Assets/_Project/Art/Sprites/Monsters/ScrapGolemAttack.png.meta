@@ -1,0 +1,1065 @@
+fileFormatVersion: 2
+guid: 2a918581c6f0b6345a724cd082cb610a
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8373367709570422101
+    second: ScrapGolemAttack_0
+  - first:
+      213: -1723234715331468844
+    second: ScrapGolemAttack_1
+  - first:
+      213: 1862198535690831332
+    second: ScrapGolemAttack_2
+  - first:
+      213: 6086164788393783017
+    second: ScrapGolemAttack_3
+  - first:
+      213: 1451829557603370646
+    second: ScrapGolemAttack_4
+  - first:
+      213: -1298356946384409939
+    second: ScrapGolemAttack_5
+  - first:
+      213: 1138354532748079360
+    second: ScrapGolemAttack_6
+  - first:
+      213: -7978091480313901899
+    second: ScrapGolemAttack_7
+  - first:
+      213: 6277882934489366497
+    second: ScrapGolemAttack_8
+  - first:
+      213: -2367546385352213604
+    second: ScrapGolemAttack_9
+  - first:
+      213: 7729799434284254971
+    second: ScrapGolemAttack_10
+  - first:
+      213: 7760738993774740776
+    second: ScrapGolemAttack_11
+  - first:
+      213: -5417715090626580941
+    second: ScrapGolemAttack_12
+  - first:
+      213: -9176258726005939524
+    second: ScrapGolemAttack_13
+  - first:
+      213: -6929182722857688270
+    second: ScrapGolemAttack_14
+  - first:
+      213: 1486818330433938604
+    second: ScrapGolemAttack_15
+  - first:
+      213: 8138195006334870661
+    second: ScrapGolemAttack_16
+  - first:
+      213: -1267140265857221122
+    second: ScrapGolemAttack_17
+  - first:
+      213: 1834268112870641528
+    second: ScrapGolemAttack_18
+  - first:
+      213: 2566494097866422331
+    second: ScrapGolemAttack_19
+  - first:
+      213: 5905302576518267606
+    second: ScrapGolemAttack_20
+  - first:
+      213: -3556956134937140744
+    second: ScrapGolemAttack_21
+  - first:
+      213: -1781189362237737556
+    second: ScrapGolemAttack_22
+  - first:
+      213: -5406342027241780805
+    second: ScrapGolemAttack_23
+  - first:
+      213: -832656617288720139
+    second: ScrapGolemAttack_24
+  - first:
+      213: -2037881037412676785
+    second: ScrapGolemAttack_25
+  - first:
+      213: 1185287421791881790
+    second: ScrapGolemAttack_26
+  - first:
+      213: 3147040930810316430
+    second: ScrapGolemAttack_27
+  - first:
+      213: -795923977676906492
+    second: ScrapGolemAttack_28
+  - first:
+      213: 984795354143174632
+    second: ScrapGolemAttack_29
+  - first:
+      213: -7768297735838910700
+    second: ScrapGolemAttack_30
+  - first:
+      213: 885967314296613071
+    second: ScrapGolemAttack_31
+  - first:
+      213: -7390380030933864945
+    second: ScrapGolemAttack_32
+  - first:
+      213: -9129681576476994619
+    second: ScrapGolemAttack_33
+  - first:
+      213: -2799180696814219363
+    second: ScrapGolemAttack_34
+  - first:
+      213: 4496111775910747225
+    second: ScrapGolemAttack_35
+  - first:
+      213: -1878732575003685848
+    second: ScrapGolemAttack_36
+  - first:
+      213: -1674825617312442342
+    second: ScrapGolemAttack_37
+  - first:
+      213: 6236042417059283019
+    second: ScrapGolemAttack_38
+  - first:
+      213: 5923770286596025887
+    second: ScrapGolemAttack_39
+  - first:
+      213: 4732092455370403585
+    second: ScrapGolemAttack_40
+  - first:
+      213: 7165432367499082176
+    second: ScrapGolemAttack_41
+  - first:
+      213: -2123930538954850655
+    second: ScrapGolemAttack_42
+  - first:
+      213: -2649110531583474976
+    second: ScrapGolemAttack_43
+  - first:
+      213: -4055011916716953867
+    second: ScrapGolemAttack_44
+  - first:
+      213: 6275419712010725938
+    second: ScrapGolemAttack_45
+  - first:
+      213: -898022376543615618
+    second: ScrapGolemAttack_46
+  - first:
+      213: -7672220517777174847
+    second: ScrapGolemAttack_47
+  - first:
+      213: 4321031868639925440
+    second: ScrapGolemAttack_48
+  - first:
+      213: -531791532407792296
+    second: ScrapGolemAttack_49
+  - first:
+      213: -3744886335646704493
+    second: ScrapGolemAttack_50
+  - first:
+      213: 2001831580361539561
+    second: ScrapGolemAttack_51
+  - first:
+      213: 6393407148848158291
+    second: ScrapGolemAttack_52
+  - first:
+      213: -7931652518394259456
+    second: ScrapGolemAttack_53
+  - first:
+      213: 3169216140899255082
+    second: ScrapGolemAttack_54
+  - first:
+      213: 4941698773790454071
+    second: ScrapGolemAttack_55
+  - first:
+      213: -3958871523289643693
+    second: ScrapGolemAttack_56
+  - first:
+      213: -1780968519421941856
+    second: ScrapGolemAttack_57
+  - first:
+      213: 131936498672870954
+    second: ScrapGolemAttack_58
+  - first:
+      213: 690009318590981732
+    second: ScrapGolemAttack_59
+  - first:
+      213: -6264990747553092754
+    second: ScrapGolemAttack_60
+  - first:
+      213: -7014258641863467491
+    second: ScrapGolemAttack_61
+  - first:
+      213: 7901501983676690386
+    second: ScrapGolemAttack_62
+  - first:
+      213: -6135796927883655440
+    second: ScrapGolemAttack_63
+  - first:
+      213: -5605547827005059728
+    second: ScrapGolemAttack_64
+  - first:
+      213: 681487634648871457
+    second: ScrapGolemAttack_65
+  - first:
+      213: 4988207577033328698
+    second: ScrapGolemAttack_66
+  - first:
+      213: 4555687690735302858
+    second: ScrapGolemAttack_67
+  - first:
+      213: -1881958368092179776
+    second: ScrapGolemAttack_68
+  - first:
+      213: 3659892216324295411
+    second: ScrapGolemAttack_69
+  - first:
+      213: -5456939917485693933
+    second: ScrapGolemAttack_70
+  - first:
+      213: -8116609688414011533
+    second: ScrapGolemAttack_71
+  - first:
+      213: 4156614900096979662
+    second: ScrapGolemAttack_72
+  - first:
+      213: -157970643962916098
+    second: ScrapGolemAttack_73
+  - first:
+      213: -7793731124859532823
+    second: ScrapGolemAttack_74
+  - first:
+      213: -6690601085464708167
+    second: ScrapGolemAttack_75
+  - first:
+      213: -3568150466228009818
+    second: ScrapGolemAttack_76
+  - first:
+      213: -7028432369641128292
+    second: ScrapGolemAttack_77
+  - first:
+      213: -8263018905398538235
+    second: ScrapGolemAttack_78
+  - first:
+      213: -5310028789798420080
+    second: ScrapGolemAttack_79
+  - first:
+      213: 1890001064715964965
+    second: ScrapGolemAttack_80
+  - first:
+      213: -3223122399236700081
+    second: ScrapGolemAttack_81
+  - first:
+      213: -4616030680210508904
+    second: ScrapGolemAttack_82
+  - first:
+      213: 3418028599691923564
+    second: ScrapGolemAttack_83
+  - first:
+      213: -8108529161105164075
+    second: ScrapGolemAttack_84
+  - first:
+      213: 4355441529493209785
+    second: ScrapGolemAttack_85
+  - first:
+      213: -8606065736953321143
+    second: ScrapGolemAttack_86
+  - first:
+      213: -2344578070377131334
+    second: ScrapGolemAttack_87
+  - first:
+      213: 3626326015076940366
+    second: ScrapGolemAttack_88
+  - first:
+      213: 4339700079364347009
+    second: ScrapGolemAttack_89
+  - first:
+      213: 1200478129668399869
+    second: ScrapGolemAttack_90
+  - first:
+      213: 3109365605057832463
+    second: ScrapGolemAttack_91
+  - first:
+      213: -895322625840458541
+    second: ScrapGolemAttack_92
+  - first:
+      213: -4369365803922335364
+    second: ScrapGolemAttack_93
+  - first:
+      213: 4027697189360657073
+    second: ScrapGolemAttack_94
+  - first:
+      213: 3710167805856911175
+    second: ScrapGolemAttack_95
+  - first:
+      213: -4147452484823828968
+    second: ScrapGolemAttack_96
+  - first:
+      213: 8197130388044546987
+    second: ScrapGolemAttack_97
+  - first:
+      213: -7268115659217285608
+    second: ScrapGolemAttack_98
+  - first:
+      213: 8908725353274655583
+    second: ScrapGolemAttack_99
+  - first:
+      213: -5264219697881292149
+    second: ScrapGolemAttack_100
+  - first:
+      213: 6123544988117827768
+    second: ScrapGolemAttack_101
+  - first:
+      213: 3794237052284470696
+    second: ScrapGolemAttack_102
+  - first:
+      213: -7829666030614713721
+    second: ScrapGolemAttack_103
+  - first:
+      213: -2244359200457937419
+    second: ScrapGolemAttack_104
+  - first:
+      213: 6614967673971042987
+    second: ScrapGolemAttack_105
+  - first:
+      213: 3225286950159367513
+    second: ScrapGolemAttack_106
+  - first:
+      213: -6074845250696761177
+    second: ScrapGolemAttack_107
+  - first:
+      213: 2944593979625587292
+    second: ScrapGolemAttack_108
+  - first:
+      213: -7774600695087055045
+    second: ScrapGolemAttack_109
+  - first:
+      213: -4538785239526588493
+    second: ScrapGolemAttack_110
+  - first:
+      213: -1796126102282547220
+    second: ScrapGolemAttack_111
+  - first:
+      213: -6363755975752906473
+    second: ScrapGolemAttack_112
+  - first:
+      213: -1416338129531184567
+    second: ScrapGolemAttack_113
+  - first:
+      213: -7856264682108397201
+    second: ScrapGolemAttack_114
+  - first:
+      213: 1476998910070755199
+    second: ScrapGolemAttack_115
+  - first:
+      213: -1353203103992237963
+    second: ScrapGolemAttack_116
+  - first:
+      213: 2435448125422435134
+    second: ScrapGolemAttack_117
+  - first:
+      213: -1822555518689494856
+    second: ScrapGolemAttack_118
+  - first:
+      213: 8484984940165428097
+    second: ScrapGolemAttack_119
+  - first:
+      213: 6533599534747798050
+    second: ScrapGolemAttack_120
+  - first:
+      213: -3577798365147123026
+    second: ScrapGolemAttack_121
+  - first:
+      213: -2765946372123273666
+    second: ScrapGolemAttack_122
+  - first:
+      213: -7983508692351822608
+    second: ScrapGolemAttack_123
+  - first:
+      213: -2089073704477566290
+    second: ScrapGolemAttack_124
+  - first:
+      213: 4499916049595424945
+    second: ScrapGolemAttack_125
+  - first:
+      213: 8226399229346320334
+    second: ScrapGolemAttack_126
+  - first:
+      213: 4994648901624335184
+    second: ScrapGolemAttack_127
+  - first:
+      213: 1687748264438691353
+    second: ScrapGolemAttack_128
+  - first:
+      213: 9080793582385507508
+    second: ScrapGolemAttack_129
+  - first:
+      213: -1764955952666934832
+    second: ScrapGolemAttack_130
+  - first:
+      213: 1036131813809044763
+    second: ScrapGolemAttack_131
+  - first:
+      213: -5886875106619767002
+    second: ScrapGolemAttack_132
+  - first:
+      213: -2547709360242781370
+    second: ScrapGolem_Attack_Down_0
+  - first:
+      213: 2784389440788805723
+    second: ScrapGolem_Attack_Down_1
+  - first:
+      213: 8368800025219227597
+    second: ScrapGolem_Attack_Down_2
+  - first:
+      213: 8621607300718388037
+    second: ScrapGolem_Attack_Down_3
+  - first:
+      213: -2507998769723259111
+    second: ScrapGolem_Attack_Left_0
+  - first:
+      213: -4663786329771741827
+    second: ScrapGolem_Attack_Left_1
+  - first:
+      213: 7913191319211479516
+    second: ScrapGolem_Attack_Left_2
+  - first:
+      213: 7427566296345156927
+    second: ScrapGolem_Attack_Left_3
+  - first:
+      213: -329654688006776974
+    second: ScrapGolem_Attack_Right_0
+  - first:
+      213: 8693585866490146623
+    second: ScrapGolem_Attack_Right_1
+  - first:
+      213: 1544198146824184586
+    second: ScrapGolem_Attack_Right_2
+  - first:
+      213: 7985028656019253680
+    second: ScrapGolem_Attack_Right_3
+  - first:
+      213: -119425794295706854
+    second: ScrapGolem_Attack_Up_0
+  - first:
+      213: 707333773349465317
+    second: ScrapGolem_Attack_Up_1
+  - first:
+      213: 9101335913086129501
+    second: ScrapGolem_Attack_Up_2
+  - first:
+      213: 3427051475918182792
+    second: ScrapGolem_Attack_Up_3
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 313
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ScrapGolem_Attack_Down_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 941
+        width: 313
+        height: 313
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1341853}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6439acfc5d7b4acd0800000000000000
+      internalID: -2547709360242781370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScrapGolem_Attack_Down_1
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 941
+        width: 313
+        height: 313
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12779553}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b58b09ea17324a620800000000000000
+      internalID: 2784389440788805723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScrapGolem_Attack_Down_2
+      rect:
+        serializedVersion: 2
+        x: 626
+        y: 941
+        width: 313
+        height: 313
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1086262}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dcfd87b7843f32470800000000000000
+      internalID: 8368800025219227597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScrapGolem_Attack_Down_3
+      rect:
+        serializedVersion: 2
+        x: 939
+        y: 941
+        width: 313
+        height: 313
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1341853}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 543eb38292a16a770800000000000000
+      internalID: 8621607300718388037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScrapGolem_Attack_Left_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 628
+        width: 313
+        height: 313
+      alignment: 9
+      pivot: {x: 0.5, y: 0.17571884}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9174789286cc13dd0800000000000000
+      internalID: -2507998769723259111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScrapGolem_Attack_Left_1
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 628
+        width: 313
+        height: 313
+      alignment: 9
+      pivot: {x: 0.5, y: 0.17571884}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7de1a9fa07e64fb0800000000000000
+      internalID: -4663786329771741827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScrapGolem_Attack_Left_2
+      rect:
+        serializedVersion: 2
+        x: 626
+        y: 628
+        width: 313
+        height: 313
+      alignment: 9
+      pivot: {x: 0.5, y: 0.17252396}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd11e45349d41dd60800000000000000
+      internalID: 7913191319211479516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScrapGolem_Attack_Left_3
+      rect:
+        serializedVersion: 2
+        x: 939
+        y: 628
+        width: 313
+        height: 313
+      alignment: 9
+      pivot: {x: 0.5, y: 0.16932908}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3d115f8134041760800000000000000
+      internalID: 7427566296345156927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScrapGolem_Attack_Right_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 315
+        width: 313
+        height: 313
+      alignment: 9
+      pivot: {x: 0.5, y: 0.22364217}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27750decec4dc6bf0800000000000000
+      internalID: -329654688006776974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScrapGolem_Attack_Right_1
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 315
+        width: 313
+        height: 313
+      alignment: 9
+      pivot: {x: 0.5, y: 0.0031948881}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3f6084f842d5a870800000000000000
+      internalID: 8693585866490146623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScrapGolem_Attack_Right_2
+      rect:
+        serializedVersion: 2
+        x: 626
+        y: 315
+        width: 313
+        height: 313
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2172524}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a03a54478081e6510800000000000000
+      internalID: 1544198146824184586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScrapGolem_Attack_Right_3
+      rect:
+        serializedVersion: 2
+        x: 939
+        y: 315
+        width: 313
+        height: 313
+      alignment: 9
+      pivot: {x: 0.5, y: 0.22364217}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b9a753914580de60800000000000000
+      internalID: 7985028656019253680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScrapGolem_Attack_Up_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2
+        width: 313
+        height: 313
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2172524}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1b4cf17fd6b75ef0800000000000000
+      internalID: -119425794295706854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScrapGolem_Attack_Up_1
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 2
+        width: 313
+        height: 313
+      alignment: 9
+      pivot: {x: 0.5, y: 0.22364217}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5eca12ab154f0d900800000000000000
+      internalID: 707333773349465317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScrapGolem_Attack_Up_2
+      rect:
+        serializedVersion: 2
+        x: 626
+        y: 2
+        width: 313
+        height: 313
+      alignment: 9
+      pivot: {x: 0.5, y: 0.21086262}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d551101cac07e4e70800000000000000
+      internalID: 9101335913086129501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScrapGolem_Attack_Up_3
+      rect:
+        serializedVersion: 2
+        x: 939
+        y: 2
+        width: 313
+        height: 313
+      alignment: 9
+      pivot: {x: 0.5, y: 0.23322684}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 889d419f8255f8f20800000000000000
+      internalID: 3427051475918182792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 97ccc6b11c64ed340aafddf25bcf97f6
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      ScrapGolemAttack_0: -8373367709570422101
+      ScrapGolemAttack_1: -1723234715331468844
+      ScrapGolemAttack_10: 7729799434284254971
+      ScrapGolemAttack_100: -5264219697881292149
+      ScrapGolemAttack_101: 6123544988117827768
+      ScrapGolemAttack_102: 3794237052284470696
+      ScrapGolemAttack_103: -7829666030614713721
+      ScrapGolemAttack_104: -2244359200457937419
+      ScrapGolemAttack_105: 6614967673971042987
+      ScrapGolemAttack_106: 3225286950159367513
+      ScrapGolemAttack_107: -6074845250696761177
+      ScrapGolemAttack_108: 2944593979625587292
+      ScrapGolemAttack_109: -7774600695087055045
+      ScrapGolemAttack_11: 7760738993774740776
+      ScrapGolemAttack_110: -4538785239526588493
+      ScrapGolemAttack_111: -1796126102282547220
+      ScrapGolemAttack_112: -6363755975752906473
+      ScrapGolemAttack_113: -1416338129531184567
+      ScrapGolemAttack_114: -7856264682108397201
+      ScrapGolemAttack_115: 1476998910070755199
+      ScrapGolemAttack_116: -1353203103992237963
+      ScrapGolemAttack_117: 2435448125422435134
+      ScrapGolemAttack_118: -1822555518689494856
+      ScrapGolemAttack_119: 8484984940165428097
+      ScrapGolemAttack_12: -5417715090626580941
+      ScrapGolemAttack_120: 6533599534747798050
+      ScrapGolemAttack_121: -3577798365147123026
+      ScrapGolemAttack_122: -2765946372123273666
+      ScrapGolemAttack_123: -7983508692351822608
+      ScrapGolemAttack_124: -2089073704477566290
+      ScrapGolemAttack_125: 4499916049595424945
+      ScrapGolemAttack_126: 8226399229346320334
+      ScrapGolemAttack_127: 4994648901624335184
+      ScrapGolemAttack_128: 1687748264438691353
+      ScrapGolemAttack_129: 9080793582385507508
+      ScrapGolemAttack_13: -9176258726005939524
+      ScrapGolemAttack_130: -1764955952666934832
+      ScrapGolemAttack_131: 1036131813809044763
+      ScrapGolemAttack_132: -5886875106619767002
+      ScrapGolemAttack_14: -6929182722857688270
+      ScrapGolemAttack_15: 1486818330433938604
+      ScrapGolemAttack_16: 8138195006334870661
+      ScrapGolemAttack_17: -1267140265857221122
+      ScrapGolemAttack_18: 1834268112870641528
+      ScrapGolemAttack_19: 2566494097866422331
+      ScrapGolemAttack_2: 1862198535690831332
+      ScrapGolemAttack_20: 5905302576518267606
+      ScrapGolemAttack_21: -3556956134937140744
+      ScrapGolemAttack_22: -1781189362237737556
+      ScrapGolemAttack_23: -5406342027241780805
+      ScrapGolemAttack_24: -832656617288720139
+      ScrapGolemAttack_25: -2037881037412676785
+      ScrapGolemAttack_26: 1185287421791881790
+      ScrapGolemAttack_27: 3147040930810316430
+      ScrapGolemAttack_28: -795923977676906492
+      ScrapGolemAttack_29: 984795354143174632
+      ScrapGolemAttack_3: 6086164788393783017
+      ScrapGolemAttack_30: -7768297735838910700
+      ScrapGolemAttack_31: 885967314296613071
+      ScrapGolemAttack_32: -7390380030933864945
+      ScrapGolemAttack_33: -9129681576476994619
+      ScrapGolemAttack_34: -2799180696814219363
+      ScrapGolemAttack_35: 4496111775910747225
+      ScrapGolemAttack_36: -1878732575003685848
+      ScrapGolemAttack_37: -1674825617312442342
+      ScrapGolemAttack_38: 6236042417059283019
+      ScrapGolemAttack_39: 5923770286596025887
+      ScrapGolemAttack_4: 1451829557603370646
+      ScrapGolemAttack_40: 4732092455370403585
+      ScrapGolemAttack_41: 7165432367499082176
+      ScrapGolemAttack_42: -2123930538954850655
+      ScrapGolemAttack_43: -2649110531583474976
+      ScrapGolemAttack_44: -4055011916716953867
+      ScrapGolemAttack_45: 6275419712010725938
+      ScrapGolemAttack_46: -898022376543615618
+      ScrapGolemAttack_47: -7672220517777174847
+      ScrapGolemAttack_48: 4321031868639925440
+      ScrapGolemAttack_49: -531791532407792296
+      ScrapGolemAttack_5: -1298356946384409939
+      ScrapGolemAttack_50: -3744886335646704493
+      ScrapGolemAttack_51: 2001831580361539561
+      ScrapGolemAttack_52: 6393407148848158291
+      ScrapGolemAttack_53: -7931652518394259456
+      ScrapGolemAttack_54: 3169216140899255082
+      ScrapGolemAttack_55: 4941698773790454071
+      ScrapGolemAttack_56: -3958871523289643693
+      ScrapGolemAttack_57: -1780968519421941856
+      ScrapGolemAttack_58: 131936498672870954
+      ScrapGolemAttack_59: 690009318590981732
+      ScrapGolemAttack_6: 1138354532748079360
+      ScrapGolemAttack_60: -6264990747553092754
+      ScrapGolemAttack_61: -7014258641863467491
+      ScrapGolemAttack_62: 7901501983676690386
+      ScrapGolemAttack_63: -6135796927883655440
+      ScrapGolemAttack_64: -5605547827005059728
+      ScrapGolemAttack_65: 681487634648871457
+      ScrapGolemAttack_66: 4988207577033328698
+      ScrapGolemAttack_67: 4555687690735302858
+      ScrapGolemAttack_68: -1881958368092179776
+      ScrapGolemAttack_69: 3659892216324295411
+      ScrapGolemAttack_7: -7978091480313901899
+      ScrapGolemAttack_70: -5456939917485693933
+      ScrapGolemAttack_71: -8116609688414011533
+      ScrapGolemAttack_72: 4156614900096979662
+      ScrapGolemAttack_73: -157970643962916098
+      ScrapGolemAttack_74: -7793731124859532823
+      ScrapGolemAttack_75: -6690601085464708167
+      ScrapGolemAttack_76: -3568150466228009818
+      ScrapGolemAttack_77: -7028432369641128292
+      ScrapGolemAttack_78: -8263018905398538235
+      ScrapGolemAttack_79: -5310028789798420080
+      ScrapGolemAttack_8: 6277882934489366497
+      ScrapGolemAttack_80: 1890001064715964965
+      ScrapGolemAttack_81: -3223122399236700081
+      ScrapGolemAttack_82: -4616030680210508904
+      ScrapGolemAttack_83: 3418028599691923564
+      ScrapGolemAttack_84: -8108529161105164075
+      ScrapGolemAttack_85: 4355441529493209785
+      ScrapGolemAttack_86: -8606065736953321143
+      ScrapGolemAttack_87: -2344578070377131334
+      ScrapGolemAttack_88: 3626326015076940366
+      ScrapGolemAttack_89: 4339700079364347009
+      ScrapGolemAttack_9: -2367546385352213604
+      ScrapGolemAttack_90: 1200478129668399869
+      ScrapGolemAttack_91: 3109365605057832463
+      ScrapGolemAttack_92: -895322625840458541
+      ScrapGolemAttack_93: -4369365803922335364
+      ScrapGolemAttack_94: 4027697189360657073
+      ScrapGolemAttack_95: 3710167805856911175
+      ScrapGolemAttack_96: -4147452484823828968
+      ScrapGolemAttack_97: 8197130388044546987
+      ScrapGolemAttack_98: -7268115659217285608
+      ScrapGolemAttack_99: 8908725353274655583
+      ScrapGolem_Attack_Down_0: -2547709360242781370
+      ScrapGolem_Attack_Down_1: 2784389440788805723
+      ScrapGolem_Attack_Down_2: 8368800025219227597
+      ScrapGolem_Attack_Down_3: 8621607300718388037
+      ScrapGolem_Attack_Left_0: -2507998769723259111
+      ScrapGolem_Attack_Left_1: -4663786329771741827
+      ScrapGolem_Attack_Left_2: 7913191319211479516
+      ScrapGolem_Attack_Left_3: 7427566296345156927
+      ScrapGolem_Attack_Right_0: -329654688006776974
+      ScrapGolem_Attack_Right_1: 8693585866490146623
+      ScrapGolem_Attack_Right_2: 1544198146824184586
+      ScrapGolem_Attack_Right_3: 7985028656019253680
+      ScrapGolem_Attack_Up_0: -119425794295706854
+      ScrapGolem_Attack_Up_1: 707333773349465317
+      ScrapGolem_Attack_Up_2: 9101335913086129501
+      ScrapGolem_Attack_Up_3: 3427051475918182792
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

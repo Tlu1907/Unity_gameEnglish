@@ -8,6 +8,9 @@ public sealed class Health : MonoBehaviour, IDamageable
     [SerializeField] private int current = 200;
     [SerializeField, Min(1)] private int maximumArmor = 100;
     [SerializeField] private int armor;
+    [SerializeField, Min(0)] private float invulnerabilitySeconds;
+    private float invulnerabilityRemaining;
+    private void Update() { if (GameplayState.CanAct) invulnerabilityRemaining = Mathf.Max(0, invulnerabilityRemaining - Time.deltaTime); }
     private bool armorEquipped;
     public int MaximumArmor => maximumArmor;
     public int Armor => armor;
@@ -31,7 +34,10 @@ public sealed class Health : MonoBehaviour, IDamageable
     }
     public void TakeDamage(int amount)
     {
-        if (!GameplayState.CanAct || IsDead || amount <= 0) return;
+        if (!GameplayState.CanAct || IsDead || amount <= 0 || invulnerabilityRemaining > 0) return;
+        var enemy = GetComponent<EnemyBrain>();
+        if (enemy != null && !enemy.IsEncounterActive) return;
+        invulnerabilityRemaining = invulnerabilitySeconds;
         int absorbed = Mathf.Min(armor, amount);
         if (absorbed > 0)
         {

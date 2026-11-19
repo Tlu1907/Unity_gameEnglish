@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2598e857b284925a344cfeb3fb12f50, type: 3}
+  m_Name: Ti_B
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueData
+  speakerName: "T\xED \u2014 C\u1EADu b\xE9 b\xE1n b\xE1o"
+  portrait: {fileID: 5170774222504116895, guid: d9cd513cc127c82479931333a891b8db, type: 3}
+  continuePrompt: "Nh\u1EA5n C \u0111\u1EC3 ti\u1EBFp t\u1EE5c"
+  closePrompt: "Nh\u1EA5n C \u0111\u1EC3 \u0111\xF3ng"
+  lines:
+  - english: Uncle Ba made the orange traps. Lure the creatures onto them to gain
+      some time.
+    vietnamese: "Ch\xFA Ba l\xE0m nh\u1EEFng c\xE1i b\u1EABy m\xE0u cam \u0111\u1EA5y.
+      D\u1EE5 qu\xE1i gi\u1EABm v\xE0o \u0111\u1EC3 c\xF3 th\xEAm th\u1EDDi gian
+      ch\u1EA1y \u0111i."
+  - english: Watch your step, and look for more chests!
+    vietnamese: "C\u1EA9n th\u1EADn nh\xE9, r\u1ED3i t\xECm th\xEAm c\xE1c r\u01B0\u01A1ng
+      n\u1EEFa!"

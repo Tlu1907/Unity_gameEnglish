@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84ee964aa0ce44098ade8293540bfa9c, type: 3}
+  m_Name: q1_spirit
+  m_EditorClassIdentifier: Assembly-CSharp::StoryBeatData
+  beatId: q1_spirit
+  conversationJson: {fileID: 4900000, guid: ef7d298a3da93b8498ac421a81808233, type: 3}
+  speaker: "LINH H\u1ED2N"
+  requiresConsent: 1
+  introEnglish: Agent... I am a spirit bound to this tower. The monsters took everything
+    from me. Will you listen?
+  introVietnamese: "\u0110\u1EB7c v\u1EE5... t\xF4i l\xE0 linh h\u1ED3n b\u1ECB gi\u1EEF
+    trong t\xF2a th\xE1p n\xE0y. L\u0169 qu\xE1i v\u1EADt \u0111\xE3
+    l\u1EA5y \u0111i t\u1EA5t c\u1EA3. Anh c\xF3 th\u1EC3 l\u1EAFng nghe t\xF4i kh\xF4ng?"
+  questionEnglish: Which weapon has a sharp blade and is used to slash monsters?
+  questionVietnamese: "\u0110\u1EB7c v\u1EE5, v\u0169 kh\xED c\xF3 l\u01B0\u1EE1i
+    s\u1EAFc, d\xF9ng \u0111\u1EC3 ch\xE9m qu\xE1i v\u1EADt \u0111\u01B0\u1EE3c g\u1ECDi
+    l\xE0 g\xEC?"
+  correct: sword
+  distractors:
+  - key
+  - chest
+  - shield
+  wrongHint: "H\xE3y ngh\u0129 \u0111\u1EBFn m\u1ED9t v\u0169 kh\xED \u0111\u1EC3
+    t\u1EA5n c\xF4ng, kh\xF4ng ph\u1EA3i \u0111\u1ED3 b\u1EA3o v\u1EC7 hay v\u1EADt
+    m\u1EDF kh\xF3a."
+  explanation: "sword = thanh ki\u1EBFm."
+  afterEnglish: Take this sword, Agent. An archaeologist is hiding from the monsters.
+    Find and save him.
+  afterVietnamese: "H\xE3y nh\u1EADn thanh ki\u1EBFm n\xE0y, \u0111\u1EB7c v\u1EE5.
+    M\u1ED9t nh\xE0 kh\u1EA3o c\u1ED5 \u0111ang tr\u1ED1n l\u0169 qu\xE1i v\u1EADt.
+    H\xE3y t\xECm v\xE0 c\u1EE9u \xF4ng \u1EA5y."

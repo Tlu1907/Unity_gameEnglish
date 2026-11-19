@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84ee964aa0ce44098ade8293540bfa9c, type: 3}
+  m_Name: q2_archaeologist
+  m_EditorClassIdentifier: Assembly-CSharp::StoryBeatData
+  beatId: q2_archaeologist
+  conversationJson: {fileID: 4900000, guid: 143e617ba61a88344aa8635d62192a53, type: 3}
+  speaker: "NH\xC0 KH\u1EA2O C\u1ED4"
+  requiresConsent: 0
+  introEnglish: Agent! You found me! The monsters are close. I know the way to the
+    research room. Listen carefully!
+  introVietnamese: "\u0110\u1EB7c v\u1EE5! Anh t\xECm \u0111\u01B0\u1EE3c t\xF4i
+    r\u1ED3i! L\u0169 qu\xE1i v\u1EADt \u0111ang \u1EDF g\u1EA7n. T\xF4i bi\u1EBFt
+    \u0111\u01B0\u1EDDng \u0111\u1EBFn ph\xF2ng nghi\xEAn c\u1EE9u. H\xE3y nghe k\u1EF9!"
+  questionEnglish: Which structure connects the two sides of a river?
+  questionVietnamese: "\u0110\u1EB7c v\u1EE5, c\xF4ng tr\xECnh n\u1ED1i hai b\u1EDD
+    s\xF4ng \u0111\u01B0\u1EE3c g\u1ECDi l\xE0 g\xEC?"
+  correct: bridge
+  distractors:
+  - school
+  - bank
+  - hospital
+  wrongHint: "H\xE3y ngh\u0129 \u0111\u1EBFn c\xF4ng tr\xECnh gi\xFAp ng\u01B0\u1EDDi
+    ta \u0111i t\u1EEB b\u1EDD s\xF4ng n\xE0y sang b\u1EDD s\xF4ng kia."
+  explanation: "bridge = c\xE2y c\u1EA7u."
+  afterEnglish: Yes! Cross the bridge to reach the research room. I left my notes
+    there. Thank you, Agent!
+  afterVietnamese: "\u0110\xFAng r\u1ED3i! B\u0103ng qua c\xE2y c\u1EA7u \u0111\u1EC3
+    \u0111\u1EBFn ph\xF2ng nghi\xEAn c\u1EE9u. T\xF4i \u0111\xE3 \u0111\u1EC3 l\u1EA1i
+    ghi ch\xFA \u1EDF \u0111\xF3. C\u1EA3m \u01A1n anh, \u0111\u1EB7c v\u1EE5!"

@@ -40,11 +40,17 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: Default
-    uniqueID: 0
+  - name: MapBackground
+    uniqueID: 1500100106
+    locked: 0
+  - name: MapGround
+    uniqueID: 1500100107
     locked: 0
   - name: Ground
     uniqueID: 4070902811
+    locked: 0
+  - name: Default
+    uniqueID: 0
     locked: 0
   - name: Fences
     uniqueID: 1950371337
@@ -60,6 +66,39 @@ TagManager:
     locked: 0
   - name: Table
     uniqueID: 2749606959
+    locked: 0
+  - name: GroundShadows
+    uniqueID: 1500100108
+    locked: 0
+  - name: WorldProps
+    uniqueID: 1500100109
+    locked: 0
+  - name: Buildings
+    uniqueID: 1500100110
+    locked: 0
+  - name: Foliage
+    uniqueID: 1500100111
+    locked: 0
+  - name: WorldDetails
+    uniqueID: 1500100112
+    locked: 0
+  - name: WorldItems
+    uniqueID: 1500100113
+    locked: 0
+  - name: WorldEffects
+    uniqueID: 1500100114
+    locked: 0
+  - name: EnemyBodies
+    uniqueID: 1500100115
+    locked: 0
+  - name: CharacterBodies
+    uniqueID: 1500100116
+    locked: 0
+  - name: WorldForeground
+    uniqueID: 1500100117
+    locked: 0
+  - name: WorldDepth
+    uniqueID: 1500100118
     locked: 0
   m_RenderingLayers:
   - Default

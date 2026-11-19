@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2598e857b284925a344cfeb3fb12f50, type: 3}
+  m_Name: Lan_C
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueData
+  speakerName: "Lan \u2014 Sinh vi\xEAn"
+  portrait: {fileID: -8143564825601374755, guid: d9cd513cc127c82479931333a891b8db, type: 3}
+  continuePrompt: "Nh\u1EA5n C \u0111\u1EC3 ti\u1EBFp t\u1EE5c"
+  closePrompt: "Nh\u1EA5n C \u0111\u1EC3 \u0111\xF3ng"
+  lines:
+  - english: Hello, nice to meet you. I can read my notes again!
+    vietnamese: "'Hello, nice to meet you.' T\u1EDB \u0111\u1ECDc \u0111\u01B0\u1EE3c
+      cu\u1ED1n s\u1ED5 c\u1EE7a m\xECnh r\u1ED3i!"
+  - english: I will help the other students reach the station. Thank you.
+    vietnamese: "T\u1EDB s\u1EBD gi\xFAp c\xE1c b\u1EA1n sinh vi\xEAn kh\xE1c \u0111\u1EBFn
+      ga. C\u1EA3m \u01A1n c\u1EADu."

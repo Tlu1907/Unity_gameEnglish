@@ -1,0 +1,53 @@
+SUCCESS
+41 prefab assets updated; 7 scene enemies configured; 3 Dust mission presets created. All prefab enemies verified at speed 2.
+Backup: Library/EnemyEncounterBackups/20261119_225808_927
+PASS: patrol, equipment gate, persistent pursuit, dormant damage, tower group deaths, guard rescue, research gate and original visibility restoration.
+Speed 2: Assets/_Project/Gameplay/Characters/Enemies/Prefabs/Dust/DustChaser.prefab (1 enemies)
+Speed 2: Assets/_Project/Gameplay/Characters/Enemies/Prefabs/Dust/DustGuard.prefab (1 enemies)
+Speed 2: Assets/_Project/Gameplay/Characters/Enemies/Prefabs/Dust/DustPatrol.prefab (1 enemies)
+Speed 2: Assets/_Project/Gameplay/Characters/Enemies/Prefabs/Dust/Encounters/Dust_ArchaeologistGuard.prefab (1 enemies)
+Speed 2: Assets/_Project/Gameplay/Characters/Enemies/Prefabs/Dust/Encounters/Dust_LaboratoryAmbush.prefab (1 enemies)
+Speed 2: Assets/_Project/Gameplay/Characters/Enemies/Prefabs/Dust/Encounters/Dust_TowerAmbush.prefab (1 enemies)
+Speed 2: Assets/_Project/Gameplay/Characters/Enemies/Prefabs/Dust/Variants/Scene1/DustChaser_1_0136.prefab (1 enemies)
+Speed 2: Assets/_Project/Gameplay/Characters/Enemies/Prefabs/Dust/Variants/Scene1/DustChaser_2_0137.prefab (1 enemies)
+Speed 2: Assets/_Project/Gameplay/Characters/Enemies/Prefabs/Dust/Variants/Scene1/DustChaser_3_0138.prefab (1 enemies)
+Speed 2: Assets/_Project/Gameplay/Characters/Enemies/Prefabs/Dust/Variants/Scene1/DustChaser_City_1_0139.prefab (1 enemies)
+Speed 2: Assets/_Project/Gameplay/Characters/Enemies/Prefabs/Dust/Variants/Scene1/DustChaser_City_2_0140.prefab (1 enemies)
+Speed 2: Assets/_Project/Gameplay/Characters/Enemies/Prefabs/Dust/Variants/Scene1/DustChaser_City_3_0141.prefab (1 enemies)
+Speed 2: Assets/_Project/Gameplay/Characters/Enemies/Prefabs/Dust/Variants/Scene1/DustGuard_1_0142.prefab (1 enemies)
+Speed 2: Assets/_Project/Gameplay/Characters/Enemies/Prefabs/Dust/Variants/Scene1/DustGuard_2_0143.prefab (1 enemies)
+Speed 2: Assets/_Project/Gameplay/Characters/Enemies/Prefabs/Dust/Variants/Scene1/DustGuard_City_1_0144.prefab (1 enemies)
+Speed 2: Assets/_Project/Gameplay/Characters/Enemies/Prefabs/Dust/Variants/Scene1/DustGuard_City_2_0145.prefab (1 enemies)
+Speed 2: Assets/_Project/Gameplay/Characters/Enemies/Prefabs/Dust/Variants/Scene1/DustPatrol_1_0146.prefab (1 enemies)
+Speed 2: Assets/_Project/Gameplay/Characters/Enemies/Prefabs/Dust/Variants/Scene1/DustPatrol_2_0147.prefab (1 enemies)
+Speed 2: Assets/_Project/Gameplay/Characters/Enemies/Prefabs/Dust/Variants/Scene1/DustPatrol_3_0148.prefab (1 enemies)
+Speed 2: Assets/_Project/Gameplay/Characters/Enemies/Prefabs/Dust/Variants/Scene1/DustPatrol_4_0149.prefab (1 enemies)
+Speed 2: Assets/_Project/Gameplay/Characters/Enemies/Prefabs/Dust/Variants/Scene1/DustPatrol_City_1_0150.prefab (1 enemies)
+Speed 2: Assets/_Project/Gameplay/Characters/Enemies/Prefabs/Dust/Variants/Scene1/DustPatrol_City_2_0151.prefab (1 enemies)
+Speed 2: Assets/_Project/Gameplay/Characters/Enemies/Prefabs/Dust/Variants/Scene1/DustPatrol_City_3_0152.prefab (1 enemies)
+Speed 2: Assets/_Project/Gameplay/Characters/Enemies/Prefabs/Dust/Variants/Scene1/DustPatrol_City_4_0153.prefab (1 enemies)
+Speed 2: Assets/_Project/Gameplay/Characters/Enemies/Prefabs/Monsters/Monster (1).prefab (1 enemies)
+Speed 2: Assets/_Project/Gameplay/Characters/Enemies/Prefabs/Monsters/Monster_Laboratory.prefab (1 enemies)
+Speed 2: Assets/_Project/Gameplay/Characters/Enemies/Prefabs/Monsters/Variants/Merged/Monster (1)_0134.prefab (1 enemies)
+Speed 2: Assets/_Project/Gameplay/Characters/Enemies/Prefabs/Monsters/Variants/Merged/Monster (2)_0135.prefab (1 enemies)
+Speed 2: Assets/_Project/Gameplay/Characters/Enemies/Prefabs/Monsters/Variants/Merged/Monster (3)_0136.prefab (1 enemies)
+Speed 2: Assets/_Project/Gameplay/Characters/Enemies/Prefabs/Monsters/Variants/Merged/Monster (4)_0137.prefab (1 enemies)
+Speed 2: Assets/_Project/Gameplay/Characters/Enemies/Prefabs/Monsters/Variants/Merged/Monster (5)_0138.prefab (1 enemies)
+Speed 2: Assets/_Project/Gameplay/Characters/Enemies/Prefabs/Monsters/Variants/Sence1_final/Monster (1)_0032.prefab (1 enemies)
+Speed 2: Assets/_Project/Gameplay/Characters/Enemies/Prefabs/Monsters/Variants/Sence1_final/Monster (2)_0033.prefab (1 enemies)
+Speed 2: Assets/_Project/Gameplay/Characters/Enemies/Prefabs/Monsters/Variants/Sence1_final/Monster (3)_0034.prefab (1 enemies)
+Speed 2: Assets/_Project/Gameplay/Characters/Enemies/Prefabs/Monsters/Variants/Sence1_final/Monster (4)_0035.prefab (1 enemies)
+Speed 2: Assets/_Project/Gameplay/Characters/Enemies/Prefabs/Monsters/Variants/Sence1_final/Monster (5)_0036.prefab (1 enemies)
+Speed 2: Assets/_Project/Gameplay/Characters/NPC/Prefabs/Scientist/ScientistNPC.prefab (0 enemies)
+Speed 2: Assets/_Project/Gameplay/Characters/NPC/Prefabs/Scientist/Variants/Merged/ScientistNPC_0140.prefab (0 enemies)
+Speed 2: Assets/_Project/Gameplay/Characters/NPC/Prefabs/Scientist/Variants/Scene1/ScientistNPC_0191.prefab (0 enemies)
+Speed 2: Assets/_Project/Gameplay/Characters/NPC/Prefabs/Scientist/Variants/Sence1_final/ScientistNPC_0038.prefab (0 enemies)
+Speed 2: Assets/_Project/Gameplay/Grid/Prefabs/Layouts/Scene1/Level1Content.prefab (18 enemies)
+Created reusable Dust encounter presets under Dust/Encounters.
+Scene: Monster (1) -> Normal; chase speed=2
+Scene: Monster (2) -> LaboratoryAmbush; chase speed=2
+Scene: Monster (4) -> MirrorAmbush; chase speed=2
+Scene: Monster (5) -> MirrorAmbush; chase speed=2
+Scene: DustChaser -> Normal; chase speed=2
+Scene: DustPatrol -> Normal; chase speed=2
+Scene: ArchaeologistGuard -> ArchaeologistGuard; chase speed=2

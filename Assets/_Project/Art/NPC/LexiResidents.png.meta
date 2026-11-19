@@ -1,0 +1,493 @@
+fileFormatVersion: 2
+guid: d9cd513cc127c82479931333a891b8db
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 661508331358433533
+    second: LexiResidents_0
+  - first:
+      213: 5134922052662369868
+    second: LexiResidents_1
+  - first:
+      213: -3584167723593868126
+    second: LexiResidents_2
+  - first:
+      213: -306679580984245010
+    second: LexiResidents_3
+  - first:
+      213: 4701035695071550409
+    second: LexiResidents_4
+  - first:
+      213: -2548195905958143789
+    second: LexiResidents_5
+  - first:
+      213: 8965666656752994527
+    second: LexiResidents_6
+  - first:
+      213: -6806189076301201276
+    second: LexiResidents_7
+  - first:
+      213: -1425119308293451403
+    second: LexiResidents_8
+  - first:
+      213: 3198070476713999322
+    second: LexiResidents_9
+  - first:
+      213: -1139501139698940969
+    second: LexiResidents_10
+  - first:
+      213: -5738795868495424132
+    second: LexiResidents_11
+  - first:
+      213: 6697936395769290738
+    second: LexiResidents_12
+  - first:
+      213: -1235701474662063384
+    second: LexiResidents_13
+  - first:
+      213: 1471805789338247695
+    second: LexiResidents_14
+  - first:
+      213: -2616917155650263594
+    second: LexiResidents_15
+  - first:
+      213: 3640663352827712068
+    second: Hai_Idle_0
+  - first:
+      213: 5170774222504116895
+    second: Ti_Idle_0
+  - first:
+      213: 3797019372818277767
+    second: Ba_Idle_0
+  - first:
+      213: 824597434760713125
+    second: Man_Idle_0
+  - first:
+      213: -8143564825601374755
+    second: Lan_Idle_0
+  - first:
+      213: 748173949620142643
+    second: Gray_Idle_0
+  - first:
+      213: 4217783153581179553
+    second: Hai_Idle_1
+  - first:
+      213: -3217241014346768840
+    second: Ti_Idle_1
+  - first:
+      213: 1067865239646965243
+    second: Ba_Idle_1
+  - first:
+      213: 5920225470983564238
+    second: Man_Idle_1
+  - first:
+      213: -4218245318073262427
+    second: Lan_Idle_1
+  - first:
+      213: 2778913600662056758
+    second: Gray_Idle_1
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 256
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Hai_Idle_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 512
+        width: 256
+        height: 512
+      alignment: 9
+      pivot: {x: 0.5, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4421414c70c368230800000000000000
+      internalID: 3640663352827712068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ti_Idle_0
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 512
+        width: 256
+        height: 512
+      alignment: 9
+      pivot: {x: 0.5, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f92ca1a62c742c740800000000000000
+      internalID: 5170774222504116895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ba_Idle_0
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 512
+        width: 256
+        height: 512
+      alignment: 9
+      pivot: {x: 0.5, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7852c1a8009b1b430800000000000000
+      internalID: 3797019372818277767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Man_Idle_0
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 512
+        width: 256
+        height: 512
+      alignment: 9
+      pivot: {x: 0.5, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a35c9d7ffe817b00800000000000000
+      internalID: 824597434760713125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lan_Idle_0
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 512
+        width: 256
+        height: 512
+      alignment: 9
+      pivot: {x: 0.5, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd50aa400fe3cfe80800000000000000
+      internalID: -8143564825601374755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gray_Idle_0
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 512
+        width: 256
+        height: 512
+      alignment: 9
+      pivot: {x: 0.5, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3324f414e3c026a00800000000000000
+      internalID: 748173949620142643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hai_Idle_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 256
+        height: 512
+      alignment: 9
+      pivot: {x: 0.5, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a245d07e63988a30800000000000000
+      internalID: 4217783153581179553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ti_Idle_1
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 256
+        height: 512
+      alignment: 9
+      pivot: {x: 0.5, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83e1b07d7501a53d0800000000000000
+      internalID: -3217241014346768840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ba_Idle_1
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 256
+        height: 512
+      alignment: 9
+      pivot: {x: 0.5, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bfd052517c1d1de00800000000000000
+      internalID: 1067865239646965243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Man_Idle_1
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 256
+        height: 512
+      alignment: 9
+      pivot: {x: 0.5, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ecbe13cf2bdd82250800000000000000
+      internalID: 5920225470983564238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lan_Idle_1
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 0
+        width: 256
+        height: 512
+      alignment: 9
+      pivot: {x: 0.5, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5aed9c08b38c575c0800000000000000
+      internalID: -4218245318073262427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gray_Idle_1
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 0
+        width: 256
+        height: 512
+      alignment: 9
+      pivot: {x: 0.5, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63fa6fc423fa09620800000000000000
+      internalID: 2778913600662056758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Ba_Idle_0: 3797019372818277767
+      Ba_Idle_1: 1067865239646965243
+      Gray_Idle_0: 748173949620142643
+      Gray_Idle_1: 2778913600662056758
+      Hai_Idle_0: 3640663352827712068
+      Hai_Idle_1: 4217783153581179553
+      Lan_Idle_0: -8143564825601374755
+      Lan_Idle_1: -4218245318073262427
+      LexiResidents_0: 661508331358433533
+      LexiResidents_1: 5134922052662369868
+      LexiResidents_10: -1139501139698940969
+      LexiResidents_11: -5738795868495424132
+      LexiResidents_12: 6697936395769290738
+      LexiResidents_13: -1235701474662063384
+      LexiResidents_14: 1471805789338247695
+      LexiResidents_15: -2616917155650263594
+      LexiResidents_2: -3584167723593868126
+      LexiResidents_3: -306679580984245010
+      LexiResidents_4: 4701035695071550409
+      LexiResidents_5: -2548195905958143789
+      LexiResidents_6: 8965666656752994527
+      LexiResidents_7: -6806189076301201276
+      LexiResidents_8: -1425119308293451403
+      LexiResidents_9: 3198070476713999322
+      Man_Idle_0: 824597434760713125
+      Man_Idle_1: 5920225470983564238
+      Ti_Idle_0: 5170774222504116895
+      Ti_Idle_1: -3217241014346768840
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

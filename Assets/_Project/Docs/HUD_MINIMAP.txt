@@ -1,0 +1,7 @@
+SUCCESS
+HUD prefab: Assets/_Project/UI/Prefabs/HUD/Scene1_Merged_HUD.prefab
+Map texture: Assets/_Project/UI/Art/HUD/Scene1_Merged_Schematic.png
+Map bounds: Center: (0.00, 0.00, 0.50), Extents: (19.00, 19.00, 0.50)
+PASS: health/armor damage and healing events; map projection at corners/center; no portrait; all UI references assigned.
+Player/colliders/gameplay state were not modified by verification. Save the scene to retain the HUD and journal layout overrides.
+Re-run Tools > UI > Build or Refresh Health Armor and Minimap after changing terrain or building positions. Existing HUD layout is preserved on refresh.
