@@ -17,6 +17,15 @@ public sealed class NPCIntroDialogue : MonoBehaviour
     [Header("Text reveal")]
     [SerializeField] private bool typewriterEffect = true;
     [SerializeField, Min(1f)] private float charactersPerSecond = 40f;
+    [Header("Player translation (optional)")]
+    [SerializeField] private bool playerTranslation;
+    [SerializeField] private TMP_Text learningHints;
+    [SerializeField] private TMP_InputField answerInput;
+    [SerializeField] private Button submitAnswerButton;
+    [SerializeField] private TMP_Text answerStatus;
+    [SerializeField] private UnityEngine.Events.UnityEvent<string> onAnswerSubmitted = new UnityEngine.Events.UnityEvent<string>();
+    public string LastSubmittedAnswer { get; private set; }
+    private bool answerSubmitted;
 
     private DialogueData activeDialogue;
     private Sprite originalPortrait;
@@ -28,6 +37,10 @@ public sealed class NPCIntroDialogue : MonoBehaviour
     private System.Action<bool> completed;
     public bool IsTyping { get; private set; }
     public bool IsOpen { get; private set; }
+    public bool AcceptsDialogue(DialogueData data) => data != null && (playerTranslation
+        ? data.lines != null && data.lines.Length > 0 && System.Array.TrueForAll(data.lines,
+            line => line != null && !string.IsNullOrWhiteSpace(line.english))
+        : data.IsValid);
 
     private void Start()
     {
@@ -66,8 +79,9 @@ public sealed class NPCIntroDialogue : MonoBehaviour
     public bool TryShowDialogue(DialogueData data, System.Action<bool> onCompleted)
     {
         if (IsOpen || !enabled) return false;
-        if (dialoguePanel == null || englishText == null || vietnameseText == null ||
-            data == null || !data.IsValid)
+        bool validData = AcceptsDialogue(data);
+        if (dialoguePanel == null || englishText == null || (!playerTranslation && vietnameseText == null) ||
+            !validData || (playerTranslation && (answerInput == null || submitAnswerButton == null)))
         {
             Debug.LogWarning("NPCIntroDialogue: assign Dialogue Panel, English Text, Vietnamese Text and a valid DialogueData asset.", this);
             return false;
@@ -99,7 +113,9 @@ public sealed class NPCIntroDialogue : MonoBehaviour
         if (!IsOpen) return;
         if (GameplayState.Current != GameplayMode.Dialogue || dialoguePanel == null || !dialoguePanel.activeInHierarchy)
         { Close(); return; }
-        if (Input.GetKeyDown(KeyCode.C)) Advance();
+        if (playerTranslation && answerInput != null && answerInput.isFocused)
+        { if (IsTyping) RevealText(Time.unscaledDeltaTime); return; }
+        if (!playerTranslation && Input.GetKeyDown(KeyCode.C)) Advance();
         else if (IsTyping) RevealText(Time.unscaledDeltaTime);
     }
 
@@ -107,6 +123,7 @@ public sealed class NPCIntroDialogue : MonoBehaviour
     {
         if (!IsOpen || GameplayState.Current != GameplayMode.Dialogue) return;
         if (IsTyping) { FinishTyping(); return; }
+        if (playerTranslation && !answerSubmitted) return;
         if (lineIndex + 1 >= activeDialogue.lines.Length) { CloseInternal(true); return; }
         lineIndex++;
         ShowLine();
@@ -115,14 +132,28 @@ public sealed class NPCIntroDialogue : MonoBehaviour
     private void ShowLine()
     {
         englishText.text = activeDialogue.lines[lineIndex].english;
-        vietnameseText.text = activeDialogue.lines[lineIndex].vietnamese;
-        englishText.maxVisibleCharacters = vietnameseText.maxVisibleCharacters = int.MaxValue;
+        if (vietnameseText != null)
+        {
+            vietnameseText.gameObject.SetActive(!playerTranslation);
+            if (!playerTranslation) vietnameseText.text = activeDialogue.lines[lineIndex].vietnamese;
+            vietnameseText.maxVisibleCharacters = int.MaxValue;
+        }
+        if (playerTranslation)
+        {
+            var line = activeDialogue.lines[lineIndex];
+            if (learningHints != null) learningHints.text = "TỪ VỰNG\n" + line.vocabulary + "\n\nNGỮ PHÁP\n" + line.grammar;
+            answerSubmitted = false; LastSubmittedAnswer = null;
+            answerInput.SetTextWithoutNotify("");
+            if (answerStatus != null) answerStatus.text = "Tự dịch câu thoại rồi bấm Gửi.";
+            RefreshAnswerControls();
+        }
+        englishText.maxVisibleCharacters = int.MaxValue;
         englishText.ForceMeshUpdate();
-        vietnameseText.ForceMeshUpdate();
-        characterCount = Mathf.Max(englishText.textInfo.characterCount, vietnameseText.textInfo.characterCount);
+        if (!playerTranslation && vietnameseText != null) vietnameseText.ForceMeshUpdate();
+        characterCount = Mathf.Max(englishText.textInfo.characterCount, !playerTranslation && vietnameseText != null ? vietnameseText.textInfo.characterCount : 0);
         revealedCharacters = 0f;
         IsTyping = typewriterEffect && characterCount > 0;
-        if (IsTyping) englishText.maxVisibleCharacters = vietnameseText.maxVisibleCharacters = 0;
+        if (IsTyping) { englishText.maxVisibleCharacters = 0; if (!playerTranslation && vietnameseText != null) vietnameseText.maxVisibleCharacters = 0; }
         RefreshPrompt();
     }
 
@@ -130,19 +161,22 @@ public sealed class NPCIntroDialogue : MonoBehaviour
     {
         revealedCharacters += Mathf.Max(1f, charactersPerSecond) * deltaTime;
         int visible = Mathf.FloorToInt(revealedCharacters);
-        englishText.maxVisibleCharacters = vietnameseText.maxVisibleCharacters = visible;
+        englishText.maxVisibleCharacters = visible;
+        if (!playerTranslation && vietnameseText != null) vietnameseText.maxVisibleCharacters = visible;
         if (visible >= characterCount) FinishTyping();
     }
 
     private void FinishTyping()
     {
         IsTyping = false;
-        englishText.maxVisibleCharacters = vietnameseText.maxVisibleCharacters = int.MaxValue;
+        englishText.maxVisibleCharacters = int.MaxValue;
+        if (vietnameseText != null) vietnameseText.maxVisibleCharacters = int.MaxValue;
         RefreshPrompt();
     }
 
     private void RefreshPrompt()
     {
+        if (playerTranslation) { if (continueText != null) continueText.text = "Nhập bản dịch của bạn vào ô trả lời."; return; }
         if (continueText != null)
             continueText.text = IsTyping ? "Nhấn C để hiện toàn bộ" : lineIndex == activeDialogue.lines.Length - 1
                 ? activeDialogue.closePrompt : activeDialogue.continuePrompt;
@@ -166,5 +200,30 @@ public sealed class NPCIntroDialogue : MonoBehaviour
         callback?.Invoke(readToEnd);
     }
 
-    private void OnDisable() => Close();
+    private void OnEnable()
+    {
+        if (answerInput != null) answerInput.onValueChanged.AddListener(OnAnswerChanged);
+        if (submitAnswerButton != null) submitAnswerButton.onClick.AddListener(SubmitAnswer);
+    }
+    private void OnAnswerChanged(string _) { answerSubmitted = false; RefreshAnswerControls(); }
+    private void RefreshAnswerControls()
+    {
+        if (submitAnswerButton != null) submitAnswerButton.interactable = IsOpen &&
+            answerInput != null && !string.IsNullOrWhiteSpace(answerInput.text) && !answerSubmitted;
+    }
+    public void SubmitAnswer()
+    {
+        if (!playerTranslation || !IsOpen || answerSubmitted || answerInput == null || string.IsNullOrWhiteSpace(answerInput.text)) return;
+        if (IsTyping) FinishTyping();
+        LastSubmittedAnswer = answerInput.text.Trim(); answerSubmitted = true;
+        if (answerStatus != null) answerStatus.text = "Đã gửi câu trả lời.";
+        RefreshAnswerControls();
+        onAnswerSubmitted.Invoke(LastSubmittedAnswer);
+    }
+    private void OnDisable()
+    {
+        if (answerInput != null) answerInput.onValueChanged.RemoveListener(OnAnswerChanged);
+        if (submitAnswerButton != null) submitAnswerButton.onClick.RemoveListener(SubmitAnswer);
+        Close();
+    }
 }

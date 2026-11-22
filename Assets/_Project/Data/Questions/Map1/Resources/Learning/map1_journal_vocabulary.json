@@ -1,0 +1,71 @@
+{
+  "sections": [
+    { "conversationId": "q1_spirit", "pageId": "introduction", "vocabulary": [
+      { "word": "spirit", "meaning": "linh hồn (n)" },
+      { "word": "tower", "meaning": "tòa tháp (n)" },
+      { "word": "gear", "meaning": "trang bị (n)" }
+    ] },
+    { "conversationId": "q1_spirit", "pageId": "consent", "vocabulary": [
+      { "word": "seal", "meaning": "phong ấn (n)" }
+    ] },
+    { "conversationId": "q1_spirit", "pageId": "reply_yes", "vocabulary": [] },
+    { "conversationId": "q1_spirit", "pageId": "reply_no", "vocabulary": [
+      { "word": "come back", "meaning": "quay lại (v. phr.)" }
+    ] },
+    { "conversationId": "q1_spirit", "pageId": "q1_sword", "vocabulary": [
+      { "word": "weapon", "meaning": "vũ khí (n)" },
+      { "word": "blade", "meaning": "lưỡi kiếm (n)" }
+    ] },
+    { "conversationId": "q1_spirit", "pageId": "q2_shield", "vocabulary": [
+      { "word": "protect", "meaning": "bảo vệ (v)" }
+    ] },
+    { "conversationId": "q1_spirit", "pageId": "q3_am", "vocabulary": [] },
+    { "conversationId": "q1_spirit", "pageId": "q4_is", "vocabulary": [] },
+    { "conversationId": "q1_spirit", "pageId": "q5_are", "vocabulary": [
+      { "word": "gate", "meaning": "cổng (n)" }
+    ] },
+    { "conversationId": "q1_spirit", "pageId": "q6_simple_sentence", "vocabulary": [] },
+    { "conversationId": "q1_spirit", "pageId": "completion", "vocabulary": [
+      { "word": "sword", "meaning": "thanh kiếm (n)" },
+      { "word": "shield", "meaning": "chiếc khiên (n)" }
+    ] },
+    { "conversationId": "q2_archaeologist", "pageId": "introduction", "vocabulary": [
+      { "word": "archaeologist", "meaning": "nhà khảo cổ (n)" },
+      { "word": "ancient", "meaning": "cổ xưa (adj)" },
+      { "word": "earthquake", "meaning": "động đất (n)" }
+    ] },
+    { "conversationId": "q2_archaeologist", "pageId": "consent", "vocabulary": [
+      { "word": "lab", "meaning": "phòng nghiên cứu (n)" },
+      { "word": "document", "meaning": "tài liệu (n)" }
+    ] },
+    { "conversationId": "q2_archaeologist", "pageId": "reply_yes", "vocabulary": [
+      { "word": "defeat", "meaning": "đánh bại (v)" }
+    ] },
+    { "conversationId": "q2_archaeologist", "pageId": "reply_no", "vocabulary": [] },
+    { "conversationId": "q2_archaeologist", "pageId": "completion", "vocabulary": [
+      { "word": "look for", "meaning": "tìm kiếm (v. phr.)" }
+    ] },
+    { "conversationId": "research_document", "pageId": "introduction", "vocabulary": [
+      { "word": "specimen", "meaning": "mẫu vật (n)" },
+      { "word": "invulnerable", "meaning": "không thể bị thương (adj)" }
+    ] },
+    { "conversationId": "research_document", "pageId": "question_1", "vocabulary": [
+      { "word": "cut through", "meaning": "cắt xuyên (v. phr.)" }
+    ] },
+    { "conversationId": "research_document", "pageId": "question_2", "vocabulary": [
+      { "word": "detect", "meaning": "phát hiện (v)" },
+      { "word": "footsteps", "meaning": "tiếng bước chân (n)" }
+    ] },
+    { "conversationId": "research_document", "pageId": "question_3", "vocabulary": [
+      { "word": "chase", "meaning": "đuổi theo (v)" }
+    ] },
+    { "conversationId": "research_document", "pageId": "question_4", "vocabulary": [
+      { "word": "alarm", "meaning": "chuông cảnh báo (n)" }
+    ] },
+    { "conversationId": "research_document", "pageId": "question_5", "vocabulary": [] },
+    { "conversationId": "research_document", "pageId": "completion", "vocabulary": [
+      { "word": "watchtower", "meaning": "tháp canh (n)" },
+      { "word": "destination", "meaning": "điểm đến (n)" }
+    ] }
+  ]
+}

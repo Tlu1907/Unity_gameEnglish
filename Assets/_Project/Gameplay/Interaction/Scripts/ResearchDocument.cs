@@ -21,6 +21,7 @@ public sealed class ResearchDocument : MonoBehaviour, IInteractable
         public string explanationVietnamese;
         public Vocabulary[] vocabulary;
         public string grammar;
+        public string grammarId, groupId;
     }
     [Serializable] public sealed class Document
     {
@@ -29,6 +30,8 @@ public sealed class ResearchDocument : MonoBehaviour, IInteractable
         public string introductionVietnamese, destinationVietnamese;
         public Vocabulary[] introductionVocabulary, destinationVocabulary;
         public string introductionGrammar, destinationGrammar;
+        public string introductionGrammarId, introductionGroupId;
+        public string destinationGrammarId, destinationGroupId;
         public Question[] questions;
     }
     [SerializeField] private TextAsset questionData;

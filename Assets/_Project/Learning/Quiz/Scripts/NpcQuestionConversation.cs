@@ -17,6 +17,7 @@ public sealed class NpcQuestionConversation
         public string dialogue_en, dialogue_vi;
         public ResearchDocument.Vocabulary[] vocabulary;
         public string grammar;
+        public string grammarId, groupId;
     }
     [Serializable] public sealed class Consent : Dialogue { public Choice[] choices; }
     [Serializable] public sealed class Choice
@@ -25,6 +26,7 @@ public sealed class NpcQuestionConversation
         public bool loop;
         public ResearchDocument.Vocabulary[] vocabulary;
         public string grammar;
+        public string grammarId, groupId;
     }
     [Serializable] public sealed class Completion
     {
@@ -32,6 +34,7 @@ public sealed class NpcQuestionConversation
         public string after_en, after_vi;
         public ResearchDocument.Vocabulary[] vocabulary;
         public string grammar;
+        public string grammarId, groupId;
     }
     [Serializable] public sealed class Question : Dialogue
     {

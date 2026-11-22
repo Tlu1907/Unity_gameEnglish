@@ -1,0 +1,2782 @@
+fileFormatVersion: 2
+guid: 8a76f565c105b5947bdf13d3e8839837
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7887117603848313518
+    second: Ancient_portal_0
+  - first:
+      213: 6025404846215116447
+    second: Ancient_portal_1
+  - first:
+      213: 3575051603244550594
+    second: Ancient_portal_2
+  - first:
+      213: 6258453106400228886
+    second: Ancient_portal_3
+  - first:
+      213: 3849609880209923972
+    second: Ancient_portal_4
+  - first:
+      213: -3790077017662897033
+    second: Ancient_portal_5
+  - first:
+      213: -3944475204807534316
+    second: Ancient_portal_6
+  - first:
+      213: -4629605023035981438
+    second: Ancient_portal_7
+  - first:
+      213: -2807092632723084886
+    second: Ancient_portal_8
+  - first:
+      213: 7300081750177309974
+    second: Ancient_portal_9
+  - first:
+      213: 5577153270072579378
+    second: Ancient_portal_10
+  - first:
+      213: 7435131325428086566
+    second: Ancient_portal_11
+  - first:
+      213: -8156722748663280129
+    second: Ancient_portal_12
+  - first:
+      213: 3971256418485999005
+    second: Ancient_portal_13
+  - first:
+      213: -7777133620414725233
+    second: Ancient_portal_14
+  - first:
+      213: 7319805647567985038
+    second: Ancient_portal_15
+  - first:
+      213: -1955430925604996373
+    second: Ancient_portal_16
+  - first:
+      213: -2968849164768222104
+    second: Ancient_portal_17
+  - first:
+      213: 8852351512578163575
+    second: Ancient_portal_18
+  - first:
+      213: -5656632016539078128
+    second: Ancient_portal_19
+  - first:
+      213: 3982723083419383834
+    second: Ancient_portal_20
+  - first:
+      213: -5116574790537856719
+    second: Ancient_portal_21
+  - first:
+      213: 82401785990342513
+    second: Ancient_portal_22
+  - first:
+      213: -6677732945938147086
+    second: Ancient_portal_23
+  - first:
+      213: 8785619204395244578
+    second: Ancient_portal_24
+  - first:
+      213: -9153879959776902323
+    second: Ancient_portal_25
+  - first:
+      213: -5913648605888381745
+    second: Ancient_portal_26
+  - first:
+      213: -3119899597075942883
+    second: Ancient_portal_27
+  - first:
+      213: -9181967813437550636
+    second: Ancient_portal_28
+  - first:
+      213: -8037250177679181227
+    second: Ancient_portal_29
+  - first:
+      213: 3862067035778179575
+    second: Ancient_portal_30
+  - first:
+      213: -9130429785767107617
+    second: Ancient_portal_31
+  - first:
+      213: -6456149092430283746
+    second: Ancient_portal_32
+  - first:
+      213: 9079664982673908804
+    second: Ancient_portal_33
+  - first:
+      213: -5094650141091999904
+    second: Ancient_portal_34
+  - first:
+      213: -3293620004846561427
+    second: Ancient_portal_35
+  - first:
+      213: 2039291682485145315
+    second: Ancient_portal_36
+  - first:
+      213: -4172046858410335694
+    second: Ancient_portal_37
+  - first:
+      213: 5009114396195193031
+    second: Ancient_portal_38
+  - first:
+      213: -3436476081777314762
+    second: Ancient_portal_39
+  - first:
+      213: -6172205666474113072
+    second: Ancient_portal_40
+  - first:
+      213: -2259808513657048715
+    second: Ancient_portal_41
+  - first:
+      213: 1146265413202695284
+    second: Ancient_portal_42
+  - first:
+      213: 4336831983581379523
+    second: Ancient_portal_43
+  - first:
+      213: 6824463302930119506
+    second: Ancient_portal_44
+  - first:
+      213: -1412391954204277437
+    second: Ancient_portal_45
+  - first:
+      213: -2467142990634238690
+    second: Ancient_portal_46
+  - first:
+      213: 2022838387157849958
+    second: Ancient_portal_47
+  - first:
+      213: 1193933849492711340
+    second: Ancient_portal_48
+  - first:
+      213: 2754982978897400674
+    second: Ancient_portal_49
+  - first:
+      213: -1123436062726326975
+    second: Ancient_portal_50
+  - first:
+      213: 2555547295028262778
+    second: Ancient_portal_51
+  - first:
+      213: 3419025158580492800
+    second: Ancient_portal_52
+  - first:
+      213: -2625558553110737057
+    second: Ancient_portal_53
+  - first:
+      213: -2835024231171298272
+    second: Ancient_portal_54
+  - first:
+      213: -2743786714671895435
+    second: Ancient_portal_55
+  - first:
+      213: -2502692484587100000
+    second: Ancient_portal_56
+  - first:
+      213: 7515123035567184571
+    second: Ancient_portal_57
+  - first:
+      213: 3731469300717615730
+    second: Ancient_portal_58
+  - first:
+      213: 3174368006340062913
+    second: Ancient_portal_59
+  - first:
+      213: 64642385902222777
+    second: Ancient_portal_60
+  - first:
+      213: -1012117964122067330
+    second: Ancient_portal_61
+  - first:
+      213: -449697293993021872
+    second: Ancient_portal_62
+  - first:
+      213: -2296383594586862391
+    second: Ancient_portal_63
+  - first:
+      213: -9079279685735454757
+    second: Ancient_portal_64
+  - first:
+      213: -7373707261235357147
+    second: Ancient_portal_65
+  - first:
+      213: -6622915845977226571
+    second: Ancient_portal_66
+  - first:
+      213: 6739248865905302726
+    second: Ancient_portal_67
+  - first:
+      213: -4890641501273718088
+    second: Ancient_portal_68
+  - first:
+      213: -341827012844252549
+    second: Ancient_portal_69
+  - first:
+      213: -5841441559772308986
+    second: Ancient_portal_70
+  - first:
+      213: -7252577966614519688
+    second: Ancient_portal_71
+  - first:
+      213: -3216982008567343208
+    second: Ancient_portal_72
+  - first:
+      213: 148533910845125182
+    second: Ancient_portal_73
+  - first:
+      213: -4323374083594318758
+    second: Ancient_portal_74
+  - first:
+      213: -6334841469107490745
+    second: Ancient_portal_75
+  - first:
+      213: 3566178294883691757
+    second: Ancient_portal_76
+  - first:
+      213: -7154866655222780418
+    second: Ancient_portal_77
+  - first:
+      213: 2119967830478942460
+    second: Ancient_portal_78
+  - first:
+      213: 960047438697759358
+    second: Ancient_portal_79
+  - first:
+      213: 3549006989869766618
+    second: Ancient_portal_80
+  - first:
+      213: -4193631330212217157
+    second: Ancient_portal_81
+  - first:
+      213: -7467468736142436727
+    second: Ancient_portal_82
+  - first:
+      213: 8213986854575057278
+    second: Ancient_portal_83
+  - first:
+      213: -6964785231882402731
+    second: Ancient_portal_84
+  - first:
+      213: -4564074451413144671
+    second: Ancient_portal_85
+  - first:
+      213: 3150679217052720767
+    second: Ancient_portal_86
+  - first:
+      213: 3606235003966471954
+    second: Ancient_portal_87
+  - first:
+      213: 1852754506833173495
+    second: Ancient_portal_88
+  - first:
+      213: 5920000507558783681
+    second: Ancient_portal_89
+  - first:
+      213: 6286626150819589907
+    second: Ancient_portal_90
+  - first:
+      213: -2948634375420726004
+    second: Ancient_portal_91
+  - first:
+      213: 4687831081758150826
+    second: Ancient_portal_92
+  - first:
+      213: -7940098526666764777
+    second: Ancient_portal_93
+  - first:
+      213: 1748154760708112609
+    second: Ancient_portal_94
+  - first:
+      213: 2296705611388260819
+    second: Ancient_portal_95
+  - first:
+      213: -2683700733514450247
+    second: Ancient_portal_96
+  - first:
+      213: 1089960842619809763
+    second: Ancient_portal_97
+  - first:
+      213: -3393587536960343093
+    second: Ancient_portal_98
+  - first:
+      213: -6534454139950654307
+    second: Ancient_portal_99
+  - first:
+      213: -3737181681796110803
+    second: Ancient_portal_100
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 300
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Ancient_portal_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1290
+        height: 1166
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25524e8b3545b8290800000000000000
+      internalID: -7887117603848313518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient_portal_1
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 1073
+        width: 74
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f96b19e98c98e9350800000000000000
+      internalID: 6025404846215116447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient_portal_2
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 1106
+        width: 49
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c90511ed722d9130800000000000000
+      internalID: 3575051603244550594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient_portal_3
+      rect:
+        serializedVersion: 2
+        x: 466
+        y: 1135
+        width: 29
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 616fc6a01fd7ad650800000000000000
+      internalID: 6258453106400228886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient_portal_4
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 1163
+        width: 33
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48f1fb93acf8c6530800000000000000
+      internalID: 3849609880209923972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient_portal_5
+      rect:
+        serializedVersion: 2
+        x: 553
+        y: 1152
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 774c4da7801f66bc0800000000000000
+      internalID: -3790077017662897033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient_portal_6
+      rect:
+        serializedVersion: 2
+        x: 622
+        y: 1131
+        width: 45
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4195c1033b86249c0800000000000000
+      internalID: -3944475204807534316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient_portal_7
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 1149
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 281839f92c650cfb0800000000000000
+      internalID: -4629605023035981438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient_portal_8
+      rect:
+        serializedVersion: 2
+        x: 686
+        y: 1149
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa9ace68f143b09d0800000000000000
+      internalID: -2807092632723084886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient_portal_9
+      rect:
+        serializedVersion: 2
+        x: 788
+        y: 1161
+        width: 45
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61561ae9ca91f4560800000000000000
+      internalID: 7300081750177309974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient_portal_10
+      rect:
+        serializedVersion: 2
+        x: 816
+        y: 1147
+        width: 15
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2359590a957066d40800000000000000
+      internalID: 5577153270072579378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient_portal_11
+      rect:
+        serializedVersion: 2
+        x: 734
+        y: 1141
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62735862c84ee2760800000000000000
+      internalID: 7435131325428086566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient_portal_12
+      rect:
+        serializedVersion: 2
+        x: 798
+        y: 1151
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ffdc39250ef7dce80800000000000000
+      internalID: -8156722748663280129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient_portal_13
+      rect:
+        serializedVersion: 2
+        x: 912
+        y: 1101
+        width: 43
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9519d70cacbc1730800000000000000
+      internalID: 3971256418485999005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient_portal_14
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 1115
+        width: 17
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f83ce606d22121490800000000000000
+      internalID: -7777133620414725233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient_portal_15
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 1120
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e891038547c259560800000000000000
+      internalID: 7319805647567985038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient_portal_16
+      rect:
+        serializedVersion: 2
+        x: 454
+        y: 1123
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bea3088fee9ecd4e0800000000000000
+      internalID: -1955430925604996373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient_portal_17
+      rect:
+        serializedVersion: 2
+        x: 566
+        y: 1123
+        width: 15
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 864664e0a678cc6d0800000000000000
+      internalID: -2968849164768222104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient_portal_18
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 1107
+        width: 23
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7730d168cced9da70800000000000000
+      internalID: 8852351512578163575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient_portal_19
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 1087
+        width: 51
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 012361da62b9f71b0800000000000000
+      internalID: -5656632016539078128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient_portal_20
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 1027
+        width: 197
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a18f5f10b89754730800000000000000
+      internalID: 3982723083419383834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient_portal_21
+      rect:
+        serializedVersion: 2
+        x: 422
+        y: 1059
+        width: 112
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 139b54736564ef8b0800000000000000
+      internalID: -5116574790537856719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient_portal_22
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 1091
+        width: 15
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 177efcedcffb42100800000000000000
+      internalID: 82401785990342513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient_portal_23
+      rect:
+        serializedVersion: 2
+        x: 944
+        y: 1091
+        width: 23
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f81f6c044de353a0800000000000000
+      internalID: -6677732945938147086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient_portal_24
+      rect:
+        serializedVersion: 2
+        x: 964
+        y: 1099
+        width: 19
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22c14d14e1acce970800000000000000
+      internalID: 8785619204395244578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient_portal_25
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 1044
+        width: 19
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d434ee80da2e6f080800000000000000
+      internalID: -9153879959776902323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient_portal_26
+      rect:
+        serializedVersion: 2
+        x: 362
+        y: 1028
+        width: 85
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fccf98fbcef7eeda0800000000000000
+      internalID: -5913648605888381745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient_portal_27
+      rect:
+        serializedVersion: 2
+        x: 978
+        y: 1057
+        width: 17
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d12776da8d3e3b4d0800000000000000
+      internalID: -3119899597075942883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient_portal_28
+      rect:
+        serializedVersion: 2
+        x: 1008
+        y: 1048
+        width: 11
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4df0cfcfbe8139080800000000000000
+      internalID: -9181967813437550636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient_portal_29
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 1050
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55abc7ceb83f57090800000000000000
+      internalID: -8037250177679181227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient_portal_30
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 1036
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f1ed46c181d89530800000000000000
+      internalID: 3862067035778179575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient_portal_31
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 1046
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd3a4b42c723a4180800000000000000
+      internalID: -9130429785767107617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient_portal_32
+      rect:
+        serializedVersion: 2
+        x: 1054
+        y: 1043
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1c7bb84b962766a0800000000000000
+      internalID: -6456149092430283746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient_portal_33
+      rect:
+        serializedVersion: 2
+        x: 1088
+        y: 1012
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 444e4d31233710e70800000000000000
+      internalID: 9079664982673908804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient_portal_34
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 841
+        width: 125
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06f415570ba2c49b0800000000000000
+      internalID: -5094650141091999904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient_portal_35
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 795
+        width: 109
+        height: 159
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6710025e06ba42d0800000000000000
+      internalID: -3293620004846561427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient_portal_36
+      rect:
+        serializedVersion: 2
+        x: 1120
+        y: 870
+        width: 15
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ee8fe70bf40d4c10800000000000000
+      internalID: 2039291682485145315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient_portal_37
+      rect:
+        serializedVersion: 2
+        x: 1132
+        y: 872
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 232ea2a9c79e916c0800000000000000
+      internalID: -4172046858410335694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient_portal_38
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 794
+        width: 19
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c082800103f38540800000000000000
+      internalID: 5009114396195193031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient_portal_39
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 809
+        width: 47
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 634798af53f2f40d0800000000000000
+      internalID: -3436476081777314762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient_portal_40
+      rect:
+        serializedVersion: 2
+        x: 1174
+        y: 801
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d74829e5abe75aa0800000000000000
+      internalID: -6172205666474113072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient_portal_41
+      rect:
+        serializedVersion: 2
+        x: 1182
+        y: 795
+        width: 7
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 571711b312c83a0e0800000000000000
+      internalID: -2259808513657048715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient_portal_42
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 777
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4745344f15a58ef00800000000000000
+      internalID: 1146265413202695284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient_portal_43
+      rect:
+        serializedVersion: 2
+        x: 1142
+        y: 736
+        width: 21
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3cbbbe726b58f2c30800000000000000
+      internalID: 4336831983581379523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient_portal_44
+      rect:
+        serializedVersion: 2
+        x: 1278
+        y: 736
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25bb6d9673d55be50800000000000000
+      internalID: 6824463302930119506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient_portal_45
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 696
+        width: 9
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 345c806300d266ce0800000000000000
+      internalID: -1412391954204277437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient_portal_46
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 702
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1db6218582f2cdd0800000000000000
+      internalID: -2467142990634238690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient_portal_47
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 663
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6675190bbc0921c10800000000000000
+      internalID: 2022838387157849958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient_portal_48
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 663
+        width: 21
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca7e358a284b19010800000000000000
+      internalID: 1193933849492711340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient_portal_49
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 667
+        width: 27
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2635d6b3c6aab3620800000000000000
+      internalID: 2754982978897400674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient_portal_50
+      rect:
+        serializedVersion: 2
+        x: 1096
+        y: 645
+        width: 31
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14575596ad0c860f0800000000000000
+      internalID: -1123436062726326975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient_portal_51
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 617
+        width: 16
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a77bed699b0277320800000000000000
+      internalID: 2555547295028262778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient_portal_52
+      rect:
+        serializedVersion: 2
+        x: 1142
+        y: 590
+        width: 9
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00a50575441d27f20800000000000000
+      internalID: 3419025158580492800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient_portal_53
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 517
+        width: 25
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5f88d02864209bd0800000000000000
+      internalID: -2625558553110737057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient_portal_54
+      rect:
+        serializedVersion: 2
+        x: 1134
+        y: 541
+        width: 17
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02ce86b7b78f7a8d0800000000000000
+      internalID: -2835024231171298272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient_portal_55
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 492
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57cab8c258c1ce9d0800000000000000
+      internalID: -2743786714671895435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient_portal_56
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 294
+        width: 137
+        height: 185
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a86522f176a44dd0800000000000000
+      internalID: -2502692484587100000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient_portal_57
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 291
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bba565285941b4860800000000000000
+      internalID: 7515123035567184571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient_portal_58
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 256
+        width: 35
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27a7c8f0f87d8c330800000000000000
+      internalID: 3731469300717615730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient_portal_59
+      rect:
+        serializedVersion: 2
+        x: 1046
+        y: 276
+        width: 153
+        height: 211
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1cea34c12ee9d0c20800000000000000
+      internalID: 3174368006340062913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient_portal_60
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 270
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9bdb22158e7a5e000800000000000000
+      internalID: 64642385902222777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient_portal_61
+      rect:
+        serializedVersion: 2
+        x: 1118
+        y: 147
+        width: 89
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7e66b5f21c34f1f0800000000000000
+      internalID: -1012117964122067330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient_portal_62
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 155
+        width: 73
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05e671791ba52c9f0800000000000000
+      internalID: -449697293993021872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient_portal_63
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 157
+        width: 23
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9cc8d98994b9120e0800000000000000
+      internalID: -2296383594586862391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient_portal_64
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 79
+        width: 131
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd7615bda3beff180800000000000000
+      internalID: -9079279685735454757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient_portal_65
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 136
+        width: 19
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52a195040545ba990800000000000000
+      internalID: -7373707261235357147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient_portal_66
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 137
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b2c837b02da614a0800000000000000
+      internalID: -6622915845977226571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient_portal_67
+      rect:
+        serializedVersion: 2
+        x: 1022
+        y: 84
+        width: 107
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6cc5d31332f968d50800000000000000
+      internalID: 6739248865905302726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient_portal_68
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 108
+        width: 35
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b20cc06773f02cb0800000000000000
+      internalID: -4890641501273718088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient_portal_69
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 35
+        width: 165
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7219c49426914bf0800000000000000
+      internalID: -341827012844252549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient_portal_70
+      rect:
+        serializedVersion: 2
+        x: 806
+        y: 104
+        width: 9
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60a5195c9d70feea0800000000000000
+      internalID: -5841441559772308986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient_portal_71
+      rect:
+        serializedVersion: 2
+        x: 944
+        y: 37
+        width: 107
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 870ed12e3caa95b90800000000000000
+      internalID: -7252577966614519688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient_portal_72
+      rect:
+        serializedVersion: 2
+        x: 1145
+        y: 116
+        width: 8
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 897558258ebfa53d0800000000000000
+      internalID: -3216982008567343208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient_portal_73
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 93
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e32f5011ec2bf0200800000000000000
+      internalID: 148533910845125182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient_portal_74
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 86
+        width: 27
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5c0b3c5d2a4004c0800000000000000
+      internalID: -4323374083594318758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient_portal_75
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 96
+        width: 21
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7403f6d4f3f1618a0800000000000000
+      internalID: -6334841469107490745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient_portal_76
+      rect:
+        serializedVersion: 2
+        x: 454
+        y: 92
+        width: 25
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dec2048c34c9d7130800000000000000
+      internalID: 3566178294883691757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient_portal_77
+      rect:
+        serializedVersion: 2
+        x: 568
+        y: 23
+        width: 91
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: efda8286faec4bc90800000000000000
+      internalID: -7154866655222780418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient_portal_78
+      rect:
+        serializedVersion: 2
+        x: 854
+        y: 86
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf0f3fe7283ab6d10800000000000000
+      internalID: 2119967830478942460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient_portal_79
+      rect:
+        serializedVersion: 2
+        x: 860
+        y: 86
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e728a171f06c25d00800000000000000
+      internalID: 960047438697759358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient_portal_80
+      rect:
+        serializedVersion: 2
+        x: 870
+        y: 70
+        width: 11
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad7d098cd0b904130800000000000000
+      internalID: 3549006989869766618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient_portal_81
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 70
+        width: 23
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bbe70c3268a3dc5c0800000000000000
+      internalID: -4193631330212217157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient_portal_82
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 48
+        width: 51
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98615e2bfb83e5890800000000000000
+      internalID: -7467468736142436727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient_portal_83
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 77
+        width: 21
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e79aca05681fdf170800000000000000
+      internalID: 8213986854575057278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient_portal_84
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 54
+        width: 29
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55443cc8bbc185f90800000000000000
+      internalID: -6964785231882402731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient_portal_85
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 64
+        width: 17
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ab651bc77629a0c0800000000000000
+      internalID: -4564074451413144671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient_portal_86
+      rect:
+        serializedVersion: 2
+        x: 462
+        y: 48
+        width: 45
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7e12ad0e0679bb20800000000000000
+      internalID: 3150679217052720767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient_portal_87
+      rect:
+        serializedVersion: 2
+        x: 830
+        y: 70
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21f300421abeb0230800000000000000
+      internalID: 3606235003966471954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient_portal_88
+      rect:
+        serializedVersion: 2
+        x: 878
+        y: 68
+        width: 9
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7fb9bcb586e46b910800000000000000
+      internalID: 1852754506833173495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient_portal_89
+      rect:
+        serializedVersion: 2
+        x: 888
+        y: 70
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ca6c2b9811182250800000000000000
+      internalID: 5920000507558783681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient_portal_90
+      rect:
+        serializedVersion: 2
+        x: 314
+        y: 50
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31f684b1d259e3750800000000000000
+      internalID: 6286626150819589907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient_portal_91
+      rect:
+        serializedVersion: 2
+        x: 366
+        y: 58
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c05ba8878a85417d0800000000000000
+      internalID: -2948634375420726004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient_portal_92
+      rect:
+        serializedVersion: 2
+        x: 414
+        y: 31
+        width: 61
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa0da3b18858e0140800000000000000
+      internalID: 4687831081758150826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient_portal_93
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 48
+        width: 27
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71ecc6c557a1fc190800000000000000
+      internalID: -7940098526666764777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient_portal_94
+      rect:
+        serializedVersion: 2
+        x: 870
+        y: 31
+        width: 13
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e04a642e71b24810800000000000000
+      internalID: 1748154760708112609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient_portal_95
+      rect:
+        serializedVersion: 2
+        x: 886
+        y: 36
+        width: 27
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d19178c5998fdf10800000000000000
+      internalID: 2296705611388260819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient_portal_96
+      rect:
+        serializedVersion: 2
+        x: 910
+        y: 48
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ba7a67d66491cad0800000000000000
+      internalID: -2683700733514450247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient_portal_97
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 48
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ef607b8c91502f00800000000000000
+      internalID: 1089960842619809763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient_portal_98
+      rect:
+        serializedVersion: 2
+        x: 878
+        y: 39
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc339497d1e87e0d0800000000000000
+      internalID: -3393587536960343093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient_portal_99
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 15
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9c192ba494f055a0800000000000000
+      internalID: -6534454139950654307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient_portal_100
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 21
+        width: 22
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2622739f0dd22cc0800000000000000
+      internalID: -3737181681796110803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Ancient_portal_0: -7887117603848313518
+      Ancient_portal_1: 6025404846215116447
+      Ancient_portal_10: 5577153270072579378
+      Ancient_portal_100: -3737181681796110803
+      Ancient_portal_11: 7435131325428086566
+      Ancient_portal_12: -8156722748663280129
+      Ancient_portal_13: 3971256418485999005
+      Ancient_portal_14: -7777133620414725233
+      Ancient_portal_15: 7319805647567985038
+      Ancient_portal_16: -1955430925604996373
+      Ancient_portal_17: -2968849164768222104
+      Ancient_portal_18: 8852351512578163575
+      Ancient_portal_19: -5656632016539078128
+      Ancient_portal_2: 3575051603244550594
+      Ancient_portal_20: 3982723083419383834
+      Ancient_portal_21: -5116574790537856719
+      Ancient_portal_22: 82401785990342513
+      Ancient_portal_23: -6677732945938147086
+      Ancient_portal_24: 8785619204395244578
+      Ancient_portal_25: -9153879959776902323
+      Ancient_portal_26: -5913648605888381745
+      Ancient_portal_27: -3119899597075942883
+      Ancient_portal_28: -9181967813437550636
+      Ancient_portal_29: -8037250177679181227
+      Ancient_portal_3: 6258453106400228886
+      Ancient_portal_30: 3862067035778179575
+      Ancient_portal_31: -9130429785767107617
+      Ancient_portal_32: -6456149092430283746
+      Ancient_portal_33: 9079664982673908804
+      Ancient_portal_34: -5094650141091999904
+      Ancient_portal_35: -3293620004846561427
+      Ancient_portal_36: 2039291682485145315
+      Ancient_portal_37: -4172046858410335694
+      Ancient_portal_38: 5009114396195193031
+      Ancient_portal_39: -3436476081777314762
+      Ancient_portal_4: 3849609880209923972
+      Ancient_portal_40: -6172205666474113072
+      Ancient_portal_41: -2259808513657048715
+      Ancient_portal_42: 1146265413202695284
+      Ancient_portal_43: 4336831983581379523
+      Ancient_portal_44: 6824463302930119506
+      Ancient_portal_45: -1412391954204277437
+      Ancient_portal_46: -2467142990634238690
+      Ancient_portal_47: 2022838387157849958
+      Ancient_portal_48: 1193933849492711340
+      Ancient_portal_49: 2754982978897400674
+      Ancient_portal_5: -3790077017662897033
+      Ancient_portal_50: -1123436062726326975
+      Ancient_portal_51: 2555547295028262778
+      Ancient_portal_52: 3419025158580492800
+      Ancient_portal_53: -2625558553110737057
+      Ancient_portal_54: -2835024231171298272
+      Ancient_portal_55: -2743786714671895435
+      Ancient_portal_56: -2502692484587100000
+      Ancient_portal_57: 7515123035567184571
+      Ancient_portal_58: 3731469300717615730
+      Ancient_portal_59: 3174368006340062913
+      Ancient_portal_6: -3944475204807534316
+      Ancient_portal_60: 64642385902222777
+      Ancient_portal_61: -1012117964122067330
+      Ancient_portal_62: -449697293993021872
+      Ancient_portal_63: -2296383594586862391
+      Ancient_portal_64: -9079279685735454757
+      Ancient_portal_65: -7373707261235357147
+      Ancient_portal_66: -6622915845977226571
+      Ancient_portal_67: 6739248865905302726
+      Ancient_portal_68: -4890641501273718088
+      Ancient_portal_69: -341827012844252549
+      Ancient_portal_7: -4629605023035981438
+      Ancient_portal_70: -5841441559772308986
+      Ancient_portal_71: -7252577966614519688
+      Ancient_portal_72: -3216982008567343208
+      Ancient_portal_73: 148533910845125182
+      Ancient_portal_74: -4323374083594318758
+      Ancient_portal_75: -6334841469107490745
+      Ancient_portal_76: 3566178294883691757
+      Ancient_portal_77: -7154866655222780418
+      Ancient_portal_78: 2119967830478942460
+      Ancient_portal_79: 960047438697759358
+      Ancient_portal_8: -2807092632723084886
+      Ancient_portal_80: 3549006989869766618
+      Ancient_portal_81: -4193631330212217157
+      Ancient_portal_82: -7467468736142436727
+      Ancient_portal_83: 8213986854575057278
+      Ancient_portal_84: -6964785231882402731
+      Ancient_portal_85: -4564074451413144671
+      Ancient_portal_86: 3150679217052720767
+      Ancient_portal_87: 3606235003966471954
+      Ancient_portal_88: 1852754506833173495
+      Ancient_portal_89: 5920000507558783681
+      Ancient_portal_9: 7300081750177309974
+      Ancient_portal_90: 6286626150819589907
+      Ancient_portal_91: -2948634375420726004
+      Ancient_portal_92: 4687831081758150826
+      Ancient_portal_93: -7940098526666764777
+      Ancient_portal_94: 1748154760708112609
+      Ancient_portal_95: 2296705611388260819
+      Ancient_portal_96: -2683700733514450247
+      Ancient_portal_97: 1089960842619809763
+      Ancient_portal_98: -3393587536960343093
+      Ancient_portal_99: -6534454139950654307
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

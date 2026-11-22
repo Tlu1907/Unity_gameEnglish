@@ -20,31 +20,39 @@ MonoBehaviour:
   - english: This is Linh. I work for the National Security Bureau.
     vietnamese: "T\xF4i l\xE0 Linh. T\xF4i l\xE0m vi\u1EC7c cho C\u1EE5c An ninh
       Qu\u1ED1c gia."
-  - english: "I\u2019m calling you because you\u2019re a special forces soldier on
-      a rescue mission in the city. I need your help."
-    vietnamese: "T\xF4i li\xEAn l\u1EA1c v\u1EDBi anh v\xEC anh l\xE0 l\xEDnh \u0111\u1EB7c
-      nhi\u1EC7m \u0111ang l\xE0m nhi\u1EC7m v\u1EE5 c\u1EE9u h\u1ED9 trong th\xE0nh
-      ph\u1ED1. T\xF4i c\u1EA7n anh gi\xFAp."
-  - english: "Strange creatures are all over the city. They\u2019re breaking windows
-      and damaging cars."
-    vietnamese: "Sinh v\u1EADt l\u1EA1 xu\u1EA5t hi\u1EC7n kh\u1EAFp th\xE0nh ph\u1ED1.
-      Ch\xFAng \u0111ang \u0111\u1EADp v\u1EE1 c\u1EEDa k\xEDnh v\xE0 ph\xE1 h\u1ECFng
-      xe c\u1ED9."
-  - english: Some streets are blocked. People are hiding in shops and houses.
-    vietnamese: "M\u1ED9t s\u1ED1 con \u0111\u01B0\u1EDDng \u0111\xE3 b\u1ECB ch\u1EB7n.
-      M\u1ECDi ng\u01B0\u1EDDi \u0111ang tr\u1ED1n trong c\xE1c c\u1EEDa h\xE0ng
-      v\xE0 nh\xE0 d\xE2n."
-  - english: A strange object fell from the sky and landed in the city park. It has
-      a metal shell and a small blue light.
-    vietnamese: "M\u1ED9t v\u1EADt th\u1EC3 l\u1EA1 r\u01A1i t\u1EEB tr\xEAn tr\u1EDDi
-      xu\u1ED1ng v\xE0 \u0111\xE1p xu\u1ED1ng c\xF4ng vi\xEAn th\xE0nh ph\u1ED1.
-      N\xF3 c\xF3 v\u1ECF kim lo\u1EA1i v\xE0 m\u1ED9t \xE1nh \u0111\xE8n xanh nh\u1ECF."
-  - english: There are creatures on the streets near the park. They all stay away
-      from the object. We need to find out why.
-    vietnamese: "C\xF3 sinh v\u1EADt l\u1EA1 tr\xEAn c\xE1c con \u0111\u01B0\u1EDDng
-      g\u1EA7n c\xF4ng vi\xEAn. T\u1EA5t c\u1EA3 ch\xFAng \u0111\u1EC1u tr\xE1nh
-      xa v\u1EADt th\u1EC3. Ch\xFAng ta c\u1EA7n t\xECm hi\u1EC3u l\xFD do."
-  - english: Go to the park and check the object. Take any items you find inside.
-    vietnamese: "H\xE3y \u0111\u1EBFn c\xF4ng vi\xEAn v\xE0 ki\u1EC3m tra v\u1EADt
-      th\u1EC3. H\xE3y l\u1EA5y nh\u1EEFng v\u1EADt ph\u1EA9m anh t\xECm th\u1EA5y
-      b\xEAn trong."
+  - english: 'I need your help. After the earthquake, strange creatures and objects
+      appeared in the city.
+
+'
+    vietnamese: "T\xF4i c\u1EA7n anh gi\xFAp. Sau tr\u1EADn \u0111\u1ED9ng \u0111\u1EA5t,
+      nh\u1EEFng sinh v\u1EADt v\xE0 v\u1EADt th\u1EC3 l\u1EA1 xu\u1EA5t hi\u1EC7n
+      trong th\xE0nh ph\u1ED1."
+  - english: The creatures are attacking people in the streets and destroying buildings.
+    vietnamese: "Nh\u1EEFng sinh v\u1EADt \u0111\xF3 \u0111ang t\u1EA5n c\xF4ng ng\u01B0\u1EDDi
+      d\xE2n tr\xEAn \u0111\u01B0\u1EDDng ph\u1ED1 v\xE0 ph\xE1 h\u1EE7y c\xE1c t\xF2a
+      nh\xE0."
+  - english: We need your help to save them. But first, please check something for
+      us.
+    vietnamese: "Ch\xFAng t\xF4i c\u1EA7n anh gi\xFAp gi\u1EA3i c\u1EE9u h\u1ECD.
+      Nh\u01B0ng tr\u01B0\u1EDBc ti\xEAn, h\xE3y ki\u1EC3m tra m\u1ED9t th\u1EE9
+      gi\xFAp ch\xFAng t\xF4i."
+  - english: Go to the city park. An ancient tower appeared there after the earthquake.
+    vietnamese: "H\xE3y \u0111\u1EBFn c\xF4ng vi\xEAn th\xE0nh ph\u1ED1. M\u1ED9t
+      t\xF2a th\xE1p c\u1ED5 \u0111\xE3 xu\u1EA5t hi\u1EC7n \u1EDF \u0111\xF3 sau
+      tr\u1EADn \u0111\u1ED9ng \u0111\u1EA5t."
+  - english: We do not know where it came from. The creatures stay away from it.
+    vietnamese: "Ch\xFAng ta ch\u01B0a bi\u1EBFt n\xF3 t\u1EEB \u0111\xE2u \u0111\u1EBFn.
+      Nh\u1EEFng sinh v\u1EADt kia tr\xE1nh xa n\xF3."
+  - english: Find the tower and check it. If you find any items inside, take them
+      with you. They may help us.
+    vietnamese: "H\xE3y t\xECm v\xE0 ki\u1EC3m tra t\xF2a th\xE1p. N\u1EBFu t\xECm
+      th\u1EA5y v\u1EADt ph\u1EA9m b\xEAn trong, h\xE3y mang ch\xFAng theo. Ch\xFAng
+      c\xF3 th\u1EC3 gi\xFAp ch\xFAng ta."
+  - english: Check your map to find the entrance to the park. Follow the road and
+      watch out for monsters.
+    vietnamese: "H\xE3y xem b\u1EA3n \u0111\u1ED3 \u0111\u1EC3 t\xECm l\u1ED1i v\xE0o
+      c\xF4ng vi\xEAn. \u0110i theo con \u0111\u01B0\u1EDDng v\xE0 \u0111\u1EC1 ph\xF2ng
+      qu\xE1i v\u1EADt."
+  - english: Be careful. Call me when you reach the tower.
+    vietnamese: "H\xE3y c\u1EA9n th\u1EADn. Li\xEAn l\u1EA1c v\u1EDBi t\xF4i khi
+      anh \u0111\u1EBFn t\xF2a th\xE1p."

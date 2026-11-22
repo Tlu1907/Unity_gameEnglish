@@ -5,34 +5,117 @@ using System.Text;
 using UnityEngine;
 using UnityEngine.UI;
 
-/// <summary>Session notebook, shared across scenes. Only pages actually encountered are recorded.</summary>
+/// <summary>Session notebook containing notes from encountered pages.</summary>
 public static class LearningJournal
 {
+    public sealed class GrammarNote
+    {
+        public string Id, GroupId, Text;
+    }
+    private static readonly string[] groupIds = { "to_be", "present_continuous", "possession_relationships", "ability_future", "commands_suggestions", "purpose_time", "continuing_actions", "general" };
+    private static readonly string[] groupTitles = { "To be & Descriptions", "Present Continuous", "Possession & Relationships", "Ability & Future", "Commands & Suggestions", "Purpose & Time", "Continuing Actions", "Other Grammar" };
     public sealed class MapNotes
     {
         public readonly string Id;
         public string Title { get; internal set; }
         private readonly List<string> grammar = new List<string>();
+        private readonly List<GrammarNote> grammarNotes = new List<GrammarNote>();
+        private readonly HashSet<string> grammarIds = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
         private readonly List<string> vocabulary = new List<string>();
         private readonly HashSet<string> grammarKeys = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
         private readonly HashSet<string> wordKeys = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
         public IReadOnlyList<string> Grammar => grammar.AsReadOnly();
         public IReadOnlyList<string> Vocabulary => vocabulary.AsReadOnly();
         internal MapNotes(string id, string title) { Id = id; Title = title; }
-        internal bool Add(ResearchDocument.Vocabulary[] words, string formula)
+        internal bool Add(ResearchDocument.Vocabulary[] words, string formula, string grammarId = null, string groupId = null)
         {
             bool changed = false;
-            if (!string.IsNullOrWhiteSpace(formula) && grammarKeys.Add(formula.Trim()))
-            { grammar.Add(formula.Trim()); changed = true; }
+            formula = SummarizeGrammar(formula);
+            if (!string.IsNullOrWhiteSpace(formula))
+            {
+                string key = NoteKey(formula, true);
+                string id = string.IsNullOrWhiteSpace(grammarId) ? key : grammarId.Trim();
+                if (!grammarIds.Contains(id) && !grammarKeys.Contains(key))
+                {
+                    grammarIds.Add(id); grammarKeys.Add(key);
+                    grammar.Add(formula.Trim());
+                    grammarNotes.Add(new GrammarNote { Id = id, GroupId = Array.IndexOf(groupIds, groupId) >= 0 ? groupId : "general", Text = formula.Trim() });
+                    changed = true;
+                }
+                else { grammarIds.Add(id); grammarKeys.Add(key); }
+            }
             if (words != null)
                 foreach (var word in words)
                 {
                     if (word == null || string.IsNullOrWhiteSpace(word.word)) continue;
-                    string line = word.word.Trim() + (string.IsNullOrWhiteSpace(word.meaning) ? "" : ": " + word.meaning.Trim());
-                    if (wordKeys.Add(line)) { vocabulary.Add(line); changed = true; }
+                    string line = FormatVocabulary(word.word, word.meaning);
+                    if (wordKeys.Add(NoteKey(line, false))) { vocabulary.Add(line); changed = true; }
                 }
             return changed;
         }
+        public string BuildGrammarColumn()
+        {
+            var result = new StringBuilder("GRAMMAR\n\n");
+            for (int group = 0; group < groupIds.Length; group++)
+            {
+                bool heading = false;
+                foreach (var note in grammarNotes)
+                {
+                    if (note.GroupId != groupIds[group]) continue;
+                    if (!heading)
+                    {
+                        if (result.Length > "GRAMMAR\n\n".Length) result.Append('\n');
+                        result.Append("<b>").Append(Plain(groupTitles[group])).Append("</b>\n");
+                        heading = true;
+                    }
+                    result.Append("• ").Append(Plain(note.Text)).Append('\n');
+                }
+            }
+            return result.ToString();
+        }
+    }
+    // A note's identity is its term/formula, independent of the wording of its translation.
+    private static string NoteKey(string entry, bool isGrammar)
+    {
+        int separator = entry.IndexOf(':');
+        string key = (separator < 0 ? entry : entry.Substring(0, separator))
+            .Normalize(NormalizationForm.FormC).Trim().ToLowerInvariant();
+        key = System.Text.RegularExpressions.Regex.Replace(key, @"\s+", " ");
+        key = key.Replace("’", "'").Replace("…", "...");
+        if (isGrammar)
+            key = System.Text.RegularExpressions.Regex.Replace(key, @"\s*([+/])\s*", "$1");
+        return key.TrimEnd(' ', '.', ',', ';', '!');
+    }
+    public static string SummarizeGrammar(string grammar)
+    {
+        if (string.IsNullOrWhiteSpace(grammar)) return "";
+        string text = grammar.Replace("\r\n", "\n").Replace('\r', '\n');
+        var options = System.Text.RegularExpressions.RegexOptions.IgnoreCase;
+        var formula = System.Text.RegularExpressions.Regex.Match(text,
+            @"(?:^|\n)\s*(?:Công thức(?: trong lời thoại)?|Formula|Structure)\s*:\s*([^\n]+)", options);
+        var meaning = System.Text.RegularExpressions.Regex.Match(text,
+            @"(?:^|\n)\s*(?:Nghĩa(?: trong lời thoại)?|Meaning)\s*:\s*([^\n]+)", options);
+        if (formula.Success)
+            return formula.Groups[1].Value.Trim() + (meaning.Success ? ": " + meaning.Groups[1].Value.Trim() : "");
+        // Compact JSON entries already use "formula: meaning". Discard usage/examples and their continuation.
+        text = System.Text.RegularExpressions.Regex.Split(text,
+            @"(?:Ví dụ|Vd\.?|Examples?|E\.g\.|Cách dùng|Usage)\s*:", options)[0];
+        return text.Trim();
+    }
+    // Normalize authored notes as well as notes collected from dialogue JSON.
+    public static string FormatVocabulary(string word, string meaning)
+    {
+        string SingleLine(string value) => string.Join(" ", (value ?? "")
+            .Split((char[])null, StringSplitOptions.RemoveEmptyEntries));
+        string term = SingleLine(word).Replace('=', ':');
+        string definition = SingleLine(meaning).Replace('=', ':');
+        int separator = term.IndexOf(':');
+        if (separator >= 0)
+        {
+            if (definition.Length == 0) definition = term.Substring(separator + 1).Trim();
+            term = term.Substring(0, separator).Trim();
+        }
+        return definition.Length == 0 ? term : term + ": " + definition;
     }
     private static readonly List<MapNotes> maps = new List<MapNotes>();
     public static IReadOnlyList<MapNotes> Maps => maps.AsReadOnly();
@@ -42,29 +125,31 @@ public static class LearningJournal
         if (string.IsNullOrWhiteSpace(mapId)) return;
         if (string.IsNullOrWhiteSpace(grammar) && (words == null || Array.TrueForAll(words,
             word => word == null || string.IsNullOrWhiteSpace(word.word)))) return;
-        MapNotes map = maps.Find(item => item.Id == mapId);
+        mapId = mapId.Trim();
+        MapNotes map = maps.Find(item => string.Equals(item.Id, mapId, StringComparison.OrdinalIgnoreCase));
         if (map == null) { map = new MapNotes(mapId, string.IsNullOrWhiteSpace(title) ? mapId : title); maps.Add(map); }
         bool changed = map.Add(words, grammar);
         if (!string.IsNullOrWhiteSpace(title) && map.Title != title) { map.Title = title; changed = true; }
         if (changed) Changed?.Invoke();
     }
     private static string Plain(string value) => (value ?? "").Replace("<", "‹").Replace(">", "›");
+    public static void RecordGrammar(string mapId, string title, GrammarNote note)
+    {
+        if (note == null || string.IsNullOrWhiteSpace(note.Text) || string.IsNullOrWhiteSpace(mapId)) return;
+        mapId = mapId.Trim();
+        var map = maps.Find(item => string.Equals(item.Id, mapId, StringComparison.OrdinalIgnoreCase));
+        if (map == null) { map = new MapNotes(mapId, string.IsNullOrWhiteSpace(title) ? mapId : title); maps.Add(map); }
+        if (map.Add(null, note.Text, note.Id, note.GroupId)) Changed?.Invoke();
+    }
     public static string BuildBook()
     {
-        var book = new StringBuilder("SỔ TAY HÀNH TRÌNH\n\nNHIỆM VỤ HIỆN TẠI\n").Append(Plain(StoryProgress.Objective));
-        if (StoryProgress.Clues.Count > 0)
-        {
-            book.Append("\n\nMANH MỐI\n");
-            foreach (string clue in StoryProgress.Clues) book.Append("• ").AppendLine(Plain(clue));
-        }
+        var book = new StringBuilder("SỔ TAY HỌC TẬP");
         if (maps.Count == 0) book.Append("\n\nChưa có ghi chú học tập. Trò chuyện và đọc tài liệu để ghi lại kiến thức.");
         foreach (var map in maps)
         {
             if (map.Grammar.Count > 0)
             {
-                book.Append("<page>").Append(Plain(map.Title)).Append("\n\nNGỮ PHÁP\n\n");
-                for (int i = 0; i < map.Grammar.Count; i++)
-                    book.Append(i + 1).Append(". ").AppendLine(Plain(map.Grammar[i])).AppendLine();
+                book.Append("<page>").Append(Plain(map.Title)).Append("\n\nNGỮ PHÁP\n\n").Append(map.BuildGrammarColumn());
             }
             if (map.Vocabulary.Count > 0)
             {
@@ -90,6 +175,7 @@ public sealed class StoryClueJournal : MonoBehaviour
     [SerializeField] private Button nextButton;
     [SerializeField] private Button closeButton;
     [SerializeField] private TMP_Text pageLabel;
+    [SerializeField] private TMP_Text mapTitle;
     private int currentPage = 1;
     private bool pausedGameplay;
     private Vector2 lastPageSize;
@@ -97,7 +183,7 @@ public sealed class StoryClueJournal : MonoBehaviour
     private readonly List<JournalPage> pages = new List<JournalPage>();
     private sealed class JournalPage
     {
-        public string Vocabulary, Grammar;
+        public string Title, Vocabulary, Grammar;
         public int Subpage;
     }
     private static StoryClueJournal activeJournal;
@@ -130,9 +216,9 @@ public sealed class StoryClueJournal : MonoBehaviour
         grammarEntries.margin = entries.margin;
         Place(grammarEntries.rectTransform, new Vector2(.51f, .14f), new Vector2(.96f, .88f));
         Place((RectTransform)notebook.transform, new Vector2(.18f, .12f), new Vector2(.82f, .88f));
-        previousButton = Navigation("Previous Page", "← Trước", .05f, .27f, font);
-        nextButton = Navigation("Next Page", "Sau →", .73f, .95f, font);
-        closeButton = Navigation("Close Book", "Đóng · J", .73f, .95f, font);
+        previousButton = Navigation("Previous Page", "← Previous", .05f, .27f, font);
+        nextButton = Navigation("Next Page", "Next →", .73f, .95f, font);
+        closeButton = Navigation("Close Book", "Close · J", .73f, .95f, font);
         Place((RectTransform)closeButton.transform, new Vector2(.73f, .9f), new Vector2(.95f, .97f));
         pageLabel = Text(notebook.transform, font);
         pageLabel.name = "Page Number";
@@ -211,14 +297,12 @@ public sealed class StoryClueJournal : MonoBehaviour
     }
     private void OnEnable()
     {
-        StoryProgress.MissionChanged += Refresh;
         LearningJournal.Changed += Refresh;
         Unbind(); Bind();
         Refresh();
     }
     private void OnDisable()
     {
-        StoryProgress.MissionChanged -= Refresh;
         LearningJournal.Changed -= Refresh;
         Unbind();
         Close();
@@ -240,59 +324,91 @@ public sealed class StoryClueJournal : MonoBehaviour
     private void Refresh()
     {
         if (entries == null || buttonLabel == null) return;
-        buttonLabel.text = "J · Sổ tay học tập (" + LearningJournal.Maps.Count + " map)";
+        buttonLabel.text = "J · Learning Journal";
         if (notebook == null || !notebook.activeInHierarchy) return;
+        EnsureHeader();
         Canvas.ForceUpdateCanvases();
         pages.Clear();
-        var mission = new StringBuilder("NHIỆM VỤ HIỆN TẠI\n\n").Append(StoryProgress.Objective);
-        foreach (string clue in StoryProgress.Clues) mission.Append("\n\n• ").Append(clue);
-        AddPages(mission.ToString(), "SỔ TAY HỌC TẬP\n\nTrò chuyện và đọc tài liệu để ghi lại từ vựng, ngữ pháp của từng map.");
+        if (LearningJournal.Maps.Count == 0)
+            AddPages("VOCABULARY\n\nNo vocabulary recorded yet.",
+                "GRAMMAR\n\nNo grammar recorded yet.");
         foreach (var map in LearningJournal.Maps)
         {
-            var words = new StringBuilder(map.Title).Append("\n\nTỪ VỰNG\n\n");
-            foreach (string word in map.Vocabulary) words.AppendLine(word);
-            var formulas = new StringBuilder(map.Title).Append("\n\nNGỮ PHÁP\n\n");
-            for (int i = 0; i < map.Grammar.Count; i++)
-                formulas.Append(i + 1).Append(". ").AppendLine(
-                    map.Grammar[i].Replace("\r\n", " ").Replace('\r', ' ').Replace('\n', ' '));
-            AddPages(words.ToString(), formulas.ToString());
+            var words = new StringBuilder("VOCABULARY\n\n");
+            // Explicit TMP line breaks keep every vocabulary entry on its own line.
+            words.Append(string.Join("\n", map.Vocabulary)).Append('\n');
+            AddPages(words.ToString(), map.BuildGrammarColumn(), map.Id == "map1" ? "Map 1 · City" : map.Title);
         }
         PageCount = Mathf.Max(1, pages.Count);
         currentPage = Mathf.Clamp(currentPage, 1, PageCount);
         UpdatePage();
+    }
+    private void EnsureHeader()
+    {
+        if (mapTitle == null)
+        {
+            var existing = notebook.transform.Find("Map Title");
+            mapTitle = existing != null ? existing.GetComponent<TMP_Text>() : null;
+            if (mapTitle == null) mapTitle = Text(notebook.transform, entries.font);
+            mapTitle.name = "Map Title";
+        }
+        mapTitle.color = entries.color;
+        mapTitle.fontStyle = FontStyles.Bold;
+        mapTitle.alignment = TextAlignmentOptions.MidlineLeft;
+        mapTitle.enableWordWrapping = false;
+        var headerMin = new Vector2(.05f, .9f);
+        var headerMax = new Vector2(.70f, .97f);
+        if (closeButton != null)
+        {
+            var closeRect = (RectTransform)closeButton.transform;
+            headerMin.y = closeRect.anchorMin.y;
+            headerMax.y = closeRect.anchorMax.y;
+        }
+        Place(mapTitle.rectTransform, headerMin, headerMax);
+        SetButtonCaption(previousButton, "← Previous");
+        SetButtonCaption(nextButton, "Next →");
+        SetButtonCaption(closeButton, "Close · J");
+    }
+    private static void SetButtonCaption(Button button, string caption)
+    {
+        if (button == null) return;
+        var label = button.GetComponentInChildren<TMP_Text>(true);
+        if (label != null) label.text = caption;
     }
     private void UpdatePage()
     {
         if (pages.Count > 0)
         {
             var page = pages[Mathf.Clamp(currentPage - 1, 0, pages.Count - 1)];
+            if (mapTitle != null) mapTitle.text = page.Title;
             SetColumn(entries, page.Vocabulary, page.Subpage);
-            SetColumn(grammarEntries, page.Grammar, page.Subpage);
+            SetColumn(grammarEntries, page.Grammar, page.Subpage, true);
         }
-        if (pageLabel != null) pageLabel.text = $"Trang {currentPage} / {PageCount}";
+        if (pageLabel != null) pageLabel.text = $"Page {currentPage} / {PageCount}";
         if (previousButton != null) previousButton.interactable = currentPage > 1;
         if (nextButton != null) nextButton.interactable = currentPage < PageCount;
     }
-    private void AddPages(string vocabulary, string grammar)
+    private void AddPages(string vocabulary, string grammar, string title = "Learning Journal")
     {
-        int count = Mathf.Max(CountColumnPages(entries, vocabulary), CountColumnPages(grammarEntries, grammar));
+        int count = Mathf.Max(CountColumnPages(entries, vocabulary), CountColumnPages(grammarEntries, grammar, true));
         for (int i = 1; i <= count; i++)
-            pages.Add(new JournalPage { Vocabulary = vocabulary, Grammar = grammar, Subpage = i });
+            pages.Add(new JournalPage { Title = title, Vocabulary = vocabulary, Grammar = grammar, Subpage = i });
     }
-    private static int CountColumnPages(TMP_Text text, string content)
+    private static int CountColumnPages(TMP_Text text, string content, bool richText = false)
     {
         if (text == null) return 1;
-        SetColumn(text, content, 1);
+        SetColumn(text, content, 1, richText);
         return Mathf.Max(1, text.textInfo.pageCount);
     }
-    private static void SetColumn(TMP_Text text, string content, int page)
+    private static void SetColumn(TMP_Text text, string content, int page, bool richText = false)
     {
         if (text == null) return;
-        text.richText = false;
-        text.fontStyle |= FontStyles.Bold;
+        text.richText = richText;
+        text.parseCtrlCharacters = true;
+        if (richText) text.fontStyle &= ~FontStyles.Bold;
         text.enableAutoSizing = false;
         text.overflowMode = TextOverflowModes.Page;
-        text.text = content;
+        text.text = content.Replace("\r\n", "\n").Replace('\r', '\n');
         text.maxVisibleCharacters = int.MaxValue;
         text.ForceMeshUpdate();
         // TMP clamps out-of-range pages; explicitly blank a shorter column instead of repeating it.

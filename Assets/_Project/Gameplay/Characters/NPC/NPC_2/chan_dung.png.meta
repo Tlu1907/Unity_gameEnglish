@@ -1,0 +1,702 @@
+fileFormatVersion: 2
+guid: c0880085737c55f46b9451a3ab6e57a7
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2185943310641217458
+    second: chan_dung_0
+  - first:
+      213: 122045910875952319
+    second: chan_dung_1
+  - first:
+      213: 970604426962658878
+    second: chan_dung_2
+  - first:
+      213: -6048594689000414021
+    second: chan_dung_3
+  - first:
+      213: -7310838839337278495
+    second: chan_dung_4
+  - first:
+      213: 8550527503644622846
+    second: chan_dung_5
+  - first:
+      213: -3565441305567282013
+    second: chan_dung_6
+  - first:
+      213: -4419822211939592587
+    second: chan_dung_7
+  - first:
+      213: 7110325099975873276
+    second: chan_dung_8
+  - first:
+      213: 4079464842638569709
+    second: chan_dung_9
+  - first:
+      213: 7848284769481865560
+    second: chan_dung_10
+  - first:
+      213: 4445726121452867691
+    second: chan_dung_11
+  - first:
+      213: -311218269976035776
+    second: chan_dung_12
+  - first:
+      213: -6025516521805887313
+    second: chan_dung_13
+  - first:
+      213: 7355178972974264551
+    second: chan_dung_14
+  - first:
+      213: 1303016283838818403
+    second: chan_dung_15
+  - first:
+      213: -154114816353041978
+    second: chan_dung_16
+  - first:
+      213: 1633392866984431736
+    second: chan_dung_17
+  - first:
+      213: 1545568625900205931
+    second: chan_dung_18
+  - first:
+      213: 5962614905879530993
+    second: chan_dung_19
+  - first:
+      213: -3695805226667025919
+    second: chan_dung_20
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: chan_dung_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 13
+        width: 1137
+        height: 1213
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e40c61ef328f9a1e0800000000000000
+      internalID: -2185943310641217458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chan_dung_1
+      rect:
+        serializedVersion: 2
+        x: 788
+        y: 1201
+        width: 17
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb4dc0cfb1891b100800000000000000
+      internalID: 122045910875952319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chan_dung_2
+      rect:
+        serializedVersion: 2
+        x: 1043
+        y: 911
+        width: 176
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e36e7867597487d00800000000000000
+      internalID: 970604426962658878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chan_dung_3
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 851
+        width: 51
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb4e0db5d231f0ca0800000000000000
+      internalID: -6048594689000414021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chan_dung_4
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 851
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e32c236fceaa8a90800000000000000
+      internalID: -7310838839337278495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chan_dung_5
+      rect:
+        serializedVersion: 2
+        x: 1013
+        y: 839
+        width: 7
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: efff1f0467399a670800000000000000
+      internalID: 8550527503644622846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chan_dung_6
+      rect:
+        serializedVersion: 2
+        x: 1029
+        y: 845
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ac382ae502058ec0800000000000000
+      internalID: -3565441305567282013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chan_dung_7
+      rect:
+        serializedVersion: 2
+        x: 987
+        y: 595
+        width: 9
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57695fe8d13a9a2c0800000000000000
+      internalID: -4419822211939592587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chan_dung_8
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 534
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf21b9d9103fca260800000000000000
+      internalID: 7110325099975873276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chan_dung_9
+      rect:
+        serializedVersion: 2
+        x: 989
+        y: 543
+        width: 7
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de0ba2319ab2d9830800000000000000
+      internalID: 4079464842638569709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chan_dung_10
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 495
+        width: 31
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85933157a65baec60800000000000000
+      internalID: 7848284769481865560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chan_dung_11
+      rect:
+        serializedVersion: 2
+        x: 1019
+        y: 518
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b609fdd5a5462bd30800000000000000
+      internalID: 4445726121452867691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chan_dung_12
+      rect:
+        serializedVersion: 2
+        x: 1027
+        y: 515
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04e7772e1a45eabf0800000000000000
+      internalID: -311218269976035776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chan_dung_13
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 461
+        width: 15
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa84381e5a0116ca0800000000000000
+      internalID: -6025516521805887313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chan_dung_14
+      rect:
+        serializedVersion: 2
+        x: 1045
+        y: 469
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e0bd877e48d21660800000000000000
+      internalID: 7355178972974264551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chan_dung_15
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 192
+        width: 17
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36823ce086e351210800000000000000
+      internalID: 1303016283838818403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chan_dung_16
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 144
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c107ac14697cddf0800000000000000
+      internalID: -154114816353041978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chan_dung_17
+      rect:
+        serializedVersion: 2
+        x: 980
+        y: 130
+        width: 40
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 870934f882afaa610800000000000000
+      internalID: 1633392866984431736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chan_dung_18
+      rect:
+        serializedVersion: 2
+        x: 932
+        y: 59
+        width: 54
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6735caf976f27510800000000000000
+      internalID: 1545568625900205931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chan_dung_19
+      rect:
+        serializedVersion: 2
+        x: 987
+        y: 95
+        width: 9
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1fd06656aa67fb250800000000000000
+      internalID: 5962614905879530993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chan_dung_20
+      rect:
+        serializedVersion: 2
+        x: 995
+        y: 101
+        width: 7
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10ada714abcd5bcc0800000000000000
+      internalID: -3695805226667025919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      chan_dung_0: -2185943310641217458
+      chan_dung_1: 122045910875952319
+      chan_dung_10: 7848284769481865560
+      chan_dung_11: 4445726121452867691
+      chan_dung_12: -311218269976035776
+      chan_dung_13: -6025516521805887313
+      chan_dung_14: 7355178972974264551
+      chan_dung_15: 1303016283838818403
+      chan_dung_16: -154114816353041978
+      chan_dung_17: 1633392866984431736
+      chan_dung_18: 1545568625900205931
+      chan_dung_19: 5962614905879530993
+      chan_dung_2: 970604426962658878
+      chan_dung_20: -3695805226667025919
+      chan_dung_3: -6048594689000414021
+      chan_dung_4: -7310838839337278495
+      chan_dung_5: 8550527503644622846
+      chan_dung_6: -3565441305567282013
+      chan_dung_7: -4419822211939592587
+      chan_dung_8: 7110325099975873276
+      chan_dung_9: 4079464842638569709
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

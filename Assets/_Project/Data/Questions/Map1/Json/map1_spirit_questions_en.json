@@ -1,390 +1,380 @@
 {
-  "id": "q1_spirit",
-  "speaker": "Spirit",
-  "introduction": {
-    "dialogue_vi": "Ta là linh hồn canh giữ tòa tháp này. Sau trận động đất, tòa tháp đã trồi lên khỏi lòng đất. Quái vật đang tấn công thành phố. Bên trong tháp có trang bị giúp ngươi chiến đấu.",
-    "dialogue_en": "I am the spirit of this tower. I guard it. The earth shook, and the tower rose from the ground. Monsters are attacking the city. There is gear inside the tower. It can help you fight.",
-    "vocabulary": [
-      {
-        "word": "spirit",
-        "meaning": "linh hồn (n)"
-      },
-      {
-        "word": "tower",
-        "meaning": "tòa tháp (n)"
-      },
-      {
-        "word": "guard",
-        "meaning": "canh giữ (v)"
-      },
-      {
-        "word": "ground",
-        "meaning": "mặt đất (n)"
-      },
-      {
-        "word": "gear",
-        "meaning": "trang bị (n)"
-      },
-      {
-        "word": "fight",
-        "meaning": "chiến đấu (v)"
-      }
-    ],
-    "grammar": "am/is/are + V-ing: đang …"
-  },
-  "consent": {
-    "dialogue_en": "The gear is behind this seal. Choose the correct words to open it. Are you ready?",
-    "choices": [
-      {
-        "id": "yes",
-        "label_en": "Yes, I am ready.",
-        "reply_en": "Good. Let us start.",
-        "vocabulary": [
-          {
-            "word": "yes",
-            "meaning": "vâng (interj)"
-          },
-          {
-            "word": "ready",
-            "meaning": "sẵn sàng (adj)"
-          },
-          {
-            "word": "good",
-            "meaning": "tốt (adj)"
-          },
-          {
-            "word": "let us",
-            "meaning": "chúng ta hãy (expr.)"
-          },
-          {
-            "word": "start",
-            "meaning": "bắt đầu (v)"
-          }
-        ],
-        "grammar": "Let us + V: Chúng ta hãy …"
-      },
-      {
-        "id": "no",
-        "label_en": "No, I am not ready.",
-        "reply_en": "Take your time. Come back when you are ready.",
-        "loop": true,
-        "vocabulary": [
-          {
-            "word": "no",
-            "meaning": "không (interj)"
-          },
-          {
-            "word": "take your time",
-            "meaning": "cứ thong thả (idiom)"
-          },
-          {
-            "word": "come back",
-            "meaning": "quay lại (v. phr.)"
-          },
-          {
-            "word": "when",
-            "meaning": "khi (conj)"
-          },
-          {
-            "word": "ready",
-            "meaning": "sẵn sàng (adj)"
-          }
-        ],
-        "grammar": "when + mệnh đề: khi …"
-      }
-    ],
-    "vocabulary": [
-      {
-        "word": "gear",
-        "meaning": "trang bị (n)"
-      },
-      {
-        "word": "behind",
-        "meaning": "phía sau (prep)"
-      },
-      {
-        "word": "seal",
-        "meaning": "phong ấn (n)"
-      },
-      {
-        "word": "choose",
-        "meaning": "chọn (v)"
-      },
-      {
-        "word": "correct",
-        "meaning": "đúng (adj)"
-      },
-      {
-        "word": "ready",
-        "meaning": "sẵn sàng (adj)"
-      }
-    ],
-    "grammar": "Are you + tính từ?: Bạn có …?"
-  },
-  "questions": [
-    {
-      "id": "q1_sword",
-      "type": "multiple_choice",
-      "skill": "vocabulary",
-      "dialogue_en": "Choose the weapon. It has a long, sharp blade.",
-      "correct": "sword",
-      "distractors": [
-        "key",
-        "book",
-        "shield"
-      ],
-      "explanation_en": "A sword is a weapon with a long, sharp blade.",
-      "wrong_hint_en": "You use this weapon to cut. A shield protects you.",
-      "after_en": "Yes. That is a sword. Now find something to protect you.",
-      "vocabulary": [
-        {
-          "word": "choose",
-          "meaning": "chọn (v)"
-        },
-        {
-          "word": "weapon",
-          "meaning": "vũ khí (n)"
-        },
-        {
-          "word": "long",
-          "meaning": "dài (adj)"
-        },
-        {
-          "word": "sharp",
-          "meaning": "sắc nhọn (adj)"
-        },
-        {
-          "word": "blade",
-          "meaning": "lưỡi kiếm (n)"
-        }
-      ],
-      "grammar": "have/has + N: có …"
-    },
-    {
-      "id": "q2_shield",
-      "type": "multiple_choice",
-      "skill": "vocabulary",
-      "dialogue_en": "Choose the item. You hold it to protect your body in a fight.",
-      "correct": "shield",
-      "distractors": [
-        "sword",
-        "key",
-        "chest"
-      ],
-      "explanation_en": "A shield protects your body in a fight.",
-      "wrong_hint_en": "You hold this item in front of your body. It blocks attacks.",
-      "after_en": "Good. A sword and a shield can help you. Now complete the sentences.",
-      "vocabulary": [
-        {
-          "word": "choose",
-          "meaning": "chọn (v)"
-        },
-        {
-          "word": "item",
-          "meaning": "vật phẩm (n)"
-        },
-        {
-          "word": "hold",
-          "meaning": "cầm (v)"
-        },
-        {
-          "word": "protect",
-          "meaning": "bảo vệ (v)"
-        },
-        {
-          "word": "body",
-          "meaning": "cơ thể (n)"
-        },
-        {
-          "word": "fight",
-          "meaning": "trận chiến (n)"
-        }
-      ],
-      "grammar": "hold … to + V: cầm … để …"
-    },
-    {
-      "id": "q3_am",
-      "type": "multiple_choice",
-      "skill": "grammar_to_be",
-      "dialogue_en": "Choose the correct word: I ___ ready.",
-      "correct": "am",
-      "distractors": [
-        "is",
-        "are"
-      ],
-      "explanation_en": "Use am with I: I am ready.",
-      "wrong_hint_en": "Look at the subject: I.",
-      "after_en": "Correct. I am ready.",
-      "vocabulary": [
-        {
-          "word": "choose",
-          "meaning": "chọn (v)"
-        },
-        {
-          "word": "correct",
-          "meaning": "đúng (adj)"
-        },
-        {
-          "word": "word",
-          "meaning": "từ (n)"
-        },
-        {
-          "word": "I",
-          "meaning": "tôi (pron)"
-        },
-        {
-          "word": "ready",
-          "meaning": "sẵn sàng (adj)"
-        }
-      ],
-      "grammar": "S + be + tính từ: mô tả trạng thái."
-    },
-    {
-      "id": "q4_is",
-      "type": "multiple_choice",
-      "skill": "grammar_to_be",
-      "dialogue_en": "Choose the correct word: The tower ___ old.",
-      "correct": "is",
-      "distractors": [
-        "am",
-        "are"
-      ],
-      "explanation_en": "The tower is one thing. Use is: The tower is old.",
-      "wrong_hint_en": "There is only one tower.",
-      "after_en": "Correct. The tower is old.",
-      "vocabulary": [
-        {
-          "word": "choose",
-          "meaning": "chọn (v)"
-        },
-        {
-          "word": "correct",
-          "meaning": "đúng (adj)"
-        },
-        {
-          "word": "word",
-          "meaning": "từ (n)"
-        },
-        {
-          "word": "tower",
-          "meaning": "tòa tháp (n)"
-        },
-        {
-          "word": "old",
-          "meaning": "cổ; cũ (adj)"
-        }
-      ],
-      "grammar": "S + be + tính từ: mô tả đặc điểm."
-    },
-    {
-      "id": "q5_are",
-      "type": "multiple_choice",
-      "skill": "grammar_to_be",
-      "dialogue_en": "Choose the correct word: The monsters ___ near the gate.",
-      "correct": "are",
-      "distractors": [
-        "am",
-        "is"
-      ],
-      "explanation_en": "The monsters means more than one monster. Use are: The monsters are near the gate.",
-      "wrong_hint_en": "There is more than one monster.",
-      "after_en": "Correct. The monsters are near the gate.",
-      "vocabulary": [
-        {
-          "word": "choose",
-          "meaning": "chọn (v)"
-        },
-        {
-          "word": "correct",
-          "meaning": "đúng (adj)"
-        },
-        {
-          "word": "word",
-          "meaning": "từ (n)"
-        },
-        {
-          "word": "monsters",
-          "meaning": "quái vật (n)"
-        },
-        {
-          "word": "near",
-          "meaning": "gần (prep)"
-        },
-        {
-          "word": "gate",
-          "meaning": "cổng (n)"
-        }
-      ],
-      "grammar": "S + be + cụm vị trí: nói vị trí."
-    },
-    {
-      "id": "q6_simple_sentence",
-      "type": "multiple_choice",
-      "skill": "simple_sentence",
-      "dialogue_en": "Choose the correct sentence.",
-      "correct": "The gate is closed.",
-      "distractors": [
-        "The gate are closed.",
-        "The gate am closed."
-      ],
-      "explanation_en": "The gate is one thing. Use is: The gate is closed.",
-      "wrong_hint_en": "Check the word after The gate.",
-      "after_en": "Good. You are ready.",
-      "vocabulary": [
-        {
-          "word": "choose",
-          "meaning": "chọn (v)"
-        },
-        {
-          "word": "correct",
-          "meaning": "đúng (adj)"
-        },
-        {
-          "word": "sentence",
-          "meaning": "câu (n)"
-        },
-        {
-          "word": "gate",
-          "meaning": "cổng (n)"
-        },
-        {
-          "word": "closed",
-          "meaning": "đóng (adj)"
-        }
-      ],
-      "grammar": "S + be + tính từ: mô tả trạng thái."
-    }
-  ],
-  "completion": {
-    "reward_items": [
-      "sword",
-      "shield"
-    ],
-    "after_vi": "Phong ấn đã mở. Hãy nhận lấy thanh kiếm và chiếc khiên.",
-    "after_en": "The seal is open. Take the sword and the shield.",
-    "vocabulary": [
-      {
-        "word": "seal",
-        "meaning": "phong ấn (n)"
-      },
-      {
-        "word": "open",
-        "meaning": "mở (adj)"
-      },
-      {
-        "word": "take",
-        "meaning": "lấy (v)"
-      },
-      {
-        "word": "sword",
-        "meaning": "thanh kiếm (n)"
-      },
-      {
-        "word": "shield",
-        "meaning": "chiếc khiên (n)"
-      }
-    ],
-    "grammar": "Take + N: Hãy lấy …"
-  },
-  "showImage": false
+    "id":  "q1_spirit",
+    "speaker":  "Spirit",
+    "introduction":  {
+                         "dialogue_vi":  "Ta là linh hồn canh giữ tòa tháp này. Sau trận động đất, tòa tháp đã trồi lên khỏi lòng đất. Quái vật đang tấn công thành phố. Bên trong tháp có trang bị giúp ngươi chiến đấu.",
+                         "dialogue_en":  "I am the spirit of this tower. I guard it. The earth shook, and the tower rose from the ground. Monsters are attacking the city. There is gear inside the tower. It can help you fight.",
+                         "vocabulary":  [
+                                            {
+                                                "word":  "spirit",
+                                                "meaning":  "linh hồn (n)"
+                                            },
+                                            {
+                                                "word":  "tower",
+                                                "meaning":  "tòa tháp (n)"
+                                            },
+                                            {
+                                                "word":  "guard",
+                                                "meaning":  "canh giữ (v)"
+                                            },
+                                            {
+                                                "word":  "ground",
+                                                "meaning":  "mặt đất (n)"
+                                            },
+                                            {
+                                                "word":  "gear",
+                                                "meaning":  "trang bị (n)"
+                                            },
+                                            {
+                                                "word":  "fight",
+                                                "meaning":  "chiến đấu (v)"
+                                            }
+                                        ],
+                         "grammar":  "am/is/are + V-ing: đang …",
+                         "grammarId":  "present_continuous",
+                         "groupId":  "present_continuous"
+                     },
+    "consent":  {
+                    "dialogue_en":  "The gear is behind this seal. Choose the correct words to open it. Are you ready?",
+                    "choices":  [
+                                    {
+                                        "id":  "yes",
+                                        "label_en":  "Yes, I am ready.",
+                                        "reply_en":  "Good. Let us start.",
+                                        "vocabulary":  [
+                                                           {
+                                                               "word":  "ready",
+                                                               "meaning":  "sẵn sàng (adj)"
+                                                           },
+                                                           {
+                                                               "word":  "good",
+                                                               "meaning":  "tốt (adj)"
+                                                           },
+                                                           {
+                                                               "word":  "let us",
+                                                               "meaning":  "chúng ta hãy (expr.)"
+                                                           },
+                                                           {
+                                                               "word":  "start",
+                                                               "meaning":  "bắt đầu (v)"
+                                                           }
+                                                       ],
+                                        "grammar":  "Let us + V: Chúng ta hãy …",
+                                        "grammarId":  "let_us",
+                                        "groupId":  "commands_suggestions"
+                                    },
+                                    {
+                                        "id":  "no",
+                                        "label_en":  "No, I am not ready.",
+                                        "reply_en":  "Take your time. Come back when you are ready.",
+                                        "loop":  true,
+                                        "vocabulary":  [
+                                                           {
+                                                               "word":  "take your time",
+                                                               "meaning":  "cứ thong thả (idiom)"
+                                                           },
+                                                           {
+                                                               "word":  "come back",
+                                                               "meaning":  "quay lại (v. phr.)"
+                                                           },
+                                                           {
+                                                               "word":  "when",
+                                                               "meaning":  "khi (conj)"
+                                                           },
+                                                           {
+                                                               "word":  "ready",
+                                                               "meaning":  "sẵn sàng (adj)"
+                                                           }
+                                                       ],
+                                        "grammar":  "when + mệnh đề: khi …",
+                                        "grammarId":  "when_clause",
+                                        "groupId":  "purpose_time"
+                                    }
+                                ],
+                    "vocabulary":  [
+                                       {
+                                           "word":  "gear",
+                                           "meaning":  "trang bị (n)"
+                                       },
+                                       {
+                                           "word":  "behind",
+                                           "meaning":  "phía sau (prep)"
+                                       },
+                                       {
+                                           "word":  "seal",
+                                           "meaning":  "phong ấn (n)"
+                                       },
+                                       {
+                                           "word":  "choose",
+                                           "meaning":  "chọn (v)"
+                                       },
+                                       {
+                                           "word":  "correct",
+                                           "meaning":  "đúng (adj)"
+                                       },
+                                       {
+                                           "word":  "ready",
+                                           "meaning":  "sẵn sàng (adj)"
+                                       }
+                                   ],
+                    "grammar":  "Are you + tính từ?: Bạn có …?",
+                    "grammarId":  "are_you_adjective",
+                    "groupId":  "to_be"
+                },
+    "questions":  [
+                      {
+                          "id":  "q1_sword",
+                          "type":  "multiple_choice",
+                          "skill":  "vocabulary",
+                          "dialogue_en":  "Choose the weapon. It has a long, sharp blade.",
+                          "correct":  "sword",
+                          "distractors":  [
+                                              "key",
+                                              "book",
+                                              "shield"
+                                          ],
+                          "explanation_en":  "A sword is a weapon with a long, sharp blade.",
+                          "wrong_hint_en":  "You use this weapon to cut. A shield protects you.",
+                          "after_en":  "Yes. That is a sword. Now find something to protect you.",
+                          "vocabulary":  [
+                                             {
+                                                 "word":  "choose",
+                                                 "meaning":  "chọn (v)"
+                                             },
+                                             {
+                                                 "word":  "weapon",
+                                                 "meaning":  "vũ khí (n)"
+                                             },
+                                             {
+                                                 "word":  "long",
+                                                 "meaning":  "dài (adj)"
+                                             },
+                                             {
+                                                 "word":  "sharp",
+                                                 "meaning":  "sắc nhọn (adj)"
+                                             },
+                                             {
+                                                 "word":  "blade",
+                                                 "meaning":  "lưỡi kiếm (n)"
+                                             }
+                                         ],
+                          "grammar":  "have/has + N: có …",
+                          "grammarId":  "have_has",
+                          "groupId":  "possession_relationships"
+                      },
+                      {
+                          "id":  "q2_shield",
+                          "type":  "multiple_choice",
+                          "skill":  "vocabulary",
+                          "dialogue_en":  "Choose the item. You hold it to protect your body in a fight.",
+                          "correct":  "shield",
+                          "distractors":  [
+                                              "sword",
+                                              "key",
+                                              "chest"
+                                          ],
+                          "explanation_en":  "A shield protects your body in a fight.",
+                          "wrong_hint_en":  "You hold this item in front of your body. It blocks attacks.",
+                          "after_en":  "Good. A sword and a shield can help you. Now complete the sentences.",
+                          "vocabulary":  [
+                                             {
+                                                 "word":  "choose",
+                                                 "meaning":  "chọn (v)"
+                                             },
+                                             {
+                                                 "word":  "item",
+                                                 "meaning":  "vật phẩm (n)"
+                                             },
+                                             {
+                                                 "word":  "hold",
+                                                 "meaning":  "cầm (v)"
+                                             },
+                                             {
+                                                 "word":  "protect",
+                                                 "meaning":  "bảo vệ (v)"
+                                             },
+                                             {
+                                                 "word":  "body",
+                                                 "meaning":  "cơ thể (n)"
+                                             },
+                                             {
+                                                 "word":  "fight",
+                                                 "meaning":  "trận chiến (n)"
+                                             }
+                                         ],
+                          "grammar":  "hold … to + V: cầm … để …",
+                          "grammarId":  "hold_to",
+                          "groupId":  "purpose_time"
+                      },
+                      {
+                          "id":  "q3_am",
+                          "type":  "multiple_choice",
+                          "skill":  "grammar_to_be",
+                          "dialogue_en":  "Choose the correct word: I ___ ready.",
+                          "correct":  "am",
+                          "distractors":  [
+                                              "is",
+                                              "are"
+                                          ],
+                          "explanation_en":  "Use am with I: I am ready.",
+                          "wrong_hint_en":  "Look at the subject: I.",
+                          "after_en":  "Correct. I am ready.",
+                          "vocabulary":  [
+                                             {
+                                                 "word":  "choose",
+                                                 "meaning":  "chọn (v)"
+                                             },
+                                             {
+                                                 "word":  "correct",
+                                                 "meaning":  "đúng (adj)"
+                                             }
+                                         ],
+                          "grammar":  "S + be + tính từ: mô tả trạng thái.",
+                          "grammarId":  "be_adjective",
+                          "groupId":  "to_be"
+                      },
+                      {
+                          "id":  "q4_is",
+                          "type":  "multiple_choice",
+                          "skill":  "grammar_to_be",
+                          "dialogue_en":  "Choose the correct word: The tower ___ old.",
+                          "correct":  "is",
+                          "distractors":  [
+                                              "am",
+                                              "are"
+                                          ],
+                          "explanation_en":  "The tower is one thing. Use is: The tower is old.",
+                          "wrong_hint_en":  "There is only one tower.",
+                          "after_en":  "Correct. The tower is old.",
+                          "vocabulary":  [
+                                             {
+                                                 "word":  "choose",
+                                                 "meaning":  "chọn (v)"
+                                             },
+                                             {
+                                                 "word":  "correct",
+                                                 "meaning":  "đúng (adj)"
+                                             },
+                                             {
+                                                 "word":  "tower",
+                                                 "meaning":  "tòa tháp (n)"
+                                             },
+                                             {
+                                                 "word":  "old",
+                                                 "meaning":  "cổ; cũ (adj)"
+                                             }
+                                         ],
+                          "grammar":  "S + be + tính từ: mô tả đặc điểm.",
+                          "grammarId":  "be_adjective",
+                          "groupId":  "to_be"
+                      },
+                      {
+                          "id":  "q5_are",
+                          "type":  "multiple_choice",
+                          "skill":  "grammar_to_be",
+                          "dialogue_en":  "Choose the correct word: The monsters ___ near the gate.",
+                          "correct":  "are",
+                          "distractors":  [
+                                              "am",
+                                              "is"
+                                          ],
+                          "explanation_en":  "The monsters means more than one monster. Use are: The monsters are near the gate.",
+                          "wrong_hint_en":  "There is more than one monster.",
+                          "after_en":  "Correct. The monsters are near the gate.",
+                          "vocabulary":  [
+                                             {
+                                                 "word":  "choose",
+                                                 "meaning":  "chọn (v)"
+                                             },
+                                             {
+                                                 "word":  "correct",
+                                                 "meaning":  "đúng (adj)"
+                                             },
+                                             {
+                                                 "word":  "monsters",
+                                                 "meaning":  "quái vật (n)"
+                                             },
+                                             {
+                                                 "word":  "near",
+                                                 "meaning":  "gần (prep)"
+                                             },
+                                             {
+                                                 "word":  "gate",
+                                                 "meaning":  "cổng (n)"
+                                             }
+                                         ],
+                          "grammar":  "S + be + cụm vị trí: nói vị trí.",
+                          "grammarId":  "be_location",
+                          "groupId":  "to_be"
+                      },
+                      {
+                          "id":  "q6_simple_sentence",
+                          "type":  "multiple_choice",
+                          "skill":  "simple_sentence",
+                          "dialogue_en":  "Choose the correct sentence.",
+                          "correct":  "The gate is closed.",
+                          "distractors":  [
+                                              "The gate are closed.",
+                                              "The gate am closed."
+                                          ],
+                          "explanation_en":  "The gate is one thing. Use is: The gate is closed.",
+                          "wrong_hint_en":  "Check the word after The gate.",
+                          "after_en":  "Good. You are ready.",
+                          "vocabulary":  [
+                                             {
+                                                 "word":  "choose",
+                                                 "meaning":  "chọn (v)"
+                                             },
+                                             {
+                                                 "word":  "correct",
+                                                 "meaning":  "đúng (adj)"
+                                             },
+                                             {
+                                                 "word":  "sentence",
+                                                 "meaning":  "câu (n)"
+                                             },
+                                             {
+                                                 "word":  "gate",
+                                                 "meaning":  "cổng (n)"
+                                             },
+                                             {
+                                                 "word":  "closed",
+                                                 "meaning":  "đóng (adj)"
+                                             }
+                                         ],
+                          "grammar":  "S + be + tính từ: mô tả trạng thái.",
+                          "grammarId":  "be_adjective",
+                          "groupId":  "to_be"
+                      }
+                  ],
+    "completion":  {
+                       "reward_items":  [
+                                            "sword",
+                                            "shield"
+                                        ],
+                       "after_vi":  "Phong ấn đã mở. Hãy nhận lấy thanh kiếm và chiếc khiên.",
+                       "after_en":  "The seal is open. Take the sword and the shield.",
+                       "vocabulary":  [
+                                          {
+                                              "word":  "seal",
+                                              "meaning":  "phong ấn (n)"
+                                          },
+                                          {
+                                              "word":  "take",
+                                              "meaning":  "lấy (v)"
+                                          },
+                                          {
+                                              "word":  "sword",
+                                              "meaning":  "thanh kiếm (n)"
+                                          },
+                                          {
+                                              "word":  "shield",
+                                              "meaning":  "chiếc khiên (n)"
+                                          }
+                                      ],
+                       "grammar":  "Take + N: Hãy lấy …",
+                       "grammarId":  "take_noun",
+                       "groupId":  "commands_suggestions"
+                   },
+    "showImage":  false
 }

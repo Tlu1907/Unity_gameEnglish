@@ -1,260 +1,274 @@
 {
-    "title": "LINH - RESEARCH FILE",
-    "showImage": false,
-    "introduction": "Agent, this is the laboratory the archaeologist mentioned. I found a damaged report near the entrance. Five words are missing. Choose carefully: every decoding error strengthens the escaped specimens. Four or five mistakes will make them invulnerable and able to kill you in one hit.",
-    "introductionVietnamese": "Đặc vụ, đây là phòng nghiên cứu mà nhà khảo cổ đã nhắc đến. Tôi tìm được một bản báo cáo bị hỏng gần cửa. Có năm từ bị mất. Hãy đọc và chọn cẩn thận: mỗi lần giải mã sai sẽ khiến quái mạnh hơn. Sai từ bốn câu trở lên, chúng sẽ bất tử và hạ anh chỉ bằng một đòn.",
-    "introductionVocabulary": [
-        {
-            "word": "laboratory",
-            "meaning": "phòng nghiên cứu (n)"
-        },
-        {
-            "word": "damaged",
-            "meaning": "bị hỏng (adj)"
-        },
-        {
-            "word": "report",
-            "meaning": "báo cáo (n)"
-        },
-        {
-            "word": "entrance",
-            "meaning": "lối vào (n)"
-        },
-        {
-            "word": "specimens",
-            "meaning": "các mẫu vật (n)"
-        },
-        {
-            "word": "invulnerable",
-            "meaning": "không thể bị thương (adj)"
-        }
-    ],
-    "introductionGrammar": "This is + danh từ: Đây là …",
-    "questions": [
-        {
-            "text": "Specimen A uses its sharp ___ to cut through protective suits.",
-            "answers": [
-                "claws",
-                "wings",
-                "books",
-                "keys"
-            ],
-            "correctIndex": 0,
-            "explanation": "Claws are sharp curved nails used by animals to attack.",
-            "vietnamese": "Mẫu vật A dùng ___ sắc nhọn để cắt xuyên đồ bảo hộ.",
-            "explanationVietnamese": "claws = móng vuốt, bộ phận sắc nhọn dùng để tấn công.",
-            "vocabulary": [
-                {
-                    "word": "specimen",
-                    "meaning": "mẫu vật (n)"
-                },
-                {
-                    "word": "use",
-                    "meaning": "sử dụng (v)"
-                },
-                {
-                    "word": "sharp",
-                    "meaning": "sắc nhọn (adj)"
-                },
-                {
-                    "word": "cut through",
-                    "meaning": "cắt xuyên (v. phr.)"
-                },
-                {
-                    "word": "protective suits",
-                    "meaning": "đồ bảo hộ (n. phr.)"
-                }
-            ],
-            "grammar": "use … to + V: dùng … để …"
-        },
-        {
-            "text": "The creature can detect footsteps. Remain ___ when passing its nest.",
-            "answers": [
-                "noisy",
-                "quiet",
-                "bright",
-                "heavy"
-            ],
-            "correctIndex": 1,
-            "explanation": "Quiet means making little or no noise.",
-            "vietnamese": "Sinh vật phát hiện được tiếng bước chân. Hãy giữ ___ khi đi qua tổ của nó.",
-            "explanationVietnamese": "quiet = yên lặng, ít hoặc không gây tiếng động.",
-            "vocabulary": [
-                {
-                    "word": "creature",
-                    "meaning": "sinh vật (n)"
-                },
-                {
-                    "word": "detect",
-                    "meaning": "phát hiện (v)"
-                },
-                {
-                    "word": "footsteps",
-                    "meaning": "tiếng bước chân (n)"
-                },
-                {
-                    "word": "remain",
-                    "meaning": "giữ trạng thái (v)"
-                },
-                {
-                    "word": "pass",
-                    "meaning": "đi qua (v)"
-                },
-                {
-                    "word": "nest",
-                    "meaning": "tổ (n)"
-                }
-            ],
-            "grammar": "can + V nguyên mẫu: có thể …"
-        },
-        {
-            "text": "The specimen keeps chasing intruders after it wakes up. It is a serious ___ to the research team.",
-            "answers": [
-                "shelter",
-                "weapon",
-                "threat",
-                "bridge"
-            ],
-            "correctIndex": 2,
-            "explanation": "A threat is something dangerous that may cause harm. These monsters keep pursuing the player once activated.",
-            "vietnamese": "Sau khi tỉnh dậy, mẫu vật liên tục đuổi theo người xâm nhập. Nó là một ___ nghiêm trọng với nhóm nghiên cứu.",
-            "explanationVietnamese": "threat = mối đe dọa. Quái sẽ liên tục truy đuổi sau khi được kích hoạt.",
-            "vocabulary": [
-                {
-                    "word": "specimen",
-                    "meaning": "mẫu vật (n)"
-                },
-                {
-                    "word": "chase",
-                    "meaning": "đuổi theo (v)"
-                },
-                {
-                    "word": "intruders",
-                    "meaning": "kẻ xâm nhập (n)"
-                },
-                {
-                    "word": "wake up",
-                    "meaning": "tỉnh dậy (v. phr.)"
-                },
-                {
-                    "word": "serious",
-                    "meaning": "nghiêm trọng (adj)"
-                },
-                {
-                    "word": "research team",
-                    "meaning": "nhóm nghiên cứu (n. phr.)"
-                }
-            ],
-            "grammar": "keep + V-ing: tiếp tục …"
-        },
-        {
-            "text": "If the containment alarm sounds, do not stay inside. ___ from the laboratory.",
-            "answers": [
-                "Return",
-                "Sleep",
-                "Wait",
-                "Escape"
-            ],
-            "correctIndex": 3,
-            "explanation": "Escape means leaving a dangerous place.",
-            "vietnamese": "Nếu chuông cảnh báo vang lên, đừng ở lại bên trong. Hãy ___ khỏi phòng nghiên cứu.",
-            "explanationVietnamese": "escape = chạy thoát khỏi nơi nguy hiểm.",
-            "vocabulary": [
-                {
-                    "word": "containment",
-                    "meaning": "sự cách ly (n)"
-                },
-                {
-                    "word": "alarm",
-                    "meaning": "chuông cảnh báo (n)"
-                },
-                {
-                    "word": "sound",
-                    "meaning": "vang lên (v)"
-                },
-                {
-                    "word": "stay",
-                    "meaning": "ở lại (v)"
-                },
-                {
-                    "word": "inside",
-                    "meaning": "bên trong (adv)"
-                },
-                {
-                    "word": "laboratory",
-                    "meaning": "phòng nghiên cứu (n)"
-                }
-            ],
-            "grammar": "Do not + V nguyên mẫu: Đừng …"
-        },
-        {
-            "text": "The next team is waiting at the northern ___. Find its radio transmitter.",
-            "answers": [
-                "watchtower",
-                "kitchen",
-                "bedroom",
-                "market"
-            ],
-            "correctIndex": 0,
-            "explanation": "A watchtower is a tall structure used to observe the surrounding area.",
-            "vietnamese": "Nhóm tiếp theo đang chờ tại ___ ở phía bắc. Hãy tìm máy phát tín hiệu của họ.",
-            "explanationVietnamese": "watchtower = tháp canh. Đây là manh mối về điểm đến tiếp theo.",
-            "vocabulary": [
-                {
-                    "word": "next",
-                    "meaning": "tiếp theo (adj)"
-                },
-                {
-                    "word": "team",
-                    "meaning": "nhóm (n)"
-                },
-                {
-                    "word": "wait",
-                    "meaning": "chờ đợi (v)"
-                },
-                {
-                    "word": "northern",
-                    "meaning": "ở phía bắc (adj)"
-                },
-                {
-                    "word": "find",
-                    "meaning": "tìm (v)"
-                },
-                {
-                    "word": "radio transmitter",
-                    "meaning": "máy phát vô tuyến (n. phr.)"
-                }
-            ],
-            "grammar": "am/is/are + V-ing: đang …"
-        }
-    ],
-    "destination": "Next destination: the northern watchtower. Follow the river north and search for the radio transmitter. (Edit this destination to match your map.)",
-    "destinationVietnamese": "Điểm đến tiếp theo: tháp canh phía bắc. Đi dọc con sông về phía bắc và tìm máy phát tín hiệu.",
-    "destinationVocabulary": [
-        {
-            "word": "destination",
-            "meaning": "điểm đến (n)"
-        },
-        {
-            "word": "watchtower",
-            "meaning": "tháp canh (n)"
-        },
-        {
-            "word": "follow",
-            "meaning": "đi theo (v)"
-        },
-        {
-            "word": "river",
-            "meaning": "con sông (n)"
-        },
-        {
-            "word": "search for",
-            "meaning": "tìm kiếm (v. phr.)"
-        },
-        {
-            "word": "radio transmitter",
-            "meaning": "máy phát vô tuyến (n. phr.)"
-        }
-    ],
-    "destinationGrammar": "V nguyên mẫu: câu mệnh lệnh."
+    "title":  "LINH - RESEARCH FILE",
+    "showImage":  false,
+    "introduction":  "Agent, this is the laboratory the archaeologist mentioned. I found a damaged report near the entrance. Five words are missing. Choose carefully: every decoding error strengthens the escaped specimens. Four or five mistakes will make them invulnerable and able to kill you in one hit.",
+    "introductionVietnamese":  "Đặc vụ, đây là phòng nghiên cứu mà nhà khảo cổ đã nhắc đến. Tôi tìm được một bản báo cáo bị hỏng gần cửa. Có năm từ bị mất. Hãy đọc và chọn cẩn thận: mỗi lần giải mã sai sẽ khiến quái mạnh hơn. Sai từ bốn câu trở lên, chúng sẽ bất tử và hạ anh chỉ bằng một đòn.",
+    "introductionVocabulary":  [
+                                   {
+                                       "word":  "laboratory",
+                                       "meaning":  "phòng nghiên cứu (n)"
+                                   },
+                                   {
+                                       "word":  "damaged",
+                                       "meaning":  "bị hỏng (adj)"
+                                   },
+                                   {
+                                       "word":  "report",
+                                       "meaning":  "báo cáo (n)"
+                                   },
+                                   {
+                                       "word":  "entrance",
+                                       "meaning":  "lối vào (n)"
+                                   },
+                                   {
+                                       "word":  "specimens",
+                                       "meaning":  "các mẫu vật (n)"
+                                   },
+                                   {
+                                       "word":  "invulnerable",
+                                       "meaning":  "không thể bị thương (adj)"
+                                   }
+                               ],
+    "introductionGrammar":  "This is + danh từ: Đây là …",
+    "questions":  [
+                      {
+                          "text":  "Specimen A uses its sharp ___ to cut through protective suits.",
+                          "answers":  [
+                                          "claws",
+                                          "wings",
+                                          "books",
+                                          "keys"
+                                      ],
+                          "correctIndex":  0,
+                          "explanation":  "Claws are sharp curved nails used by animals to attack.",
+                          "vietnamese":  "Mẫu vật A dùng ___ sắc nhọn để cắt xuyên đồ bảo hộ.",
+                          "explanationVietnamese":  "claws = móng vuốt, bộ phận sắc nhọn dùng để tấn công.",
+                          "vocabulary":  [
+                                             {
+                                                 "word":  "specimen",
+                                                 "meaning":  "mẫu vật (n)"
+                                             },
+                                             {
+                                                 "word":  "use",
+                                                 "meaning":  "sử dụng (v)"
+                                             },
+                                             {
+                                                 "word":  "sharp",
+                                                 "meaning":  "sắc nhọn (adj)"
+                                             },
+                                             {
+                                                 "word":  "cut through",
+                                                 "meaning":  "cắt xuyên (v. phr.)"
+                                             },
+                                             {
+                                                 "word":  "protective suits",
+                                                 "meaning":  "đồ bảo hộ (n. phr.)"
+                                             }
+                                         ],
+                          "grammar":  "use … to + V: dùng … để …",
+                          "grammarId":  "use_to",
+                          "groupId":  "purpose_time"
+                      },
+                      {
+                          "text":  "The creature can detect footsteps. Remain ___ when passing its nest.",
+                          "answers":  [
+                                          "noisy",
+                                          "quiet",
+                                          "bright",
+                                          "heavy"
+                                      ],
+                          "correctIndex":  1,
+                          "explanation":  "Quiet means making little or no noise.",
+                          "vietnamese":  "Sinh vật phát hiện được tiếng bước chân. Hãy giữ ___ khi đi qua tổ của nó.",
+                          "explanationVietnamese":  "quiet = yên lặng, ít hoặc không gây tiếng động.",
+                          "vocabulary":  [
+                                             {
+                                                 "word":  "creature",
+                                                 "meaning":  "sinh vật (n)"
+                                             },
+                                             {
+                                                 "word":  "detect",
+                                                 "meaning":  "phát hiện (v)"
+                                             },
+                                             {
+                                                 "word":  "footsteps",
+                                                 "meaning":  "tiếng bước chân (n)"
+                                             },
+                                             {
+                                                 "word":  "remain",
+                                                 "meaning":  "giữ trạng thái (v)"
+                                             },
+                                             {
+                                                 "word":  "pass",
+                                                 "meaning":  "đi qua (v)"
+                                             },
+                                             {
+                                                 "word":  "nest",
+                                                 "meaning":  "tổ (n)"
+                                             }
+                                         ],
+                          "grammar":  "can + V nguyên mẫu: có thể …",
+                          "grammarId":  "can_ability",
+                          "groupId":  "ability_future"
+                      },
+                      {
+                          "text":  "The specimen keeps chasing intruders after it wakes up. It is a serious ___ to the research team.",
+                          "answers":  [
+                                          "shelter",
+                                          "weapon",
+                                          "threat",
+                                          "bridge"
+                                      ],
+                          "correctIndex":  2,
+                          "explanation":  "A threat is something dangerous that may cause harm. These monsters keep pursuing the player once activated.",
+                          "vietnamese":  "Sau khi tỉnh dậy, mẫu vật liên tục đuổi theo người xâm nhập. Nó là một ___ nghiêm trọng với nhóm nghiên cứu.",
+                          "explanationVietnamese":  "threat = mối đe dọa. Quái sẽ liên tục truy đuổi sau khi được kích hoạt.",
+                          "vocabulary":  [
+                                             {
+                                                 "word":  "specimen",
+                                                 "meaning":  "mẫu vật (n)"
+                                             },
+                                             {
+                                                 "word":  "chase",
+                                                 "meaning":  "đuổi theo (v)"
+                                             },
+                                             {
+                                                 "word":  "intruders",
+                                                 "meaning":  "kẻ xâm nhập (n)"
+                                             },
+                                             {
+                                                 "word":  "wake up",
+                                                 "meaning":  "tỉnh dậy (v. phr.)"
+                                             },
+                                             {
+                                                 "word":  "serious",
+                                                 "meaning":  "nghiêm trọng (adj)"
+                                             },
+                                             {
+                                                 "word":  "research team",
+                                                 "meaning":  "nhóm nghiên cứu (n. phr.)"
+                                             }
+                                         ],
+                          "grammar":  "keep + V-ing: tiếp tục …",
+                          "grammarId":  "keep_ing",
+                          "groupId":  "continuing_actions"
+                      },
+                      {
+                          "text":  "If the containment alarm sounds, do not stay inside. ___ from the laboratory.",
+                          "answers":  [
+                                          "Return",
+                                          "Sleep",
+                                          "Wait",
+                                          "Escape"
+                                      ],
+                          "correctIndex":  3,
+                          "explanation":  "Escape means leaving a dangerous place.",
+                          "vietnamese":  "Nếu chuông cảnh báo vang lên, đừng ở lại bên trong. Hãy ___ khỏi phòng nghiên cứu.",
+                          "explanationVietnamese":  "escape = chạy thoát khỏi nơi nguy hiểm.",
+                          "vocabulary":  [
+                                             {
+                                                 "word":  "containment",
+                                                 "meaning":  "sự cách ly (n)"
+                                             },
+                                             {
+                                                 "word":  "alarm",
+                                                 "meaning":  "chuông cảnh báo (n)"
+                                             },
+                                             {
+                                                 "word":  "sound",
+                                                 "meaning":  "vang lên (v)"
+                                             },
+                                             {
+                                                 "word":  "stay",
+                                                 "meaning":  "ở lại (v)"
+                                             },
+                                             {
+                                                 "word":  "inside",
+                                                 "meaning":  "bên trong (adv)"
+                                             },
+                                             {
+                                                 "word":  "laboratory",
+                                                 "meaning":  "phòng nghiên cứu (n)"
+                                             }
+                                         ],
+                          "grammar":  "Do not + V nguyên mẫu: Đừng …",
+                          "grammarId":  "negative_imperative",
+                          "groupId":  "commands_suggestions"
+                      },
+                      {
+                          "text":  "The next team is waiting at the northern ___. Find its radio transmitter.",
+                          "answers":  [
+                                          "watchtower",
+                                          "kitchen",
+                                          "bedroom",
+                                          "market"
+                                      ],
+                          "correctIndex":  0,
+                          "explanation":  "A watchtower is a tall structure used to observe the surrounding area.",
+                          "vietnamese":  "Nhóm tiếp theo đang chờ tại ___ ở phía bắc. Hãy tìm máy phát tín hiệu của họ.",
+                          "explanationVietnamese":  "watchtower = tháp canh. Đây là manh mối về điểm đến tiếp theo.",
+                          "vocabulary":  [
+                                             {
+                                                 "word":  "next",
+                                                 "meaning":  "tiếp theo (adj)"
+                                             },
+                                             {
+                                                 "word":  "team",
+                                                 "meaning":  "nhóm (n)"
+                                             },
+                                             {
+                                                 "word":  "wait",
+                                                 "meaning":  "chờ đợi (v)"
+                                             },
+                                             {
+                                                 "word":  "northern",
+                                                 "meaning":  "ở phía bắc (adj)"
+                                             },
+                                             {
+                                                 "word":  "find",
+                                                 "meaning":  "tìm (v)"
+                                             },
+                                             {
+                                                 "word":  "radio transmitter",
+                                                 "meaning":  "máy phát vô tuyến (n. phr.)"
+                                             }
+                                         ],
+                          "grammar":  "am/is/are + V-ing: đang …",
+                          "grammarId":  "present_continuous",
+                          "groupId":  "present_continuous"
+                      }
+                  ],
+    "destination":  "Next destination: the northern watchtower. Follow the river north and search for the radio transmitter. (Edit this destination to match your map.)",
+    "destinationVietnamese":  "Điểm đến tiếp theo: tháp canh phía bắc. Đi dọc con sông về phía bắc và tìm máy phát tín hiệu.",
+    "destinationVocabulary":  [
+                                  {
+                                      "word":  "destination",
+                                      "meaning":  "điểm đến (n)"
+                                  },
+                                  {
+                                      "word":  "watchtower",
+                                      "meaning":  "tháp canh (n)"
+                                  },
+                                  {
+                                      "word":  "follow",
+                                      "meaning":  "đi theo (v)"
+                                  },
+                                  {
+                                      "word":  "river",
+                                      "meaning":  "con sông (n)"
+                                  },
+                                  {
+                                      "word":  "search for",
+                                      "meaning":  "tìm kiếm (v. phr.)"
+                                  },
+                                  {
+                                      "word":  "radio transmitter",
+                                      "meaning":  "máy phát vô tuyến (n. phr.)"
+                                  }
+                              ],
+    "destinationGrammar":  "V nguyên mẫu: câu mệnh lệnh.",
+    "introductionGrammarId":  "this_is",
+    "introductionGroupId":  "to_be",
+    "destinationGrammarId":  "imperative",
+    "destinationGroupId":  "commands_suggestions"
 }

@@ -52,6 +52,26 @@ public sealed class EnemyEncounterTests
     }
 
     [Test]
+    public void LaboratoryEnemiesMoveAndAttackFasterWithoutChangingNormalEnemies()
+    {
+        var lab = Brain("LaboratoryAmbush");
+        var normal = Brain("Normal");
+        var labAttack = lab.GetComponent(Runtime("EnemyAttack"));
+        var normalAttack = normal.GetComponent(Runtime("EnemyAttack"));
+        Call(labAttack, "Awake"); Call(normalAttack, "Awake");
+        Assert.That(Value(lab, "EffectiveChaseSpeed"), Is.EqualTo(3.5f));
+        Assert.That(Value(normal, "EffectiveChaseSpeed"), Is.EqualTo(2f));
+        Assert.That(Value(labAttack, "AttackInterval"), Is.EqualTo(.8f));
+        Assert.That(Value(normalAttack, "AttackInterval"), Is.EqualTo(1.5f));
+        Call(lab, "InitializeEncounter");
+        Assert.That(Value(lab, "PursuesPlayerAfterTrigger"), Is.False);
+        UnlockArchaeologist();
+        Static("StoryProgress", "TryEnterResearchRoom");
+        Static("StoryProgress", "TryCompleteResearchDocument", 5, "Next destination");
+        Assert.That(Value(lab, "PursuesPlayerAfterTrigger"), Is.True);
+    }
+
+    [Test]
     public void MirrorEnemyWaitsForStoryRewardThenAttacksAndKeepsPursuing()
     {
         GameObject player = Object("Test player");

@@ -10,6 +10,8 @@ public sealed class DialogueData : ScriptableObject
     {
         [TextArea(2, 5)] public string english;
         [TextArea(2, 5)] public string vietnamese;
+        [TextArea(2, 5)] public string vocabulary;
+        [TextArea(2, 5)] public string grammar;
     }
 
     public string speakerName;

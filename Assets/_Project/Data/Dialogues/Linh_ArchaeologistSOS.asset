@@ -17,17 +17,25 @@ MonoBehaviour:
   continuePrompt: C to continue
   closePrompt: C to finish
   lines:
-  - english: Agent K1, this is Linh. You cleared the monsters around the tower.
-    vietnamese: "\u0110\u1EB7c v\u1EE5 K1, Linh \u0111\xE2y. Anh \u0111\xE3 h\u1EA1
-      \u0111\u01B0\u1EE3c nh\xF3m qu\xE1i quanh t\xF2a th\xE1p."
-  - english: I am receiving a distress signal from an archaeologist near the station.
-    vietnamese: "T\xF4i v\u1EEBa nh\u1EADn \u0111\u01B0\u1EE3c t\xEDn hi\u1EC7u c\u1EA7u
-      c\u1EE9u c\u1EE7a m\u1ED9t nh\xE0 kh\u1EA3o c\u1ED5 g\u1EA7n nh\xE0 ga."
-  - english: A monster is guarding his hiding place. Go there and defeat it.
-    vietnamese: "C\xF3 qu\xE1i v\u1EADt canh gi\u1EEF n\u01A1i \xF4ng \u1EA5y \u0111ang
-      tr\u1ED1n. H\xE3y \u0111\u1EBFn \u0111\xF3 v\xE0 h\u1EA1 n\xF3."
-  - english: Then speak to the archaeologist. He may know more about the tower and
-      these monsters.
-    vietnamese: "Sau \u0111\xF3 h\xE3y n\xF3i chuy\u1EC7n v\u1EDBi nh\xE0 kh\u1EA3o
-      c\u1ED5. \xD4ng \u1EA5y c\xF3 th\u1EC3 bi\u1EBFt th\xEAm th\xF4ng tin v\u1EC1
-      t\xF2a th\xE1p v\xE0 l\u0169 qu\xE1i v\u1EADt."
+  - english: You defeated the monsters near the tower. Now we know that only the
+      equipment from the tower can defeat them.
+    vietnamese: "Anh \u0111\xE3 h\u1EA1 \u0111\u01B0\u1EE3c nh\u1EEFng con qu\xE1i
+      v\u1EADt g\u1EA7n th\xE1p. Gi\u1EDD ch\xFAng ta \u0111\xE3 bi\u1EBFt ch\u1EC9
+      c\xF3 trang b\u1ECB l\u1EA5y \u0111\u01B0\u1EE3c trong th\xE1p m\u1EDBi ti\xEAu
+      di\u1EC7t \u0111\u01B0\u1EE3c ch\xFAng."
+  - english: We just received a call for help from an archaeologist. Check your map
+      to see where he is
+    vietnamese: "Ch\xFAng t\xF4i v\u1EEBa nh\u1EADn \u0111\u01B0\u1EE3c l\u1EDDi
+      c\u1EA7u c\u1EE9u t\u1EEB m\u1ED9t nh\xE0 kh\u1EA3o c\u1ED5. H\xE3y xem b\u1EA3n
+      \u0111\u1ED3 \u0111\u1EC3 x\xE1c \u0111\u1ECBnh v\u1ECB tr\xED c\u1EE7a \xF4ng
+      \u1EA5y."
+  - english: He may know why these monsters appeared and how to defeat them
+    vietnamese: "\xD4ng \u1EA5y c\xF3 th\u1EC3 bi\u1EBFt v\xEC sao nh\u1EEFng con
+      qu\xE1i v\u1EADt n\xE0y xu\u1EA5t hi\u1EC7n v\xE0 c\xE1ch ti\xEAu di\u1EC7t
+      ch\xFAng."
+  - english: Monsters are blocking the road to him. Defeat them and rescue him. Then
+      talk to him to learn more.
+    vietnamese: "Qu\xE1i v\u1EADt \u0111ang ch\u1EB7n con \u0111\u01B0\u1EDDng d\u1EABn
+      \u0111\u1EBFn ch\u1ED7 \xF4ng \u1EA5y. H\xE3y ti\xEAu di\u1EC7t ch\xFAng v\xE0
+      gi\u1EA3i c\u1EE9u \xF4ng \u1EA5y. Sau \u0111\xF3, h\xE3y n\xF3i chuy\u1EC7n
+      v\u1EDBi \xF4ng \u1EA5y \u0111\u1EC3 t\xECm hi\u1EC3u th\xEAm."

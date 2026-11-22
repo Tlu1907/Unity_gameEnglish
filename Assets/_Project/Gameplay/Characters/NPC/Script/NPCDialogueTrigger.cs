@@ -34,7 +34,7 @@ public sealed class NPCDialogueTrigger : MonoBehaviour
             if (Beat == null || !Beat.IsValid) { Debug.LogWarning("NPC story beat is missing or invalid: " + beatId, this); enabled = false; }
             return;
         }
-        if (dialogueUI == null || dialogueData == null || !dialogueData.IsValid)
+        if (dialogueUI == null || !dialogueUI.AcceptsDialogue(dialogueData))
         {
             Debug.LogWarning("NPCDialogueTrigger: assign Dialogue UI and Dialogue Data with non-empty English and Vietnamese lines.", this);
             enabled = false;

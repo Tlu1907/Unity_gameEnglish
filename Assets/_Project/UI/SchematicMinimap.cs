@@ -37,6 +37,10 @@ public sealed class SchematicMinimap : MonoBehaviour
     private readonly Dictionary<int, Marker> markers = new Dictionary<int, Marker>();
     private readonly List<int> remove = new List<int>();
     private float nextScan;
+    [SerializeField] private bool useMap1Objectives = true;
+    [SerializeField] private string customObjective = "";
+    public void SetObjectiveMode(bool map1, string objective)
+    { useMap1Objectives = map1; customObjective = objective ?? ""; }
     public Bounds WorldBounds => worldBounds;
     public void SetMap(Texture texture, Bounds bounds)
     {
@@ -44,6 +48,7 @@ public sealed class SchematicMinimap : MonoBehaviour
         if (mapImage != null)
         {
             mapImage.texture = texture;
+            mapImage.uvRect = new Rect(0, 0, 1, 1);
             var aspect = mapImage.GetComponent<AspectRatioFitter>();
             if (aspect != null) aspect.aspectRatio = Mathf.Max(.001f, bounds.size.x / Mathf.Max(.001f, bounds.size.y));
         }
@@ -52,6 +57,15 @@ public sealed class SchematicMinimap : MonoBehaviour
     public Vector2 WorldToMap(Vector3 world) => new Vector2(
         (world.x - worldBounds.min.x) / Mathf.Max(.001f, worldBounds.size.x),
         (world.y - worldBounds.min.y) / Mathf.Max(.001f, worldBounds.size.y));
+
+    public void SetMapSprite(Sprite sprite, Bounds bounds)
+    {
+        SetMap(sprite != null ? sprite.texture : null, bounds);
+        if (sprite == null || mapImage == null) return;
+        Rect rect = sprite.rect;
+        mapImage.uvRect = new Rect(rect.x / sprite.texture.width, rect.y / sprite.texture.height,
+            rect.width / sprite.texture.width, rect.height / sprite.texture.height);
+    }
 
     public void Configure(Texture texture, Bounds bounds, RawImage image, RectTransform layer, TMP_Text objective,
         Sprite player, Sprite enemy, Sprite npc, Sprite tower, Sprite lab)
@@ -200,8 +214,9 @@ public sealed class SchematicMinimap : MonoBehaviour
             marker.rect.SetAsLastSibling();
         }
     }
-    private static string Hint()
+    private string Hint()
     {
+        if (!useMap1Objectives) return customObjective;
         if (!StoryProgress.IsCompleted("q1_spirit")) return "Tìm tín hiệu tại tháp";
         if (!StoryProgress.HasClearedTowerEnemies) return "Hạ nhóm quái quanh tháp";
         if (!StoryProgress.HasReceivedArchaeologistSignal) return "Nhận tín hiệu từ Linh";

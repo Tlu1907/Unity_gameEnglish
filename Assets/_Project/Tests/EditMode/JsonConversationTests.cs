@@ -27,6 +27,7 @@ public sealed class JsonConversationTests
         timeScale = Time.timeScale;
         Static("StoryProgress", "Reset"); Static("GameplayState", "Reset");
         Static("LearningJournal", "Reset");
+        Static("JournalVocabularyCatalog", "Reset");
         root = new GameObject("JSON conversation tests");
     }
     [TearDown] public void TearDown()
@@ -66,14 +67,14 @@ public sealed class JsonConversationTests
         var map = maps[0];
         var grammar = (System.Collections.IList)map.GetType().GetProperty("Grammar").GetValue(map);
         var words = (System.Collections.IList)map.GetType().GetProperty("Vocabulary").GetValue(map);
-        Assert.That(grammar.Count, Is.EqualTo(1));
+        Assert.That(grammar.Count, Is.Zero, "Opening a dialogue must not save grammar before completion.");
         Assert.That(words, Does.Contain("spirit: linh hồn"));
         Assert.That(words, Does.Not.Contain("blade: lưỡi kiếm"), "Unseen question pages must not be recorded.");
         Call(panel, "Close");
         int count = words.Count;
         Assert.That(Call(panel, "TryOpenConversation", Source, null, null), Is.True);
         Assert.That(words.Count, Is.EqualTo(count));
-        Assert.That(grammar.Count, Is.EqualTo(1));
+        Assert.That(grammar.Count, Is.Zero);
         Call(panel, "Close");
         Static("LearningJournal", "Record", "map2", "Màn 2 · Rừng", null, "There is + N");
         Assert.That(maps.Count, Is.EqualTo(2));
@@ -84,6 +85,153 @@ public sealed class JsonConversationTests
         Assert.That(book, Does.Contain("spirit: linh hồn"));
         Static("LearningJournal", "Reset");
         Assert.That(maps.Count, Is.Zero);
+    }
+
+    [TestCase(" city ", " thành phố (n) ", "city: thành phố (n)")]
+    [TestCase("city = thành phố (n)", null, "city: thành phố (n)")]
+    [TestCase("city", "thành\nphố (n)", "city: thành phố (n)")]
+    public void JournalVocabularyUsesOneLineAndColon(string word, string meaning, string expected)
+    {
+        Assert.That(Static("LearningJournal", "FormatVocabulary", word, meaning), Is.EqualTo(expected));
+    }
+
+    [TestCase("Công thức: S + will + V\nNghĩa: sẽ làm gì\nCách dùng: lời hứa\nVí dụ: I will go.", "S + will + V: sẽ làm gì")]
+    [TestCase("Công thức trong lời thoại: Will you + V?\nNghĩa trong lời thoại: lời đề nghị\nVí dụ: Will you help?", "Will you + V?: lời đề nghị")]
+    [TestCase("can + V: có thể …\nVí dụ: I can swim.\nTôi có thể bơi.", "can + V: có thể …")]
+    public void JournalGrammarKeepsOnlyFormulaAndMeaning(string source, string expected)
+    {
+        Assert.That(Static("LearningJournal", "SummarizeGrammar", source), Is.EqualTo(expected));
+    }
+
+    [Test] public void CuratedVocabularyOnlyRecordsTheSelectedWordsForTheSeenPage()
+    {
+        var panel = Panel();
+        Assert.That(Call(panel, "TryOpenConversation", Source, null, null), Is.True);
+        var maps = (System.Collections.IList)Runtime("LearningJournal").GetProperty("Maps").GetValue(null);
+        var words = (System.Collections.IList)maps[0].GetType().GetProperty("Vocabulary").GetValue(maps[0]);
+        Assert.That(words, Has.Count.EqualTo(3));
+        Assert.That(words, Does.Contain("gear: trang bị (n)"));
+        Assert.That(words, Does.Not.Contain("guard: canh giữ (v)"));
+        Assert.That(words, Does.Not.Contain("blade: lưỡi kiếm (n)"));
+        Call(panel, "Advance");
+        Assert.That(words, Does.Contain("seal: phong ấn (n)"));
+        int count = words.Count;
+        Call(panel, "Choose", 0);
+        Assert.That(words.Count, Is.EqualTo(count + 2), "Only the two curated reply words should be recorded.");
+        Call(panel, "Advance");
+        Assert.That(words, Does.Contain("blade: lưỡi kiếm (n)"));
+        Call(panel, "Close");
+    }
+
+    [Test] public void JournalDeduplicatesTermsAndFormulasDespiteFormattingAndMeaningChanges()
+    {
+        var wordsType = Runtime("ResearchDocument+Vocabulary");
+        var words = Array.CreateInstance(wordsType, 3);
+        string[] terms = { " CITY ", "city", "City = thành phố" };
+        for (int i = 0; i < terms.Length; i++)
+        {
+            object word = Activator.CreateInstance(wordsType);
+            wordsType.GetField("word").SetValue(word, terms[i]);
+            wordsType.GetField("meaning").SetValue(word, "thành phố");
+            words.SetValue(word, i);
+        }
+        Static("LearningJournal", "Record", " MAP1 ", "Màn 1", words, " S + be + tính từ: mô tả trạng thái.");
+        Static("LearningJournal", "Record", "map1", "Màn 1", words,
+            "Công thức: s+BE+tính   từ.\nNghĩa: mô tả đặc điểm.\nVí dụ: The tower is old.");
+        var maps = (System.Collections.IList)Runtime("LearningJournal").GetProperty("Maps").GetValue(null);
+        Assert.That(maps.Count, Is.EqualTo(1));
+        var map = maps[0];
+        Assert.That((System.Collections.IList)map.GetType().GetProperty("Vocabulary").GetValue(map), Has.Count.EqualTo(1));
+        var grammar = (System.Collections.IList)map.GetType().GetProperty("Grammar").GetValue(map);
+        Assert.That(grammar, Has.Count.EqualTo(1));
+        Assert.That(grammar[0], Is.EqualTo("S + be + tính từ: mô tả trạng thái."));
+        Static("LearningJournal", "Record", "map1", "Màn 1", null, "S + be + danh từ: là ai/cái gì.");
+        Assert.That(grammar, Has.Count.EqualTo(2), "Different formulas must remain separate.");
+    }
+
+    [Test] public void JournalGroupsLearnedGrammarAndDeduplicatesStableIds()
+    {
+        void Record(string id, string group, string text)
+        {
+            var type = Runtime("LearningJournal+GrammarNote");
+            var note = Activator.CreateInstance(type);
+            type.GetField("Id").SetValue(note, id);
+            type.GetField("GroupId").SetValue(note, group);
+            type.GetField("Text").SetValue(note, text);
+            Static("LearningJournal", "RecordGrammar", "map1", "Map 1 · City", note);
+        }
+        Record("will_future", "ability_future", "S + will + V: sẽ làm gì.");
+        Record("be_adjective", "to_be", "S + be + tính từ: mô tả trạng thái.");
+        Record("will_future", "ability_future", "Subject + will + verb: một lời hứa.");
+        var maps = (System.Collections.IList)Runtime("LearningJournal").GetProperty("Maps").GetValue(null);
+        var map = maps[0];
+        var grammar = (System.Collections.IList)map.GetType().GetProperty("Grammar").GetValue(map);
+        Assert.That(grammar.Count, Is.EqualTo(2));
+        string column = (string)Call(map, "BuildGrammarColumn");
+        Assert.That(column, Does.Contain("<b>To be & Descriptions</b>"));
+        Assert.That(column, Does.Contain("<b>Ability & Future</b>"));
+        Assert.That(column.IndexOf("To be & Descriptions"), Is.LessThan(column.IndexOf("Ability & Future")));
+        Assert.That(column, Does.Not.Contain("Present Continuous"), "Unlearned groups must stay hidden.");
+        Assert.That(column, Does.Not.Contain("một lời hứa"), "The same ID must not add a second entry.");
+    }
+
+    [Test] public void AllJsonGrammarPagesHaveKnownGroupsAndStableIds()
+    {
+        string[] groups = { "to_be", "present_continuous", "possession_relationships", "ability_future", "commands_suggestions", "purpose_time", "continuing_actions" };
+        void Check(object page)
+        {
+            Assert.That((string)Field(page, "grammarId"), Is.Not.Null.And.Not.Empty);
+            Assert.That(groups, Does.Contain((string)Field(page, "groupId")));
+        }
+        foreach (string filename in new[] { "map1_spirit_questions_en.json", "map1_archaeologist_dialogue.json" })
+        {
+            var source = UnityEditor.AssetDatabase.LoadAssetAtPath<TextAsset>("Assets/_Project/Data/Questions/Map1/Json/" + filename);
+            var data = Parse(source.text, null);
+            Check(Field(data, "introduction")); Check(Field(data, "consent")); Check(Field(data, "completion"));
+            foreach (var choice in (Array)Field(Field(data, "consent"), "choices")) Check(choice);
+            foreach (var question in Questions(data)) Check(question);
+        }
+        var documentSource = UnityEditor.AssetDatabase.LoadAssetAtPath<TextAsset>("Assets/_Project/Data/Questions/Map1/Json/research_document_questions_en.json");
+        var document = JsonUtility.FromJson(documentSource.text, Runtime("ResearchDocument+Document"));
+        Assert.That((string)Field(document, "introductionGrammarId"), Is.Not.Empty);
+        Assert.That((string)Field(document, "destinationGrammarId"), Is.Not.Empty);
+        Assert.That(groups, Does.Contain((string)Field(document, "introductionGroupId")));
+        Assert.That(groups, Does.Contain((string)Field(document, "destinationGroupId")));
+        foreach (var question in (Array)Field(document, "questions")) Check(question);
+    }
+
+    [Test] public void AnswerSavesQuestionGrammarBeforeConversationCompletes()
+    {
+        var panel = Panel();
+        Assert.That(Call(panel, "TryOpenConversation", Source, null, null), Is.True);
+        Agree(panel);
+        var maps = (System.Collections.IList)Runtime("LearningJournal").GetProperty("Maps").GetValue(null);
+        var grammar = (System.Collections.IList)maps[0].GetType().GetProperty("Grammar").GetValue(maps[0]);
+        Assert.That(grammar.Count, Is.Zero);
+        Call(panel, "Choose", CorrectIndex(panel));
+        Assert.That(grammar, Does.Contain("have/has + N: có …"));
+        Assert.That(grammar, Does.Not.Contain("am/is/are + V-ing: đang …"));
+        Call(panel, "Close");
+        Assert.That(grammar.Count, Is.EqualTo(1), "Cancelling must not commit unfinished dialogue notes.");
+    }
+
+    [Test] public void CompletedArchaeologistConversationSavesSeenGrammarWithoutUsage()
+    {
+        var panel = Panel();
+        var source = UnityEditor.AssetDatabase.LoadAssetAtPath<TextAsset>(
+            "Assets/_Project/Data/Questions/Map1/Json/map1_archaeologist_dialogue.json");
+        Assert.That(Call(panel, "TryOpenConversation", source, null, null), Is.True);
+        Agree(panel);
+        Call(panel, "Advance");
+        var maps = (System.Collections.IList)Runtime("LearningJournal").GetProperty("Maps").GetValue(null);
+        var grammar = (System.Collections.IList)maps[0].GetType().GetProperty("Grammar").GetValue(maps[0]);
+        Assert.That(grammar.Count, Is.EqualTo(4));
+        foreach (string entry in grammar)
+        {
+            Assert.That(entry, Does.Not.Contain("Cách dùng:"));
+            Assert.That(entry, Does.Not.Contain("Ví dụ:"));
+            Assert.That(entry, Does.Contain(": "));
+        }
     }
 
     [Test] public void AuthoredJournalPaginatesLongContentAndClampsNavigation()
@@ -98,15 +246,15 @@ public sealed class JsonConversationTests
         Call(journal, "Toggle");
         int pages = (int)journal.GetType().GetProperty("PageCount").GetValue(journal);
         Assert.That(pages, Is.GreaterThan(2));
-        Call(journal, "NextPage");
         var wordsText = (Component)Field(journal, "entries");
         var grammarText = (Component)Field(journal, "grammarEntries");
         string Content(Component text) => (string)text.GetType().GetProperty("text").GetValue(text);
         Assert.That(wordsText, Is.Not.SameAs(grammarText));
-        Assert.That(Content(wordsText), Does.Contain("TỪ VỰNG\n\n"));
+        Assert.That(Content(wordsText), Does.StartWith("VOCABULARY\n\n"));
         Assert.That(Content(wordsText), Does.Contain("spirit: linh hồn\n"));
-        Assert.That(Content(wordsText), Does.Not.Contain("NGỮ PHÁP"));
-        Assert.That(Content(grammarText), Does.Contain("NGỮ PHÁP\n\n"));
+        Assert.That(Content(wordsText), Does.Not.Contain("GRAMMAR"));
+        Assert.That(Content(grammarText), Does.StartWith("GRAMMAR\n\n"));
+        Assert.That(Content((Component)Field(journal, "mapTitle")), Is.EqualTo("Map 1 · City"));
         Assert.That(Content(grammarText), Does.Not.Contain("spirit: linh hồn"));
         for (int i = 0; i < pages + 2; i++) Call(journal, "NextPage");
         Assert.That(journal.GetType().GetProperty("CurrentPage").GetValue(journal), Is.EqualTo(pages));
@@ -126,8 +274,10 @@ public sealed class JsonConversationTests
     {
         Component panel = Panel();
         var textType = Type.GetType("TMPro.TextMeshProUGUI, Unity.TextMeshPro", true);
-        var notesObject = new GameObject("Vocab_Gammar", typeof(RectTransform), textType);
+        var notesObject = new GameObject("Vocab", typeof(RectTransform), textType);
         notesObject.transform.SetParent(panel.transform, false);
+        var grammarObject = new GameObject("Grammar Notes", typeof(RectTransform), textType);
+        grammarObject.transform.SetParent(panel.transform, false);
         notesObject.SetActive(false);
         var text = notesObject.GetComponent(textType);
         string Notes() => (string)textType.GetProperty("text").GetValue(text);
@@ -138,9 +288,13 @@ public sealed class JsonConversationTests
         void AssertNotes(object page)
         {
             // Learning fields on Question/Consent are inherited from Dialogue.
-            Assert.That(Notes(), Does.Contain((string)Field(page, "grammar")));
+            var grammarWidget = (Component)Field(panel, "grammarNotesText");
+            Assert.That((string)textType.GetProperty("text").GetValue(grammarWidget),
+                Does.Contain((string)Field(page, "grammar")));
             Array words = (Array)Field(page, "vocabulary");
-            Assert.That(Notes(), Does.Contain((string)Field(words.GetValue(0), "word")));
+            foreach (object word in words)
+                Assert.That(System.Text.RegularExpressions.Regex.Replace(Notes(), "<[^>]+>", "").Split('\n'), Does.Contain((string)Static("LearningJournal", "FormatVocabulary",
+                    Field(word, "word"), Field(word, "meaning"))));
             Assert.That(notesObject.activeSelf, Is.True);
         }
         AssertNotes(Field(conversation, "introduction"));
@@ -158,6 +312,17 @@ public sealed class JsonConversationTests
         }
         AssertNotes(Field(conversation, "completion"));
         Call(panel, "Close");
+    }
+
+    [Test] public void VocabularyHighlightMatchesWholeWordsAndPreservesCase()
+    {
+        object parsed = Parse(Source.text, "q1_spirit");
+        object words = Field(Field(parsed, "introduction"), "vocabulary");
+        string result = (string)Static("StoryQuizPanel", "HighlightVocabulary",
+            "TOWER tower towers watchtower.", words, Color.yellow);
+        Assert.That(result, Does.Contain("<color=#FFFF00>TOWER</color>"));
+        Assert.That(result, Does.Contain("<color=#FFFF00>tower</color>"));
+        Assert.That(result, Does.Contain(" towers watchtower."));
     }
 
     [Test] public void JsonPreservesAllSixAnswersAndVariableChoiceCountsAndRejectsInvalidData()

@@ -7,6 +7,12 @@ public sealed class EnemyAttack : MonoBehaviour
     [SerializeField, Min(1)] private int damage = 30;
     [SerializeField, Min(.01f)] private float attackInterval = 1.5f;
     [SerializeField, Min(.01f)] private float attackRange = 1.5f;
+    [Header("Laboratory ambush")]
+    [SerializeField, Min(.01f)] private float laboratoryAttackInterval = .8f;
+    [SerializeField, Min(1f)] private float laboratoryAttackAnimationSpeed = 1.5f;
+    private bool IsLaboratory => brain != null && brain.EncounterMode == EnemyEncounterMode.LaboratoryAmbush;
+    public float AttackInterval => IsLaboratory ? Mathf.Min(attackInterval, laboratoryAttackInterval) : attackInterval;
+    private float AnimationSpeed => IsAttacking && IsLaboratory ? laboratoryAttackAnimationSpeed : 1f;
     private float cooldown;
     private Health victim;
     private Animator animator;
@@ -35,12 +41,12 @@ public sealed class EnemyAttack : MonoBehaviour
     }
     private void OnStateChanged(GameplayMode mode)
     {
-        if(animator!=null)animator.speed=CanAct?1:0;
+        if(animator!=null)animator.speed=CanAct?AnimationSpeed:0;
     }
     private void Update()
     {
         if (animator == null && visuals != null) animator = visuals.Animator;
-        if (animator != null) animator.speed = CanAct ? 1 : 0;
+        if (animator != null) animator.speed = CanAct ? AnimationSpeed : 0;
         if (CanAct) cooldown = Mathf.Max(0, cooldown - Time.deltaTime);
     }
     public bool IsInRange(Health target)
@@ -58,8 +64,8 @@ public sealed class EnemyAttack : MonoBehaviour
         animator=visuals!=null?visuals.Animator:null;
         if(animator==null || animator.runtimeAnimatorController==null || !animator.HasState(0,Animator.StringToHash("Attack")))return false;
         visuals.Face(GroundPosition(target)-transform.position);visuals.SetMoving(false);
-        attackFacing=visuals.Facing;victim=target;hitResolved=false;IsAttacking=true;cooldown=attackInterval;
-        animator.speed=1;animator.Play("Attack",0,0);
+        attackFacing=visuals.Facing;victim=target;hitResolved=false;IsAttacking=true;cooldown=AttackInterval;
+        animator.speed=AnimationSpeed;animator.Play("Attack",0,0);
         return true;
     }
     // Called by the Attack clip on its strike frame. Blend-tree duplicate events cannot double-hit.
@@ -76,5 +82,6 @@ public sealed class EnemyAttack : MonoBehaviour
     {
         if(!CanAct)return;
         IsAttacking=false;victim=null;
+        if(animator!=null)animator.speed=1f;
     }
 }

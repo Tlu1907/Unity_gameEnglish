@@ -3,6 +3,8 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
+using System.Collections.Generic;
+using System.Text.RegularExpressions;
 
 /// <summary>Fixed bilingual story conversation using the existing NPC frame.</summary>
 public sealed class StoryQuizPanel : MonoBehaviour
@@ -15,6 +17,9 @@ public sealed class StoryQuizPanel : MonoBehaviour
     [SerializeField] private TMP_Text promptText;
     [SerializeField] private Image portrait;
     [SerializeField] private TMP_Text vocabGrammarText;
+    [SerializeField] private TMP_Text grammarNotesText;
+    [SerializeField] private Color vocabularyHighlightColor = new Color(1f, .78f, .25f);
+    private string plainEnglishText;
     [Header("Learning journal map")]
     [SerializeField] private string journalMapId = "map1";
     [SerializeField] private string journalMapTitle = "Màn 1 · Thành phố";
@@ -48,7 +53,50 @@ public sealed class StoryQuizPanel : MonoBehaviour
     private QuestionData eventQuestion;
     private ResearchDocument.Document researchDocument;
     private NpcQuestionConversation.Choice selectedConsent;
+    private bool editorPreview;
+    private LearningJournal.GrammarNote currentPageGrammar;
+    private readonly List<LearningJournal.GrammarNote> pendingDialogueGrammar = new List<LearningJournal.GrammarNote>();
     public bool IsOpen => open;
+    public void SetJournalMap(string id, string title)
+    {
+        journalMapId = id;
+        journalMapTitle = title;
+    }
+
+#if UNITY_EDITOR
+    public bool PreviewPage(TextAsset source, bool research, string page, int index)
+    {
+        if (open) Close();
+        if (!GameplayState.CanAct) return false;
+        editorPreview = true;
+        bool opened = research
+            ? ResearchDocument.TryParse(source, out var document) && TryOpenResearchDocument(document, _ => { })
+            : TryOpenConversation(source, null);
+        if (!opened) { editorPreview = false; return false; }
+        if (page == "Introduction") return true;
+        if (page == "Completion")
+        {
+            step = Step.Success;
+            SetText(conversation.completion.after_en, conversation.completion.after_vi);
+            SetChoices();
+        }
+        else if (page == "Consent" || page == "Consent Reply")
+        {
+            if (conversation.consent == null) return true;
+            ShowConsent();
+            if (page == "Consent Reply")
+                Choose(Mathf.Clamp(index, 0, conversation.consent.choices.Length - 1));
+        }
+        else if (conversation.questions.Length > 0)
+        {
+            questionIndex = Mathf.Clamp(index, 0, conversation.questions.Length - 1);
+            ShowQuestion();
+            if (page == "Correct Feedback") Choose(Array.IndexOf(answers, conversation.questions[questionIndex].correct));
+            else if (page == "Wrong Feedback") Choose((Array.IndexOf(answers, conversation.questions[questionIndex].correct) + 1) % answers.Length);
+        }
+        return true;
+    }
+#endif
 
     public static StoryQuizPanel FindOrCreate()
     {
@@ -62,7 +110,7 @@ public sealed class StoryQuizPanel : MonoBehaviour
     }
 
     // Authoring helper, called only by the Editor builder and isolated tests.
-    // Runtime playback never calls this or changes RectTransforms/fonts.
+    // Runtime playback preserves the authored layout and font settings.
     public void Configure(TMP_Text speaker, TMP_Text english, TMP_Text vietnamese, TMP_Text prompt)
     {
         nameText = speaker; englishText = english; vietnameseText = vietnamese; promptText = prompt;
@@ -99,9 +147,9 @@ public sealed class StoryQuizPanel : MonoBehaviour
             Place((RectTransform)label.transform, Vector2.zero, Vector2.one);
             labels[i] = label.GetComponent<TextMeshProUGUI>();
             labels[i].font = vietnameseText.font;
-            labels[i].fontSize = 23;
+            labels[i].fontSize = 28;
             labels[i].enableAutoSizing = true;
-            labels[i].fontSizeMin = 12; labels[i].fontSizeMax = 23;
+            labels[i].fontSizeMin = 25; labels[i].fontSizeMax = 28;
             labels[i].alignment = TextAlignmentOptions.Center;
             labels[i].color = Color.white;
             labels[i].raycastTarget = false;
@@ -228,6 +276,8 @@ public sealed class StoryQuizPanel : MonoBehaviour
     {
         if (open || !enabled || !HasReferences || !GameplayState.BeginDialogue(this)) return false;
         beat = data; conversation = parsed; questionIndex = 0;
+        pendingDialogueGrammar.Clear();
+        currentPageGrammar = null;
         researchDocument = research;
         selectedConsent = null;
         completed = onCompleted; declines = 0;
@@ -241,6 +291,7 @@ public sealed class StoryQuizPanel : MonoBehaviour
         if (ownerCanvas != null) ownerCanvas.gameObject.SetActive(true);
         gameObject.SetActive(true);
         if (!gameObject.activeInHierarchy) { Close(); return false; }
+
         if (portrait != null)
         {
             portrait.sprite = speakerPortrait != null ? speakerPortrait : authoredPortrait;
@@ -251,7 +302,7 @@ public sealed class StoryQuizPanel : MonoBehaviour
         SetText(conversation != null ? conversation.introduction.dialogue_en : beat.introEnglish,
             conversation != null ? conversation.introduction.dialogue_vi : beat.introVietnamese);
         SetChoices();
-        onOpened.Invoke();
+        if (!editorPreview) onOpened.Invoke();
         return open;
     }
 
@@ -360,6 +411,8 @@ public sealed class StoryQuizPanel : MonoBehaviour
             return;
         }
         if (step != Step.Question) return;
+        if (!editorPreview)
+            LearningJournal.RecordGrammar(journalMapId, journalMapTitle, currentPageGrammar);
         var question = conversation != null ? conversation.questions[questionIndex] : null;
         if (scoredCompletion != null)
         {
@@ -377,8 +430,8 @@ public sealed class StoryQuizPanel : MonoBehaviour
                 $"\nĐúng {correctAnswers}/5 câu. Sai {wrong} câu." +
                 (wrong > 3 ? " Quái bất tử và hạ bạn bằng một đòn. Hãy chạy thoát!" : "") : ""));
             SetChoices();
-            QuizEvents.RaiseAnswered(correct, eventQuestion);
-            if (correct) onCorrect.Invoke(); else onWrong.Invoke();
+            if (!editorPreview) QuizEvents.RaiseAnswered(correct, eventQuestion);
+            if (!editorPreview) { if (correct) onCorrect.Invoke(); else onWrong.Invoke(); }
             return;
         }
         if (answers[index] != (question != null ? question.correct : beat.correct))
@@ -386,8 +439,8 @@ public sealed class StoryQuizPanel : MonoBehaviour
             SetText(question != null ? question.dialogue_en + "\n" + question.wrong_hint_en : beat.questionEnglish,
                 question != null ? question.dialogue_vi + (string.IsNullOrEmpty(question.wrong_hint_vi) ? "" : "\n" + question.wrong_hint_vi)
                     : beat.questionVietnamese + "\n" + beat.wrongHint);
-            QuizEvents.RaiseAnswered(false, eventQuestion);
-            onWrong.Invoke();
+            if (!editorPreview) QuizEvents.RaiseAnswered(false, eventQuestion);
+            if (!editorPreview) onWrong.Invoke();
             return;
         }
         bool last = conversation == null || questionIndex == conversation.questions.Length - 1;
@@ -397,12 +450,15 @@ public sealed class StoryQuizPanel : MonoBehaviour
                 last ? conversation.completion.after_vi : question.explanation_vi + "\n" + question.after_vi);
         else SetText(beat.afterEnglish, beat.explanation + "\n" + beat.afterVietnamese);
         SetChoices();
-        QuizEvents.RaiseAnswered(true, eventQuestion);
-        onCorrect.Invoke();
+        if (!editorPreview) QuizEvents.RaiseAnswered(true, eventQuestion);
+        if (!editorPreview) onCorrect.Invoke();
     }
 
     private void SetText(string english, string vietnamese)
     {
+        plainEnglishText = english;
+        // Research questions are reading practice; vocabulary remains available as a guide.
+        if (researchDocument != null && step != Step.Intro) vietnamese = "";
         englishText.text = english; vietnameseText.text = vietnamese;
         vietnameseText.gameObject.SetActive(showVietnamese && !string.IsNullOrWhiteSpace(vietnamese));
         englishText.maxVisibleCharacters = vietnameseText.maxVisibleCharacters = int.MaxValue;
@@ -411,31 +467,37 @@ public sealed class StoryQuizPanel : MonoBehaviour
 
     private void RefreshLearningNotes()
     {
-        // Resolve the designer's existing text, including inactive children; preserve its layout.
+        // Support the authored Vocab object and older combined learning-note widgets.
         if (vocabGrammarText == null)
             foreach (var text in GetComponentsInChildren<TMP_Text>(true))
-                if (string.Equals(text.name.Trim(), "Vocab_gammar", StringComparison.OrdinalIgnoreCase))
+                if (string.Equals(text.name.Trim(), "Vocab", StringComparison.OrdinalIgnoreCase) ||
+                    string.Equals(text.name.Trim(), "Text Vocab", StringComparison.OrdinalIgnoreCase) ||
+                    string.Equals(text.name.Trim(), "Vocab_gammar", StringComparison.OrdinalIgnoreCase))
                 { vocabGrammarText = text; break; }
         var notes = new System.Text.StringBuilder();
         ResearchDocument.Vocabulary[] vocabulary = null;
         string grammar = null;
+        string grammarId = null, groupId = null;
         if (researchDocument != null)
         {
             if (step == Step.Intro)
             {
                 vocabulary = researchDocument.introductionVocabulary;
                 grammar = researchDocument.introductionGrammar;
+                grammarId = researchDocument.introductionGrammarId; groupId = researchDocument.introductionGroupId;
             }
             else if (step == Step.Success)
             {
                 vocabulary = researchDocument.destinationVocabulary;
                 grammar = researchDocument.destinationGrammar;
+                grammarId = researchDocument.destinationGrammarId; groupId = researchDocument.destinationGroupId;
             }
             else
             {
                 var question = researchDocument.questions[questionIndex];
                 vocabulary = question.vocabulary;
                 grammar = question.grammar;
+                grammarId = question.grammarId; groupId = question.groupId;
             }
         }
         else if (conversation != null)
@@ -444,35 +506,105 @@ public sealed class StoryQuizPanel : MonoBehaviour
             {
                 vocabulary = conversation.completion.vocabulary;
                 grammar = conversation.completion.grammar;
+                grammarId = conversation.completion.grammarId; groupId = conversation.completion.groupId;
             }
             else if (step == Step.ConsentReply && selectedConsent != null)
             {
                 vocabulary = selectedConsent.vocabulary;
                 grammar = selectedConsent.grammar;
+                grammarId = selectedConsent.grammarId; groupId = selectedConsent.groupId;
             }
             else
             {
                 NpcQuestionConversation.Dialogue page = step == Step.Intro ? conversation.introduction
                     : step == Step.Consent ? conversation.consent
                     : questionIndex < conversation.questions.Length ? conversation.questions[questionIndex] : null;
-                if (page != null) { vocabulary = page.vocabulary; grammar = page.grammar; }
+                if (page != null)
+                {
+                    vocabulary = page.vocabulary; grammar = page.grammar;
+                    grammarId = page.grammarId; groupId = page.groupId;
+                }
             }
         }
-        LearningJournal.Record(journalMapId, journalMapTitle, vocabulary, grammar);
+        currentPageGrammar = new LearningJournal.GrammarNote { Id = grammarId, GroupId = groupId, Text = grammar };
+        if (!editorPreview)
+        {
+            LearningJournal.Record(journalMapId, journalMapTitle, JournalVocabularyCatalog.Get(
+                journalMapId, conversation != null ? conversation.id : beat != null ? beat.beatId : null,
+                JournalPageId()), null);
+            if ((step == Step.Intro || step == Step.Consent || step == Step.ConsentReply || step == Step.Success) &&
+                !string.IsNullOrWhiteSpace(grammar) && !pendingDialogueGrammar.Exists(note => note.Text == grammar))
+                pendingDialogueGrammar.Add(currentPageGrammar);
+        }
+        englishText.richText = true;
+        englishText.text = HighlightVocabulary(plainEnglishText, vocabulary, vocabularyHighlightColor);
+        if (grammarNotesText == null)
+            foreach (var text in GetComponentsInChildren<TMP_Text>(true))
+                if (string.Equals(text.name.Trim(), "Grammar Notes", StringComparison.OrdinalIgnoreCase) ||
+                    string.Equals(text.name.Trim(), "Grammar", StringComparison.OrdinalIgnoreCase))
+                { grammarNotesText = text; break; }
+        if (grammarNotesText != null)
+        {
+            grammarNotesText.text = string.IsNullOrWhiteSpace(grammar) ? "" : grammar.Trim();
+            grammarNotesText.richText = false;
+            grammarNotesText.maxVisibleCharacters = int.MaxValue;
+            grammarNotesText.gameObject.SetActive(!string.IsNullOrWhiteSpace(grammar));
+        }
         if (vocabGrammarText == null) return;
-        if (!string.IsNullOrWhiteSpace(grammar)) notes.AppendLine("Ngữ pháp:").Append(grammar);
+        bool combined = string.Equals(vocabGrammarText.name, "Vocab_gammar", StringComparison.OrdinalIgnoreCase);
+        if (combined && !string.IsNullOrWhiteSpace(grammar)) notes.AppendLine("Grammar:").Append(grammar);
         if (vocabulary != null)
             foreach (var entry in vocabulary)
             {
                 if (entry == null || string.IsNullOrWhiteSpace(entry.word)) continue;
                 if (notes.Length > 0) notes.AppendLine();
-                notes.Append(entry.word);
-                if (!string.IsNullOrWhiteSpace(entry.meaning)) notes.Append(": ").Append(entry.meaning);
+                string line = LearningJournal.FormatVocabulary(entry.word, entry.meaning);
+                int separator = line.IndexOf(':');
+                string term = separator < 0 ? line : line.Substring(0, separator);
+                notes.Append("<color=#").Append(ColorUtility.ToHtmlStringRGB(vocabularyHighlightColor))
+                    .Append('>').Append(EscapeMarkup(term)).Append("</color>");
+                if (separator >= 0) notes.Append(EscapeMarkup(line.Substring(separator)));
             }
         vocabGrammarText.text = notes.ToString();
-        vocabGrammarText.richText = false;
+        vocabGrammarText.richText = true;
         vocabGrammarText.maxVisibleCharacters = int.MaxValue;
         vocabGrammarText.gameObject.SetActive(notes.Length > 0);
+    }
+
+    private static string EscapeMarkup(string text) => (text ?? "").Replace("<", "‹").Replace(">", "›");
+
+    private string JournalPageId()
+    {
+        if (step == Step.Intro) return "introduction";
+        if (step == Step.Success) return "completion";
+        if (step == Step.Consent) return "consent";
+        if (step == Step.ConsentReply) return "reply_" + selectedConsent?.id;
+        if (researchDocument != null) return "question_" + (questionIndex + 1);
+        return conversation != null && questionIndex < conversation.questions.Length
+            ? conversation.questions[questionIndex].id : "question";
+    }
+
+    public static string HighlightVocabulary(string text, ResearchDocument.Vocabulary[] vocabulary, Color color)
+    {
+        string content = EscapeMarkup(text);
+        if (vocabulary == null || vocabulary.Length == 0) return content;
+        var terms = new List<string>();
+        var seen = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
+        foreach (var entry in vocabulary)
+        {
+            if (entry == null || string.IsNullOrWhiteSpace(entry.word)) continue;
+            string term = entry.word.Trim();
+            if (seen.Add(term)) terms.Add(term);
+        }
+        if (terms.Count == 0) return content;
+        // Prefer a complete phrase over a shorter word inside it; never match inside another word.
+        terms.Sort((a, b) => b.Length.CompareTo(a.Length));
+        string pattern = @"(?<![\p{L}\p{N}_])(?:" + string.Join("|", terms.ConvertAll(term =>
+            string.Join(@"\s+", Array.ConvertAll(EscapeMarkup(term).Split((char[])null,
+                StringSplitOptions.RemoveEmptyEntries), part => Regex.Escape(part))))) + @")(?![\p{L}\p{N}_])";
+        string hex = ColorUtility.ToHtmlStringRGB(color);
+        return Regex.Replace(content, pattern, match => "<color=#" + hex + ">" + match.Value + "</color>",
+            RegexOptions.IgnoreCase | RegexOptions.CultureInvariant);
     }
 
     private void SetChoices(params string[] choices)
@@ -481,7 +613,11 @@ public sealed class StoryQuizPanel : MonoBehaviour
         for (int i = 0; i < buttons.Length; i++)
         {
             buttons[i].gameObject.SetActive(i < choices.Length);
-            if (i < choices.Length) labels[i].text = (i + 1) + ". " + choices[i];
+            if (i < choices.Length)
+            {
+                labels[i].text = (i + 1) + ". " + choices[i];
+                FormatAnswerLabel(labels[i], buttons[i]);
+            }
         }
         if (advanceButton != null) advanceButton.gameObject.SetActive(choices.Length == 0);
         if (closeButton != null) closeButton.gameObject.SetActive(true);
@@ -491,11 +627,45 @@ public sealed class StoryQuizPanel : MonoBehaviour
             promptText.text += " · " + (questionIndex + 1) + "/" + conversation.questions.Length;
     }
 
+    private static void FormatAnswerLabel(TMP_Text label, Button button)
+    {
+        var rect = label.rectTransform;
+        var buttonRect = (RectTransform)button.transform;
+        if (rect.parent != button.transform) rect.SetParent(button.transform, false);
+        // Counter uneven ancestor scaling on the text only, preserving the authored button frame.
+        var canvas = button.GetComponentInParent<Canvas>();
+        Vector3 reference = canvas != null ? canvas.rootCanvas.transform.lossyScale : Vector3.one;
+        Vector3 inherited = button.transform.lossyScale;
+        float sx = Mathf.Abs(inherited.x) > .0001f ? Mathf.Abs(reference.x / inherited.x) : 1f;
+        float sy = Mathf.Abs(inherited.y) > .0001f ? Mathf.Abs(reference.y / inherited.y) : 1f;
+        rect.localScale = new Vector3(sx, sy, 1f);
+        rect.localRotation = Quaternion.identity;
+        rect.anchorMin = rect.anchorMax = rect.pivot = new Vector2(.5f, .5f);
+        rect.anchoredPosition = Vector2.zero;
+        rect.sizeDelta = new Vector2(Mathf.Max(1f, buttonRect.rect.width / sx - 12f),
+            Mathf.Max(1f, buttonRect.rect.height / sy - 8f));
+        label.alignment = TextAlignmentOptions.Center;
+        label.fontSize = 28f;
+        label.enableAutoSizing = true;
+        label.fontSizeMin = 25f;
+        label.fontSizeMax = 28f;
+        label.characterWidthAdjustment = 0f;
+        label.characterSpacing = 0f;
+        label.wordSpacing = 0f;
+        label.margin = Vector4.zero;
+        label.richText = false;
+        label.raycastTarget = false;
+    }
+
     public void Close()
     {
         if (!open) return;
         open = false;
         bool passed = step == Step.Success && GameplayState.Current == GameplayMode.Dialogue;
+        bool finishedDialogue = passed || step == Step.ConsentReply && !consentAccepted && !repeatConsent;
+        if (!editorPreview && finishedDialogue)
+            foreach (var grammar in pendingDialogueGrammar)
+                LearningJournal.RecordGrammar(journalMapId, journalMapTitle, grammar);
         Action<bool> result = completed;
         Action<int> scoredResult = scoredCompletion;
         int score = correctAnswers;
@@ -509,11 +679,12 @@ public sealed class StoryQuizPanel : MonoBehaviour
             if (passed && beat != null) passed = StoryProgress.Complete(beat.beatId);
             result?.Invoke(passed);
             scoredResult?.Invoke(passed ? score : -1);
-            onClosed.Invoke();
+            if (!editorPreview) onClosed.Invoke();
         }
         finally
         {
             ReleaseQuestionEvent();
+            editorPreview = false;
         }
     }
 
@@ -531,6 +702,7 @@ public sealed class StoryQuizPanel : MonoBehaviour
         Close();
         researchDocument = null;
         if (vocabGrammarText != null) vocabGrammarText.text = string.Empty;
+        if (grammarNotesText != null) grammarNotesText.text = string.Empty;
         UnbindControls();
         RestoreChoiceColors();
         if (portrait != null)

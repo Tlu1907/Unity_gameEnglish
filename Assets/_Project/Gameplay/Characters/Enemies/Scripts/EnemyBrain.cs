@@ -35,6 +35,10 @@ public class EnemyBrain : MonoBehaviour
     [Header("Mission encounter")]
     [Tooltip("Normal: tuần tra; MirrorAmbush: nhận trang bị ở tháp; ArchaeologistGuard: hạ quái để cứu NPC; LaboratoryAmbush: hoàn tất tài liệu.")]
     [SerializeField] private EnemyEncounterMode encounterMode;
+    [Tooltip("Tốc độ truy đuổi của quái xuất hiện sau tài liệu nghiên cứu.")]
+    [SerializeField, Min(.01f)] private float laboratoryChaseSpeed = 3.5f;
+    public float EffectiveChaseSpeed => encounterMode == EnemyEncounterMode.LaboratoryAmbush
+        ? Mathf.Max(chaseSpeed, laboratoryChaseSpeed) : chaseSpeed;
     [SerializeField] private GameObject archaeologistToReveal;
     [SerializeField] private Transform archaeologistSpawnPoint;
     public EnemyEncounterMode EncounterMode => encounterMode;
@@ -224,6 +228,13 @@ public class EnemyBrain : MonoBehaviour
         IsChasing = forcedPursuit || alerted || (behaviour == EnemyBehaviour.Chaser && (visible || memoryRemaining > 0));
         if (attack.IsAttacking || movement.IsMoving || Time.time < retryAt) return;
         Vector2Int current = Cell(transform.position);
+        // Lab enemies strike as soon as they reach the player instead of retreating first.
+        if (encounterMode == EnemyEncounterMode.LaboratoryAmbush && !concealed && target != null && attack.IsInRange(target))
+        {
+            GetComponent<CharacterAnimation>()?.Face(PlayerFeet - transform.position);
+            attack.TryAttack(target);
+            return;
+        }
         if (target != null && !target.IsDead && Vector2.Distance(transform.position, PlayerFeet) < personalSpace - .15f)
         {
             foreach (var direction in Directions)
@@ -242,7 +253,7 @@ public class EnemyBrain : MonoBehaviour
         }
         if (IsChasing)
         {
-            if (!visible || !attack.IsInRange(target)) MoveToward(current, lastSeen, chaseSpeed);
+            if (!visible || !attack.IsInRange(target)) MoveToward(current, lastSeen, EffectiveChaseSpeed);
             return;
         }
         if (patrolOffsets != null && patrolOffsets.Length > 0)

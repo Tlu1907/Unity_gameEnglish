@@ -1,0 +1,1669 @@
+{
+    "schema_version": 1,
+    "title": "Tổng hợp từ vựng và ngữ pháp từ 3 JSON Map 1",
+    "source_files": [
+        "map1_spirit_questions_en.json",
+        "map1_archaeologist_dialogue.json",
+        "research_document_questions_en.json"
+    ],
+    "scope_vi": "Gộp các mục vocabulary, introductionVocabulary và destinationVocabulary; giữ các nghĩa khác nhau của cùng từ. Bổ sung đáp án từ vựng còn thiếu. Ngữ pháp tóm tắt theo grammarId và các cấu trúc được chú thích trong nguồn; ví dụ câu điền khuyết được điền đáp án đúng. Không liệt kê toàn bộ từ thông dụng hoặc đáp án nhiễu; không chứa bản dịch đầy đủ của hội thoại.",
+    "vocabulary_count": 94,
+    "grammar_count": 20,
+    "vocabulary": [
+        {
+            "word": "alarm",
+            "meanings_vi": [
+                "chuông cảnh báo (n)"
+            ],
+            "sources": [
+                {
+                    "file": "research_document_questions_en.json",
+                    "path": "$.questions[3].vocabulary",
+                    "origin": "source_vocabulary"
+                }
+            ]
+        },
+        {
+            "word": "ancient",
+            "meanings_vi": [
+                "cổ xưa (adj)"
+            ],
+            "sources": [
+                {
+                    "file": "map1_archaeologist_dialogue.json",
+                    "path": "$.introduction.vocabulary",
+                    "origin": "source_vocabulary"
+                }
+            ]
+        },
+        {
+            "word": "archaeologist",
+            "meanings_vi": [
+                "nhà khảo cổ (n)"
+            ],
+            "sources": [
+                {
+                    "file": "map1_archaeologist_dialogue.json",
+                    "path": "$.introduction.vocabulary",
+                    "origin": "source_vocabulary"
+                }
+            ]
+        },
+        {
+            "word": "be linked to",
+            "meanings_vi": [
+                "có liên quan đến (v. phr.)"
+            ],
+            "sources": [
+                {
+                    "file": "map1_archaeologist_dialogue.json",
+                    "path": "$.introduction.vocabulary",
+                    "origin": "source_vocabulary"
+                }
+            ]
+        },
+        {
+            "word": "behind",
+            "meanings_vi": [
+                "phía sau (prep)"
+            ],
+            "sources": [
+                {
+                    "file": "map1_spirit_questions_en.json",
+                    "path": "$.consent.vocabulary",
+                    "origin": "source_vocabulary"
+                }
+            ]
+        },
+        {
+            "word": "blade",
+            "meanings_vi": [
+                "lưỡi kiếm (n)"
+            ],
+            "sources": [
+                {
+                    "file": "map1_spirit_questions_en.json",
+                    "path": "$.questions[0].vocabulary",
+                    "origin": "source_vocabulary"
+                }
+            ]
+        },
+        {
+            "word": "body",
+            "meanings_vi": [
+                "cơ thể (n)"
+            ],
+            "sources": [
+                {
+                    "file": "map1_spirit_questions_en.json",
+                    "path": "$.questions[1].vocabulary",
+                    "origin": "source_vocabulary"
+                }
+            ]
+        },
+        {
+            "word": "careful",
+            "meanings_vi": [
+                "cẩn thận (adj)"
+            ],
+            "sources": [
+                {
+                    "file": "map1_archaeologist_dialogue.json",
+                    "path": "$.consent.choices[1].vocabulary",
+                    "origin": "source_vocabulary"
+                }
+            ]
+        },
+        {
+            "word": "chase",
+            "meanings_vi": [
+                "đuổi theo (v)"
+            ],
+            "sources": [
+                {
+                    "file": "research_document_questions_en.json",
+                    "path": "$.questions[2].vocabulary",
+                    "origin": "source_vocabulary"
+                }
+            ]
+        },
+        {
+            "word": "choose",
+            "meanings_vi": [
+                "chọn (v)"
+            ],
+            "sources": [
+                {
+                    "file": "map1_spirit_questions_en.json",
+                    "path": "$.consent.vocabulary",
+                    "origin": "source_vocabulary"
+                },
+                {
+                    "file": "map1_spirit_questions_en.json",
+                    "path": "$.questions[0].vocabulary",
+                    "origin": "source_vocabulary"
+                },
+                {
+                    "file": "map1_spirit_questions_en.json",
+                    "path": "$.questions[1].vocabulary",
+                    "origin": "source_vocabulary"
+                },
+                {
+                    "file": "map1_spirit_questions_en.json",
+                    "path": "$.questions[2].vocabulary",
+                    "origin": "source_vocabulary"
+                },
+                {
+                    "file": "map1_spirit_questions_en.json",
+                    "path": "$.questions[3].vocabulary",
+                    "origin": "source_vocabulary"
+                },
+                {
+                    "file": "map1_spirit_questions_en.json",
+                    "path": "$.questions[4].vocabulary",
+                    "origin": "source_vocabulary"
+                },
+                {
+                    "file": "map1_spirit_questions_en.json",
+                    "path": "$.questions[5].vocabulary",
+                    "origin": "source_vocabulary"
+                }
+            ]
+        },
+        {
+            "word": "claws",
+            "meanings_vi": [
+                "móng vuốt (n, số nhiều)"
+            ],
+            "sources": [
+                {
+                    "file": "research_document_questions_en.json",
+                    "path": "$.questions[0].answers[0]",
+                    "origin": "correct_answer"
+                }
+            ]
+        },
+        {
+            "word": "closed",
+            "meanings_vi": [
+                "đóng (adj)"
+            ],
+            "sources": [
+                {
+                    "file": "map1_spirit_questions_en.json",
+                    "path": "$.questions[5].vocabulary",
+                    "origin": "source_vocabulary"
+                }
+            ]
+        },
+        {
+            "word": "come back",
+            "meanings_vi": [
+                "quay lại (v. phr.)"
+            ],
+            "sources": [
+                {
+                    "file": "map1_spirit_questions_en.json",
+                    "path": "$.consent.choices[1].vocabulary",
+                    "origin": "source_vocabulary"
+                },
+                {
+                    "file": "map1_archaeologist_dialogue.json",
+                    "path": "$.consent.choices[1].vocabulary",
+                    "origin": "source_vocabulary"
+                }
+            ]
+        },
+        {
+            "word": "containment",
+            "meanings_vi": [
+                "sự cách ly (n)"
+            ],
+            "sources": [
+                {
+                    "file": "research_document_questions_en.json",
+                    "path": "$.questions[3].vocabulary",
+                    "origin": "source_vocabulary"
+                }
+            ]
+        },
+        {
+            "word": "correct",
+            "meanings_vi": [
+                "đúng (adj)"
+            ],
+            "sources": [
+                {
+                    "file": "map1_spirit_questions_en.json",
+                    "path": "$.consent.vocabulary",
+                    "origin": "source_vocabulary"
+                },
+                {
+                    "file": "map1_spirit_questions_en.json",
+                    "path": "$.questions[2].vocabulary",
+                    "origin": "source_vocabulary"
+                },
+                {
+                    "file": "map1_spirit_questions_en.json",
+                    "path": "$.questions[3].vocabulary",
+                    "origin": "source_vocabulary"
+                },
+                {
+                    "file": "map1_spirit_questions_en.json",
+                    "path": "$.questions[4].vocabulary",
+                    "origin": "source_vocabulary"
+                },
+                {
+                    "file": "map1_spirit_questions_en.json",
+                    "path": "$.questions[5].vocabulary",
+                    "origin": "source_vocabulary"
+                }
+            ]
+        },
+        {
+            "word": "creature",
+            "meanings_vi": [
+                "sinh vật (n)"
+            ],
+            "sources": [
+                {
+                    "file": "research_document_questions_en.json",
+                    "path": "$.questions[1].vocabulary",
+                    "origin": "source_vocabulary"
+                }
+            ]
+        },
+        {
+            "word": "cut through",
+            "meanings_vi": [
+                "cắt xuyên (v. phr.)"
+            ],
+            "sources": [
+                {
+                    "file": "research_document_questions_en.json",
+                    "path": "$.questions[0].vocabulary",
+                    "origin": "source_vocabulary"
+                }
+            ]
+        },
+        {
+            "word": "damaged",
+            "meanings_vi": [
+                "bị hỏng (adj)"
+            ],
+            "sources": [
+                {
+                    "file": "research_document_questions_en.json",
+                    "path": "$.introductionVocabulary",
+                    "origin": "source_vocabulary"
+                }
+            ]
+        },
+        {
+            "word": "defeat",
+            "meanings_vi": [
+                "đánh bại (v)"
+            ],
+            "sources": [
+                {
+                    "file": "map1_archaeologist_dialogue.json",
+                    "path": "$.consent.choices[0].vocabulary",
+                    "origin": "source_vocabulary"
+                }
+            ]
+        },
+        {
+            "word": "destination",
+            "meanings_vi": [
+                "điểm đến (n)"
+            ],
+            "sources": [
+                {
+                    "file": "research_document_questions_en.json",
+                    "path": "$.destinationVocabulary",
+                    "origin": "source_vocabulary"
+                }
+            ]
+        },
+        {
+            "word": "detect",
+            "meanings_vi": [
+                "phát hiện (v)"
+            ],
+            "sources": [
+                {
+                    "file": "research_document_questions_en.json",
+                    "path": "$.questions[1].vocabulary",
+                    "origin": "source_vocabulary"
+                }
+            ]
+        },
+        {
+            "word": "document",
+            "meanings_vi": [
+                "tài liệu (n)"
+            ],
+            "sources": [
+                {
+                    "file": "map1_archaeologist_dialogue.json",
+                    "path": "$.consent.vocabulary",
+                    "origin": "source_vocabulary"
+                },
+                {
+                    "file": "map1_archaeologist_dialogue.json",
+                    "path": "$.completion.vocabulary",
+                    "origin": "source_vocabulary"
+                }
+            ]
+        },
+        {
+            "word": "earthquake",
+            "meanings_vi": [
+                "động đất (n)"
+            ],
+            "sources": [
+                {
+                    "file": "map1_archaeologist_dialogue.json",
+                    "path": "$.introduction.vocabulary",
+                    "origin": "source_vocabulary"
+                }
+            ]
+        },
+        {
+            "word": "entrance",
+            "meanings_vi": [
+                "lối vào (n)"
+            ],
+            "sources": [
+                {
+                    "file": "research_document_questions_en.json",
+                    "path": "$.introductionVocabulary",
+                    "origin": "source_vocabulary"
+                }
+            ]
+        },
+        {
+            "word": "escape",
+            "meanings_vi": [
+                "chạy thoát; thoát khỏi (v)"
+            ],
+            "sources": [
+                {
+                    "file": "research_document_questions_en.json",
+                    "path": "$.questions[3].answers[3]",
+                    "origin": "correct_answer"
+                }
+            ]
+        },
+        {
+            "word": "fight",
+            "meanings_vi": [
+                "chiến đấu (v)",
+                "trận chiến (n)"
+            ],
+            "sources": [
+                {
+                    "file": "map1_spirit_questions_en.json",
+                    "path": "$.introduction.vocabulary",
+                    "origin": "source_vocabulary"
+                },
+                {
+                    "file": "map1_spirit_questions_en.json",
+                    "path": "$.questions[1].vocabulary",
+                    "origin": "source_vocabulary"
+                }
+            ]
+        },
+        {
+            "word": "find",
+            "meanings_vi": [
+                "tìm (v)"
+            ],
+            "sources": [
+                {
+                    "file": "research_document_questions_en.json",
+                    "path": "$.questions[4].vocabulary",
+                    "origin": "source_vocabulary"
+                }
+            ]
+        },
+        {
+            "word": "follow",
+            "meanings_vi": [
+                "đi theo (v)"
+            ],
+            "sources": [
+                {
+                    "file": "research_document_questions_en.json",
+                    "path": "$.destinationVocabulary",
+                    "origin": "source_vocabulary"
+                }
+            ]
+        },
+        {
+            "word": "footsteps",
+            "meanings_vi": [
+                "tiếng bước chân (n)"
+            ],
+            "sources": [
+                {
+                    "file": "research_document_questions_en.json",
+                    "path": "$.questions[1].vocabulary",
+                    "origin": "source_vocabulary"
+                }
+            ]
+        },
+        {
+            "word": "gate",
+            "meanings_vi": [
+                "cổng (n)"
+            ],
+            "sources": [
+                {
+                    "file": "map1_spirit_questions_en.json",
+                    "path": "$.questions[4].vocabulary",
+                    "origin": "source_vocabulary"
+                },
+                {
+                    "file": "map1_spirit_questions_en.json",
+                    "path": "$.questions[5].vocabulary",
+                    "origin": "source_vocabulary"
+                },
+                {
+                    "file": "map1_archaeologist_dialogue.json",
+                    "path": "$.completion.vocabulary",
+                    "origin": "source_vocabulary"
+                }
+            ]
+        },
+        {
+            "word": "gear",
+            "meanings_vi": [
+                "trang bị (n)"
+            ],
+            "sources": [
+                {
+                    "file": "map1_spirit_questions_en.json",
+                    "path": "$.introduction.vocabulary",
+                    "origin": "source_vocabulary"
+                },
+                {
+                    "file": "map1_spirit_questions_en.json",
+                    "path": "$.consent.vocabulary",
+                    "origin": "source_vocabulary"
+                }
+            ]
+        },
+        {
+            "word": "get",
+            "meanings_vi": [
+                "lấy (v)"
+            ],
+            "sources": [
+                {
+                    "file": "map1_archaeologist_dialogue.json",
+                    "path": "$.consent.choices[0].vocabulary",
+                    "origin": "source_vocabulary"
+                },
+                {
+                    "file": "map1_archaeologist_dialogue.json",
+                    "path": "$.consent.vocabulary",
+                    "origin": "source_vocabulary"
+                }
+            ]
+        },
+        {
+            "word": "go to",
+            "meanings_vi": [
+                "đi đến (v. phr.)"
+            ],
+            "sources": [
+                {
+                    "file": "map1_archaeologist_dialogue.json",
+                    "path": "$.consent.vocabulary",
+                    "origin": "source_vocabulary"
+                }
+            ]
+        },
+        {
+            "word": "good",
+            "meanings_vi": [
+                "tốt (adj)"
+            ],
+            "sources": [
+                {
+                    "file": "map1_spirit_questions_en.json",
+                    "path": "$.consent.choices[0].vocabulary",
+                    "origin": "source_vocabulary"
+                }
+            ]
+        },
+        {
+            "word": "ground",
+            "meanings_vi": [
+                "mặt đất (n)"
+            ],
+            "sources": [
+                {
+                    "file": "map1_spirit_questions_en.json",
+                    "path": "$.introduction.vocabulary",
+                    "origin": "source_vocabulary"
+                }
+            ]
+        },
+        {
+            "word": "guard",
+            "meanings_vi": [
+                "canh giữ (v)"
+            ],
+            "sources": [
+                {
+                    "file": "map1_spirit_questions_en.json",
+                    "path": "$.introduction.vocabulary",
+                    "origin": "source_vocabulary"
+                }
+            ]
+        },
+        {
+            "word": "hold",
+            "meanings_vi": [
+                "cầm (v)"
+            ],
+            "sources": [
+                {
+                    "file": "map1_spirit_questions_en.json",
+                    "path": "$.questions[1].vocabulary",
+                    "origin": "source_vocabulary"
+                }
+            ]
+        },
+        {
+            "word": "inside",
+            "meanings_vi": [
+                "bên trong (adv)"
+            ],
+            "sources": [
+                {
+                    "file": "research_document_questions_en.json",
+                    "path": "$.questions[3].vocabulary",
+                    "origin": "source_vocabulary"
+                }
+            ]
+        },
+        {
+            "word": "intruders",
+            "meanings_vi": [
+                "kẻ xâm nhập (n)"
+            ],
+            "sources": [
+                {
+                    "file": "research_document_questions_en.json",
+                    "path": "$.questions[2].vocabulary",
+                    "origin": "source_vocabulary"
+                }
+            ]
+        },
+        {
+            "word": "invulnerable",
+            "meanings_vi": [
+                "không thể bị thương (adj)"
+            ],
+            "sources": [
+                {
+                    "file": "research_document_questions_en.json",
+                    "path": "$.introductionVocabulary",
+                    "origin": "source_vocabulary"
+                }
+            ]
+        },
+        {
+            "word": "item",
+            "meanings_vi": [
+                "vật phẩm (n)"
+            ],
+            "sources": [
+                {
+                    "file": "map1_spirit_questions_en.json",
+                    "path": "$.questions[1].vocabulary",
+                    "origin": "source_vocabulary"
+                }
+            ]
+        },
+        {
+            "word": "lab",
+            "meanings_vi": [
+                "phòng nghiên cứu (n)"
+            ],
+            "sources": [
+                {
+                    "file": "map1_archaeologist_dialogue.json",
+                    "path": "$.consent.choices[0].vocabulary",
+                    "origin": "source_vocabulary"
+                },
+                {
+                    "file": "map1_archaeologist_dialogue.json",
+                    "path": "$.consent.vocabulary",
+                    "origin": "source_vocabulary"
+                },
+                {
+                    "file": "map1_archaeologist_dialogue.json",
+                    "path": "$.completion.vocabulary",
+                    "origin": "source_vocabulary"
+                }
+            ]
+        },
+        {
+            "word": "laboratory",
+            "meanings_vi": [
+                "phòng nghiên cứu (n)"
+            ],
+            "sources": [
+                {
+                    "file": "research_document_questions_en.json",
+                    "path": "$.introductionVocabulary",
+                    "origin": "source_vocabulary"
+                },
+                {
+                    "file": "research_document_questions_en.json",
+                    "path": "$.questions[3].vocabulary",
+                    "origin": "source_vocabulary"
+                }
+            ]
+        },
+        {
+            "word": "let us",
+            "meanings_vi": [
+                "chúng ta hãy (expr.)"
+            ],
+            "sources": [
+                {
+                    "file": "map1_spirit_questions_en.json",
+                    "path": "$.consent.choices[0].vocabulary",
+                    "origin": "source_vocabulary"
+                }
+            ]
+        },
+        {
+            "word": "long",
+            "meanings_vi": [
+                "dài (adj)"
+            ],
+            "sources": [
+                {
+                    "file": "map1_spirit_questions_en.json",
+                    "path": "$.questions[0].vocabulary",
+                    "origin": "source_vocabulary"
+                }
+            ]
+        },
+        {
+            "word": "look for",
+            "meanings_vi": [
+                "tìm kiếm (v. phr.)"
+            ],
+            "sources": [
+                {
+                    "file": "map1_archaeologist_dialogue.json",
+                    "path": "$.completion.vocabulary",
+                    "origin": "source_vocabulary"
+                }
+            ]
+        },
+        {
+            "word": "make your way",
+            "meanings_vi": [
+                "tìm cách đi tới (idiom)"
+            ],
+            "sources": [
+                {
+                    "file": "map1_archaeologist_dialogue.json",
+                    "path": "$.consent.choices[0].vocabulary",
+                    "origin": "source_vocabulary"
+                }
+            ]
+        },
+        {
+            "word": "minimap",
+            "meanings_vi": [
+                "bản đồ nhỏ (n)"
+            ],
+            "sources": [
+                {
+                    "file": "map1_archaeologist_dialogue.json",
+                    "path": "$.completion.vocabulary",
+                    "origin": "source_vocabulary"
+                }
+            ]
+        },
+        {
+            "word": "monsters",
+            "meanings_vi": [
+                "quái vật (n)"
+            ],
+            "sources": [
+                {
+                    "file": "map1_spirit_questions_en.json",
+                    "path": "$.questions[4].vocabulary",
+                    "origin": "source_vocabulary"
+                },
+                {
+                    "file": "map1_archaeologist_dialogue.json",
+                    "path": "$.consent.choices[0].vocabulary",
+                    "origin": "source_vocabulary"
+                }
+            ]
+        },
+        {
+            "word": "near",
+            "meanings_vi": [
+                "gần (prep)"
+            ],
+            "sources": [
+                {
+                    "file": "map1_spirit_questions_en.json",
+                    "path": "$.questions[4].vocabulary",
+                    "origin": "source_vocabulary"
+                }
+            ]
+        },
+        {
+            "word": "nest",
+            "meanings_vi": [
+                "tổ (n)"
+            ],
+            "sources": [
+                {
+                    "file": "research_document_questions_en.json",
+                    "path": "$.questions[1].vocabulary",
+                    "origin": "source_vocabulary"
+                }
+            ]
+        },
+        {
+            "word": "next",
+            "meanings_vi": [
+                "tiếp theo (adj)"
+            ],
+            "sources": [
+                {
+                    "file": "research_document_questions_en.json",
+                    "path": "$.questions[4].vocabulary",
+                    "origin": "source_vocabulary"
+                }
+            ]
+        },
+        {
+            "word": "northern",
+            "meanings_vi": [
+                "ở phía bắc (adj)"
+            ],
+            "sources": [
+                {
+                    "file": "research_document_questions_en.json",
+                    "path": "$.questions[4].vocabulary",
+                    "origin": "source_vocabulary"
+                }
+            ]
+        },
+        {
+            "word": "not ... yet",
+            "meanings_vi": [
+                "chưa ... (cụm phủ định)"
+            ],
+            "sources": [
+                {
+                    "file": "map1_archaeologist_dialogue.json",
+                    "path": "$.consent.choices[1].vocabulary",
+                    "origin": "source_vocabulary"
+                }
+            ]
+        },
+        {
+            "word": "old",
+            "meanings_vi": [
+                "cổ; cũ (adj)"
+            ],
+            "sources": [
+                {
+                    "file": "map1_spirit_questions_en.json",
+                    "path": "$.questions[3].vocabulary",
+                    "origin": "source_vocabulary"
+                }
+            ]
+        },
+        {
+            "word": "on the way",
+            "meanings_vi": [
+                "trên đường (prep. phr.)"
+            ],
+            "sources": [
+                {
+                    "file": "map1_archaeologist_dialogue.json",
+                    "path": "$.consent.choices[0].vocabulary",
+                    "origin": "source_vocabulary"
+                }
+            ]
+        },
+        {
+            "word": "pass",
+            "meanings_vi": [
+                "đi qua (v)"
+            ],
+            "sources": [
+                {
+                    "file": "research_document_questions_en.json",
+                    "path": "$.questions[1].vocabulary",
+                    "origin": "source_vocabulary"
+                }
+            ]
+        },
+        {
+            "word": "please",
+            "meanings_vi": [
+                "làm ơn, xin hãy (adv)"
+            ],
+            "sources": [
+                {
+                    "file": "map1_archaeologist_dialogue.json",
+                    "path": "$.consent.choices[1].vocabulary",
+                    "origin": "source_vocabulary"
+                }
+            ]
+        },
+        {
+            "word": "protect",
+            "meanings_vi": [
+                "bảo vệ (v)"
+            ],
+            "sources": [
+                {
+                    "file": "map1_spirit_questions_en.json",
+                    "path": "$.questions[1].vocabulary",
+                    "origin": "source_vocabulary"
+                }
+            ]
+        },
+        {
+            "word": "protective suits",
+            "meanings_vi": [
+                "đồ bảo hộ (n. phr.)"
+            ],
+            "sources": [
+                {
+                    "file": "research_document_questions_en.json",
+                    "path": "$.questions[0].vocabulary",
+                    "origin": "source_vocabulary"
+                }
+            ]
+        },
+        {
+            "word": "quiet",
+            "meanings_vi": [
+                "yên lặng (adj)"
+            ],
+            "sources": [
+                {
+                    "file": "research_document_questions_en.json",
+                    "path": "$.questions[1].answers[1]",
+                    "origin": "correct_answer"
+                }
+            ]
+        },
+        {
+            "word": "radio transmitter",
+            "meanings_vi": [
+                "máy phát vô tuyến (n. phr.)"
+            ],
+            "sources": [
+                {
+                    "file": "research_document_questions_en.json",
+                    "path": "$.questions[4].vocabulary",
+                    "origin": "source_vocabulary"
+                },
+                {
+                    "file": "research_document_questions_en.json",
+                    "path": "$.destinationVocabulary",
+                    "origin": "source_vocabulary"
+                }
+            ]
+        },
+        {
+            "word": "ready",
+            "meanings_vi": [
+                "sẵn sàng (adj)"
+            ],
+            "sources": [
+                {
+                    "file": "map1_spirit_questions_en.json",
+                    "path": "$.consent.choices[0].vocabulary",
+                    "origin": "source_vocabulary"
+                },
+                {
+                    "file": "map1_spirit_questions_en.json",
+                    "path": "$.consent.choices[1].vocabulary",
+                    "origin": "source_vocabulary"
+                },
+                {
+                    "file": "map1_spirit_questions_en.json",
+                    "path": "$.consent.vocabulary",
+                    "origin": "source_vocabulary"
+                },
+                {
+                    "file": "map1_archaeologist_dialogue.json",
+                    "path": "$.consent.choices[1].vocabulary",
+                    "origin": "source_vocabulary"
+                }
+            ]
+        },
+        {
+            "word": "remain",
+            "meanings_vi": [
+                "giữ trạng thái (v)"
+            ],
+            "sources": [
+                {
+                    "file": "research_document_questions_en.json",
+                    "path": "$.questions[1].vocabulary",
+                    "origin": "source_vocabulary"
+                }
+            ]
+        },
+        {
+            "word": "report",
+            "meanings_vi": [
+                "báo cáo (n)"
+            ],
+            "sources": [
+                {
+                    "file": "research_document_questions_en.json",
+                    "path": "$.introductionVocabulary",
+                    "origin": "source_vocabulary"
+                }
+            ]
+        },
+        {
+            "word": "research team",
+            "meanings_vi": [
+                "nhóm nghiên cứu (n. phr.)"
+            ],
+            "sources": [
+                {
+                    "file": "research_document_questions_en.json",
+                    "path": "$.questions[2].vocabulary",
+                    "origin": "source_vocabulary"
+                }
+            ]
+        },
+        {
+            "word": "river",
+            "meanings_vi": [
+                "con sông (n)"
+            ],
+            "sources": [
+                {
+                    "file": "research_document_questions_en.json",
+                    "path": "$.destinationVocabulary",
+                    "origin": "source_vocabulary"
+                }
+            ]
+        },
+        {
+            "word": "seal",
+            "meanings_vi": [
+                "phong ấn (n)"
+            ],
+            "sources": [
+                {
+                    "file": "map1_spirit_questions_en.json",
+                    "path": "$.consent.vocabulary",
+                    "origin": "source_vocabulary"
+                },
+                {
+                    "file": "map1_spirit_questions_en.json",
+                    "path": "$.completion.vocabulary",
+                    "origin": "source_vocabulary"
+                },
+                {
+                    "file": "map1_archaeologist_dialogue.json",
+                    "path": "$.introduction.vocabulary",
+                    "origin": "source_vocabulary"
+                }
+            ]
+        },
+        {
+            "word": "search for",
+            "meanings_vi": [
+                "tìm kiếm (v. phr.)"
+            ],
+            "sources": [
+                {
+                    "file": "research_document_questions_en.json",
+                    "path": "$.destinationVocabulary",
+                    "origin": "source_vocabulary"
+                }
+            ]
+        },
+        {
+            "word": "sentence",
+            "meanings_vi": [
+                "câu (n)"
+            ],
+            "sources": [
+                {
+                    "file": "map1_spirit_questions_en.json",
+                    "path": "$.questions[5].vocabulary",
+                    "origin": "source_vocabulary"
+                }
+            ]
+        },
+        {
+            "word": "serious",
+            "meanings_vi": [
+                "nghiêm trọng (adj)"
+            ],
+            "sources": [
+                {
+                    "file": "research_document_questions_en.json",
+                    "path": "$.questions[2].vocabulary",
+                    "origin": "source_vocabulary"
+                }
+            ]
+        },
+        {
+            "word": "sharp",
+            "meanings_vi": [
+                "sắc nhọn (adj)"
+            ],
+            "sources": [
+                {
+                    "file": "map1_spirit_questions_en.json",
+                    "path": "$.questions[0].vocabulary",
+                    "origin": "source_vocabulary"
+                },
+                {
+                    "file": "research_document_questions_en.json",
+                    "path": "$.questions[0].vocabulary",
+                    "origin": "source_vocabulary"
+                }
+            ]
+        },
+        {
+            "word": "shield",
+            "meanings_vi": [
+                "chiếc khiên (n)"
+            ],
+            "sources": [
+                {
+                    "file": "map1_spirit_questions_en.json",
+                    "path": "$.completion.vocabulary",
+                    "origin": "source_vocabulary"
+                }
+            ]
+        },
+        {
+            "word": "sound",
+            "meanings_vi": [
+                "vang lên (v)"
+            ],
+            "sources": [
+                {
+                    "file": "research_document_questions_en.json",
+                    "path": "$.questions[3].vocabulary",
+                    "origin": "source_vocabulary"
+                }
+            ]
+        },
+        {
+            "word": "specimen",
+            "meanings_vi": [
+                "mẫu vật (n)"
+            ],
+            "sources": [
+                {
+                    "file": "research_document_questions_en.json",
+                    "path": "$.questions[0].vocabulary",
+                    "origin": "source_vocabulary"
+                },
+                {
+                    "file": "research_document_questions_en.json",
+                    "path": "$.questions[2].vocabulary",
+                    "origin": "source_vocabulary"
+                }
+            ]
+        },
+        {
+            "word": "specimens",
+            "meanings_vi": [
+                "các mẫu vật (n)"
+            ],
+            "sources": [
+                {
+                    "file": "research_document_questions_en.json",
+                    "path": "$.introductionVocabulary",
+                    "origin": "source_vocabulary"
+                }
+            ]
+        },
+        {
+            "word": "spirit",
+            "meanings_vi": [
+                "linh hồn (n)"
+            ],
+            "sources": [
+                {
+                    "file": "map1_spirit_questions_en.json",
+                    "path": "$.introduction.vocabulary",
+                    "origin": "source_vocabulary"
+                }
+            ]
+        },
+        {
+            "word": "start",
+            "meanings_vi": [
+                "bắt đầu (v)"
+            ],
+            "sources": [
+                {
+                    "file": "map1_spirit_questions_en.json",
+                    "path": "$.consent.choices[0].vocabulary",
+                    "origin": "source_vocabulary"
+                }
+            ]
+        },
+        {
+            "word": "stay",
+            "meanings_vi": [
+                "ở lại (v)"
+            ],
+            "sources": [
+                {
+                    "file": "research_document_questions_en.json",
+                    "path": "$.questions[3].vocabulary",
+                    "origin": "source_vocabulary"
+                }
+            ]
+        },
+        {
+            "word": "sword",
+            "meanings_vi": [
+                "thanh kiếm (n)"
+            ],
+            "sources": [
+                {
+                    "file": "map1_spirit_questions_en.json",
+                    "path": "$.completion.vocabulary",
+                    "origin": "source_vocabulary"
+                }
+            ]
+        },
+        {
+            "word": "symbols",
+            "meanings_vi": [
+                "các ký hiệu (n)"
+            ],
+            "sources": [
+                {
+                    "file": "map1_archaeologist_dialogue.json",
+                    "path": "$.introduction.vocabulary",
+                    "origin": "source_vocabulary"
+                }
+            ]
+        },
+        {
+            "word": "table",
+            "meanings_vi": [
+                "bàn (n)"
+            ],
+            "sources": [
+                {
+                    "file": "map1_archaeologist_dialogue.json",
+                    "path": "$.completion.vocabulary",
+                    "origin": "source_vocabulary"
+                }
+            ]
+        },
+        {
+            "word": "take",
+            "meanings_vi": [
+                "lấy (v)"
+            ],
+            "sources": [
+                {
+                    "file": "map1_spirit_questions_en.json",
+                    "path": "$.completion.vocabulary",
+                    "origin": "source_vocabulary"
+                }
+            ]
+        },
+        {
+            "word": "take your time",
+            "meanings_vi": [
+                "cứ thong thả (idiom)"
+            ],
+            "sources": [
+                {
+                    "file": "map1_spirit_questions_en.json",
+                    "path": "$.consent.choices[1].vocabulary",
+                    "origin": "source_vocabulary"
+                }
+            ]
+        },
+        {
+            "word": "team",
+            "meanings_vi": [
+                "nhóm (n)"
+            ],
+            "sources": [
+                {
+                    "file": "research_document_questions_en.json",
+                    "path": "$.questions[4].vocabulary",
+                    "origin": "source_vocabulary"
+                }
+            ]
+        },
+        {
+            "word": "threat",
+            "meanings_vi": [
+                "mối đe dọa (n)"
+            ],
+            "sources": [
+                {
+                    "file": "research_document_questions_en.json",
+                    "path": "$.questions[2].answers[2]",
+                    "origin": "correct_answer"
+                }
+            ]
+        },
+        {
+            "word": "tower",
+            "meanings_vi": [
+                "tòa tháp (n)"
+            ],
+            "sources": [
+                {
+                    "file": "map1_spirit_questions_en.json",
+                    "path": "$.introduction.vocabulary",
+                    "origin": "source_vocabulary"
+                },
+                {
+                    "file": "map1_spirit_questions_en.json",
+                    "path": "$.questions[3].vocabulary",
+                    "origin": "source_vocabulary"
+                }
+            ]
+        },
+        {
+            "word": "use",
+            "meanings_vi": [
+                "sử dụng (v)"
+            ],
+            "sources": [
+                {
+                    "file": "research_document_questions_en.json",
+                    "path": "$.questions[0].vocabulary",
+                    "origin": "source_vocabulary"
+                }
+            ]
+        },
+        {
+            "word": "wait",
+            "meanings_vi": [
+                "chờ đợi (v)"
+            ],
+            "sources": [
+                {
+                    "file": "research_document_questions_en.json",
+                    "path": "$.questions[4].vocabulary",
+                    "origin": "source_vocabulary"
+                }
+            ]
+        },
+        {
+            "word": "wake up",
+            "meanings_vi": [
+                "tỉnh dậy (v. phr.)"
+            ],
+            "sources": [
+                {
+                    "file": "research_document_questions_en.json",
+                    "path": "$.questions[2].vocabulary",
+                    "origin": "source_vocabulary"
+                }
+            ]
+        },
+        {
+            "word": "watchtower",
+            "meanings_vi": [
+                "tháp canh (n)"
+            ],
+            "sources": [
+                {
+                    "file": "research_document_questions_en.json",
+                    "path": "$.destinationVocabulary",
+                    "origin": "source_vocabulary"
+                }
+            ]
+        },
+        {
+            "word": "weapon",
+            "meanings_vi": [
+                "vũ khí (n)"
+            ],
+            "sources": [
+                {
+                    "file": "map1_spirit_questions_en.json",
+                    "path": "$.questions[0].vocabulary",
+                    "origin": "source_vocabulary"
+                }
+            ]
+        },
+        {
+            "word": "when",
+            "meanings_vi": [
+                "khi (conj)"
+            ],
+            "sources": [
+                {
+                    "file": "map1_spirit_questions_en.json",
+                    "path": "$.consent.choices[1].vocabulary",
+                    "origin": "source_vocabulary"
+                },
+                {
+                    "file": "map1_archaeologist_dialogue.json",
+                    "path": "$.consent.choices[1].vocabulary",
+                    "origin": "source_vocabulary"
+                }
+            ]
+        },
+        {
+            "word": "will",
+            "meanings_vi": [
+                "sẽ; dùng trong lời đề nghị ở câu này (modal v)"
+            ],
+            "sources": [
+                {
+                    "file": "map1_archaeologist_dialogue.json",
+                    "path": "$.consent.vocabulary",
+                    "origin": "source_vocabulary"
+                }
+            ]
+        }
+    ],
+    "grammar": [
+        {
+            "id": "be_adjective",
+            "structure": "S + am/is/are + adjective",
+            "meaning_vi": "Mô tả trạng thái hoặc đặc điểm. I dùng am; chủ ngữ số ít dùng is; you/we/they và số nhiều dùng are.",
+            "example_en": "The tower is old.",
+            "sources": [
+                {
+                    "file": "map1_spirit_questions_en.json",
+                    "path": "$.questions[2].grammar",
+                    "original_note_vi": "S + be + tính từ: mô tả trạng thái."
+                },
+                {
+                    "file": "map1_spirit_questions_en.json",
+                    "path": "$.questions[3].grammar",
+                    "original_note_vi": "S + be + tính từ: mô tả đặc điểm."
+                },
+                {
+                    "file": "map1_spirit_questions_en.json",
+                    "path": "$.questions[5].grammar",
+                    "original_note_vi": "S + be + tính từ: mô tả trạng thái."
+                }
+            ]
+        },
+        {
+            "id": "be_location",
+            "structure": "S + am/is/are + place phrase",
+            "meaning_vi": "Nói vị trí của người hoặc vật.",
+            "example_en": "The monsters are near the gate.",
+            "sources": [
+                {
+                    "file": "map1_spirit_questions_en.json",
+                    "path": "$.questions[4].grammar",
+                    "original_note_vi": "S + be + cụm vị trí: nói vị trí."
+                }
+            ]
+        },
+        {
+            "id": "are_you_adjective",
+            "structure": "Are you + adjective?",
+            "meaning_vi": "Hỏi trạng thái hoặc mức độ sẵn sàng của người nghe.",
+            "example_en": "Are you ready?",
+            "sources": [
+                {
+                    "file": "map1_spirit_questions_en.json",
+                    "path": "$.consent.grammar",
+                    "original_note_vi": "Are you + tính từ?: Bạn có …?"
+                }
+            ]
+        },
+        {
+            "id": "this_is",
+            "structure": "This is + noun phrase",
+            "meaning_vi": "Giới thiệu một người, vật hoặc địa điểm ở gần.",
+            "example_en": "This is the laboratory the archaeologist mentioned.",
+            "sources": [
+                {
+                    "file": "research_document_questions_en.json",
+                    "path": "$.introductionGrammar",
+                    "original_note_vi": "This is + danh từ: Đây là …"
+                }
+            ]
+        },
+        {
+            "id": "present_continuous",
+            "structure": "S + am/is/are + V-ing",
+            "meaning_vi": "Diễn tả hành động đang diễn ra.",
+            "example_en": "Monsters are attacking the city.",
+            "sources": [
+                {
+                    "file": "map1_spirit_questions_en.json",
+                    "path": "$.introduction.grammar",
+                    "original_note_vi": "am/is/are + V-ing: đang …"
+                },
+                {
+                    "file": "research_document_questions_en.json",
+                    "path": "$.questions[4].grammar",
+                    "original_note_vi": "am/is/are + V-ing: đang …"
+                }
+            ]
+        },
+        {
+            "id": "have_has",
+            "structure": "S + have/has + noun phrase",
+            "meaning_vi": "Diễn tả sở hữu hoặc đặc điểm. He/she/it và danh từ số ít dùng has; các chủ ngữ còn lại dùng have.",
+            "example_en": "It has a long, sharp blade.",
+            "sources": [
+                {
+                    "file": "map1_spirit_questions_en.json",
+                    "path": "$.questions[0].grammar",
+                    "original_note_vi": "have/has + N: có …"
+                }
+            ]
+        },
+        {
+            "id": "be_linked_to",
+            "structure": "S + am/is/are + linked to + noun phrase",
+            "meaning_vi": "Nói ai hoặc cái gì có liên quan đến ai hoặc cái gì.",
+            "example_en": "These monsters are linked to an ancient seal under the city.",
+            "sources": [
+                {
+                    "file": "map1_archaeologist_dialogue.json",
+                    "path": "$.introduction.grammar",
+                    "original_note_vi": "Công thức: Chủ ngữ + am/is/are + linked to + danh từ/cụm danh từ.\nNghĩa: Ai/cái gì có liên quan đến ai/cái gì.\nCách dùng: Chọn am/is/are theo chủ ngữ: I dùng am; he/she/it và danh từ số ít dùng is; you/we/they và danh từ số nhiều dùng are."
+                }
+            ]
+        },
+        {
+            "id": "can_ability",
+            "structure": "S + can + base verb",
+            "meaning_vi": "Diễn tả khả năng; động từ sau can giữ nguyên dạng.",
+            "example_en": "The creature can detect footsteps.",
+            "sources": [
+                {
+                    "file": "research_document_questions_en.json",
+                    "path": "$.questions[1].grammar",
+                    "original_note_vi": "can + V nguyên mẫu: có thể …"
+                }
+            ]
+        },
+        {
+            "id": "will_future",
+            "structure": "S + will + base verb",
+            "meaning_vi": "Diễn tả quyết định, lời hứa hoặc kết quả trong tương lai; động từ sau will không thêm s/es.",
+            "example_en": "Four or five mistakes will make them invulnerable and able to kill you in one hit.",
+            "sources": [
+                {
+                    "file": "map1_archaeologist_dialogue.json",
+                    "path": "$.consent.choices[0].grammar",
+                    "original_note_vi": "Công thức: Chủ ngữ + will + động từ nguyên mẫu không có to + phần còn lại của câu.\nNghĩa: Ai đó sẽ làm gì.\nCách dùng: Trong lời đáp này, will diễn tả quyết định nhận nhiệm vụ và lời hứa thực hiện. Động từ sau will giữ nguyên dạng, không thêm s/es hoặc đuôi quá khứ."
+                }
+            ]
+        },
+        {
+            "id": "will_you_request",
+            "structure": "Will you + base verb ...?",
+            "meaning_vi": "Đề nghị hoặc nhờ người nghe làm một việc; trong ngữ cảnh này không chỉ là hỏi tương lai.",
+            "example_en": "Will you go to my lab and get the document?",
+            "sources": [
+                {
+                    "file": "map1_archaeologist_dialogue.json",
+                    "path": "$.consent.grammar",
+                    "original_note_vi": "Công thức: Will you + động từ nguyên mẫu không có to + phần còn lại của câu + ?\nNghĩa trong lời thoại: Anh có sẵn lòng làm gì không? / Anh làm giúp tôi việc này được không?\nCách dùng: Đây là lời đề nghị hoặc nhờ người nghe làm một việc. Trong ngữ cảnh này, will không chỉ dùng để hỏi về tương lai."
+                }
+            ]
+        },
+        {
+            "id": "imperative",
+            "structure": "Base verb + ...",
+            "meaning_vi": "Câu mệnh lệnh hoặc hướng dẫn; thường lược bỏ chủ ngữ you.",
+            "example_en": "Follow the river north and search for the radio transmitter.",
+            "sources": [
+                {
+                    "file": "research_document_questions_en.json",
+                    "path": "$.destinationGrammar",
+                    "original_note_vi": "V nguyên mẫu: câu mệnh lệnh."
+                }
+            ]
+        },
+        {
+            "id": "negative_imperative",
+            "structure": "Do not + base verb",
+            "meaning_vi": "Yêu cầu không làm một việc.",
+            "example_en": "Do not stay inside.",
+            "sources": [
+                {
+                    "file": "research_document_questions_en.json",
+                    "path": "$.questions[3].grammar",
+                    "original_note_vi": "Do not + V nguyên mẫu: Đừng …"
+                }
+            ]
+        },
+        {
+            "id": "take_noun",
+            "structure": "Take + noun phrase",
+            "meaning_vi": "Mệnh lệnh lấy hoặc mang theo một vật.",
+            "example_en": "Take the sword and the shield.",
+            "sources": [
+                {
+                    "file": "map1_spirit_questions_en.json",
+                    "path": "$.completion.grammar",
+                    "original_note_vi": "Take + N: Hãy lấy …"
+                }
+            ]
+        },
+        {
+            "id": "look_for",
+            "structure": "Look for + noun phrase",
+            "meaning_vi": "Mệnh lệnh tìm kiếm một người, đồ vật hoặc địa điểm.",
+            "example_en": "Look for my lab on the minimap.",
+            "sources": [
+                {
+                    "file": "map1_archaeologist_dialogue.json",
+                    "path": "$.completion.grammar",
+                    "original_note_vi": "Công thức: Look for + danh từ/cụm danh từ.\nNghĩa: Hãy tìm kiếm ai/cái gì/địa điểm nào.\nCách dùng: Đây là câu mệnh lệnh, thường lược bỏ chủ ngữ you. Look for có nghĩa là tìm kiếm; sau for là người, vật hoặc địa điểm cần tìm."
+                }
+            ]
+        },
+        {
+            "id": "let_us",
+            "structure": "Let us + base verb",
+            "meaning_vi": "Đưa ra lời rủ rê hoặc đề nghị cùng làm gì.",
+            "example_en": "Let us start.",
+            "sources": [
+                {
+                    "file": "map1_spirit_questions_en.json",
+                    "path": "$.consent.choices[0].grammar",
+                    "original_note_vi": "Let us + V: Chúng ta hãy …"
+                }
+            ]
+        },
+        {
+            "id": "when_clause",
+            "structure": "Main clause + when + S + verb",
+            "meaning_vi": "Mệnh đề when cho biết thời điểm hoặc trạng thái để hành động xảy ra.",
+            "example_en": "Come back when you are ready.",
+            "sources": [
+                {
+                    "file": "map1_spirit_questions_en.json",
+                    "path": "$.consent.choices[1].grammar",
+                    "original_note_vi": "when + mệnh đề: khi …"
+                }
+            ]
+        },
+        {
+            "id": "imperative_when",
+            "structure": "Base verb + ... + when + S + verb",
+            "meaning_vi": "Kết hợp mệnh lệnh với thời điểm thực hiện; câu nguồn dùng hiện tại đơn sau when.",
+            "example_en": "Come back when you are ready.",
+            "sources": [
+                {
+                    "file": "map1_archaeologist_dialogue.json",
+                    "path": "$.consent.choices[1].grammar",
+                    "original_note_vi": "Công thức trong lời thoại: Động từ nguyên mẫu + ... + when + chủ ngữ + động từ được chia theo thì.\nNghĩa: Hãy làm gì khi một thời điểm hoặc trạng thái xảy ra.\nCách dùng: Phần đầu là câu mệnh lệnh, thường lược bỏ chủ ngữ you. When nghĩa là khi; mệnh đề sau when cho biết lúc thực hiện hành động. Trong câu này, you are ready nghĩa là anh đã sẵn sàng."
+                }
+            ]
+        },
+        {
+            "id": "hold_to",
+            "structure": "hold + object + to + base verb",
+            "meaning_vi": "Cầm hoặc giữ một vật để làm gì; to + động từ chỉ mục đích.",
+            "example_en": "You hold it to protect your body in a fight.",
+            "sources": [
+                {
+                    "file": "map1_spirit_questions_en.json",
+                    "path": "$.questions[1].grammar",
+                    "original_note_vi": "hold … to + V: cầm … để …"
+                }
+            ]
+        },
+        {
+            "id": "use_to",
+            "structure": "use + object + to + base verb",
+            "meaning_vi": "Dùng một vật để làm gì; khác với used to diễn tả thói quen trong quá khứ.",
+            "example_en": "Specimen A uses its sharp claws to cut through protective suits.",
+            "sources": [
+                {
+                    "file": "research_document_questions_en.json",
+                    "path": "$.questions[0].grammar",
+                    "original_note_vi": "use … to + V: dùng … để …"
+                }
+            ]
+        },
+        {
+            "id": "keep_ing",
+            "structure": "S + keep/keeps + V-ing",
+            "meaning_vi": "Tiếp tục hoặc liên tục làm một việc.",
+            "example_en": "The specimen keeps chasing intruders after it wakes up.",
+            "sources": [
+                {
+                    "file": "research_document_questions_en.json",
+                    "path": "$.questions[2].grammar",
+                    "original_note_vi": "keep + V-ing: tiếp tục …"
+                }
+            ]
+        }
+    ]
+}
