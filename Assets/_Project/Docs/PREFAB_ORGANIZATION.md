@@ -4,7 +4,7 @@ Organized 416 prefabs. Verified unchanged GUID dependencies for 425 prefab/scene
 
 Canonical reusable prefabs sit directly in their category. Exported instances sit in Variants/<scene>. Compound object groups sit in Layouts/<scene>; their internal hierarchy is preserved.
 
-StoryDialogue and FlaskEnglishQuiz remain inside Resources folders with their original load keys. No duplicate assets were deleted. Other imported art packages were not moved.
+StoryDialogue remains inside Resources folders with its original load key. No duplicate assets were deleted. Other imported art packages were not moved.
 
 | Destination folder | Prefabs moved |
 |---|---:|
@@ -269,7 +269,6 @@ StoryDialogue and FlaskEnglishQuiz remain inside Resources folders with their or
 | Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0124_ChestQuizSystem.prefab | Assets/_Project/Learning/Quiz/Prefabs/Systems/Variants/Merged/ChestQuizSystem_0124.prefab |
 | Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0125_CityExpansion.prefab | Assets/_Project/Gameplay/Grid/Prefabs/Layouts/Merged/CityExpansion.prefab |
 | Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0126_DialogueCanvas.prefab | Assets/_Project/UI/Prefabs/Dialogue/Variants/Merged/DialogueCanvas_0126.prefab |
-| Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0127_Flask English Quiz Test.prefab | Assets/_Project/Learning/Quiz/Prefabs/Panels/Variants/Merged/Flask English Quiz Test_0127.prefab |
 | Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0128_Grid.prefab | Assets/_Project/Gameplay/Grid/Prefabs/Layouts/Merged/Grid.prefab |
 | Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0129_HidingAndTraps.prefab | Assets/_Project/Gameplay/Interaction/Prefabs/Layouts/Merged/HidingAndTraps.prefab |
 | Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0130_House_1.prefab | Assets/_Project/Gameplay/Items/Prefabs/Houses/Variants/Merged/House_1_0130.prefab |
@@ -466,7 +465,6 @@ StoryDialogue and FlaskEnglishQuiz remain inside Resources folders with their or
 | Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0179_ChestQuizSystem.prefab | Assets/_Project/Learning/Quiz/Prefabs/Systems/Variants/Scene1/ChestQuizSystem_0179.prefab |
 | Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0180_CityExpansion.prefab | Assets/_Project/Gameplay/Grid/Prefabs/Layouts/Scene1/CityExpansion.prefab |
 | Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0181_DialogueCanvas.prefab | Assets/_Project/UI/Prefabs/Dialogue/Variants/Scene1/DialogueCanvas_0181.prefab |
-| Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0182_Flask English Quiz Test.prefab | Assets/_Project/Learning/Quiz/Prefabs/Panels/Variants/Scene1/Flask English Quiz Test_0182.prefab |
 | Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0183_Grid.prefab | Assets/_Project/Gameplay/Grid/Prefabs/Layouts/Scene1/Grid.prefab |
 | Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0184_HidingAndTraps.prefab | Assets/_Project/Gameplay/Interaction/Prefabs/Layouts/Scene1/HidingAndTraps.prefab |
 | Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0185_LayeredCityTerrain.prefab | Assets/_Project/Gameplay/Grid/Prefabs/Terrain/Variants/Scene1/LayeredCityTerrain_0185.prefab |
@@ -503,7 +501,6 @@ StoryDialogue and FlaskEnglishQuiz remain inside Resources folders with their or
 | Assets/_Project/Prefab1/Export_20261119_193215_474/Sence1_final/0024_GroundShadow.prefab | Assets/_Project/Gameplay/Characters/Common/Prefabs/Shadows/Variants/Sence1_final/GroundShadow_0024.prefab |
 | Assets/_Project/Prefab1/Export_20261119_193215_474/Sence1_final/0025_ChestQuizSystem.prefab | Assets/_Project/Learning/Quiz/Prefabs/Systems/Variants/Sence1_final/ChestQuizSystem_0025.prefab |
 | Assets/_Project/Prefab1/Export_20261119_193215_474/Sence1_final/0026_DialogueCanvas.prefab | Assets/_Project/UI/Prefabs/Dialogue/Variants/Sence1_final/DialogueCanvas_0026.prefab |
-| Assets/_Project/Prefab1/Export_20261119_193215_474/Sence1_final/0027_Flask English Quiz Test.prefab | Assets/_Project/Learning/Quiz/Prefabs/Panels/Variants/Sence1_final/Flask English Quiz Test_0027.prefab |
 | Assets/_Project/Prefab1/Export_20261119_193215_474/Sence1_final/0028_Grid.prefab | Assets/_Project/Gameplay/Grid/Prefabs/Layouts/Sence1_final/Grid.prefab |
 | Assets/_Project/Prefab1/Export_20261119_193215_474/Sence1_final/0029_House_1.prefab | Assets/_Project/Gameplay/Items/Prefabs/Houses/Variants/Sence1_final/House_1_0029.prefab |
 | Assets/_Project/Prefab1/Export_20261119_193215_474/Sence1_final/0030_lab.prefab | Assets/_Project/Gameplay/Items/Prefabs/Buildings/Laboratories/Variants/Sence1_final/lab_0030.prefab |
@@ -517,5 +514,4 @@ StoryDialogue and FlaskEnglishQuiz remain inside Resources folders with their or
 | Assets/_Project/Prefab1/Export_20261119_193215_474/Sence1_final/0038_ScientistNPC.prefab | Assets/_Project/Gameplay/Characters/NPC/Prefabs/Scientist/Variants/Sence1_final/ScientistNPC_0038.prefab |
 | Assets/_Project/Prefab1/Export_20261119_193215_474/Sence1_final/0039_Tower.prefab | Assets/_Project/Gameplay/Items/Prefabs/Buildings/Towers/Variants/Sence1_final/Tower_0039.prefab |
 | Assets/_Project/Prefab1/Export_20261119_193215_474/Sence1_final/0040_TreasureMirrorDialogueCanvas.prefab | Assets/_Project/UI/Prefabs/Dialogue/Variants/Sence1_final/TreasureMirrorDialogueCanvas_0040.prefab |
-| Assets/_Project/Resources/FlaskEnglishQuiz.prefab | Assets/_Project/Learning/Quiz/Prefabs/Resources/FlaskEnglishQuiz.prefab |
 | Assets/_Project/Resources/StoryDialogue.prefab | Assets/_Project/UI/Prefabs/Resources/StoryDialogue.prefab |

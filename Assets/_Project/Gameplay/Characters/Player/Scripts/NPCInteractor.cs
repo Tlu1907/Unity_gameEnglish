@@ -9,6 +9,7 @@ public sealed class NPCInteractor : MonoBehaviour
     [SerializeField, Min(.1f)] private float talkDistance = .85f;
     private StoryNPC[] stories;
     private NPCDialogueTrigger[] legacy;
+    private TempleDialogueTrigger[] temples;
     private MonoBehaviour target;
     private Collider2D feet;
     private GameObject prompt;
@@ -19,6 +20,7 @@ public sealed class NPCInteractor : MonoBehaviour
         feet=GetComponent<Collider2D>();
         stories=FindObjectsByType<StoryNPC>(FindObjectsInactive.Include);
         legacy=FindObjectsByType<NPCDialogueTrigger>(FindObjectsInactive.Include);
+        temples=FindObjectsByType<TempleDialogueTrigger>(FindObjectsInactive.Include);
         var hud=FindAnyObjectByType<GameStateUI>();
         var canvas=hud!=null?hud.GetComponentInParent<Canvas>():null;
         if (canvas == null)
@@ -44,11 +46,14 @@ public sealed class NPCInteractor : MonoBehaviour
             if(npc!=null && npc.isActiveAndEnabled && npc.IsAvailable && npc.CurrentDialogue!=null)Consider(npc,ref best);
         foreach(var npc in legacy)
             if(npc!=null && npc.CanTalk)Consider(npc,ref best);
+        foreach(var temple in temples)
+            if(temple!=null && temple.IsAvailable)Consider(temple,ref best);
     }
     private void Consider(MonoBehaviour npc,ref float best)
     {
         var solid=npc.transform.parent.GetComponent<Collider2D>();
-        Vector2 position=solid!=null?(Vector2)solid.bounds.center:(Vector2)npc.transform.parent.position;
+        Vector2 position=npc is TempleDialogueTrigger ? (Vector2)npc.transform.position
+            : solid!=null?(Vector2)solid.bounds.center:(Vector2)npc.transform.parent.position;
         float distance=(position-(Vector2)feet.bounds.center).sqrMagnitude;
         if(distance>best)return;
         // Walls, trees and other solid props block interaction through them.
@@ -59,7 +64,7 @@ public sealed class NPCInteractor : MonoBehaviour
     public bool TryInteract()
     {
         RefreshTarget();
-        bool opened=target is StoryNPC story?story.TryTalk():target is NPCDialogueTrigger old && old.TryTalk();
+        bool opened=target is StoryNPC story?story.TryTalk():target is TempleDialogueTrigger temple?temple.TryTalk():target is NPCDialogueTrigger old && old.TryTalk();
         if(opened && prompt!=null)prompt.SetActive(false);
         return opened;
     }
@@ -68,7 +73,7 @@ public sealed class NPCInteractor : MonoBehaviour
         RefreshTarget();
         prompt.SetActive(target!=null);
         if(target==null)return;
-        string speaker=target is StoryNPC story?story.CurrentDialogue.speakerName:((NPCDialogueTrigger)target).SpeakerName;
+        string speaker=target is StoryNPC story?story.CurrentDialogue.speakerName:target is TempleDialogueTrigger temple?temple.SpeakerName:((NPCDialogueTrigger)target).SpeakerName;
         label.text="[E] Nói chuyện — "+speaker;
         if(Input.GetKeyDown(KeyCode.E))TryInteract();
     }

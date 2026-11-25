@@ -1,0 +1,243 @@
+{
+  "dialogue_id": "map2_forest_ranger",
+  "scene_facts": "The player is an adventurer who has just saved the forest ranger from a monster. Strange creatures are attacking the forest.",
+  "defaults": {
+    "strict_form": false,
+    "min_words": 3,
+    "pass_total": 6,
+    "reward_total": 8,
+    "max_attempts": 3
+  },
+  "questions": {
+    "ranger_question_01_player_identity": {
+      "target_forms": {
+        "formula": "I am + N / My name is + name",
+        "accepted_tenses": [
+          "present_simple"
+        ],
+        "hint_vi": "Gợi ý (không bắt buộc): giới thiệu bản thân bằng I am ... hoặc My name is ..."
+      },
+      "min_words": 2,
+      "expected_intent": "The player says who they are: a name and/or a role or job (for example adventurer, hero, student, traveler).",
+      "expect_hint_vi": "Hãy giới thiệu tên hoặc vai trò của bạn, ví dụ: I am ...",
+      "references": [
+        "I am Alex. I am an adventurer.",
+        "My name is Alex, and I am a traveler."
+      ],
+      "few_shot": [
+        {
+          "answer": "I am Alex. I am a traveler.",
+          "output": {
+            "relevance": "story",
+            "meaning": 5,
+            "feedback_vi": "Rất tốt! Bạn giới thiệu tên và vai trò rõ ràng.",
+            "better_answer": "I am Alex, a traveler who came to help the forest."
+          }
+        },
+        {
+          "answer": "I are a hero from the village.",
+          "output": {
+            "relevance": "story",
+            "meaning": 5,
+            "feedback_vi": "Ý rất rõ ràng: bạn là một anh hùng từ làng.",
+            "better_answer": "I am a hero from the village, and I came to help you."
+          }
+        },
+        {
+          "answer": "The forest is beautiful.",
+          "output": {
+            "relevance": "scene",
+            "meaning": 2,
+            "feedback_vi": "Câu nói về khu rừng nhưng chưa cho biết bạn là ai.",
+            "better_answer": "I am Alex, an adventurer who loves this forest."
+          }
+        },
+        {
+          "answer": "I like pizza.",
+          "output": {
+            "relevance": "off",
+            "meaning": 0,
+            "feedback_vi": "Câu này không trả lời bạn là ai. Hãy nói tên hoặc vai trò của bạn nhé!",
+            "better_answer": "I am Alex, an adventurer."
+          }
+        }
+      ],
+      "story_examples": [
+        "I am Alex.",
+        "a traveler",
+        "a hunter",
+        "a student"
+      ],
+      "off_examples": [
+        "I like pizza.",
+        "The weather is nice."
+      ],
+      "scene_cap": null
+    },
+    "ranger_question_02_player_purpose": {
+      "target_forms": {
+        "formula": "I am + V-ing + ...",
+        "accepted_tenses": [
+          "present_continuous",
+          "present_simple"
+        ],
+        "hint_vi": "Gợi ý (không bắt buộc): bạn có thể dùng hiện tại tiếp diễn, ví dụ: I am looking for ..."
+      },
+      "expected_intent": "The player says what they are doing or why they are in the forest (for example looking for something, exploring, helping the ranger, hunting the monsters).",
+      "expect_hint_vi": "Hãy nói bạn đang làm gì trong rừng, ví dụ: I am looking for ...",
+      "references": [
+        "I am looking for the monsters.",
+        "I am exploring the forest to help you."
+      ],
+      "few_shot": [
+        {
+          "answer": "I am tracking the creatures that set the forest on fire.",
+          "output": {
+            "relevance": "story",
+            "meaning": 5,
+            "feedback_vi": "Rất hợp với câu chuyện: bạn đang lần theo những con quái vật đốt rừng.",
+            "better_answer": "I am tracking the creatures that set the forest on fire to protect the animals."
+          }
+        },
+        {
+          "answer": "I am go to find the monsters.",
+          "output": {
+            "relevance": "story",
+            "meaning": 5,
+            "feedback_vi": "Ý rõ ràng và đúng câu chuyện: bạn đang đi tìm quái vật.",
+            "better_answer": "I am going to find the monsters that are destroying the forest."
+          }
+        },
+        {
+          "answer": "I am searching for my lost cat.",
+          "output": {
+            "relevance": "scene",
+            "meaning": 3,
+            "feedback_vi": "Bạn đã trả lời câu hỏi, nhưng việc này chưa liên quan đến quái vật đang phá rừng.",
+            "better_answer": "I am searching for my lost cat, and I will help you fight the creatures."
+          }
+        },
+        {
+          "answer": "I am picking herbs for my soup.",
+          "output": {
+            "relevance": "scene",
+            "meaning": 3,
+            "feedback_vi": "Hợp với khu rừng nhưng chưa nói đến mối nguy từ quái vật.",
+            "better_answer": "I am picking herbs to heal the animals that the creatures hurt."
+          }
+        },
+        {
+          "answer": "I am playing football here.",
+          "output": {
+            "relevance": "off",
+            "meaning": 0,
+            "feedback_vi": "Hoạt động này không thuộc câu chuyện. Hãy nói bạn đang tìm quái vật hoặc giúp ai đó nhé!",
+            "better_answer": "I am looking for the creatures that are attacking the forest."
+          }
+        },
+        {
+          "answer": "The creatures are very strong.",
+          "output": {
+            "relevance": "story",
+            "meaning": 2,
+            "feedback_vi": "Câu liên quan đến truyện nhưng chưa trả lời bạn đang làm gì trong rừng.",
+            "better_answer": "I am here to stop the strong creatures from hurting the forest."
+          }
+        }
+      ],
+      "story_examples": [
+        "hunting the monsters",
+        "helping the ranger",
+        "protecting the animals",
+        "investigating the strange creatures",
+        "putting out the fire"
+      ],
+      "scene_examples": [
+        "looking for my lost dog",
+        "picking herbs for myself",
+        "camping",
+        "walking in the forest"
+      ],
+      "off_examples": [
+        "playing football",
+        "watching TV",
+        "doing homework",
+        "eating pizza"
+      ],
+      "scene_cap": 3,
+      "scene_hint_vi": "Câu này hợp với khu rừng nhưng chưa liên quan đến cốt truyện (quái vật đang phá rừng). Thử nói bạn đang tìm quái vật hoặc giúp kiểm lâm nhé!"
+    },
+    "ranger_question_03_creature_origin": {
+      "target_forms": {
+        "formula": "I (don't) know ... / I think they come ...",
+        "accepted_tenses": [
+          "present_simple"
+        ],
+        "hint_vi": "Gợi ý (không bắt buộc): I don't know ... hoặc I think they come from ..."
+      },
+      "expected_intent": "The player says whether they know where the creatures come from (yes, no, or a guess) and may add a short reason or guess.",
+      "expect_hint_vi": "Hãy nói bạn có biết nguồn gốc của chúng không, ví dụ: No, I don't know. / I think they come from ...",
+      "references": [
+        "No, I do not know where they come from.",
+        "I think they come from another world."
+      ],
+      "few_shot": [
+        {
+          "answer": "No, I don't know where they come from.",
+          "output": {
+            "relevance": "story",
+            "meaning": 5,
+            "feedback_vi": "Rất tốt! Bạn trả lời rõ là bạn không biết.",
+            "better_answer": "No, I do not know where they come from, but I want to find out."
+          }
+        },
+        {
+          "answer": "I think they comes from the mountain.",
+          "output": {
+            "relevance": "story",
+            "meaning": 5,
+            "feedback_vi": "Ý hay! Bạn đưa ra một phỏng đoán hợp lý.",
+            "better_answer": "I think they come from the mountain in the north."
+          }
+        },
+        {
+          "answer": "Yes.",
+          "output": {
+            "relevance": "story",
+            "meaning": 3,
+            "feedback_vi": "Bạn đã trả lời có, nhưng hãy nói thêm chúng đến từ đâu.",
+            "better_answer": "Yes, I think they come from another world."
+          }
+        },
+        {
+          "answer": "They are very strong monsters.",
+          "output": {
+            "relevance": "story",
+            "meaning": 2,
+            "feedback_vi": "Câu liên quan đến quái vật nhưng chưa trả lời chúng đến từ đâu.",
+            "better_answer": "No, I do not know where these strong monsters come from."
+          }
+        },
+        {
+          "answer": "I am hungry.",
+          "output": {
+            "relevance": "off",
+            "meaning": 0,
+            "feedback_vi": "Câu này không trả lời câu hỏi. Hãy nói bạn có biết chúng đến từ đâu không nhé!",
+            "better_answer": "No, I do not know where they come from."
+          }
+        }
+      ],
+      "story_examples": [
+        "No, I don't know.",
+        "I think they come from the north.",
+        "Yes, from another world."
+      ],
+      "off_examples": [
+        "I am hungry.",
+        "I like football."
+      ],
+      "scene_cap": null
+    }
+  }
+}

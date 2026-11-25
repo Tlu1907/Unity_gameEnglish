@@ -19,6 +19,8 @@ public sealed class DialogueData : ScriptableObject
     public string continuePrompt = "Nhấn C để tiếp tục";
     public string closePrompt = "Nhấn C để đóng";
     public Line[] lines = Array.Empty<Line>();
+    [Tooltip("Optional authored NPC conversation JSON. Uses UnityAI for question nodes.")]
+    public TextAsset conversationJson;
     public bool IsValid => lines != null && lines.Length > 0 &&
         Array.TrueForAll(lines, line => line != null &&
             !string.IsNullOrWhiteSpace(line.english) && !string.IsNullOrWhiteSpace(line.vietnamese));

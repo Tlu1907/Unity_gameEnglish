@@ -1,0 +1,658 @@
+{
+  "with_few_shot": {
+    "summary": {
+      "passed": 23,
+      "total": 23,
+      "pass_rate": 1.0,
+      "known_gap_cases": 0,
+      "deterministic_failed": 0,
+      "by_tag": {
+        "precheck": {
+          "passed": 14,
+          "total": 14,
+          "pass_rate": 1.0
+        },
+        "no_false_positive": {
+          "passed": 6,
+          "total": 6,
+          "pass_rate": 1.0
+        },
+        "rule": {
+          "passed": 3,
+          "total": 3,
+          "pass_rate": 1.0
+        }
+      },
+      "model_cases": 0,
+      "model_pass_rate": null,
+      "false_positives": 0,
+      "false_negatives": 0,
+      "review_required": 0,
+      "average_seconds": 0.01
+    },
+    "results": [
+      {
+        "id": "q1_vietnamese",
+        "status": "validated",
+        "fails": [],
+        "seconds": 0.0,
+        "node_id": "ranger_question_01_player_identity",
+        "tag": "precheck",
+        "model_called": false,
+        "data": {
+          "original_answer": "Tôi là một thợ săn.",
+          "errors": [],
+          "scores": {
+            "meaning": 0,
+            "grammar": 0
+          },
+          "corrected_answer": "Tôi là một thợ săn.",
+          "feedback_vi": "Hãy trả lời bằng tiếng Anh nhé.",
+          "total_score": 0,
+          "max_score": 10,
+          "passed": false,
+          "reward_eligible": false,
+          "rule_override": true,
+          "better_answer": null,
+          "form_hint_vi": null
+        }
+      },
+      {
+        "id": "q1_gibberish",
+        "status": "validated",
+        "fails": [],
+        "seconds": 0.0,
+        "node_id": "ranger_question_01_player_identity",
+        "tag": "precheck",
+        "model_called": false,
+        "data": {
+          "original_answer": "qwrtp zxcvb",
+          "errors": [],
+          "scores": {
+            "meaning": 0,
+            "grammar": 0
+          },
+          "corrected_answer": "qwrtp zxcvb",
+          "feedback_vi": "Mình chưa hiểu câu này. Hãy viết một câu tiếng Anh ngắn.",
+          "total_score": 0,
+          "max_score": 10,
+          "passed": false,
+          "reward_eligible": false,
+          "rule_override": true,
+          "better_answer": null,
+          "form_hint_vi": null
+        }
+      },
+      {
+        "id": "q1_empty",
+        "status": "validated",
+        "fails": [],
+        "seconds": 0.0,
+        "node_id": "ranger_question_01_player_identity",
+        "tag": "precheck",
+        "model_called": false,
+        "data": {
+          "original_answer": "",
+          "errors": [],
+          "scores": {
+            "meaning": 0,
+            "grammar": 0
+          },
+          "corrected_answer": "",
+          "feedback_vi": "Bạn chưa nhập câu trả lời bằng tiếng Anh.",
+          "total_score": 0,
+          "max_score": 10,
+          "passed": false,
+          "reward_eligible": false,
+          "rule_override": true,
+          "better_answer": null,
+          "form_hint_vi": null
+        }
+      },
+      {
+        "id": "q2_whitespace",
+        "status": "validated",
+        "fails": [],
+        "seconds": 0.0,
+        "node_id": "ranger_question_02_player_purpose",
+        "tag": "precheck",
+        "model_called": false,
+        "data": {
+          "original_answer": "   ",
+          "errors": [],
+          "scores": {
+            "meaning": 0,
+            "grammar": 0
+          },
+          "corrected_answer": "   ",
+          "feedback_vi": "Bạn chưa nhập câu trả lời bằng tiếng Anh.",
+          "total_score": 0,
+          "max_score": 10,
+          "passed": false,
+          "reward_eligible": false,
+          "rule_override": true,
+          "better_answer": null,
+          "form_hint_vi": null
+        }
+      },
+      {
+        "id": "q3_digits",
+        "status": "validated",
+        "fails": [],
+        "seconds": 0.0,
+        "node_id": "ranger_question_03_creature_origin",
+        "tag": "precheck",
+        "model_called": false,
+        "data": {
+          "original_answer": "123 456 !!!",
+          "errors": [],
+          "scores": {
+            "meaning": 0,
+            "grammar": 0
+          },
+          "corrected_answer": "123 456 !!!",
+          "feedback_vi": "Bạn chưa nhập câu trả lời bằng tiếng Anh.",
+          "total_score": 0,
+          "max_score": 10,
+          "passed": false,
+          "reward_eligible": false,
+          "rule_override": true,
+          "better_answer": null,
+          "form_hint_vi": null
+        }
+      },
+      {
+        "id": "q1_symbols",
+        "status": "validated",
+        "fails": [],
+        "seconds": 0.0,
+        "node_id": "ranger_question_01_player_identity",
+        "tag": "precheck",
+        "model_called": false,
+        "data": {
+          "original_answer": "?! @#$%",
+          "errors": [],
+          "scores": {
+            "meaning": 0,
+            "grammar": 0
+          },
+          "corrected_answer": "?! @#$%",
+          "feedback_vi": "Bạn chưa nhập câu trả lời bằng tiếng Anh.",
+          "total_score": 0,
+          "max_score": 10,
+          "passed": false,
+          "reward_eligible": false,
+          "rule_override": true,
+          "better_answer": null,
+          "form_hint_vi": null
+        }
+      },
+      {
+        "id": "q2_vietnamese_ascii",
+        "status": "validated",
+        "fails": [],
+        "seconds": 0.0,
+        "node_id": "ranger_question_02_player_purpose",
+        "tag": "precheck",
+        "model_called": false,
+        "data": {
+          "original_answer": "toi dang tim con cho cua minh",
+          "errors": [],
+          "scores": {
+            "meaning": 0,
+            "grammar": 0
+          },
+          "corrected_answer": "toi dang tim con cho cua minh",
+          "feedback_vi": "Hãy trả lời bằng tiếng Anh nhé.",
+          "total_score": 0,
+          "max_score": 10,
+          "passed": false,
+          "reward_eligible": false,
+          "rule_override": true,
+          "better_answer": null,
+          "form_hint_vi": null
+        }
+      },
+      {
+        "id": "q3_non_english",
+        "status": "validated",
+        "fails": [],
+        "seconds": 0.0,
+        "node_id": "ranger_question_03_creature_origin",
+        "tag": "precheck",
+        "model_called": false,
+        "data": {
+          "original_answer": "????",
+          "errors": [],
+          "scores": {
+            "meaning": 0,
+            "grammar": 0
+          },
+          "corrected_answer": "????",
+          "feedback_vi": "Bạn chưa nhập câu trả lời bằng tiếng Anh.",
+          "total_score": 0,
+          "max_score": 10,
+          "passed": false,
+          "reward_eligible": false,
+          "rule_override": true,
+          "better_answer": null,
+          "form_hint_vi": null
+        }
+      },
+      {
+        "id": "identity_no_false_positive_01",
+        "status": "validated",
+        "fails": [],
+        "seconds": 0.05,
+        "node_id": "ranger_question_01_player_identity",
+        "tag": "no_false_positive",
+        "model_called": false,
+        "data": {
+          "original_answer": "i'm a young traveller from the east",
+          "errors": [],
+          "scores": {
+            "meaning": 5,
+            "grammar": 5
+          },
+          "corrected_answer": "i'm a young traveller from the east",
+          "feedback_vi": "Đánh giá luật, không chấm nghĩa.",
+          "total_score": 10,
+          "max_score": 10,
+          "passed": true,
+          "reward_eligible": true,
+          "rule_override": false,
+          "better_answer": null,
+          "form_hint_vi": null
+        }
+      },
+      {
+        "id": "identity_no_false_positive_02",
+        "status": "validated",
+        "fails": [],
+        "seconds": 0.01,
+        "node_id": "ranger_question_01_player_identity",
+        "tag": "no_false_positive",
+        "model_called": false,
+        "data": {
+          "original_answer": "What I do is help lost explorers.",
+          "errors": [],
+          "scores": {
+            "meaning": 5,
+            "grammar": 5
+          },
+          "corrected_answer": "What I do is help lost explorers.",
+          "feedback_vi": "Đánh giá luật, không chấm nghĩa.",
+          "total_score": 10,
+          "max_score": 10,
+          "passed": true,
+          "reward_eligible": true,
+          "rule_override": false,
+          "better_answer": null,
+          "form_hint_vi": null
+        }
+      },
+      {
+        "id": "identity_rule_01",
+        "status": "validated",
+        "fails": [],
+        "seconds": 0.01,
+        "node_id": "ranger_question_01_player_identity",
+        "tag": "rule",
+        "model_called": false,
+        "data": {
+          "original_answer": "I is a young mapmaker.",
+          "errors": [
+            {
+              "quote": "I is",
+              "replacement": "I am",
+              "explanation_vi": "Động từ be: I đi với am; he/she/it đi với is; you/we/they đi với are.",
+              "rule_id": "be.agreement",
+              "tense": "present_simple"
+            }
+          ],
+          "scores": {
+            "meaning": 5,
+            "grammar": 4
+          },
+          "corrected_answer": "I am a young mapmaker.",
+          "feedback_vi": "Đánh giá luật, không chấm nghĩa. Cần sửa: Động từ be: I đi với am; he/she/it đi với is; you/we/they đi với are.",
+          "total_score": 9,
+          "max_score": 10,
+          "passed": true,
+          "reward_eligible": true,
+          "rule_override": true,
+          "better_answer": null,
+          "form_hint_vi": null
+        }
+      },
+      {
+        "id": "purpose_no_false_positive_01",
+        "status": "validated",
+        "fails": [],
+        "seconds": 0.01,
+        "node_id": "ranger_question_02_player_purpose",
+        "tag": "no_false_positive",
+        "model_called": false,
+        "data": {
+          "original_answer": "i'm here to help you find a safe path",
+          "errors": [],
+          "scores": {
+            "meaning": 5,
+            "grammar": 5
+          },
+          "corrected_answer": "i'm here to help you find a safe path",
+          "feedback_vi": "Đánh giá luật, không chấm nghĩa.",
+          "total_score": 10,
+          "max_score": 10,
+          "passed": true,
+          "reward_eligible": true,
+          "rule_override": false,
+          "better_answer": null,
+          "form_hint_vi": null
+        }
+      },
+      {
+        "id": "purpose_no_false_positive_02",
+        "status": "validated",
+        "fails": [],
+        "seconds": 0.01,
+        "node_id": "ranger_question_02_player_purpose",
+        "tag": "no_false_positive",
+        "model_called": false,
+        "data": {
+          "original_answer": "What I do here is look after injured animals.",
+          "errors": [],
+          "scores": {
+            "meaning": 5,
+            "grammar": 5
+          },
+          "corrected_answer": "What I do here is look after injured animals.",
+          "feedback_vi": "Đánh giá luật, không chấm nghĩa.",
+          "total_score": 10,
+          "max_score": 10,
+          "passed": true,
+          "reward_eligible": true,
+          "rule_override": false,
+          "better_answer": null,
+          "form_hint_vi": null
+        }
+      },
+      {
+        "id": "purpose_rule_01",
+        "status": "validated",
+        "fails": [],
+        "seconds": 0.01,
+        "node_id": "ranger_question_02_player_purpose",
+        "tag": "rule",
+        "model_called": false,
+        "data": {
+          "original_answer": "I are gathering wood for a new bridge.",
+          "errors": [
+            {
+              "quote": "I are",
+              "replacement": "I am",
+              "explanation_vi": "Động từ be: I đi với am; he/she/it đi với is; you/we/they đi với are.",
+              "rule_id": "be.agreement",
+              "tense": "present_simple"
+            }
+          ],
+          "scores": {
+            "meaning": 5,
+            "grammar": 4
+          },
+          "corrected_answer": "I am gathering wood for a new bridge.",
+          "feedback_vi": "Đánh giá luật, không chấm nghĩa. Cần sửa: Động từ be: I đi với am; he/she/it đi với is; you/we/they đi với are.",
+          "total_score": 9,
+          "max_score": 10,
+          "passed": true,
+          "reward_eligible": true,
+          "rule_override": true,
+          "better_answer": null,
+          "form_hint_vi": null
+        }
+      },
+      {
+        "id": "origin_no_false_positive_01",
+        "status": "validated",
+        "fails": [],
+        "seconds": 0.01,
+        "node_id": "ranger_question_03_creature_origin",
+        "tag": "no_false_positive",
+        "model_called": false,
+        "data": {
+          "original_answer": "i reckon they're from the ruins",
+          "errors": [],
+          "scores": {
+            "meaning": 5,
+            "grammar": 5
+          },
+          "corrected_answer": "i reckon they're from the ruins",
+          "feedback_vi": "Đánh giá luật, không chấm nghĩa.",
+          "total_score": 10,
+          "max_score": 10,
+          "passed": true,
+          "reward_eligible": true,
+          "rule_override": false,
+          "better_answer": null,
+          "form_hint_vi": null
+        }
+      },
+      {
+        "id": "origin_no_false_positive_02",
+        "status": "validated",
+        "fails": [],
+        "seconds": 0.01,
+        "node_id": "ranger_question_03_creature_origin",
+        "tag": "no_false_positive",
+        "model_called": false,
+        "data": {
+          "original_answer": "I haven't a clue where they come from.",
+          "errors": [],
+          "scores": {
+            "meaning": 5,
+            "grammar": 5
+          },
+          "corrected_answer": "I haven't a clue where they come from.",
+          "feedback_vi": "Đánh giá luật, không chấm nghĩa.",
+          "total_score": 10,
+          "max_score": 10,
+          "passed": true,
+          "reward_eligible": true,
+          "rule_override": false,
+          "better_answer": null,
+          "form_hint_vi": null
+        }
+      },
+      {
+        "id": "origin_rule_01",
+        "status": "validated",
+        "fails": [],
+        "seconds": 0.01,
+        "node_id": "ranger_question_03_creature_origin",
+        "tag": "rule",
+        "model_called": false,
+        "data": {
+          "original_answer": "I doesn't know where they lived before.",
+          "errors": [
+            {
+              "quote": "I doesn't",
+              "replacement": "I don't",
+              "explanation_vi": "Phủ định hiện tại đơn dùng he/she/it + doesn't, I/you/we/they + don't, rồi động từ nguyên mẫu.",
+              "rule_id": "do.agreement",
+              "tense": "present_simple"
+            }
+          ],
+          "scores": {
+            "meaning": 5,
+            "grammar": 4
+          },
+          "corrected_answer": "I don't know where they lived before.",
+          "feedback_vi": "Đánh giá luật, không chấm nghĩa. Cần sửa: Phủ định hiện tại đơn dùng he/she/it + doesn't, I/you/we/they + don't, rồi động từ nguyên mẫu.",
+          "total_score": 9,
+          "max_score": 10,
+          "passed": true,
+          "reward_eligible": true,
+          "rule_override": true,
+          "better_answer": null,
+          "form_hint_vi": null
+        }
+      },
+      {
+        "id": "identity_shared_precheck_vi",
+        "status": "validated",
+        "fails": [],
+        "seconds": 0.0,
+        "node_id": "ranger_question_01_player_identity",
+        "tag": "precheck",
+        "model_called": false,
+        "data": {
+          "original_answer": "Tôi là người dẫn đường trong khu rừng này.",
+          "errors": [],
+          "scores": {
+            "meaning": 0,
+            "grammar": 0
+          },
+          "corrected_answer": "Tôi là người dẫn đường trong khu rừng này.",
+          "feedback_vi": "Hãy trả lời bằng tiếng Anh nhé.",
+          "total_score": 0,
+          "max_score": 10,
+          "passed": false,
+          "reward_eligible": false,
+          "rule_override": true,
+          "better_answer": null,
+          "form_hint_vi": null
+        }
+      },
+      {
+        "id": "identity_shared_precheck_emoji",
+        "status": "validated",
+        "fails": [],
+        "seconds": 0.0,
+        "node_id": "ranger_question_01_player_identity",
+        "tag": "precheck",
+        "model_called": false,
+        "data": {
+          "original_answer": "🌳🧭✨",
+          "errors": [],
+          "scores": {
+            "meaning": 0,
+            "grammar": 0
+          },
+          "corrected_answer": "🌳🧭✨",
+          "feedback_vi": "Bạn chưa nhập câu trả lời bằng tiếng Anh.",
+          "total_score": 0,
+          "max_score": 10,
+          "passed": false,
+          "reward_eligible": false,
+          "rule_override": true,
+          "better_answer": null,
+          "form_hint_vi": null
+        }
+      },
+      {
+        "id": "purpose_shared_precheck_vi",
+        "status": "validated",
+        "fails": [],
+        "seconds": 0.0,
+        "node_id": "ranger_question_02_player_purpose",
+        "tag": "precheck",
+        "model_called": false,
+        "data": {
+          "original_answer": "Tôi đang tìm lối đi an toàn để quay về làng.",
+          "errors": [],
+          "scores": {
+            "meaning": 0,
+            "grammar": 0
+          },
+          "corrected_answer": "Tôi đang tìm lối đi an toàn để quay về làng.",
+          "feedback_vi": "Hãy trả lời bằng tiếng Anh nhé.",
+          "total_score": 0,
+          "max_score": 10,
+          "passed": false,
+          "reward_eligible": false,
+          "rule_override": true,
+          "better_answer": null,
+          "form_hint_vi": null
+        }
+      },
+      {
+        "id": "purpose_shared_precheck_digits",
+        "status": "validated",
+        "fails": [],
+        "seconds": 0.0,
+        "node_id": "ranger_question_02_player_purpose",
+        "tag": "precheck",
+        "model_called": false,
+        "data": {
+          "original_answer": "2468013579",
+          "errors": [],
+          "scores": {
+            "meaning": 0,
+            "grammar": 0
+          },
+          "corrected_answer": "2468013579",
+          "feedback_vi": "Bạn chưa nhập câu trả lời bằng tiếng Anh.",
+          "total_score": 0,
+          "max_score": 10,
+          "passed": false,
+          "reward_eligible": false,
+          "rule_override": true,
+          "better_answer": null,
+          "form_hint_vi": null
+        }
+      },
+      {
+        "id": "origin_shared_precheck_vi",
+        "status": "validated",
+        "fails": [],
+        "seconds": 0.0,
+        "node_id": "ranger_question_03_creature_origin",
+        "tag": "precheck",
+        "model_called": false,
+        "data": {
+          "original_answer": "Tôi không biết những sinh vật này đến từ đâu.",
+          "errors": [],
+          "scores": {
+            "meaning": 0,
+            "grammar": 0
+          },
+          "corrected_answer": "Tôi không biết những sinh vật này đến từ đâu.",
+          "feedback_vi": "Hãy trả lời bằng tiếng Anh nhé.",
+          "total_score": 0,
+          "max_score": 10,
+          "passed": false,
+          "reward_eligible": false,
+          "rule_override": true,
+          "better_answer": null,
+          "form_hint_vi": null
+        }
+      },
+      {
+        "id": "origin_shared_precheck_gibberish",
+        "status": "validated",
+        "fails": [],
+        "seconds": 0.0,
+        "node_id": "ranger_question_03_creature_origin",
+        "tag": "precheck",
+        "model_called": false,
+        "data": {
+          "original_answer": "brrr qzxt pfff zzzx",
+          "errors": [],
+          "scores": {
+            "meaning": 0,
+            "grammar": 0
+          },
+          "corrected_answer": "brrr qzxt pfff zzzx",
+          "feedback_vi": "Mình chưa hiểu câu này. Hãy viết một câu tiếng Anh ngắn.",
+          "total_score": 0,
+          "max_score": 10,
+          "passed": false,
+          "reward_eligible": false,
+          "rule_override": true,
+          "better_answer": null,
+          "form_hint_vi": null
+        }
+      }
+    ]
+  }
+}

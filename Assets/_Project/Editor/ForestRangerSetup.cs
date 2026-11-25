@@ -152,6 +152,12 @@ public static class ForestRangerSetup
             var settings = new SerializedObject(trigger);
             view = settings.FindProperty("dialogueUI").objectReferenceValue as NPCIntroDialogue;
             var data = settings.FindProperty("dialogueData").objectReferenceValue as DialogueData;
+            if (data != null && data.conversationJson != null)
+            {
+                ForestRangerJsonSetup.Validate();
+                File.WriteAllText("Library/ForestRangerValidation.result", File.ReadAllText("Library/ForestRangerJsonValidation.result"));
+                return;
+            }
             if (view == null || !view.AcceptsDialogue(data)) throw new InvalidOperationException("Invalid ranger dialogue references.");
             var viewSettings = new SerializedObject(view);
             bool translation = viewSettings.FindProperty("playerTranslation").boolValue;

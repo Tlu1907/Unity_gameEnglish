@@ -1,0 +1,7 @@
+[
+  {"text": "Where are the ancient ruins?",          "expect": "yes"},
+  {"text": "How can I get to the ruins?",           "expect": "yes"},
+  {"text": "Where do these creatures come from?",   "expect": "no"},
+  {"text": "Where is it?",                          "expect": "maybe"},
+  {"text": "I like this forest.",                   "expect": "no"}
+]

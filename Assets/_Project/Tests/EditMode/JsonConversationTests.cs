@@ -87,6 +87,75 @@ public sealed class JsonConversationTests
         Assert.That(maps.Count, Is.Zero);
     }
 
+    [Test] public void JournalRestoresEarlierMapsAndMergesLaterLearningWithoutDuplicates()
+    {
+        Component panel = Panel();
+        Assert.That(Call(panel, "TryOpenConversation", Source, null, null), Is.True);
+        Call(panel, "Close");
+        Static("LearningJournal", "Record", "map1", "Map 1 · City", null, "S + be + N: giới thiệu.");
+        var journalType = Runtime("LearningJournal");
+        var serialize = journalType.GetMethod("Serialize", BindingFlags.Static | BindingFlags.NonPublic);
+        var restore = journalType.GetMethod("Restore", BindingFlags.Static | BindingFlags.NonPublic);
+        string saved = (string)serialize.Invoke(null, null);
+        UnityEngine.Object.DestroyImmediate(panel.transform.parent.gameObject);
+        Static("LearningJournal", "Reset");
+        restore.Invoke(null, new object[] { saved });
+        Static("GameplayState", "Reset");
+        Static("LearningJournal", "Record", "map2", "Map 2 · Forest", null, "There is + N: có.");
+        restore.Invoke(null, new object[] { saved });
+        var maps = (System.Collections.IList)journalType.GetProperty("Maps").GetValue(null);
+        Assert.That(maps.Count, Is.EqualTo(2));
+        var vocabulary = (System.Collections.IList)maps[0].GetType().GetProperty("Vocabulary").GetValue(maps[0]);
+        Assert.That(vocabulary, Does.Contain("spirit: linh hồn"));
+        Assert.That(vocabulary, Has.Count.EqualTo(3));
+        var grammar = (System.Collections.IList)maps[0].GetType().GetProperty("Grammar").GetValue(maps[0]);
+        Assert.That(grammar, Has.Count.EqualTo(1));
+        string book = (string)Static("LearningJournal", "BuildBook");
+        Assert.That(book, Does.Contain("Map 1 · City"));
+        Assert.That(book, Does.Contain("Map 2 · Forest"));
+        Assert.That(book, Does.Contain("There is + N"));
+        Assert.That(book, Does.Contain("spirit: linh hồn"));
+        panel = Panel();
+        var notebook = panel.transform.parent.GetComponent(Runtime("StoryClueJournal"));
+        Call(notebook, "Toggle");
+        var text = (Component)Field(notebook, "entries");
+        Assert.That(text.GetType().GetProperty("text").GetValue(text), Does.Contain("spirit: linh hồn"));
+        Call(notebook, "Close");
+        string roundTrip = (string)serialize.Invoke(null, null);
+        Static("LearningJournal", "Reset");
+        restore.Invoke(null, new object[] { roundTrip });
+        Assert.That(Static("LearningJournal", "BuildBook"), Is.EqualTo(book));
+    }
+
+    [Test] public void StartingMapTwoDirectlyShowsEarlierLessonsWithoutAddingFutureLessons()
+    {
+        Static("LearningJournal", "LoadEarlierMaps", "map1");
+        var maps = (System.Collections.IList)Runtime("LearningJournal").GetProperty("Maps").GetValue(null);
+        Assert.That(maps.Count, Is.Zero);
+        Static("LearningJournal", "LoadEarlierMaps", "map2");
+        Assert.That(maps.Count, Is.EqualTo(1));
+        string book = (string)Static("LearningJournal", "BuildBook");
+        Assert.That(book, Does.Contain("spirit: linh hồn"));
+        Assert.That(book, Does.Contain("NGỮ PHÁP"));
+        Assert.That(book, Does.Not.Contain("Map 2"));
+        Static("LearningJournal", "LoadEarlierMaps", "map2");
+        Assert.That(Static("LearningJournal", "BuildBook"), Is.EqualTo(book));
+        var panel = Panel();
+        var notebook = panel.transform.parent.GetComponent(Runtime("StoryClueJournal"));
+        Call(notebook, "Toggle");
+        var text = (Component)Field(notebook, "entries");
+        Assert.That(text.GetType().GetProperty("text").GetValue(text), Does.Contain("spirit: linh hồn"));
+        Call(notebook, "Close");
+    }
+
+    [Test] public void EarlierLessonArchiveDoesNotReplaceExistingLearnedNotes()
+    {
+        Static("LearningJournal", "Record", "map1", "Map 1", null, "My own learned formula");
+        string before = (string)Static("LearningJournal", "BuildBook");
+        Static("LearningJournal", "LoadEarlierMaps", "map2");
+        Assert.That(Static("LearningJournal", "BuildBook"), Is.EqualTo(before));
+    }
+
     [TestCase(" city ", " thành phố (n) ", "city: thành phố (n)")]
     [TestCase("city = thành phố (n)", null, "city: thành phố (n)")]
     [TestCase("city", "thành\nphố (n)", "city: thành phố (n)")]

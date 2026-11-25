@@ -1,0 +1,144 @@
+{
+  "maps": [
+    {
+      "id": "map1",
+      "title": "Map 1 · City",
+      "vocabulary": [
+        "spirit: linh hồn (n)",
+        "tower: tòa tháp (n)",
+        "gear: trang bị (n)",
+        "seal: phong ấn (n)",
+        "come back: quay lại (v. phr.)",
+        "weapon: vũ khí (n)",
+        "blade: lưỡi kiếm (n)",
+        "protect: bảo vệ (v)",
+        "gate: cổng (n)",
+        "sword: thanh kiếm (n)",
+        "shield: chiếc khiên (n)",
+        "archaeologist: nhà khảo cổ (n)",
+        "ancient: cổ xưa (adj)",
+        "earthquake: động đất (n)",
+        "lab: phòng nghiên cứu (n)",
+        "document: tài liệu (n)",
+        "defeat: đánh bại (v)",
+        "look for: tìm kiếm (v. phr.)",
+        "specimen: mẫu vật (n)",
+        "invulnerable: không thể bị thương (adj)",
+        "cut through: cắt xuyên (v. phr.)",
+        "detect: phát hiện (v)",
+        "footsteps: tiếng bước chân (n)",
+        "chase: đuổi theo (v)",
+        "alarm: chuông cảnh báo (n)",
+        "watchtower: tháp canh (n)",
+        "destination: điểm đến (n)"
+      ],
+      "grammar": [
+        {
+          "Id": "present_continuous",
+          "GroupId": "present_continuous",
+          "Text": "am/is/are + V-ing: đang …"
+        },
+        {
+          "Id": "are_you_adjective",
+          "GroupId": "to_be",
+          "Text": "Are you + tính từ?: Bạn có …?"
+        },
+        {
+          "Id": "let_us",
+          "GroupId": "commands_suggestions",
+          "Text": "Let us + V: Chúng ta hãy …"
+        },
+        {
+          "Id": "when_clause",
+          "GroupId": "purpose_time",
+          "Text": "when + mệnh đề: khi …"
+        },
+        {
+          "Id": "have_has",
+          "GroupId": "possession_relationships",
+          "Text": "have/has + N: có …"
+        },
+        {
+          "Id": "hold_to",
+          "GroupId": "purpose_time",
+          "Text": "hold … to + V: cầm … để …"
+        },
+        {
+          "Id": "be_adjective",
+          "GroupId": "to_be",
+          "Text": "S + be + tính từ: mô tả trạng thái."
+        },
+        {
+          "Id": "be_adjective",
+          "GroupId": "to_be",
+          "Text": "S + be + tính từ: mô tả đặc điểm."
+        },
+        {
+          "Id": "be_location",
+          "GroupId": "to_be",
+          "Text": "S + be + cụm vị trí: nói vị trí."
+        },
+        {
+          "Id": "take_noun",
+          "GroupId": "commands_suggestions",
+          "Text": "Take + N: Hãy lấy …"
+        },
+        {
+          "Id": "be_linked_to",
+          "GroupId": "possession_relationships",
+          "Text": "Công thức: Chủ ngữ + am/is/are + linked to + danh từ/cụm danh từ.\nNghĩa: Ai/cái gì có liên quan đến ai/cái gì.\nCách dùng: Chọn am/is/are theo chủ ngữ: I dùng am; he/she/it và danh từ số ít dùng is; you/we/they và danh từ số nhiều dùng are."
+        },
+        {
+          "Id": "will_you_request",
+          "GroupId": "ability_future",
+          "Text": "Công thức: Will you + động từ nguyên mẫu không có to + phần còn lại của câu + ?\nNghĩa trong lời thoại: Anh có sẵn lòng làm gì không? / Anh làm giúp tôi việc này được không?\nCách dùng: Đây là lời đề nghị hoặc nhờ người nghe làm một việc. Trong ngữ cảnh này, will không chỉ dùng để hỏi về tương lai."
+        },
+        {
+          "Id": "will_future",
+          "GroupId": "ability_future",
+          "Text": "Công thức: Chủ ngữ + will + động từ nguyên mẫu không có to + phần còn lại của câu.\nNghĩa: Ai đó sẽ làm gì.\nCách dùng: Trong lời đáp này, will diễn tả quyết định nhận nhiệm vụ và lời hứa thực hiện. Động từ sau will giữ nguyên dạng, không thêm s/es hoặc đuôi quá khứ."
+        },
+        {
+          "Id": "imperative_when",
+          "GroupId": "purpose_time",
+          "Text": "Công thức trong lời thoại: Động từ nguyên mẫu + ... + when + chủ ngữ + động từ được chia theo thì.\nNghĩa: Hãy làm gì khi một thời điểm hoặc trạng thái xảy ra.\nCách dùng: Phần đầu là câu mệnh lệnh, thường lược bỏ chủ ngữ you. When nghĩa là khi; mệnh đề sau when cho biết lúc thực hiện hành động. Trong câu này, you are ready nghĩa là anh đã sẵn sàng."
+        },
+        {
+          "Id": "look_for",
+          "GroupId": "commands_suggestions",
+          "Text": "Công thức: Look for + danh từ/cụm danh từ.\nNghĩa: Hãy tìm kiếm ai/cái gì/địa điểm nào.\nCách dùng: Đây là câu mệnh lệnh, thường lược bỏ chủ ngữ you. Look for có nghĩa là tìm kiếm; sau for là người, vật hoặc địa điểm cần tìm."
+        },
+        {
+          "Id": "use_to",
+          "GroupId": "purpose_time",
+          "Text": "use … to + V: dùng … để …"
+        },
+        {
+          "Id": "can_ability",
+          "GroupId": "ability_future",
+          "Text": "can + V nguyên mẫu: có thể …"
+        },
+        {
+          "Id": "keep_ing",
+          "GroupId": "continuing_actions",
+          "Text": "keep + V-ing: tiếp tục …"
+        },
+        {
+          "Id": "negative_imperative",
+          "GroupId": "commands_suggestions",
+          "Text": "Do not + V nguyên mẫu: Đừng …"
+        },
+        {
+          "Id": "this_is",
+          "GroupId": "to_be",
+          "Text": "This is + danh từ: Đây là …"
+        },
+        {
+          "Id": "imperative",
+          "GroupId": "commands_suggestions",
+          "Text": "V nguyên mẫu: câu mệnh lệnh."
+        }
+      ]
+    }
+  ]
+}

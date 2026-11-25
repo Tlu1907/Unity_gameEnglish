@@ -86,7 +86,7 @@ public static class PrefabFolderOrganizer
                 if (!pair.Value.SetEquals(after)) throw new InvalidOperationException("Dependencies changed: " + path);
                 verified++;
             }
-            foreach (string key in new[] { "StoryDialogue", "FlaskEnglishQuiz" })
+            foreach (string key in new[] { "StoryDialogue" })
             {
                 int count = AssetDatabase.GetAllAssetPaths().Count(path => path.EndsWith("/Resources/" + key + ".prefab", StringComparison.Ordinal));
                 if (count != 1) throw new InvalidOperationException("Resources key must remain unique: " + key + " (" + count + ")");
@@ -101,7 +101,7 @@ public static class PrefabFolderOrganizer
             report.AppendLine();
             report.AppendLine("Canonical reusable prefabs sit directly in their category. Exported instances sit in Variants/<scene>. Compound object groups sit in Layouts/<scene>; their internal hierarchy is preserved.");
             report.AppendLine();
-            report.AppendLine("StoryDialogue and FlaskEnglishQuiz remain inside Resources folders with their original load keys. No duplicate assets were deleted. Other imported art packages were not moved.");
+            report.AppendLine("StoryDialogue remains inside Resources folders with its original load key. No duplicate assets were deleted. Other imported art packages were not moved.");
             report.AppendLine();
             report.AppendLine("| Destination folder | Prefabs moved |\n|---|---:|");
             foreach (var category in completed.GroupBy(move => Path.GetDirectoryName(move.to).Replace('\\', '/')).OrderBy(group => group.Key))
@@ -163,7 +163,6 @@ public static class PrefabFolderOrganizer
             case "dialoguecanvas": case "treasuremirrordialoguecanvas": category = "UI/Prefabs/Dialogue"; break;
             case "flask english quiz test": category = "Learning/Quiz/Prefabs/Panels"; break;
             case "storydialogue": return Root + "UI/Prefabs/Resources/StoryDialogue.prefab";
-            case "flaskenglishquiz": return Root + "Learning/Quiz/Prefabs/Resources/FlaskEnglishQuiz.prefab";
             case "lab": category = "Gameplay/Items/Prefabs/Buildings/Laboratories"; break;
             case "tower": case "tower_story": category = "Gameplay/Items/Prefabs/Buildings/Towers"; if (!export && path.Contains("/Ground1/")) clean = "Tower_Story"; break;
             case "researchdocument": case "researchroomstorytrigger": category = "Gameplay/Interaction/Prefabs/Research"; break;

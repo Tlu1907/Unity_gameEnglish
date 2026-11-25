@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2598e857b284925a344cfeb3fb12f50, type: 3}
+  m_Name: TempleGuardianDialogue
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueData
+  speakerName: Temple Guardian
+  portrait: {fileID: 0}
+  continuePrompt: "Nh\u1EA5n C \u0111\u1EC3 ti\u1EBFp t\u1EE5c"
+  closePrompt: "Nh\u1EA5n C \u0111\u1EC3 \u0111\xF3ng"
+  lines: []
+  conversationJson: {fileID: 4900000, guid: 71093fa874664f1189fa76e64f274e84, type: 3}

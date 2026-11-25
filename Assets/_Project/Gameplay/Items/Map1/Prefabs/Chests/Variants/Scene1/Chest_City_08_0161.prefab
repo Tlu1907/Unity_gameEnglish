@@ -317,8 +317,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ChestQuizInteraction
   question: {fileID: 11400000, guid: e7510bb70b8b2c7449234c1fe3396ef7, type: 2}
   controller: {fileID: 0}
-  useFlaskQuiz: 0
-  flaskPanel: {fileID: 0}
   retryDelay: 0.5
 --- !u!210 &5677635345742877977
 SortingGroup:

@@ -90,5 +90,4 @@ Giữ nguyên beatId của hai nhiệm vụ hiện tại vì tiến trình nhi�
 
 Menu EarthDefender > Questions > Open question data chỉ mở thư mục dữ liệu, không tạo lại hay ghi đè câu hỏi. Script runtime không chứa bộ câu hỏi dự phòng; thiếu dữ liệu hợp lệ sẽ báo lỗi để sửa asset.
 
-FlaskEnglishQuizPanel vẫn nhận câu hỏi động từ server; các câu hỏi đó không phải ngân hàng câu hỏi tĩnh cục bộ.
 Mỗi màn có thư mục riêng: Questions/Map1, Questions/Map2, ...; Shared chứa câu hỏi dùng chung. Với màn mới, dùng beatId riêng và đặt asset trong Resources/Story để bộ nạp hiện tại tìm được; tiến trình nhiệm vụ mới cần nối logic riêng.

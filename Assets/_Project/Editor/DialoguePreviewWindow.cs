@@ -66,8 +66,6 @@ public sealed class DialoguePreviewWindow : EditorWindow
             if (intro.IsOpen) intro.Close();
         foreach (var existing in Object.FindObjectsByType<StoryQuizPanel>(FindObjectsInactive.Include, FindObjectsSortMode.None))
             if (existing.IsOpen) existing.Close();
-        foreach (var quiz in Object.FindObjectsByType<FlaskEnglishQuizPanel>(FindObjectsInactive.Include, FindObjectsSortMode.None))
-            if (quiz.IsSessionOpen) quiz.Close();
         if (QuizController.Instance != null) QuizController.Instance.CloseQuestion();
         GameplayState.Resume();
         var panel = StoryQuizPanel.FindOrCreate();

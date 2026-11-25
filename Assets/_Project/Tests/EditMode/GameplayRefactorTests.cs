@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Reflection;
 using NUnit.Framework;
 using UnityEngine;
@@ -167,45 +167,6 @@ public sealed class GameplayRefactorTests
         Assert.That(Value(health, "Armor"), Is.EqualTo(100));
         Call(inventory, "SetEquipped", false);
         Assert.That(Value(health, "Armor"), Is.EqualTo(0));
-    }
-
-    [Test]
-    public void FlaskSessionKeepsGradeVisibleAndCompletesOnlyOnceOnClose()
-    {
-        float originalTimeScale = Time.timeScale;
-        var go = new GameObject("Flask quiz");
-        go.transform.SetParent(root.transform);
-        go.SetActive(false);
-        Component panel = go.AddComponent(RuntimeType("FlaskEnglishQuizPanel"));
-        Type textType = Type.GetType("TMPro.TextMeshProUGUI, Unity.TextMeshPro", true);
-        var status = new GameObject("Status", typeof(RectTransform), textType);
-        var result = new GameObject("Result", typeof(RectTransform), textType);
-        status.transform.SetParent(go.transform);
-        result.transform.SetParent(go.transform);
-        Field(panel, "statusText", status.GetComponent(textType));
-        Field(panel, "resultText", result.GetComponent(textType));
-        int completions = 0;
-        bool passed = false;
-        Field(panel, "completed", (Action<bool>)(value => { completions++; passed = value; }));
-        try
-        {
-            Assert.That(Static("FlaskEnglishQuizPanel", "IsReviewRequired", "{\"status\":\"review_required\"}"), Is.EqualTo(true));
-            Static("GameplayState", "BeginQuiz", panel);
-            Field(panel, "<IsSessionOpen>k__BackingField", true);
-            Field(panel, "previousTimeScale", .75f);
-            Time.timeScale = 0f;
-            Call(panel, "ReadGrade", "{\"status\":\"validated\",\"can_award_reward\":true,\"data\":{\"total_score\":8,\"max_score\":10,\"feedback_vi\":\"Good\",\"corrected_answer\":\"Answer\"}}");
-            Assert.That(completions, Is.EqualTo(0));
-            Assert.That(State, Is.EqualTo("Quiz"));
-            Assert.That(Value(panel, "CanAwardReward"), Is.EqualTo(true));
-            Call(panel, "OnDisable");
-            Call(panel, "OnDisable");
-            Assert.That(completions, Is.EqualTo(1));
-            Assert.That(passed, Is.EqualTo(true));
-            Assert.That(State, Is.EqualTo("Playing"));
-            Assert.That(Time.timeScale, Is.EqualTo(.75f));
-        }
-        finally { Time.timeScale = originalTimeScale; }
     }
 
     [Test]
@@ -465,7 +426,6 @@ public sealed class GameplayRefactorTests
             // Leave the renderer unassigned to exercise discovery on a child Visual.
             Field(chest, "openedSprite", opened);
             Component interaction = chest.gameObject.AddComponent(RuntimeType("ChestQuizInteraction"));
-            Field(interaction, "useFlaskQuiz", false);
             Field(interaction, "question", question);
             Field(interaction, "controller", controller);
             Field(interaction, "retryDelay", 0f);

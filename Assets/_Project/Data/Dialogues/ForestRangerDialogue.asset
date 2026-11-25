@@ -20,3 +20,6 @@ MonoBehaviour:
   - english: '[Dialogue content will be added later.]'
     vietnamese: "[N\u1ED9i dung h\u1ED9i tho\u1EA1i s\u1EBD \u0111\u01B0\u1EE3c b\u1ED5
       sung sau.]"
+    vocabulary: 
+    grammar: 
+  conversationJson: {fileID: 4900000, guid: 761540831ccfd644fbb92bc5d70c02ba, type: 3}

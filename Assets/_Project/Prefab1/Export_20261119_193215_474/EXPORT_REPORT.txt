@@ -181,7 +181,6 @@ Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0178_GroundShadow.pref
 Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0179_ChestQuizSystem.prefab <- ChestQuizSystem
 Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0180_CityExpansion.prefab <- CityExpansion
 Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0181_DialogueCanvas.prefab <- DialogueCanvas
-Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0182_Flask English Quiz Test.prefab <- Flask English Quiz Test
 Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0183_Grid.prefab <- Grid
 Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0184_HidingAndTraps.prefab <- HidingAndTraps
 Assets/_Project/Prefab1/Export_20261119_193215_474/Scene1/0185_LayeredCityTerrain.prefab <- LayeredCityTerrain
@@ -219,7 +218,6 @@ Assets/_Project/Prefab1/Export_20261119_193215_474/Sence1_final/0023_GroundShado
 Assets/_Project/Prefab1/Export_20261119_193215_474/Sence1_final/0024_GroundShadow.prefab <- Monster (5)/GroundShadow
 Assets/_Project/Prefab1/Export_20261119_193215_474/Sence1_final/0025_ChestQuizSystem.prefab <- ChestQuizSystem
 Assets/_Project/Prefab1/Export_20261119_193215_474/Sence1_final/0026_DialogueCanvas.prefab <- DialogueCanvas
-Assets/_Project/Prefab1/Export_20261119_193215_474/Sence1_final/0027_Flask English Quiz Test.prefab <- Flask English Quiz Test
 Assets/_Project/Prefab1/Export_20261119_193215_474/Sence1_final/0028_Grid.prefab <- Grid
 Assets/_Project/Prefab1/Export_20261119_193215_474/Sence1_final/0029_House_1.prefab <- House_1
 Assets/_Project/Prefab1/Export_20261119_193215_474/Sence1_final/0030_lab.prefab <- lab
@@ -238,7 +236,7 @@ Map root imported: Grid
 Map root imported: CityExpansion
 Map root imported: LayeredCityTerrain
 Map root imported: HidingAndTraps
-Story roots retained: Main Camera, Player, ChestQuizSystem, Flask English Quiz Test, DialogueCanvas, Monster (1), Monster (2), Monster (3), Monster (4), Monster (5), ScientistNPC, House_1, Tower, TreasureMirrorDialogueCanvas, lab
+Story roots retained: Main Camera, Player, ChestQuizSystem, DialogueCanvas, Monster (1), Monster (2), Monster (3), Monster (4), Monster (5), ScientistNPC, House_1, Tower, TreasureMirrorDialogueCanvas, lab
 Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0001_GroundShadow.prefab <- Grid/Enviroments/Bushes/Bush (1)/GroundShadow
 Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0002_GroundShadow.prefab <- Grid/Enviroments/Bushes/Bush (10)/GroundShadow
 Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0003_GroundShadow.prefab <- Grid/Enviroments/Bushes/Bush (11)/GroundShadow
@@ -365,7 +363,6 @@ Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0123_GroundShadow.pref
 Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0124_ChestQuizSystem.prefab <- ChestQuizSystem
 Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0125_CityExpansion.prefab <- CityExpansion
 Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0126_DialogueCanvas.prefab <- DialogueCanvas
-Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0127_Flask English Quiz Test.prefab <- Flask English Quiz Test
 Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0128_Grid.prefab <- Grid
 Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0129_HidingAndTraps.prefab <- HidingAndTraps
 Assets/_Project/Prefab1/Export_20261119_193215_474/Merged/0130_House_1.prefab <- House_1

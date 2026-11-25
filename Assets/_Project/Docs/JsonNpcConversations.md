@@ -1,5 +1,48 @@
 # Câu hỏi JSON và khung NPC dùng chung
 
+## Map 2: kiểm lâm và UnityAI
+
+`Scence2` dùng `ForestRangerDialogueCanvas` hiện có. Asset
+`Data/Dialogues/ForestRangerDialogue.asset` tham chiếu JSON qua `conversationJson`:
+`Data/Questions/Map2/map2_forest_ranger_dialogue_en.json`. TextAsset này được đóng gói
+cùng game, không đọc đường dẫn ổ đĩa lúc chơi. Các hội thoại cũ không gán JSON vẫn
+dùng luồng NPCIntroDialogue trước đó.
+
+- Đến gần kiểm lâm, nhấn **E**. **C** hoặc **Tiếp tục** chuyển lời thoại; khi đang nhập, C là ký tự bình thường.
+- Chỉ ba node `type: question` mở ô trả lời. Nhập tiếng Anh, nhấn **Gửi** hoặc Enter.
+- `UnityAiDialogueClient` gửi UTF-8 tới `/grade-answer` bằng node_id và một session_id giữ nguyên trong phiên Play.
+- Game dừng ở câu hỏi trong khi chờ chấm. UI và HTTP vẫn chạy khi `Time.timeScale=0`.
+- Kết quả có điểm, nhận xét, **CẦN SỬA** với câu sửa từ luật, và **GỢI Ý CÂU HAY HƠN** riêng nếu có.
+- Chưa đạt và còn lượt: sửa đáp án rồi **Gửi lại**. Đạt hoặc hết lượt: **Tiếp tục**. Hết lượt có đáp án tham khảo nếu backend cung cấp.
+- Lỗi kết nối/bận/review_required cho thử lại. Không tăng lượt ở client; backend quyết định số lượt.
+- **Đóng** hoặc Esc khôi phục trạng thái game. Mở lại không tạo session mới; kết quả đã chấm được giữ trong client.
+- Cuối hội thoại có ô hỏi đường không bắt buộc. `/detect-intent` chỉ được gọi tại đây; chỉ hiện nhánh ẩn khi đúng ý định và địa điểm trong JSON.
+
+Từ vựng/ngữ pháp của từng node hiện trong khung cuộn hiện có. Khung kết quả mới
+`JsonGradeFeedback` cũng cuộn được; `JsonContinueButton` nằm cạnh nút Đóng. Các
+RectTransform này được lưu trong scene để chỉnh bằng Inspector, không dựng lại
+mỗi lần Play. Kết quả đủ điều kiện thưởng được đọc từ backend; kết nối này chưa tự
+tạo phần thưởng vật phẩm mới hay thay đổi mục tiêu nhiệm vụ của Map 1.
+
+Chạy backend từ thư mục `UnityAI` trước khi gửi đáp án:
+
+```powershell
+.\.venv\Scripts\python.exe -B -X utf8 app.py
+```
+
+Trên `ForestRangerDialogueCanvas → UnityAiDialogueClient`, `Base Url` mặc định là
+`http://127.0.0.1:8000`, timeout 600 giây. Địa chỉ này dành cho game và backend
+chạy trên cùng PC; đổi thành địa chỉ máy chạy backend khi dùng máy khác.
+
+Các menu Editor chỉ chạy khi chủ động gọi:
+
+- **Tools → Map 2 → Connect Ranger JSON And UnityAI**: gắn tham chiếu, thêm các phần UI còn thiếu; giữ vị trí NPC và khung đã chỉnh, sao lưu scene vào `Library/RangerBackups` trước khi lưu.
+- **Validate Ranger JSON Connection**: kiểm tra dữ liệu và reference.
+- **Run Ranger JSON Tests**: test schema, UTF-8, điều kiện tiếp tục và khôi phục trạng thái, không cần model.
+- **Test Ranger UI With Running UnityAI**: vào Play Mode, gửi một đáp án thật, kiểm tra câu sửa/tiếng Việt, chụp UI rồi trở về Edit Mode. Cần backend đang chạy.
+
+Các kết quả kiểm tra nằm trong `Library/ForestRangerJson*.result`.
+
 ## Sổ tay học tập có phân trang
 
 Nhấn **J** hoặc nút **Clue Journal** để mở/đóng sổ. Dùng **Previous Page / Next Page** hoặc **Page Up / Page Down** để lật trang. Trang đầu ghi nhiệm vụ và manh mối; mỗi map có phần **Ngữ pháp** và **Từ vựng** riêng. TextMeshPro tự chia thêm trang khi nội dung vượt khung chữ, thay vì thu nhỏ chữ để nhét toàn bộ nội dung vào một trang.

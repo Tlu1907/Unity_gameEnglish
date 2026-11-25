@@ -16,7 +16,11 @@ public sealed class ReusableLevelConfiguration : MonoBehaviour
     public PlayerCameraFollow2D cameraFollow;
     public SchematicMinimap minimap;
 
-    private void Awake() => ApplyConfiguration();
+    private void Awake()
+    {
+        LearningJournal.LoadEarlierMaps(mapId);
+        ApplyConfiguration();
+    }
 
     [ContextMenu("Apply Map Configuration")]
     public void ApplyConfiguration()
@@ -51,6 +55,7 @@ public sealed class ReusableLevelConfiguration : MonoBehaviour
             }
         }
         foreach (var panel in GetComponentsInChildren<StoryQuizPanel>(true)) panel.SetJournalMap(mapId, mapTitle);
+        foreach (var panel in GetComponentsInChildren<NpcJsonDialoguePanel>(true)) panel.SetJournalMap(mapId, mapTitle);
         if (cameraFollow != null && player != null) cameraFollow.SetTarget(player.transform);
         if (minimap != null) minimap.SetObjectiveMode(false, objective);
         if (mapBackground != null && mapBackground.sprite != null)

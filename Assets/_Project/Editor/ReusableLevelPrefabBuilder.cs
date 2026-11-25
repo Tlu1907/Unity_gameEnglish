@@ -207,7 +207,7 @@ public static class ReusableLevelPrefabBuilder
             if (root.GetComponentsInChildren<EnemyBrain>(true).Length > 0 || root.GetComponentsInChildren<CityExitPortal>(true).Length > 0 ||
                 root.GetComponentsInChildren<TowerDialogueTrigger>(true).Length > 0 || root.GetComponentsInChildren<ResearchDocument>(true).Length > 0)
                 throw new InvalidOperationException("Map 1 mission objects remain in template.");
-            if (root.GetComponentInChildren<QuizPanel>(true) == null || root.GetComponentInChildren<FlaskEnglishQuizPanel>(true) == null)
+            if (root.GetComponentInChildren<QuizPanel>(true) == null)
                 throw new InvalidOperationException("Missing quiz UI after saving the prefab.");
             foreach (var story in root.GetComponentsInChildren<StoryQuizPanel>(true))
             {

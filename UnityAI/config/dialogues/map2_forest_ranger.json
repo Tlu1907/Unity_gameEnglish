@@ -1,0 +1,363 @@
+{
+  "id": "map2_forest_ranger",
+  "speaker": "Forest Ranger",
+  "dialogue_language": "en",
+  "grammar_symbols": {
+    "S": "Chủ ngữ",
+    "V1": "Động từ nguyên mẫu",
+    "V2": "Động từ quá khứ: dạng bất quy tắc hoặc thêm -ed",
+    "V3": "Quá khứ phân từ: dạng bất quy tắc hoặc thêm -ed",
+    "V-ing": "Động từ thêm -ing",
+    "N": "Danh từ hoặc cụm danh từ",
+    "Adj": "Tính từ",
+    "Wh-word": "Từ để hỏi, ví dụ: what, where, why, how"
+  },
+  "dialogues": [
+    {
+      "id": "ranger_01_greeting",
+      "type": "dialogue",
+      "dialogue_en": "Hello! Thank you for saving me from that monster. I am a forest ranger. I protect the forest.",
+      "wait_for_player_response": false,
+      "vocabulary": [
+        {
+          "word": "saving me from that monster",
+          "meaning": "cứu tôi khỏi con quái vật đó (v. phr.)"
+        },
+        {
+          "word": "forest ranger",
+          "meaning": "kiểm lâm (n. phr.)"
+        },
+        {
+          "word": "protect the forest",
+          "meaning": "bảo vệ khu rừng (v. phr.)"
+        }
+      ],
+      "grammar": [
+        {
+          "name_en": "Thanking someone",
+          "formula": "Thank you for + V-ing + ...",
+          "example_en": "Thank you for saving me from that monster.",
+          "note_vi": "Cảm ơn ai vì đã làm việc gì. Sau giới từ for dùng V-ing; save ... from ... nghĩa là cứu ai khỏi điều gì."
+        },
+        {
+          "name_en": "Present simple: identity and regular duties",
+          "formula": "S + am/is/are + N/Adj. / S + V1(s/es) + ...",
+          "example_en": "I am a forest ranger. I protect the forest.",
+          "note_vi": "Hiện tại đơn dùng để giới thiệu nghề nghiệp và công việc thường xuyên. I đi với am; động từ protect giữ nguyên mẫu khi chủ ngữ là I."
+        }
+      ]
+    },
+    {
+      "id": "ranger_question_01_player_identity",
+      "type": "question",
+      "dialogue_en": "Who are you?",
+      "wait_for_player_response": true,
+      "vocabulary": [],
+      "grammar": [
+        {
+          "name_en": "Present simple: asking about identity",
+          "formula": "Who + am/is/are + S?",
+          "example_en": "Who are you?",
+          "note_vi": "Hỏi người đối diện là ai. You đi với are. Khi giới thiệu bản thân, người chơi có thể dùng I am + tên hoặc nghề nghiệp."
+        }
+      ]
+    },
+    {
+      "id": "ranger_02_forest_condition",
+      "type": "dialogue",
+      "dialogue_en": "Strange creatures have appeared in the forest. They are very strong. They have destroyed many trees and hurt some animals.",
+      "wait_for_player_response": false,
+      "vocabulary": [
+        {
+          "word": "strange creatures",
+          "meaning": "những sinh vật lạ (n. phr.)"
+        },
+        {
+          "word": "appeared in the forest",
+          "meaning": "xuất hiện trong khu rừng (v. phr.)"
+        },
+        {
+          "word": "very strong",
+          "meaning": "rất mạnh (adj. phr.)"
+        },
+        {
+          "word": "destroyed many trees",
+          "meaning": "phá hủy nhiều cây (v. phr.)"
+        },
+        {
+          "word": "hurt some animals",
+          "meaning": "làm một số con vật bị thương (v. phr.)"
+        }
+      ],
+      "grammar": [
+        {
+          "name_en": "Present perfect: changes with present results",
+          "formula": "S + have/has + V3 + ...",
+          "example_en": "Strange creatures have appeared in the forest.",
+          "note_vi": "Hiện tại hoàn thành diễn tả việc đã xảy ra và còn ảnh hưởng ở hiện tại. I/you/we/they dùng have; he/she/it dùng has. Appear → appeared; destroy → destroyed; hurt → hurt. Trong câu cuối, have được dùng chung cho destroyed và hurt."
+        },
+        {
+          "name_en": "Present simple: current states",
+          "formula": "S + am/is/are + Adj.",
+          "example_en": "They are very strong.",
+          "note_vi": "Dùng hiện tại đơn để mô tả trạng thái hoặc đặc điểm hiện tại. They đi với are."
+        }
+      ]
+    },
+    {
+      "id": "ranger_question_02_player_purpose",
+      "type": "question",
+      "dialogue_en": "What are you doing in this forest?",
+      "wait_for_player_response": true,
+      "vocabulary": [],
+      "grammar": [
+        {
+          "name_en": "Present continuous: asking about current activity",
+          "formula": "What + am/is/are + S + V-ing + ...?",
+          "example_en": "What are you doing in this forest?",
+          "note_vi": "Hỏi người chơi đang làm gì trong khu rừng, từ đó tìm hiểu mục đích có mặt tại đây. Khi trả lời về hành động đang thực hiện, dùng I am + V-ing + ..."
+        }
+      ]
+    },
+    {
+      "id": "ranger_04_ongoing_attacks",
+      "type": "dialogue",
+      "dialogue_en": "The creatures are breaking trees and chasing animals. Some parts of the forest are burning, and the animals are running away.",
+      "wait_for_player_response": false,
+      "vocabulary": [
+        {
+          "word": "breaking trees",
+          "meaning": "làm gãy cây, phá cây (v. phr.)"
+        },
+        {
+          "word": "chasing animals",
+          "meaning": "đuổi theo các con vật (v. phr.)"
+        },
+        {
+          "word": "parts of the forest",
+          "meaning": "các khu vực của khu rừng (n. phr.)"
+        },
+        {
+          "word": "burning",
+          "meaning": "cháy (v)"
+        },
+        {
+          "word": "running away",
+          "meaning": "bỏ chạy, chạy trốn (v. phr.)"
+        }
+      ],
+      "grammar": [
+        {
+          "name_en": "Present continuous: ongoing events",
+          "formula": "S + am/is/are + V-ing + ...",
+          "example_en": "The creatures are breaking trees and chasing animals.",
+          "note_vi": "Hiện tại tiếp diễn diễn tả sự việc đang xảy ra lúc nói hoặc trong giai đoạn hiện tại. Are dùng chung cho breaking và chasing. Chase → chasing; run → running."
+        }
+      ]
+    },
+    {
+      "id": "ranger_question_03_creature_origin",
+      "type": "question",
+      "dialogue_en": "Do you know where these creatures come from?",
+      "wait_for_player_response": true,
+      "vocabulary": [
+        {
+          "word": "come from",
+          "meaning": "đến từ, có nguồn gốc từ (v. phr.)"
+        }
+      ],
+      "grammar": [
+        {
+          "name_en": "Present simple: asking about knowledge and origin",
+          "formula": "Do/Does + S + know + where + S + V1(s/es) + ...?",
+          "example_en": "Do you know where these creatures come from?",
+          "note_vi": "Hỏi người chơi có biết nguồn gốc các sinh vật không. Sau know, mệnh đề có where dùng trật tự khẳng định: where + these creatures + come from. Không đảo thành where do these creatures come from trong mệnh đề này."
+        }
+      ]
+    },
+    {
+      "id": "ranger_05_visit_to_ruins",
+      "type": "dialogue",
+      "dialogue_en": "There is something strange at the ancient ruins. This morning, I went there to check the area. I saw a blue light and heard strange sounds near the old stones.",
+      "wait_for_player_response": false,
+      "vocabulary": [
+        {
+          "word": "something strange",
+          "meaning": "điều gì đó kỳ lạ (n. phr.)"
+        },
+        {
+          "word": "ancient ruins",
+          "meaning": "khu di tích cổ, những tàn tích cổ (n. phr.)"
+        },
+        {
+          "word": "check the area",
+          "meaning": "kiểm tra khu vực (v. phr.)"
+        },
+        {
+          "word": "blue light",
+          "meaning": "ánh sáng xanh dương (n. phr.)"
+        },
+        {
+          "word": "strange sounds",
+          "meaning": "những âm thanh kỳ lạ (n. phr.)"
+        },
+        {
+          "word": "old stones",
+          "meaning": "những tảng đá cũ, lâu đời (n. phr.)"
+        }
+      ],
+      "grammar": [
+        {
+          "name_en": "Present simple: existence",
+          "formula": "There is + N số ít hoặc N không đếm được + ...",
+          "example_en": "There is something strange at the ancient ruins.",
+          "note_vi": "There is diễn tả sự tồn tại của một điều gì đó. Something strange nghĩa là điều gì đó kỳ lạ; với something, tính từ đứng sau."
+        },
+        {
+          "name_en": "Past simple: a completed visit",
+          "formula": "S + V2 + ...",
+          "example_en": "This morning, I went there to check the area.",
+          "note_vi": "Quá khứ đơn kể lại chuyến đi đã kết thúc. Go → went; see → saw; hear → heard. To check diễn tả mục đích: để kiểm tra. There chỉ khu di tích cổ vừa được nhắc đến."
+        }
+      ]
+    },
+    {
+      "id": "ranger_06_monster_attack",
+      "type": "dialogue",
+      "dialogue_en": "On my way back, a large monster attacked me. I hid behind a tree, but it found me.",
+      "wait_for_player_response": false,
+      "vocabulary": [
+        {
+          "word": "on my way back",
+          "meaning": "trên đường tôi quay về (prep. phr.)"
+        },
+        {
+          "word": "a large monster",
+          "meaning": "một con quái vật to lớn (n. phr.)"
+        },
+        {
+          "word": "attacked me",
+          "meaning": "tấn công tôi (v. phr.)"
+        },
+        {
+          "word": "hid behind a tree",
+          "meaning": "ẩn nấp sau một cái cây (v. phr.)"
+        }
+      ],
+      "grammar": [
+        {
+          "name_en": "Past simple: a sequence of events",
+          "formula": "S + V2 + ...",
+          "example_en": "I hid behind a tree, but it found me.",
+          "note_vi": "Kể lại các sự việc đã xảy ra trong quá khứ. Attack → attacked; hide → hid; find → found. But nối hai ý tương phản: kiểm lâm đã trốn nhưng vẫn bị phát hiện."
+        }
+      ]
+    },
+    {
+      "id": "ranger_07_strange_changes",
+      "type": "dialogue",
+      "dialogue_en": "I have also found strange marks on the old stones. The blue light has become brighter since yesterday.",
+      "wait_for_player_response": false,
+      "vocabulary": [
+        {
+          "word": "strange marks",
+          "meaning": "những dấu vết hoặc dấu khắc kỳ lạ (n. phr.)"
+        },
+        {
+          "word": "old stones",
+          "meaning": "những tảng đá cũ, lâu đời (n. phr.)"
+        },
+        {
+          "word": "become brighter",
+          "meaning": "trở nên sáng hơn (v. phr.)"
+        },
+        {
+          "word": "since yesterday",
+          "meaning": "kể từ hôm qua (prep. phr.)"
+        }
+      ],
+      "grammar": [
+        {
+          "name_en": "Present perfect: a discovery relevant now",
+          "formula": "S + have/has + V3 + ...",
+          "example_en": "I have also found strange marks on the old stones.",
+          "note_vi": "Diễn tả phát hiện đã xảy ra và còn ý nghĩa ở hiện tại. Find → found → found. Also bổ sung thông tin về hiện tượng lạ ở di tích."
+        },
+        {
+          "name_en": "Present perfect: change since a starting point",
+          "formula": "S + have/has + V3 + ... + since + mốc thời gian.",
+          "example_en": "The blue light has become brighter since yesterday.",
+          "note_vi": "Diễn tả thay đổi tính từ một mốc quá khứ đến hiện tại. The blue light là số ít nên dùng has. Become → became → become; brighter là dạng so sánh hơn của bright."
+        }
+      ]
+    },
+    {
+      "id": "ranger_09_next_destination",
+      "type": "dialogue",
+      "dialogue_en": "I think the ruins and the creatures are connected. Please go to the ancient ruins and look for clues. Watch out for monsters.",
+      "wait_for_player_response": false,
+      "vocabulary": [
+        {
+          "word": "are connected",
+          "meaning": "có liên quan với nhau (v. phr.)"
+        },
+        {
+          "word": "ancient ruins",
+          "meaning": "khu di tích cổ, những tàn tích cổ (n. phr.)"
+        },
+        {
+          "word": "look for clues",
+          "meaning": "tìm kiếm manh mối (v. phr.)"
+        },
+        {
+          "word": "watch out for monsters",
+          "meaning": "cẩn thận, đề phòng quái vật (v. phr.)"
+        }
+      ],
+      "grammar": [
+        {
+          "name_en": "Present simple: expressing a belief",
+          "formula": "S + think(s) + (that) + S + am/is/are + Adj.",
+          "example_en": "I think the ruins and the creatures are connected.",
+          "note_vi": "I think... diễn tả suy nghĩ hiện tại. Kiểm lâm chỉ nghi ngờ có mối liên hệ, chưa xác nhận nguồn gốc sinh vật. Are connected ở đây diễn tả trạng thái có liên quan."
+        },
+        {
+          "name_en": "Imperatives: giving a mission",
+          "formula": "(Please) + V1 + ...",
+          "example_en": "Please go to the ancient ruins and look for clues.",
+          "note_vi": "Dùng động từ nguyên mẫu để giao nhiệm vụ; chủ ngữ you thường được lược bỏ. Please giúp lời yêu cầu lịch sự hơn. Đây là cấu trúc bổ sung cho bốn thì chính."
+        }
+      ]
+    }
+  ],
+  "conditional_dialogues": [
+    {
+      "id": "ranger_hidden_01_mark_ruins_on_map",
+      "type": "conditional_dialogue",
+      "hidden_by_default": true,
+      "available_after": "ranger_09_next_destination",
+      "trigger": {
+        "player_intent": "ask_next_destination_location",
+        "target_location": "ancient_ruins",
+        "requires_explicit_question": true,
+        "note_vi": "Chỉ hiện ở cuối cuộc trò chuyện, sau lời giao nhiệm vụ, khi người chơi chủ động hỏi khu di tích cổ nằm ở đâu hoặc hỏi đường đến đó. Nếu người chơi không hỏi thì kết thúc mà không hiện câu này. Câu hỏi về nguồn gốc sinh vật không kích hoạt nhánh đánh dấu vị trí."
+      },
+      "dialogue_en": "I will mark it on your map.",
+      "wait_for_player_response": false,
+      "vocabulary": [
+        {
+          "word": "mark it on your map",
+          "meaning": "đánh dấu vị trí đó trên bản đồ của bạn (v. phr.)"
+        }
+      ],
+      "grammar": [
+        {
+          "name_en": "Future simple: a promise",
+          "formula": "S + will + V1 + ...",
+          "example_en": "I will mark it on your map.",
+          "note_vi": "Will + động từ nguyên mẫu diễn tả lời hứa hoặc quyết định đưa ra lúc nói. Ở đây kiểm lâm hứa sẽ đánh dấu vị trí khu di tích cổ trên bản đồ của người chơi. Đây là cấu trúc bổ sung riêng cho câu trả lời ẩn."
+        }
+      ]
+    }
+  ]
+}

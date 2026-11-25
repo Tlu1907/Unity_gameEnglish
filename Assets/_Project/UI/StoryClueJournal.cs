@@ -5,15 +5,27 @@ using System.Text;
 using UnityEngine;
 using UnityEngine.UI;
 
-/// <summary>Session notebook containing notes from encountered pages.</summary>
+/// <summary>Shared notebook containing learned notes across levels and play sessions.</summary>
 public static class LearningJournal
 {
+    private const string SaveKey = "EarthDefender.LearningJournal.v1";
+    [Serializable] private sealed class SavedJournal
+    {
+        public List<SavedMap> maps = new List<SavedMap>();
+    }
+    [Serializable] internal sealed class SavedMap
+    {
+        public string id, title;
+        public List<string> vocabulary = new List<string>();
+        public List<GrammarNote> grammar = new List<GrammarNote>();
+    }
+    [Serializable]
     public sealed class GrammarNote
     {
         public string Id, GroupId, Text;
     }
-    private static readonly string[] groupIds = { "to_be", "present_continuous", "possession_relationships", "ability_future", "commands_suggestions", "purpose_time", "continuing_actions", "general" };
-    private static readonly string[] groupTitles = { "To be & Descriptions", "Present Continuous", "Possession & Relationships", "Ability & Future", "Commands & Suggestions", "Purpose & Time", "Continuing Actions", "Other Grammar" };
+    private static readonly string[] groupIds = { "to_be", "present_simple", "present_continuous", "past_simple", "present_perfect", "possession_relationships", "ability_future", "commands_suggestions", "purpose_time", "continuing_actions", "general" };
+    private static readonly string[] groupTitles = { "To be & Descriptions", "Present Simple", "Present Continuous", "Past Simple", "Present Perfect", "Possession & Relationships", "Ability & Future", "Commands & Suggestions", "Purpose & Time", "Continuing Actions", "Other Grammar" };
     public sealed class MapNotes
     {
         public readonly string Id;
@@ -26,6 +38,12 @@ public static class LearningJournal
         private readonly HashSet<string> wordKeys = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
         public IReadOnlyList<string> Grammar => grammar.AsReadOnly();
         public IReadOnlyList<string> Vocabulary => vocabulary.AsReadOnly();
+        internal SavedMap Capture() => new SavedMap
+        {
+            id = Id, title = Title,
+            vocabulary = new List<string>(vocabulary),
+            grammar = new List<GrammarNote>(grammarNotes)
+        };
         internal MapNotes(string id, string title) { Id = id; Title = title; }
         internal bool Add(ResearchDocument.Vocabulary[] words, string formula, string grammarId = null, string groupId = null)
         {
@@ -120,6 +138,21 @@ public static class LearningJournal
     private static readonly List<MapNotes> maps = new List<MapNotes>();
     public static IReadOnlyList<MapNotes> Maps => maps.AsReadOnly();
     public static event Action Changed;
+    // Starting a later level directly has no earlier play-session data to restore.
+    // Use authored summaries only for missing maps; never overwrite the player's notes.
+    public static void LoadEarlierMaps(string currentMapId)
+    {
+        if (string.IsNullOrWhiteSpace(currentMapId)) return;
+        string id = currentMapId.Trim().ToLowerInvariant();
+        if (!id.StartsWith("map") || !int.TryParse(id.Substring(3), out int level) || level < 2) return;
+        for (int previous = 1; previous < level; previous++)
+        {
+            string previousId = "map" + previous;
+            if (maps.Exists(map => string.Equals(map.Id, previousId, StringComparison.OrdinalIgnoreCase))) continue;
+            var archive = Resources.Load<TextAsset>("Learning/" + previousId + "_journal_archive");
+            if (archive != null) Restore(archive.text);
+        }
+    }
     public static void Record(string mapId, string title, ResearchDocument.Vocabulary[] words, string grammar)
     {
         if (string.IsNullOrWhiteSpace(mapId)) return;
@@ -130,7 +163,7 @@ public static class LearningJournal
         if (map == null) { map = new MapNotes(mapId, string.IsNullOrWhiteSpace(title) ? mapId : title); maps.Add(map); }
         bool changed = map.Add(words, grammar);
         if (!string.IsNullOrWhiteSpace(title) && map.Title != title) { map.Title = title; changed = true; }
-        if (changed) Changed?.Invoke();
+        if (changed) NotifyChanged();
     }
     private static string Plain(string value) => (value ?? "").Replace("<", "‹").Replace(">", "›");
     public static void RecordGrammar(string mapId, string title, GrammarNote note)
@@ -139,7 +172,57 @@ public static class LearningJournal
         mapId = mapId.Trim();
         var map = maps.Find(item => string.Equals(item.Id, mapId, StringComparison.OrdinalIgnoreCase));
         if (map == null) { map = new MapNotes(mapId, string.IsNullOrWhiteSpace(title) ? mapId : title); maps.Add(map); }
-        if (map.Add(null, note.Text, note.Id, note.GroupId)) Changed?.Invoke();
+        if (map.Add(null, note.Text, note.Id, note.GroupId)) NotifyChanged();
+    }
+    private static void NotifyChanged()
+    {
+        if (Application.isPlaying)
+        {
+            PlayerPrefs.SetString(SaveKey, Serialize());
+            PlayerPrefs.Save();
+        }
+        Changed?.Invoke();
+    }
+    private static string Serialize()
+    {
+        var saved = new SavedJournal();
+        foreach (var map in maps) saved.maps.Add(map.Capture());
+        return JsonUtility.ToJson(saved);
+    }
+    // Restore through the normal deduplication rules, without saving or firing per-note events.
+    private static void Restore(string json)
+    {
+        if (string.IsNullOrWhiteSpace(json)) return;
+        SavedJournal saved;
+        try { saved = JsonUtility.FromJson<SavedJournal>(json); }
+        catch (ArgumentException) { Debug.LogWarning("Learning journal save could not be read."); return; }
+        if (saved?.maps == null) return;
+        foreach (var source in saved.maps)
+        {
+            if (source == null || string.IsNullOrWhiteSpace(source.id)) continue;
+            string id = source.id.Trim();
+            var map = maps.Find(item => string.Equals(item.Id, id, StringComparison.OrdinalIgnoreCase));
+            if (map == null)
+            {
+                map = new MapNotes(id, string.IsNullOrWhiteSpace(source.title) ? id : source.title);
+                maps.Add(map);
+            }
+            if (source.vocabulary != null)
+                foreach (string entry in source.vocabulary)
+                {
+                    if (string.IsNullOrWhiteSpace(entry)) continue;
+                    int separator = entry.IndexOf(':');
+                    map.Add(new[] { new ResearchDocument.Vocabulary
+                    {
+                        word = separator < 0 ? entry : entry.Substring(0, separator),
+                        meaning = separator < 0 ? "" : entry.Substring(separator + 1).Trim()
+                    } }, null);
+                }
+            if (source.grammar != null)
+                foreach (var note in source.grammar)
+                    if (note != null) map.Add(null, note.Text, note.Id, note.GroupId);
+        }
+        Changed?.Invoke();
     }
     public static string BuildBook()
     {
@@ -160,6 +243,12 @@ public static class LearningJournal
         return book.ToString();
     }
     [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
+    private static void BeginSession()
+    {
+        Reset();
+        Restore(PlayerPrefs.GetString(SaveKey, ""));
+    }
+    // Explicit in-memory reset for isolated tests; scene changes never clear learned notes.
     public static void Reset() { maps.Clear(); Changed = null; }
 }
 

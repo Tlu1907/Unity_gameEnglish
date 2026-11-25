@@ -35,9 +35,13 @@ public sealed class NPCIntroDialogue : MonoBehaviour
     private float revealedCharacters;
     private int characterCount;
     private System.Action<bool> completed;
-    public bool IsTyping { get; private set; }
-    public bool IsOpen { get; private set; }
-    public bool AcceptsDialogue(DialogueData data) => data != null && (playerTranslation
+    private NpcJsonDialoguePanel jsonPanel;
+    private bool legacyTyping, legacyOpen;
+    public bool IsTyping { get => jsonPanel != null && jsonPanel.IsOpen ? jsonPanel.IsTyping : legacyTyping; private set => legacyTyping = value; }
+    public bool IsOpen { get => legacyOpen || jsonPanel != null && jsonPanel.IsOpen; private set => legacyOpen = value; }
+    public bool AcceptsDialogue(DialogueData data) => data != null && (data.conversationJson != null
+        ? NpcJsonDialogue.TryParse(data.conversationJson.text, out _)
+        : playerTranslation
         ? data.lines != null && data.lines.Length > 0 && System.Array.TrueForAll(data.lines,
             line => line != null && !string.IsNullOrWhiteSpace(line.english))
         : data.IsValid);
@@ -79,6 +83,11 @@ public sealed class NPCIntroDialogue : MonoBehaviour
     public bool TryShowDialogue(DialogueData data, System.Action<bool> onCompleted)
     {
         if (IsOpen || !enabled) return false;
+        if (data != null && data.conversationJson != null)
+        {
+            jsonPanel = GetComponent<NpcJsonDialoguePanel>();
+            return jsonPanel != null && jsonPanel.TryOpen(data, onCompleted);
+        }
         bool validData = AcceptsDialogue(data);
         if (dialoguePanel == null || englishText == null || (!playerTranslation && vietnameseText == null) ||
             !validData || (playerTranslation && (answerInput == null || submitAnswerButton == null)))
@@ -110,6 +119,7 @@ public sealed class NPCIntroDialogue : MonoBehaviour
     // Update and legacy keyboard input keep working with timeScale at zero.
     private void Update()
     {
+        if (jsonPanel != null && jsonPanel.IsOpen) return;
         if (!IsOpen) return;
         if (GameplayState.Current != GameplayMode.Dialogue || dialoguePanel == null || !dialoguePanel.activeInHierarchy)
         { Close(); return; }
@@ -121,6 +131,7 @@ public sealed class NPCIntroDialogue : MonoBehaviour
 
     public void Advance()
     {
+        if (jsonPanel != null && jsonPanel.IsOpen) { jsonPanel.Advance(); return; }
         if (!IsOpen || GameplayState.Current != GameplayMode.Dialogue) return;
         if (IsTyping) { FinishTyping(); return; }
         if (playerTranslation && !answerSubmitted) return;
@@ -182,7 +193,11 @@ public sealed class NPCIntroDialogue : MonoBehaviour
                 ? activeDialogue.closePrompt : activeDialogue.continuePrompt;
     }
 
-    public void Close() => CloseInternal(false);
+    public void Close()
+    {
+        if (jsonPanel != null && jsonPanel.IsOpen) jsonPanel.Close();
+        else CloseInternal(false);
+    }
 
     private void CloseInternal(bool readToEnd)
     {
@@ -205,7 +220,7 @@ public sealed class NPCIntroDialogue : MonoBehaviour
         if (answerInput != null) answerInput.onValueChanged.AddListener(OnAnswerChanged);
         if (submitAnswerButton != null) submitAnswerButton.onClick.AddListener(SubmitAnswer);
     }
-    private void OnAnswerChanged(string _) { answerSubmitted = false; RefreshAnswerControls(); }
+    private void OnAnswerChanged(string _) { if (jsonPanel != null && jsonPanel.IsOpen) return; answerSubmitted = false; RefreshAnswerControls(); }
     private void RefreshAnswerControls()
     {
         if (submitAnswerButton != null) submitAnswerButton.interactable = IsOpen &&
@@ -213,6 +228,7 @@ public sealed class NPCIntroDialogue : MonoBehaviour
     }
     public void SubmitAnswer()
     {
+        if (jsonPanel != null && jsonPanel.IsOpen) { jsonPanel.SubmitAnswer(); return; }
         if (!playerTranslation || !IsOpen || answerSubmitted || answerInput == null || string.IsNullOrWhiteSpace(answerInput.text)) return;
         if (IsTyping) FinishTyping();
         LastSubmittedAnswer = answerInput.text.Trim(); answerSubmitted = true;
