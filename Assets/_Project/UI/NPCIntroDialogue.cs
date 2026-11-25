@@ -46,8 +46,9 @@ public sealed class NPCIntroDialogue : MonoBehaviour
             line => line != null && !string.IsNullOrWhiteSpace(line.english))
         : data.IsValid);
 
-    private void Start()
+    private System.Collections.IEnumerator Start()
     {
+        while (SceneTransition.IsTransitioning) yield return null;
         if (playOnStart) Open();
         else if (!IsOpen && dialoguePanel != null) dialoguePanel.SetActive(false);
     }

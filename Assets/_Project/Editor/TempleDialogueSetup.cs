@@ -193,7 +193,7 @@ public static class TempleDialogueSetup
         }
         var questionScroll = text.GetComponentInParent<ScrollRect>(true);
         var questionArea = (RectTransform)questionScroll.transform;
-        questionArea.anchorMin = new Vector2(.025f, .46f);
+        questionArea.anchorMin = new Vector2(.025f, .68f);
         questionArea.anchorMax = new Vector2(.50f, .94f);
         questionArea.offsetMin = questionArea.offsetMax = Vector2.zero;
         questionArea.localScale = Vector3.one;

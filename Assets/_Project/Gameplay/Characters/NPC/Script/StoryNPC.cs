@@ -19,7 +19,8 @@ public sealed class StoryNPC : MonoBehaviour
     private Animator animator;
     public int CurrentStage => progress!=null && progress.OpenedCount>=progress.Target?2:progress!=null && progress.OpenedCount>=2?1:0;
     public bool IsAvailable => !appearsAfterTwoChests || CurrentStage>0;
-    public bool HasUnreadDialogue => IsAvailable && lastReadStage!=CurrentStage;
+    public bool CanTalk => IsAvailable && StoryProgress.CanTalkTo(CurrentDialogue);
+    public bool HasUnreadDialogue => CanTalk && lastReadStage!=CurrentStage;
     public DialogueData CurrentDialogue => stages!=null && stages.Length>CurrentStage?stages[CurrentStage]:null;
     private void OnEnable(){GameplayState.Changed+=OnGameplayChanged;if(progress!=null)progress.Changed+=Refresh;Refresh();}
     private void OnGameplayChanged(GameplayMode mode){if(mode!=GameplayMode.Dialogue)ownsConversation=false;}
@@ -32,7 +33,7 @@ public sealed class StoryNPC : MonoBehaviour
     }
     public bool TryTalk()
     {
-        if(!isActiveAndEnabled || !IsAvailable || !GameplayState.CanAct || dialogueUI==null || dialogueUI.IsOpen || CurrentDialogue==null)return false;
+        if(!isActiveAndEnabled || !CanTalk || !GameplayState.CanAct || dialogueUI==null || dialogueUI.IsOpen || CurrentDialogue==null)return false;
         dialogueUI.ShowDialogue(CurrentDialogue);
         if(!dialogueUI.IsOpen)return false;
         ownsConversation=true;lastReadStage=CurrentStage;Refresh();return true;

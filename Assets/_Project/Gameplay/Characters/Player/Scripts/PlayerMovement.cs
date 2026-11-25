@@ -16,6 +16,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField, HideInInspector] private int migrationVersion;
     private Health health;
     private PlayerInventory inventory;
+    public string PlayerName => PlayerProfileStore.PlayerName;
+    public string PlayerId => PlayerProfileStore.PlayerId;
 
     private void Awake()
     {

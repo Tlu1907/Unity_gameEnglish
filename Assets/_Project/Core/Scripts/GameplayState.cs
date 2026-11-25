@@ -6,7 +6,7 @@ public enum GameplayMode { Playing, Quiz, Paused, GameOver, Dialogue }
 public static class GameplayState
 {
     public static GameplayMode Current { get; private set; } = GameplayMode.Playing;
-    public static bool CanAct => Current == GameplayMode.Playing;
+    public static bool CanAct => Current == GameplayMode.Playing && !SceneTransition.IsTransitioning;
     public static event Action<GameplayMode> Changed;
     private static GameplayMode beforeQuiz;
     private static object quizOwner;

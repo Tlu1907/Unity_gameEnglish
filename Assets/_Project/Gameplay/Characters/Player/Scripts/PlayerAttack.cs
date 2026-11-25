@@ -11,8 +11,19 @@ public sealed class PlayerAttack : MonoBehaviour
     [SerializeField, Min(.01f)] private float reach = 1.8f;
     [SerializeField, Range(1f, 180f)] private float attackAngle = 100f;
     private float cooldown;
+    public bool HasTempleBlessing { get; private set; }
     private static readonly int AttackTrigger = Animator.StringToHash("Attack");
-    public int Damage => GetComponent<PlayerInventory>()?.HasWeapon == true ? weaponDamage : unarmedDamage;
+    public int Damage => HasTempleBlessing ? 70 : GetComponent<PlayerInventory>()?.HasWeapon == true ? weaponDamage : unarmedDamage;
+
+    public bool GrantTempleBlessing()
+    {
+        var health = GetComponent<Health>();
+        if (HasTempleBlessing || health == null || health.IsDead) return false;
+        HasTempleBlessing = true;
+        health.AddBonusArmor(200);
+        health.RestoreHealthAndArmor();
+        return true;
+    }
 
     private void Update()
     {

@@ -8,10 +8,97 @@ using UnityEngine;
 
 public sealed class TempleExerciseTests
 {
+    [Test]
+    public void TempleLocationIsHiddenUntilAskedAndClearsAfterTempleCompletion()
+    {
+        var progress = Runtime("StoryProgress");
+        bool Visible() => (bool)progress.GetProperty("ShowTempleLocation").GetValue(null);
+        Assert.That(Visible(), Is.False);
+        progress.GetMethod("CompleteConversation").Invoke(null, new object[] { "map2_forest_ranger" });
+        Assert.That(Visible(), Is.False, "Finishing the ranger without asking directions must not reveal the temple.");
+        progress.GetMethod("MarkTempleLocation").Invoke(null, null);
+        Assert.That(Visible(), Is.True);
+        progress.GetMethod("CompleteConversation").Invoke(null, new object[] { "map2_ancient_temple" });
+        Assert.That(Visible(), Is.False);
+        progress.GetMethod("Reset").Invoke(null, null);
+        Assert.That(progress.GetProperty("HasMarkedTempleLocation").GetValue(null), Is.False);
+    }
+
+    [Test]
+    public void TempleRequiresRangerAndCompletedConversationsCannotRestart()
+    {
+        var progress = Runtime("StoryProgress");
+        bool CanStart(string id) => (bool)progress.GetMethod("CanStartConversation").Invoke(null, new object[] { id });
+        bool Complete(string id) => (bool)progress.GetMethod("CompleteConversation").Invoke(null, new object[] { id });
+        Assert.That(CanStart("map2_ancient_temple"), Is.False);
+        Assert.That(Complete("map2_ancient_temple"), Is.False);
+        Assert.That(CanStart("map2_forest_ranger"), Is.True);
+        Assert.That(Complete("map2_forest_ranger"), Is.True);
+        Assert.That(CanStart("map2_forest_ranger"), Is.False);
+        Assert.That(CanStart("map2_ancient_temple"), Is.True);
+        Assert.That(Complete("map2_ancient_temple"), Is.True);
+        Assert.That(CanStart("map2_ancient_temple"), Is.False);
+        progress.GetMethod("Reset").Invoke(null, null);
+        Assert.That(CanStart("map2_forest_ranger"), Is.True);
+        Assert.That(CanStart("map2_ancient_temple"), Is.False);
+    }
+
+    [Test]
+    public void CrystalBlessingRestoresHealthAndArmorSetsDamageAndCannotBeClaimedTwice()
+    {
+        var player = new GameObject("Temple reward test player");
+        try
+        {
+            var health = player.AddComponent(Runtime("Health"));
+            var inventory = player.AddComponent(Runtime("PlayerInventory"));
+            var attack = player.AddComponent(Runtime("PlayerAttack"));
+            inventory.GetType().GetMethod("SetEquipped").Invoke(inventory, new object[] { true });
+            int Armor() => (int)health.GetType().GetProperty("Armor").GetValue(health);
+            int before = Armor();
+            health.GetType().GetField("armor", BindingFlags.Instance | BindingFlags.NonPublic).SetValue(health, 25);
+            health.GetType().GetMethod("Configure").Invoke(health, new object[] { 200, 60 });
+            var grant = attack.GetType().GetMethod("GrantTempleBlessing");
+            Assert.That(grant.Invoke(attack, null), Is.True);
+            Assert.That(health.GetType().GetProperty("Current").GetValue(health), Is.EqualTo(200));
+            Assert.That(Armor(), Is.EqualTo(before + 200));
+            Assert.That(health.GetType().GetProperty("MaximumArmor").GetValue(health), Is.EqualTo(300));
+            Assert.That(attack.GetType().GetProperty("Damage").GetValue(attack), Is.EqualTo(70));
+            health.GetType().GetMethod("Configure").Invoke(health, new object[] { 200, 80 });
+            Assert.That(grant.Invoke(attack, null), Is.False);
+            Assert.That(health.GetType().GetProperty("Current").GetValue(health), Is.EqualTo(80));
+            Assert.That(Armor(), Is.EqualTo(before + 200));
+            inventory.GetType().GetMethod("SetEquipped").Invoke(inventory, new object[] { false });
+            Assert.That(Armor(), Is.EqualTo(200), "Unequipping gear must preserve the crystal armor.");
+        }
+        finally { UnityEngine.Object.DestroyImmediate(player); }
+    }
+
+    [Test]
+    public void TempleRewardUsesTheAuthoredGoldenCrystalSprite()
+    {
+        var scene = EditorSceneManager.OpenPreviewScene("Assets/_Project/Scenes/Scence_2/Scence2.unity");
+        try
+        {
+            Component trigger = null;
+            foreach (var root in scene.GetRootGameObjects())
+            {
+                trigger = root.GetComponentInChildren(Runtime("TempleDialogueTrigger"), true);
+                if (trigger != null) break;
+            }
+            Assert.That(trigger, Is.Not.Null);
+            var sprite = (Sprite)Runtime("TempleDialogueTrigger")
+                .GetField("rewardCrystal", BindingFlags.Instance | BindingFlags.NonPublic).GetValue(trigger);
+            Assert.That(sprite, Is.Not.Null);
+            Assert.That(sprite.name, Is.EqualTo("Items_56"));
+        }
+        finally { EditorSceneManager.ClosePreviewScene(scene); }
+    }
+
     private object[] exercises;
     private static Type Runtime(string name) => Assembly.Load("Assembly-CSharp").GetType(name, true);
     [SetUp] public void Load()
     {
+        Runtime("StoryProgress").GetMethod("Reset").Invoke(null, null);
         object[] args = { File.ReadAllText("Assets/_Project/Data/Questions/Map2/map2_ancient_temple_dialogue_en.json"), null };
         Assert.That(Runtime("NpcJsonDialogue").GetMethod("TryParse").Invoke(null, args), Is.True);
         var values = (Array)Runtime("NpcJsonDialogue").GetField("exercises").GetValue(args[1]);
@@ -50,6 +137,7 @@ public sealed class TempleExerciseTests
     }
     [Test] public void TempleSceneUiUsesServerResultsAndKeepsEvidenceAvailableForTheReport()
     {
+        Runtime("StoryProgress").GetMethod("CompleteConversation").Invoke(null, new object[] { "map2_forest_ranger" });
         var flags = BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic;
         object Call(object target, string method, params object[] args) => target.GetType().GetMethod(method, flags).Invoke(target, args);
         object Field(object target, string name) => target.GetType().GetField(name, flags).GetValue(target);
@@ -114,6 +202,7 @@ public sealed class TempleExerciseTests
             EditorSceneManager.ClosePreviewScene(preview);
             Runtime("GameplayState").GetMethod("Reset").Invoke(null, null);
             Runtime("LearningJournal").GetMethod("Reset").Invoke(null, null);
+            Runtime("StoryProgress").GetMethod("Reset").Invoke(null, null);
             Time.timeScale = scale;
         }
     }

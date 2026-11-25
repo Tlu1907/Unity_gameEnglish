@@ -20,7 +20,7 @@ public sealed class SchematicMinimap : MonoBehaviour
     private Vector3 compactScale;
     private int compactSibling;
     public bool IsExpanded => expanded;
-    private enum Kind { Enemy, Npc, Tower, Lab, Player }
+    private enum Kind { Enemy, Npc, Tower, Lab, Player, Temple }
     private sealed class Marker
     {
         public Transform target;
@@ -163,13 +163,14 @@ public sealed class SchematicMinimap : MonoBehaviour
             else if (component is StoryNPC story) Add(story.transform.parent != null ? story.transform.parent : story.transform, Kind.Npc, null, null, story);
             else if (component is TowerDialogueTrigger tower) Add(tower.transform, Kind.Tower);
             else if (component is LabBuildingInteraction lab) Add(lab.transform, Kind.Lab);
+            else if (component is TempleDialogueTrigger temple) Add(temple.transform, Kind.Temple);
         }
     }
     private void Add(Transform target, Kind kind, EnemyBrain enemy = null, NPCDialogueTrigger npc = null, StoryNPC story = null)
     {
         int key = target.GetEntityId().GetHashCode() * 8 + (int)kind;
         if (markers.ContainsKey(key)) return;
-        Sprite icon = kind == Kind.Player ? playerIcon : kind == Kind.Enemy ? enemyIcon : kind == Kind.Npc ? npcIcon : kind == Kind.Tower ? towerIcon : labIcon;
+        Sprite icon = kind == Kind.Player ? playerIcon : kind == Kind.Enemy ? enemyIcon : kind == Kind.Npc ? npcIcon : kind == Kind.Tower || kind == Kind.Temple ? towerIcon : labIcon;
         var go = new GameObject("Marker_" + kind + "_" + target.name, typeof(RectTransform), typeof(Image));
         go.hideFlags = HideFlags.DontSaveInEditor | HideFlags.DontSaveInBuild;
         go.layer = gameObject.layer; go.transform.SetParent(markerLayer, false);
@@ -188,6 +189,7 @@ public sealed class SchematicMinimap : MonoBehaviour
     private void UpdateMarker(Marker marker)
     {
         bool visible = marker.target.gameObject.activeInHierarchy;
+        if (marker.kind == Kind.Temple && !StoryProgress.ShowTempleLocation) visible = false;
         if (marker.health != null && marker.health.IsDead) visible = false;
         if (marker.enemy != null && !marker.enemy.IsEncounterActive) visible = false;
         if (marker.npc != null && StoryProgress.IsCompleted(marker.npc.MissionBeatId)) visible = false;
@@ -201,12 +203,20 @@ public sealed class SchematicMinimap : MonoBehaviour
         marker.rect.anchorMin = marker.rect.anchorMax = point; marker.rect.anchoredPosition = Vector2.zero;
         bool towerObjective = marker.kind == Kind.Tower && !StoryProgress.HasReceivedArchaeologistSignal;
         bool labObjective = marker.kind == Kind.Lab && StoryProgress.IsCompleted("q2_archaeologist") && !StoryProgress.HasDecodedResearchDocuments;
-        bool quest = towerObjective || labObjective || marker.kind == Kind.Npc;
+        bool templeObjective = marker.kind == Kind.Temple;
+        bool quest = towerObjective || labObjective || marker.kind == Kind.Npc || templeObjective;
         Color tint = marker.kind == Kind.Player ? new Color(.35f, 1f, .91f) : marker.kind == Kind.Enemy ? new Color(1f, .33f, .38f) :
             marker.kind == Kind.Npc ? new Color(1f, .84f, .32f) : marker.kind == Kind.Tower ? new Color(.93f, .79f, .48f) : new Color(.42f, .74f, 1f);
         marker.image.color = tint;
         marker.halo.color = quest ? new Color(1f, .89f, .48f, .5f + .25f * Mathf.Sin(Time.realtimeSinceStartup * 3)) : new Color(.025f, .06f, .09f, .95f);
         marker.rect.localScale = Vector3.one * (quest ? 1f + .08f * Mathf.Sin(Time.realtimeSinceStartup * 3) : 1f);
+        if (templeObjective)
+        {
+            float pulse = .5f + .5f * Mathf.Sin(Time.realtimeSinceStartup * 5f);
+            marker.image.color = new Color(1f, .9f, .25f, .35f + .65f * pulse);
+            marker.halo.color = new Color(1f, .8f, .15f, .2f + .65f * pulse);
+            marker.rect.localScale = Vector3.one * (1.15f + .25f * pulse);
+        }
         if (marker.kind == Kind.Player && marker.facing != null)
         {
             Vector2 facing = marker.facing.Facing;

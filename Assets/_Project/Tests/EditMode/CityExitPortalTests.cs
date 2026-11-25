@@ -73,3 +73,74 @@ public sealed class CityExitPortalTests
         Assert.That(Value(portal, "IsUnlocked"), Is.False);
     }
 }
+
+public sealed class MainMenuFlowTests
+{
+    private const string ProfileKey = "EarthDefender.PlayerProfile.v1";
+    private const string NameKey = "EarthDefender.PlayerName";
+    private string oldProfile, oldName;
+    private bool hadProfile, hadName;
+    private static Type Runtime(string name) => Assembly.Load("Assembly-CSharp").GetType(name, true);
+    private static object Profile(string method, params object[] args) => Runtime("PlayerProfileStore")
+        .GetMethod(method, BindingFlags.Static | BindingFlags.Public | BindingFlags.NonPublic).Invoke(null, args);
+    private static string Identity(string property) => (string)Runtime("PlayerProfileStore").GetProperty(property).GetValue(null);
+
+    [SetUp] public void SetUp()
+    {
+        hadProfile = PlayerPrefs.HasKey(ProfileKey); oldProfile = PlayerPrefs.GetString(ProfileKey);
+        hadName = PlayerPrefs.HasKey(NameKey); oldName = PlayerPrefs.GetString(NameKey);
+        PlayerPrefs.DeleteKey(ProfileKey); PlayerPrefs.DeleteKey(NameKey);
+        Profile("ResetCache");
+    }
+    [TearDown] public void TearDown()
+    {
+        if (hadProfile) PlayerPrefs.SetString(ProfileKey, oldProfile); else PlayerPrefs.DeleteKey(ProfileKey);
+        if (hadName) PlayerPrefs.SetString(NameKey, oldName); else PlayerPrefs.DeleteKey(NameKey);
+        PlayerPrefs.Save(); Profile("ResetCache");
+    }
+    [Test] public void NameIsRequiredAndIdentitySurvivesRenameAndReload()
+    {
+        Assert.That(Identity("PlayerName"), Is.Empty);
+        Assert.That(Profile("SetName", "  \t "), Is.False);
+        Assert.That(Profile("SetName", "  Nguyễn   An  "), Is.True);
+        string id = Identity("PlayerId");
+        Assert.That(Guid.TryParse(id, out _), Is.True);
+        Profile("ResetCache");
+        Assert.That(Identity("PlayerName"), Is.EqualTo("Nguyễn An"));
+        Assert.That(Identity("PlayerId"), Is.EqualTo(id));
+        Profile("SetName", "Bình");
+        Assert.That(Identity("PlayerId"), Is.EqualTo(id));
+        Assert.That(((string)Profile("NormalizeName", new string('x', 30))).Length, Is.EqualTo(20));
+    }
+    [Test] public void ExistingMenuNameMigratesWithoutChangingIdentity()
+    {
+        PlayerPrefs.SetString(NameKey, "Linh");
+        Assert.That(Identity("PlayerName"), Is.EqualTo("Linh"));
+        string id = Identity("PlayerId");
+        Profile("ResetCache");
+        Assert.That(Identity("PlayerId"), Is.EqualTo(id));
+    }
+    [Test] public void BuildStartsAtMenuAndCityPortalTargetsEnabledForestScene()
+    {
+        var scenes = UnityEditor.EditorBuildSettings.scenes;
+        var enabled = Array.FindAll(scenes, scene => scene.enabled);
+        Assert.That(enabled.Length, Is.GreaterThanOrEqualTo(3));
+        Assert.That(enabled[0].path, Is.EqualTo("Assets/_Project/Scenes/MainMenu.unity"));
+        Assert.That(enabled[1].path, Is.EqualTo("Assets/_Project/Scenes/Sence_1/Scene1_Merged.unity"));
+        Assert.That(enabled[2].path, Is.EqualTo("Assets/_Project/Scenes/Scence_2/Scence2.unity"));
+        foreach (var scene in enabled) Assert.That(System.IO.File.Exists(scene.path), Is.True, scene.path);
+        var city = UnityEditor.SceneManagement.EditorSceneManager.OpenPreviewScene(enabled[1].path);
+        try
+        {
+            Component portal = null;
+            foreach (var root in city.GetRootGameObjects())
+            {
+                portal = root.GetComponentInChildren(Runtime("CityExitPortal"), true);
+                if (portal != null) break;
+            }
+            Assert.That(portal, Is.Not.Null);
+            Assert.That(portal.GetType().GetField("destination").GetValue(portal), Is.EqualTo(enabled[2].path));
+        }
+        finally { UnityEditor.SceneManagement.EditorSceneManager.ClosePreviewScene(city); }
+    }
+}

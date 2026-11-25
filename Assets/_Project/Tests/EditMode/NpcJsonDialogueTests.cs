@@ -25,6 +25,7 @@ public sealed class NpcJsonDialogueTests
     private static object Response(string json) => Runtime("UnityAiDialogueClient").GetMethod("ParseGrade").Invoke(null, new object[] { json });
     [SetUp] public void SetUp()
     {
+        Runtime("StoryProgress").GetMethod("Reset").Invoke(null, null);
         Runtime("GameplayState").GetMethod("Reset").Invoke(null, null);
         Runtime("LearningJournal").GetMethod("Reset").Invoke(null, null);
         previousScale = Time.timeScale;
@@ -32,6 +33,7 @@ public sealed class NpcJsonDialogueTests
     }
     [TearDown] public void TearDown()
     {
+        Runtime("StoryProgress").GetMethod("Reset").Invoke(null, null);
         UnityEngine.Object.DestroyImmediate(root);
         Time.timeScale = previousScale;
         Runtime("GameplayState").GetMethod("Reset").Invoke(null, null);
@@ -158,6 +160,11 @@ public sealed class NpcJsonDialogueTests
             Assert.That(Book(), Is.EqualTo(before), "Cancelling the first page must not learn unseen content.");
             for (int replay = 0; replay < 2; replay++)
             {
+                if (replay > 0)
+                {
+                    Assert.That(Call(flow, "TryOpen", data, null), Is.False, "Completed NPC conversations must stay closed.");
+                    Runtime("StoryProgress").GetMethod("Reset").Invoke(null, null);
+                }
                 Assert.That(Call(flow, "TryOpen", data, null), Is.True);
                 for (int step = 0; step < 30 && (bool)Value(flow, "IsOpen"); step++)
                 {
@@ -175,6 +182,8 @@ public sealed class NpcJsonDialogueTests
                 if (replay == 0) before = book;
                 else Assert.That(book, Is.EqualTo(before), "Replaying must not duplicate notes.");
             }
+            Assert.That(Call(flow, "TryOpen", data, null), Is.False);
+            Runtime("StoryProgress").GetMethod("Reset").Invoke(null, null);
             Assert.That(Call(flow, "TryOpen", data, null), Is.True);
             var parsed = Parse(source.text);
             var hidden = ((Array)Runtime("NpcJsonDialogue").GetField("conditional_dialogues").GetValue(parsed)).GetValue(0);

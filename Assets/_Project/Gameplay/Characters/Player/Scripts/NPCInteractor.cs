@@ -43,7 +43,7 @@ public sealed class NPCInteractor : MonoBehaviour
         if(!GameplayState.CanAct || feet==null)return;
         float best=talkDistance*talkDistance;
         foreach(var npc in stories)
-            if(npc!=null && npc.isActiveAndEnabled && npc.IsAvailable && npc.CurrentDialogue!=null)Consider(npc,ref best);
+            if(npc!=null && npc.isActiveAndEnabled && npc.CanTalk)Consider(npc,ref best);
         foreach(var npc in legacy)
             if(npc!=null && npc.CanTalk)Consider(npc,ref best);
         foreach(var temple in temples)

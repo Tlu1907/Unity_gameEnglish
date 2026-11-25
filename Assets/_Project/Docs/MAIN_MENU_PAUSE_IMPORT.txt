@@ -1,0 +1,27 @@
+MAIN MENU + ESC PAUSE — GÓI BỔ SUNG CHO UNITY_GAMEENGLISH
+
+Dùng Unity 6000.5.5f1. Đây là gói bổ sung cho cùng project/repo, không phải game độc lập.
+Project nhận cần có các hệ thống GameplayState, StoryProgress, LearningJournal và Unity UI đã có trên nhánh main.
+
+1. Sao lưu/commit project nhận. Assets > Import Package > Custom Package, chọn MainMenu_ESC_Pause.unitypackage.
+2. Khi import, đối chiếu script LevelSessionActions.cs nếu đồng nghiệp đã chỉnh riêng. Gói cập nhật script này để ESC dừng game, chơi lại reset nhiệm vụ và Quit về MainMenu.
+3. MainMenu nằm ở Assets/_Project/Scenes/MainMenu.unity. Thêm MainMenu vào Scene List trong Build Profiles và đặt đầu tiên. Thêm scene Màn 1 đang dùng, bật cả hai.
+4. Chọn MainMenuCanvas trong MainMenu: MainMenuController > Gameplay Scene hiện trỏ Assets/_Project/Scenes/Sence_1/Scene1_Merged.unity. Đổi nếu dùng màn khác.
+5. Mở Màn 1, kéo Assets/_Project/UI/Prefabs/Menu/PauseMenuCanvas.prefab vào Hierarchy làm root. Scene cần có đúng một EventSystem hoạt động (map hiện tại đã có).
+6. Chỉ giữ MỘT LevelSessionActions trong scene: prefab đã chứa component này và ba nút nối sẵn tới nó. Nếu scene đã có controller/menu pause cũ, bỏ component LevelSessionActions cũ sau khi chuyển các nút HUD cũ sang controller của prefab; tắt panel pause cũ. Không đặt trùng hai PauseMenuCanvas.
+7. Save scene. Play từ MainMenu > Chơi. Trong lúc gameplay đang hoạt động, nhấn ESC: game và âm thanh tạm dừng. Chơi tiếp/ESC tiếp tục; Chơi lại từ đầu reset nhiệm vụ, sổ học tập và tải lại scene; Thoát về màn hình chính mở MainMenu.
+
+Tên người chơi và âm lượng lưu cục bộ bằng PlayerPrefs. Đây không phải hệ thống tài khoản online.
+ESC không mở pause chồng lên hội thoại/câu hỏi; hoàn tất hoặc đóng bảng đó trước.
+Gói không bao gồm toàn bộ map, scene Màn 1, ProjectSettings, MCP, log, công cụ tạo scene hay script kiểm thử.
+Không đổi đường dẫn MainMenu nếu chưa cập nhật LevelSessionActions.MainMenuScene.
+
+CẬP NHẬT LUỒNG CHƠI TRONG PROJECT
+
+Build Settings đã đăng ký theo thứ tự MainMenu -> Scene1_Merged -> Scence2.
+Nút Chơi yêu cầu tên không rỗng, chuẩn hóa khoảng trắng và giới hạn 20 ký tự.
+PlayerMovement.PlayerName và PlayerMovement.PlayerId đọc chung hồ sơ PlayerProfileStore qua các scene.
+Tên và ID được lưu cục bộ; đổi tên không tạo ID mới. PlayerId hiện là ID cục bộ, chưa phải ID tài khoản cloud.
+Cổng cuối màn 1 chỉ mở sau khi giải mã tài liệu và hạ hết nhóm quái phòng nghiên cứu.
+Đi vào cổng sẽ tối màn hình, tải Scence2 rồi sáng trở lại; không xóa ghi chú và tiến trình khi chuyển màn.
+Để thử toàn bộ luồng, mở MainMenu rồi Play. Play trực tiếp scene màn chơi vẫn được dùng để kiểm tra trong Editor.

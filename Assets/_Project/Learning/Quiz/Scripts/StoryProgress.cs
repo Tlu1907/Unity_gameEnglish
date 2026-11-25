@@ -6,6 +6,33 @@ using UnityEngine;
 public static class StoryProgress
 {
     private static readonly HashSet<string> completed = new HashSet<string>();
+    private static readonly HashSet<string> completedConversations = new HashSet<string>();
+    public static bool HasMarkedTempleLocation { get; private set; }
+    public static bool ShowTempleLocation => HasMarkedTempleLocation && !completedConversations.Contains("map2_ancient_temple");
+    public static void MarkTempleLocation()
+    {
+        if (HasMarkedTempleLocation) return;
+        HasMarkedTempleLocation = true;
+        MissionChanged?.Invoke();
+    }
+    public static bool CanStartConversation(string id)
+    {
+        return !string.IsNullOrWhiteSpace(id) && !completedConversations.Contains(id)
+            && (id != "map2_ancient_temple" || completedConversations.Contains("map2_forest_ranger"));
+    }
+    public static bool CanTalkTo(DialogueData data)
+    {
+        if (data == null) return false;
+        return data.conversationJson == null ||
+            NpcJsonDialogue.TryParse(data.conversationJson.text, out var parsed) && CanStartConversation(parsed.id);
+    }
+    public static bool CompleteConversation(string id)
+    {
+        if (!CanStartConversation(id)) return false;
+        completedConversations.Add(id);
+        MissionChanged?.Invoke();
+        return true;
+    }
     private static readonly List<string> clues = new List<string>();
     public static IReadOnlyList<string> Clues => clues.AsReadOnly();
     public static string Objective => HasDecodedResearchDocuments && !string.IsNullOrEmpty(ResearchDestination)
@@ -82,6 +109,8 @@ public static class StoryProgress
     public static void Reset()
     {
         completed.Clear(); clues.Clear(); BeatCompleted = null;
+        completedConversations.Clear();
+        HasMarkedTempleLocation = false;
         HasEnteredResearchRoom = HasDecodedResearchDocuments = false;
         ResearchWrongAnswers = 0;
         ResearchDestination = null;

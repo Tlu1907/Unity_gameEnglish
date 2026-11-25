@@ -57,7 +57,8 @@ def test_cli_failure_exit(tmp_path, tag, model_rate, det_failed):
 
 def test_new_expectations():
     ctx = DialogueStore().get('ranger_question_02_player_purpose')
-    data = finalize_dialogue_grade(ctx, 'I exploring.', 5, 'Bạn nói rõ hoạt động.', 'I am exploring the forest.', [])
+    data = finalize_dialogue_grade(ctx, 'I exploring.', 'story', 5, 'Bạn nói rõ hoạt động.',
+                                   'I am exploring the forest.', [])
     assert check({'expect': {'total_max': 10, 'has_better_answer': True}}, data, True) == []
     assert check({'expect': {'total_max': 0}}, data, True)
 

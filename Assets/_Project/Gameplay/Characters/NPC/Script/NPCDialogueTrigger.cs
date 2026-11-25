@@ -56,7 +56,7 @@ public sealed class NPCDialogueTrigger : MonoBehaviour
     }
 
     public bool CanTalk => isActiveAndEnabled && !pending && !(onlyOnce && played) &&
-        (!string.IsNullOrEmpty(beatId) ? StoryProgress.CanStart(beatId) : dialogueUI != null && dialogueData != null);
+        (!string.IsNullOrEmpty(beatId) ? StoryProgress.CanStart(beatId) : dialogueUI != null && StoryProgress.CanTalkTo(dialogueData));
     public string SpeakerName => !string.IsNullOrEmpty(beatId) ? Beat != null ? Beat.speaker : "NPC" : dialogueData != null ? dialogueData.speakerName : "NPC";
     public bool TryTalk()
     {
@@ -72,15 +72,10 @@ public sealed class NPCDialogueTrigger : MonoBehaviour
         }
         if (dialogueUI.IsOpen) return false;
 
-        dialogueUI.ShowDialogue(dialogueData);
-
-        if (dialogueUI.IsOpen)
+        return dialogueUI.TryShowDialogue(dialogueData, completed =>
         {
-            played = true;
-
-            return true;
-        }
-        return false;
+            if (this != null && completed) played = true;
+        });
     }
 
     private void OnDisable()

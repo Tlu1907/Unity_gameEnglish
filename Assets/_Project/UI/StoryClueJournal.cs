@@ -136,6 +136,19 @@ public static class LearningJournal
         return definition.Length == 0 ? term : term + ": " + definition;
     }
     private static readonly List<MapNotes> maps = new List<MapNotes>();
+    private static int MapNumber(string id)
+    {
+        return id.StartsWith("map", StringComparison.OrdinalIgnoreCase)
+            && int.TryParse(id.Substring(3), out int number) && number > 0
+            ? number : int.MaxValue;
+    }
+    private static void AddMap(MapNotes map)
+    {
+        // Keep both restored and newly learned notes in level order.
+        int index = maps.FindIndex(existing => MapNumber(existing.Id) > MapNumber(map.Id));
+        if (index < 0) maps.Add(map);
+        else maps.Insert(index, map);
+    }
     public static IReadOnlyList<MapNotes> Maps => maps.AsReadOnly();
     public static event Action Changed;
     // Starting a later level directly has no earlier play-session data to restore.
@@ -160,7 +173,7 @@ public static class LearningJournal
             word => word == null || string.IsNullOrWhiteSpace(word.word)))) return;
         mapId = mapId.Trim();
         MapNotes map = maps.Find(item => string.Equals(item.Id, mapId, StringComparison.OrdinalIgnoreCase));
-        if (map == null) { map = new MapNotes(mapId, string.IsNullOrWhiteSpace(title) ? mapId : title); maps.Add(map); }
+        if (map == null) { map = new MapNotes(mapId, string.IsNullOrWhiteSpace(title) ? mapId : title); AddMap(map); }
         bool changed = map.Add(words, grammar);
         if (!string.IsNullOrWhiteSpace(title) && map.Title != title) { map.Title = title; changed = true; }
         if (changed) NotifyChanged();
@@ -171,7 +184,7 @@ public static class LearningJournal
         if (note == null || string.IsNullOrWhiteSpace(note.Text) || string.IsNullOrWhiteSpace(mapId)) return;
         mapId = mapId.Trim();
         var map = maps.Find(item => string.Equals(item.Id, mapId, StringComparison.OrdinalIgnoreCase));
-        if (map == null) { map = new MapNotes(mapId, string.IsNullOrWhiteSpace(title) ? mapId : title); maps.Add(map); }
+        if (map == null) { map = new MapNotes(mapId, string.IsNullOrWhiteSpace(title) ? mapId : title); AddMap(map); }
         if (map.Add(null, note.Text, note.Id, note.GroupId)) NotifyChanged();
     }
     private static void NotifyChanged()
@@ -205,7 +218,7 @@ public static class LearningJournal
             if (map == null)
             {
                 map = new MapNotes(id, string.IsNullOrWhiteSpace(source.title) ? id : source.title);
-                maps.Add(map);
+                AddMap(map);
             }
             if (source.vocabulary != null)
                 foreach (string entry in source.vocabulary)

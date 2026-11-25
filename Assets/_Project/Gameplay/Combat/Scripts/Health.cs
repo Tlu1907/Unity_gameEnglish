@@ -12,7 +12,8 @@ public sealed class Health : MonoBehaviour, IDamageable
     private float invulnerabilityRemaining;
     private void Update() { if (GameplayState.CanAct) invulnerabilityRemaining = Mathf.Max(0, invulnerabilityRemaining - Time.deltaTime); }
     private bool armorEquipped;
-    public int MaximumArmor => maximumArmor;
+    private int bonusArmor;
+    public int MaximumArmor => maximumArmor + bonusArmor;
     public int Armor => armor;
     public event Action<int> ArmorChanged;
     public int Maximum => maximum;
@@ -24,7 +25,14 @@ public sealed class Health : MonoBehaviour, IDamageable
     {
         if (armorEquipped == equipped) return;
         armorEquipped = equipped;
-        armor = equipped ? maximumArmor : 0;
+        armor = equipped ? MaximumArmor : Mathf.Min(armor, bonusArmor);
+        ArmorChanged?.Invoke(armor);
+    }
+    public void AddBonusArmor(int amount)
+    {
+        if (amount <= 0 || IsDead) return;
+        bonusArmor += amount;
+        armor += amount;
         ArmorChanged?.Invoke(armor);
     }
     public void Configure(int maxHealth, int currentHealth)
@@ -55,5 +63,13 @@ public sealed class Health : MonoBehaviour, IDamageable
         if (IsDead || amount <= 0) return;
         current = Mathf.Min(maximum, current + amount);
         Changed?.Invoke(current);
+    }
+    public void RestoreHealthAndArmor()
+    {
+        if (IsDead) return;
+        current = maximum;
+        armor = MaximumArmor;
+        Changed?.Invoke(current);
+        ArmorChanged?.Invoke(armor);
     }
 }

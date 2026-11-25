@@ -13,7 +13,7 @@ def test_dialogue_response_optional_fields():
     app.attempts.clear()
     node = 'ranger_question_02_player_purpose'
     ctx = app.dialogues.get(node)
-    data = finalize_dialogue_grade(ctx, 'I am agent.', 5, 'Bạn nêu rõ vai trò.',
+    data = finalize_dialogue_grade(ctx, 'I am agent.', 'story', 5, 'Bạn nêu rõ vai trò.',
                                    'I am an agent exploring this forest.', rule_errors('I am agent.'))
     with patch.object(app, 'grade_with_model', return_value=('validated', data)):
         response = app.app.test_client().post('/grade-answer', json={
@@ -22,13 +22,23 @@ def test_dialogue_response_optional_fields():
     assert {'status', 'node_id', 'attempt', 'attempts_left', 'passed', 'can_award_reward', 'data'} <= response.json.keys()
     result = response.json['data']
     assert {'original_answer', 'errors', 'scores', 'corrected_answer', 'feedback_vi', 'total_score',
-            'max_score', 'passed', 'reward_eligible', 'rule_override', 'better_answer', 'form_hint_vi'} <= result.keys()
+            'max_score', 'passed', 'reward_eligible', 'rule_override', 'better_answer', 'form_hint_vi',
+            'relevance'} <= result.keys()
+    assert result['relevance'] == 'story'
     assert set(result['scores']) == {'meaning', 'grammar'}
     assert result['errors'][0]['rule_id'] == 'article.role_noun'
 
 
 @pytest.mark.parametrize('bad', [None, {}, [], {'answer': '', 'output': {}},
-                               {'answer': 'I am a guide.', 'output': {'meaning': True, 'feedback_vi': 'ok'}}])
+                               {'answer': 'I am a guide.', 'output': {'meaning': 5, 'feedback_vi': 'ok'}},
+                               {'answer': 'I am a guide.',
+                                'output': {'relevance': 'story', 'meaning': True, 'feedback_vi': 'ok'}},
+                               {'answer': 'I am a guide.',
+                                'output': {'relevance': 'sideways', 'meaning': 5, 'feedback_vi': 'ok'}},
+                               {'answer': 'I like pizza.',
+                                'output': {'relevance': 'off', 'meaning': 3, 'feedback_vi': 'ok'}},
+                               {'answer': 'I am a guide.',
+                                'output': {'relevance': 'story', 'meaning': 0, 'feedback_vi': 'ok'}}])
 def test_startup_rejects_bad_examples(bad):
     root = Path('config/dialogues')
     dlg = json.loads((root/'map2_forest_ranger.json').read_text(encoding='utf-8'))

@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 /// <summary>Reveals the exit after the research encounter is completed and its enemies actually die.</summary>
 public sealed class CityExitPortal : MonoBehaviour
@@ -9,7 +8,7 @@ public sealed class CityExitPortal : MonoBehaviour
     public GameObject portalVisual;
     public Collider2D entrance;
     [Tooltip("Scene name or asset path registered in Build Profiles.")]
-    public string destination = "";
+    public string destination = "Assets/_Project/Scenes/Scence_2/Scence2.unity";
     private readonly Dictionary<Health, Action> subscriptions = new Dictionary<Health, Action>();
     private readonly HashSet<Health> tracked = new HashSet<Health>();
     private Renderer[] visuals;
@@ -99,10 +98,7 @@ public sealed class CityExitPortal : MonoBehaviour
             destinationReported = true;
             return;
         }
-        loading = true;
-        Time.timeScale = 1f;
-        GameplayState.Reset();
-        SceneManager.LoadScene(destination);
+        loading = SceneTransition.Load(destination);
     }
     private void OnGUI()
     {

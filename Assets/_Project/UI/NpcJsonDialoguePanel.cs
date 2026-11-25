@@ -49,9 +49,9 @@ public sealed class NpcJsonDialoguePanel : MonoBehaviour
     { journalMapId = id; journalMapTitle = title; }
     public void ApplyReadableTypography()
     {
-        SetFont(englishText, 38);
-        SetFont(learningHints, 30);
-        SetFont(feedbackText, 30);
+        SetFont(englishText, 25);
+        SetFont(learningHints, 25);
+        SetFont(feedbackText, 25);
         SetFont(statusText, 26);
         SetFont(npcNameText, 32);
         if (answerInput != null)
@@ -63,7 +63,10 @@ public sealed class NpcJsonDialoguePanel : MonoBehaviour
         foreach (var button in GetComponentsInChildren<Button>(true))
             foreach (var label in button.GetComponentsInChildren<TMP_Text>(true)) SetFont(label, 28);
         if (statusText != null)
-            statusText.rectTransform.sizeDelta = new Vector2(statusText.rectTransform.sizeDelta.x, 64);
+        {
+            var rect = statusText.rectTransform;
+            rect.sizeDelta = new Vector2(rect.sizeDelta.x, rect.anchorMin.y == rect.anchorMax.y ? 64 : 0);
+        }
         EnsureQuestionArea();
     }
     private void EnsureQuestionArea()
@@ -79,7 +82,7 @@ public sealed class NpcJsonDialoguePanel : MonoBehaviour
             englishText.transform.SetParent(wrapper.transform, false);
         }
         var area = (RectTransform)scroll.transform;
-        area.anchorMin = new Vector2(.025f, .46f);
+        area.anchorMin = new Vector2(.025f, .68f);
         area.anchorMax = new Vector2(.50f, .94f);
         area.offsetMin = area.offsetMax = Vector2.zero;
         area.localScale = Vector3.one;
@@ -115,6 +118,7 @@ public sealed class NpcJsonDialoguePanel : MonoBehaviour
     {
         if (IsOpen || !enabled || !GameplayState.CanAct || data == null || data.conversationJson == null ||
             !NpcJsonDialogue.TryParse(data.conversationJson.text, out var parsed) ||
+            !StoryProgress.CanStartConversation(parsed.id) ||
             client == null || dialoguePanel == null || englishText == null || answerInput == null ||
             submitButton == null || continueButton == null) return false;
         if (!gameObject.activeSelf) gameObject.SetActive(true);
@@ -278,7 +282,8 @@ public sealed class NpcJsonDialoguePanel : MonoBehaviour
                 : name.StartsWith("Imperative", StringComparison.OrdinalIgnoreCase) ? "commands_suggestions" : "general";
             LearningJournal.RecordGrammar(journalMapId, journalMapTitle, new LearningJournal.GrammarNote
             {
-                Id = conversation.id + ":" + rule.formula.Trim(), GroupId = group,
+                Id = conversation.id + ":" + rule.formula.Trim(),
+                GroupId = group,
                 Text = rule.formula.Trim() + (string.IsNullOrWhiteSpace(rule.note_vi) ? "" : ": " + rule.note_vi.Trim())
             });
         }
@@ -307,7 +312,13 @@ public sealed class NpcJsonDialoguePanel : MonoBehaviour
                 else
                 {
                     var node = result.triggered ? conversation.FindFollowUp(result.intent, result.target_location, index) : null;
-                    if (node != null) { followUp = false; hiddenNode = node; ShowNode(); }
+                    if (node != null)
+                    {
+                        followUp = false; hiddenNode = node;
+                        if (conversation.id == "map2_forest_ranger" && node.id == "ranger_hidden_01_mark_ruins_on_map")
+                            StoryProgress.MarkTempleLocation();
+                        ShowNode();
+                    }
                     else SetStatus("Chưa có gợi ý chỉ đường cho câu hỏi này. Bạn có thể hỏi lại hoặc kết thúc.");
                 }
                 RefreshControls();
@@ -426,6 +437,7 @@ public sealed class NpcJsonDialoguePanel : MonoBehaviour
         replacedPortrait = false;
         if (dialoguePanel != null) dialoguePanel.SetActive(false);
         var callback = completed; completed = null;
+        if (readToEnd) StoryProgress.CompleteConversation(conversation.id);
         callback?.Invoke(readToEnd);
     }
     private void OnDisable()

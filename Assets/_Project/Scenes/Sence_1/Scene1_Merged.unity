@@ -1553,7 +1553,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CityExitPortal
   portalVisual: {fileID: 790798802}
   entrance: {fileID: 0}
-  destination: 
+  destination: Assets/_Project/Scenes/Scence_2/Scence2.unity
 --- !u!4 &791393651 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8476963895115793769, guid: dbf4ddf010406ed45abbd7f847ad291f, type: 3}

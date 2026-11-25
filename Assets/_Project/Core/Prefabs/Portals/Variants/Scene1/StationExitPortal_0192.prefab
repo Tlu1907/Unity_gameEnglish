@@ -477,7 +477,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CityExitPortal
   portalVisual: {fileID: 4321426073989777259}
   entrance: {fileID: 2081549923468303129}
-  destination: Assets/_Project/Scenes/Scene_Test/SampleScene.unity
+  destination: Assets/_Project/Scenes/Scence_2/Scence2.unity
 --- !u!61 &2081549923468303129
 BoxCollider2D:
   m_ObjectHideFlags: 0
